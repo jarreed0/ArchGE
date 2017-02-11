@@ -2,6 +2,7 @@
 #define ARCH_H
 
 #include "global.h"
+#include "window.h"
 
 /*
 This is the main header file for the engine that will have most classes underneath.
@@ -13,8 +14,9 @@ class Arch {
 public:
   Arch();
   ~Arch();
-  Global gl; //Global class is used for global variables, like the engine version
+  bool createWindow(); //create a new window
 private:
+  Global gl; //Global class is used for global variables, like the engine version
 };
 
 #endif //ARCH_H

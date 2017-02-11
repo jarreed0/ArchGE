@@ -6,6 +6,7 @@
 using namespace std;
 #include <iostream>
 #include <string>
+#include "SDL2/SDL.h"
 
 /*
 This is the global class that will store global variables, global libraries to include, and if annotations is on/off.

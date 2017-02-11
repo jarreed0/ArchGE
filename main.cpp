@@ -8,5 +8,6 @@ Last Edited by: Avery Reed 2/10/17
 
 int main() {
   Arch engine;
+  engine.createWindow();
   return 0;
 }
