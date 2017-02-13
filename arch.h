@@ -24,8 +24,11 @@ public:
   void setWidth(int w) {width = w;}
   void setHeight(int h) {height = h;}
   void setTitle(string t) {title = t;}
+  void setFlags(Uint32 f) {flags = f;}
   void declareWindow(int w, int h, string t) {setWidth(w); setHeight(h); setTitle(t);}
   void declareWindow(int w, int h, string t, int x, int y) {setWidth(w); setHeight(h); setTitle(t); setPosX(x); setPosY(y);}
+  void declareWindow(int w, int h, string t, int x, int y, Uint32 f) {setWidth(w); setHeight(h); setTitle(t); setPosX(x); setPosY(y); setFlags(f);}
+  void declareWindow(int w, int h, string t, Uint32 f) {setWidth(w); setHeight(h); setTitle(t); setFlags(f);}
   int getPosX() const {return posX;}
   int getPosY() const {return posY;}
   int getWidth() const {return width;}
@@ -34,8 +37,9 @@ public:
 private:
   SDL_Window *win = NULL;
   SDL_Renderer *renderer = NULL;
-  int posX = 100, posY = 100, width = 320, height = 240;
+  int posX = SDL_WINDOWPOS_UNDEFINED, posY = SDL_WINDOWPOS_UNDEFINED, width = 640, height = 480;
   string title;
+  Uint32 flags;
 };
 
 #endif //ARCH_H

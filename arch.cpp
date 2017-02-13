@@ -18,10 +18,9 @@ Arch::~Arch() {
 }
 
 //Create a Window based on variables
-//need to add Flags
 void Arch::createWindow() {
   const char * t = title.c_str();
-  win = SDL_CreateWindow(t, posX, posY, width, height, 0);
+  win = SDL_CreateWindow(t, posX, posY, width, height, flags);
   renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
 }
 
