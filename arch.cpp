@@ -9,6 +9,23 @@ Last Edited by: Avery Reed 2/12/17
 Arch::Arch() {
   SDL_Init(SDL_INIT_VIDEO);
 }
+//Constructor with specified windows
+Arch::Arch(int w, int h, string t) {
+  SDL_Init(SDL_INIT_VIDEO);
+  declareWindow(w, h, t);
+}
+Arch::Arch(int w, int h, string t, int x, int y) {
+  SDL_Init(SDL_INIT_VIDEO);
+  declareWindow(w, h, t, x, y);
+}
+Arch::Arch(int w, int h, string t, Uint32 f) {
+  SDL_Init(SDL_INIT_VIDEO);
+  declareWindow(w, h, t, f);
+}
+Arch::Arch(int w, int h, string t, int x, int y, Uint32 f) {
+  SDL_Init(SDL_INIT_VIDEO);
+  declareWindow(w, h, t, x, y, f);
+}
 
 //Deconstruct Engine and SDL
 Arch::~Arch() {

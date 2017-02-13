@@ -7,8 +7,7 @@ Last Edited by: Avery Reed 2/12/17
 */
 
 int main() {
-  Arch engine; //creates reference of engine
-  engine.declareWindow(320, 480, "Title", 50, 200); //sets window specifications
+  Arch engine(320, 480, "Title"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications
   bool loop = true;
   while (loop) { //gameloop
