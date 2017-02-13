@@ -14,6 +14,7 @@ Created by: Avery Reed on 2/10/17
 Last Edited by: Avery Reed 2/10/17
 */
 
+//Need to make the global class accessible to all class' with static variables and functions
 class Global {
 public:
   Global() {setAnnotation(1); out("Global variables and functions initiated.\n");}
