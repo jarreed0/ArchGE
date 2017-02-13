@@ -2,75 +2,39 @@
 
 /*
 Created by: Avery Reed on 2/10/17
-Last Edited by: Avery Reed 2/10/17
+Last Edited by: Avery Reed 2/12/17
 */
 
+//Create Engine and initialize SDL
 Arch::Arch() {
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-      SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't initialize SDL: %s", SDL_GetError());
-  }
-
-  if (SDL_CreateWindowAndRenderer(860, 480, 0, &window, &renderer)) {
-      SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't create window and renderer: %s", SDL_GetError());
-  }
-
-  while (1) {
-      SDL_PollEvent(&event);
-      if (event.type == SDL_QUIT) {
-          break;
-      }
-      SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0x00);
-      SDL_RenderClear(renderer);
-      SDL_RenderCopy(renderer, texture, NULL, NULL);
-      SDL_RenderPresent(renderer);
-  }
+  SDL_Init(SDL_INIT_VIDEO);
 }
 
-Arch::Arch(int WIDTH, int HEIGHT) {
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-      SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't initialize SDL: %s", SDL_GetError());
-  }
-
-  if (SDL_CreateWindowAndRenderer(WIDTH, HEIGHT, 0, &window, &renderer)) {
-      SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't create window and renderer: %s", SDL_GetError());
-  }
-
-  while (1) {
-      SDL_PollEvent(&event);
-      if (event.type == SDL_QUIT) {
-          break;
-      }
-      SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0x00);
-      SDL_RenderClear(renderer);
-      SDL_RenderCopy(renderer, texture, NULL, NULL);
-      SDL_RenderPresent(renderer);
-  }
-}
-
-Arch::Arch(int WIDTH, int HEIGHT, Uint32 FLAGS) {
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-      SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't initialize SDL: %s", SDL_GetError());
-  }
-
-  if (SDL_CreateWindowAndRenderer(WIDTH, HEIGHT, FLAGS, &window, &renderer)) {
-      SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't create window and renderer: %s", SDL_GetError());
-  }
-
-  while (1) {
-      SDL_PollEvent(&event);
-      if (event.type == SDL_QUIT) {
-          break;
-      }
-      SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0x00);
-      SDL_RenderClear(renderer);
-      SDL_RenderCopy(renderer, texture, NULL, NULL);
-      SDL_RenderPresent(renderer);
-  }
-}
-
+//Deconstruct Engine and SDL
 Arch::~Arch() {
-  SDL_DestroyTexture(texture);
   SDL_DestroyRenderer(renderer);
-  SDL_DestroyWindow(window);
+  SDL_DestroyWindow(win);
   SDL_Quit();
+}
+
+//Create a Window based on variables
+//need to add Flags
+void Arch::createWindow() {
+  const char * t = title.c_str();
+  win = SDL_CreateWindow(t, posX, posY, width, height, 0);
+  renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
+}
+
+//function for gameloop for rendering window
+bool Arch::loopCall() {
+  SDL_Event e;
+  if (SDL_PollEvent(&e)) {
+    if (e.type == SDL_QUIT) {
+      return false;
+    }
+  }
+
+  SDL_RenderClear(renderer);
+  SDL_RenderPresent(renderer);
+  return true;
 }
