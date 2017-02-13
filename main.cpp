@@ -7,7 +7,6 @@ Last Edited by: Avery Reed 2/10/17
 */
 
 int main() {
-  Arch engine;
-  engine.createWindow();
+  Arch engine(480, 320, SDL_WINDOW_RESIZABLE);
   return 0;
 }
