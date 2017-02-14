@@ -1,11 +1,19 @@
 #!/bin/bash
 
+################################################################
+# This program is used to manage basic commands for
+# managing a project, such as git.
+# Created by: Avery Reed on 2/14/17
+# Last Edited by: Avery Reed 2/14/17
+################################################################
+
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "push or -p - push everything"
   echo "test or -t - build and test sample program"
-  echo "conf or -c - reconfigure makefile #in the works"
+  #echo "conf or -c - reconfigure makefile #in the works"
   echo "update or -u - update get branch from main"
-  echo "setup or -s - make it so you can run the program without ./, it also works everywhere"
+  echo "setup or -s - make it so you can run the program without ./, it also works everywhere, also updates it"
+  #echo "check or -c - to check if the installed version is the newest version"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   if [ "$2" != NULL ]; then
     git add $2
@@ -42,22 +50,17 @@ elif [ "$1" == "update" ] || [ "$1" == "-u" ]; then
   git status
   git pull
 elif [ "$1" == "setup" ] || [ "$1" == "-s" ]; then
-  echo -n "Are you sure you want to add the command 'manage' to your path? (y/n): "
+  echo -n "Are you sure you want to add/update the command 'manage' to your path? (y/n): "
   read ans1
   if [ "$ans1" == "y" ]; then
-    echo "HERE:"
-    manage
-    echo -n "Did anything happen after HERE? (y/n): "
-    read ans2
-    if [ "$ans2" == "n" ]; then
-      echo "Ok. Adding manage to your path..."
-      export PATH=$PATH:$PWD
-      echo "Completed. You can now run wihtout ./ and from anywhere."
-    else
-      echo "You already have a program called manage and should not do this."
-      echo "Aborting."
-    fi
+    echo "Ok. Adding manage to your path..."
+    #export PATH=$PATH:$PWD
+    #move to bin
+    sudo cp manage /usr/local/bin/
+    sudo chmod a+x /usr/local/bin/manage
+    echo "Completed. You can now run wihtout ./ and from anywhere."
   fi
 else
   echo "No input value"
+  echo "-h or --help for help"
 fi
