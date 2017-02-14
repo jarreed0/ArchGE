@@ -1,4 +1,4 @@
-#ArchGE is a 2D C++ Game Engine using SDL2
+#ArchGE is a Isometric 2D C++ Game Engine using SDL2
 
 
 Build w/ sample main:
