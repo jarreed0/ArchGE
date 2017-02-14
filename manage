@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+  echo "push or -p - push everything"
+  echo "test or -t - build and test sample program"
+elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
+  if [ "$2" != NULL ]; then
+    git add $2
+  else
+    git add *
+  fi
+  echo "What did you change:"
+  read change
+  git commit -m "$change"
+  git config --global push.defualt simple
+  git push
+elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
+  make clean
+  make
+  ./a.out
+else
+  echo "No input value"
+fi
