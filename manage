@@ -5,6 +5,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "test or -t - build and test sample program"
   echo "conf or -c - reconfigure makefile #in the works"
   echo "update or -u - update get branch from main"
+  echo "setup or -s - make it so you can run the program without ./, it also works everywhere"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   if [ "$2" != NULL ]; then
     git add $2
@@ -40,6 +41,23 @@ elif [ "$1" == "conf" ] || [ "$1" == "-c" ]; then
 elif [ "$1" == "update" ] || [ "$1" == "-u" ]; then
   git status
   git pull
+elif [ "$1" == "setup" ] || [ "$1" == "-s" ]; then
+  echo -n "Are you sure you want to add the command 'manage' to your path? (y/n): "
+  read ans1
+  if [ "$ans1" == "y" ]; then
+    echo "HERE:"
+    manage
+    echo -n "Did anything happen after HERE? (y/n): "
+    read ans2
+    if [ "$ans2" == "n" ]; then
+      echo "Ok. Adding manage to your path..."
+      export PATH=$PATH:$PWD
+      echo "Completed. You can now run wihtout ./ and from anywhere."
+    else
+      echo "You already have a program called manage and should not do this."
+      echo "Aborting."
+    fi
+  fi
 else
   echo "No input value"
 fi
