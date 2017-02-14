@@ -8,3 +8,5 @@ Test build with: ./manage -t
 Push back to get with: ./manage -p (FILE TO PUSH)
 
 Update branch: ./manage -u
+
+Install manage to the path: ./manage -s
