@@ -3,7 +3,8 @@
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "push or -p - push everything"
   echo "test or -t - build and test sample program"
-  echo "conf or -c - reconfigure makefile"
+  echo "conf or -c - reconfigure makefile #in the works"
+  echo "update or -u - update get branch from main"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   if [ "$2" != NULL ]; then
     git add $2
@@ -36,6 +37,9 @@ elif [ "$1" == "conf" ] || [ "$1" == "-c" ]; then
   #echo "################################################################" >> .cache/mf
   #echo "# Build Game" >> .cache/mf
   #echo "################################################################" >> .cache/mf
+elif [ "$1" == "update" ] || [ "$1" == "-u" ]; then
+  git status
+  git pull
 else
   echo "No input value"
 fi
