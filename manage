@@ -30,6 +30,7 @@ elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
   make clean
   make
   ./a.out
+  make clean
 elif [ "$1" == "conf" ] || [ "$1" == "-cf" ]; then
   #NEED TO FINISH THIS
   echo "This is still being worked on"
