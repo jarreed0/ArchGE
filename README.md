@@ -1,5 +1,9 @@
 #ArchGE is a Isometric 2D C++ Game Engine using SDL2
 
+#UNDER HEAVY DEVELOPMENT
+
+#Current build does not work. Only temporarily. I just need to fix part of the makefile and include paths
+
 clone branch from terminal:
 
 git clone https://github.com/jarreed0/ArchGE.git
