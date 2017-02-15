@@ -18,6 +18,7 @@ public:
   Arch(int w, int h, string t, int x, int y);
   Arch(int w, int h, string t, int x, int y, Uint32 f);
   Arch(int w, int h, string t, Uint32 f);
+  void construct();
 
   ~Arch();
 
@@ -42,9 +43,9 @@ public:
 private:
   SDL_Window *win = NULL;
   SDL_Renderer *renderer = NULL;
-  int posX = SDL_WINDOWPOS_UNDEFINED, posY = SDL_WINDOWPOS_UNDEFINED, width = 640, height = 480;
+  int posX, posY, width, height;
   string title;
-  Uint32 flags = 0;
+  Uint32 flags;
 };
 
 #endif //ARCH_H
