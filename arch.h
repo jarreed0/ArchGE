@@ -7,6 +7,7 @@ using namespace std;
 
 #include "global.h"
 #include "object.h"
+#include "coord.h"
 
 /*
 This is the main header file for the engine that will have most classes underneath.

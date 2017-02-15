@@ -3,7 +3,7 @@
 /*
 This is a test main function in order to test out the game engine mechanics.
 Created by: Avery Reed on 2/10/17
-Last Edited by: Avery Reed 2/14/17
+Last Edited by: Avery Reed 2/15/17
 */
 
 //The commented code does not work
@@ -14,6 +14,7 @@ Last Edited by: Avery Reed 2/14/17
 int main() {
   Arch engine(320, 480, "Park Stroll"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications
+  //engine.Object grass(engine.Coord c(3, 3));
   /*engine.loadImage("res/tiles.png", "tilesimg");
   engine.loadImage("res/sprite.png", "playerimg");
   engine.loadImage("res/gui.png", "guiimg");
@@ -42,6 +43,7 @@ int main() {
     if(engine.input() = "right") { engine.moveMap("player", "right", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 3, 2); }
     if(engine.input() = "down") { engine.moveMap("player", "down", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 2, 3); }
     if(engine.input() = "up") { engine.moveMap("player", "up", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 2, 1); }*/
+    //std::cout << "(" <<  grass.getCoord().getX() << " ," << grass.getCoord().getY() << ")" << endl;
   }
   return 0;
 }
