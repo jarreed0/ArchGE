@@ -7,24 +7,34 @@ Last Edited by: Avery Reed 2/12/17
 
 //Create Engine and initialize SDL
 Arch::Arch() {
-  SDL_Init(SDL_INIT_VIDEO);
+  construct();
 }
 //Constructor with specified windows
 Arch::Arch(int w, int h, string t) {
-  SDL_Init(SDL_INIT_VIDEO);
+  construct();
   declareWindow(w, h, t);
 }
 Arch::Arch(int w, int h, string t, int x, int y) {
-  SDL_Init(SDL_INIT_VIDEO);
+  construct();
   declareWindow(w, h, t, x, y);
 }
 Arch::Arch(int w, int h, string t, Uint32 f) {
-  SDL_Init(SDL_INIT_VIDEO);
+  construct();
   declareWindow(w, h, t, f);
 }
 Arch::Arch(int w, int h, string t, int x, int y, Uint32 f) {
-  SDL_Init(SDL_INIT_VIDEO);
+  construct();
   declareWindow(w, h, t, x, y, f);
+}
+
+//Set Variables
+void Arch::construct() {
+  SDL_Init(SDL_INIT_VIDEO);
+  posX = SDL_WINDOWPOS_UNDEFINED;
+  posY = SDL_WINDOWPOS_UNDEFINED;
+  width = 640;
+  height = 480;
+  flags = 0;
 }
 
 //Deconstruct Engine and SDL
