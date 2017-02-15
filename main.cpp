@@ -6,6 +6,11 @@ Created by: Avery Reed on 2/10/17
 Last Edited by: Avery Reed 2/14/17
 */
 
+//The commented code does not work
+//It is a sample for a game
+//Though it is not how the engine will work at all
+//The engine will have refrenced objects instead of just calling all functions just from the engine
+
 int main() {
   Arch engine(320, 480, "Park Stroll"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications

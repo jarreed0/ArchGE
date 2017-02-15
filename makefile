@@ -9,15 +9,15 @@ FLAGS = -lSDL2
 ################################################################
 # Build Game
 ################################################################
-a.out: main.o engine.o
-	g++ main.o engine.o $(FLAGS)
+a.out: main.o arch.o global.o object.o coord.o#engine.o
+	g++ main.o arch.o global.o object.o coord.o $(FLAGS) #engine.o $(FLAGS)
 
 ################################################################
 # Build Engine
 ################################################################
 #Engine
-engine.o: arch.o global.o object.o coord.o
-	g++ -c arch.o global.o object.o coord.o $(FLAGS)
+#engine.o: arch.o global.o object.o coord.o
+#	g++ -c arch.o global.o object.o coord.o $(FLAGS)
 
 #ArchGE main functions
 arch.o: arch.cpp arch.h global.h
