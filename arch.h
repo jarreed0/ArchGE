@@ -5,6 +5,9 @@
 using namespace std;
 #include <iostream>
 
+#include "global.h"
+#include "object.h"
+
 /*
 This is the main header file for the engine that will have most classes underneath.
 Created by: Avery Reed on 2/10/17

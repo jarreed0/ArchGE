@@ -9,19 +9,31 @@ FLAGS = -lSDL2
 ################################################################
 # Build Game
 ################################################################
-a.out: main.o arch.o
-	g++ main.o arch.o $(FLAGS)
+a.out: main.o engine.o
+	g++ main.o engine.o $(FLAGS)
 
 ################################################################
 # Build Engine
 ################################################################
+#Engine
+engine.o: arch.o global.o object.o coord.o
+	g++ -c arch.o global.o object.o coord.o $(FLAGS)
+
 #ArchGE main functions
 arch.o: arch.cpp arch.h global.h
 	g++ -c arch.cpp
 
 #Global variables/function class
-#global.o: global.cpp global.h
-#	g++ -c global.cpp
+global.o: global.cpp global.h
+	g++ -c global.cpp
+
+#Game objects
+object.o: object.cpp object.h coord.h global.h
+	g++ -c object.cpp
+
+#Coordinate Point Storer
+coord.o: coord.cpp coord.h global.h
+	g++ -c coord.cpp
 
 ################################################################
 # Build temp main

@@ -17,8 +17,8 @@ Last Edited by: Avery Reed 2/10/17
 //Need to make the global class accessible to all class' with static variables and functions
 class Global {
 public:
-  Global() {setAnnotation(1); out("Global variables and functions initiated.\n");}
-  ~Global() {out("Deconstructing global class.\n");}
+  Global();
+  ~Global();
   void out(string s) {if(annotation){cout << s;}}
   void out(int i) {if(annotation){cout << i;}} //Use this to post to the screen.
   void setAnnotation(bool an) {annotation = an;}

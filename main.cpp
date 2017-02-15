@@ -3,15 +3,40 @@
 /*
 This is a test main function in order to test out the game engine mechanics.
 Created by: Avery Reed on 2/10/17
-Last Edited by: Avery Reed 2/12/17
+Last Edited by: Avery Reed 2/14/17
 */
 
 int main() {
-  Arch engine(320, 480, "Title"); //creates reference of engine and sets window specifications
+  Arch engine(320, 480, "Park Stroll"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications
+  /*engine.loadImage("res/tiles.png", "tilesimg");
+  engine.loadImage("res/sprite.png", "playerimg");
+  engine.loadImage("res/gui.png", "guiimg");
+  engine.loadMap("res/map.txt", "cart", 20, "map");
+  engine.parseImage("tilesimg", 4, 1, 20, 20, "tileparsed");
+  engine.parseImage("playerimg", 3, 3, 20, 40, "playerparsed");
+  engine.parseImage("guiimg", 3, 1, 15, 15, "guiparsed");
+  engine.createEntity("player", "playerparsed");
+  engine.createGUI("gui", "guiparsed");
+  engine.setMapTile("map", "tileparsed", 0, 4, 1, "air");
+  engine.setMapTile("map", "tileparsed", 1, 3, 1, "dirt");
+  engine.setMapTile("map", "tileparsed", 2, 1, 1, "grass");
+  engine.setMapTile("map", "tileparsed", 3, 2, 1, "stone");
+  engine.setMapStart("map", 3, 3);
+  engine.setBackground(0x00, 0x00, 0xFF);
+  engine.entityStart("map", 3, 3);
+  engine.setEntityFrame("player", 2, 2);
+  engine.setEntitySpeed("player", 3);*/
   bool loop = true;
   while (loop) { //gameloop
     loop = engine.loopCall(); //calls loop from engine, if it fails the loop will end
+    /*engine.drawBackground();
+    engine.drawMap("map");
+    engine.drawEntity("player");
+    if(engine.input() = "left") { engine.moveMap("player", "left", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 1, 2); }
+    if(engine.input() = "right") { engine.moveMap("player", "right", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 3, 2); }
+    if(engine.input() = "down") { engine.moveMap("player", "down", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 2, 3); }
+    if(engine.input() = "up") { engine.moveMap("player", "up", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 2, 1); }*/
   }
   return 0;
 }
