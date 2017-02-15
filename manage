@@ -14,7 +14,10 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "update or -u - update get branch from main"
   echo "setup or -s - make it so you can run the program without ./, it also works everywhere, also updates it"
   #echo "check or -cf - to check if the installed version is the newest version"
+  echo "debug or -d - compile program and run it in debug mode"
   echo "create or -c - create a git branch"
+  echo "install or -i - install missing dependicies"
+  echo "git or -g - set up git info like username, email, and (need to add) key"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   if [ "$2" != NULL ]; then
     git add $2
@@ -87,6 +90,24 @@ elif [ "$1" == "create" ] || [ "$1" == "-c" ]; then
   else
     echo "Not an option."
   fi
+elif [ "$1" == "debug" ] || [ "$1" == "-d" ]; then
+  echo "THIS MAY NOT WORK YET. - JUST ENTER q TO QUIT"
+  make clean
+  make
+  gdb ./a.out
+  make clean
+elif [ "$1" == "install" ] || [ "$1" == "-i" ]; then
+  sudo apt-get install git
+  sudo apt-get install g++
+  sudo apt-get install gdb
+elif [ "$1" == "git" ] || [ "$1" == "-g" ]; then
+  echo -n "User Name: "
+  read un
+  echo -n "Email: "
+  read em
+  git config --global user.name "$un"
+	git config --global user.email $em
+  echo "(key creation coming soon)"
 else
   echo "No input value"
   echo "-h or --help for help"
