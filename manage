@@ -17,7 +17,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "debug or -d - compile program and run it in debug mode"
   echo "create or -c - create a git branch"
   echo "install or -i - install missing dependicies"
-  echo "git or -g - set up git info like username, email, and (need to add) key"
+  echo "reg or -r - register git info like username, email, and (need to add) key"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   if [ "$2" != NULL ]; then
     git add $2
@@ -100,7 +100,7 @@ elif [ "$1" == "install" ] || [ "$1" == "-i" ]; then
   sudo apt-get install git
   sudo apt-get install g++
   sudo apt-get install gdb
-elif [ "$1" == "git" ] || [ "$1" == "-g" ]; then
+elif [ "$1" == "reg" ] || [ "$1" == "-r" ]; then
   echo -n "User Name: "
   read un
   echo -n "Email: "
