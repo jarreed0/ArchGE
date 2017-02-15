@@ -8,16 +8,17 @@
 ################################################################
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
-  echo "push or -p - push everything"
+  echo "push or -p - push everything or specified file"
   echo "test or -t - build and test sample program"
-  #echo "conf or -c - reconfigure makefile #in the works"
   echo "update or -u - update get branch from main"
   echo "setup or -s - make it so you can run the program without ./, it also works everywhere, also updates it"
-  #echo "check or -cf - to check if the installed version is the newest version"
-  echo "debug or -d - compile program and run it in debug mode"
   echo "create or -c - create a git branch"
+  echo "In the works:"
   echo "install or -i - install missing dependicies"
   echo "reg or -r - register git info like username, email, and (need to add) key"
+  echo "check or -cf - to check if the installed version is the newest version"
+  echo "conf or -c - reconfigure makefile #in the works"
+  echo "debug or -d - compile program and run it in debug mode"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   if [ "$2" != NULL ]; then
     git add $2
