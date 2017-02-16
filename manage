@@ -14,6 +14,9 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "setup or -s - make it so you can run the program without ./, it also works everywhere, also updates it"
   echo "create or -c - create a git branch"
   echo "install or -i - install missing dependicies"
+  echo "engine or -e - rebuild engine"
+  echo "game or -g - build game based on current engine build"
+  echo "clean or -cl - clean out all built files and engine library"
   echo "In the works:"
   echo "reg or -r - CAN: register git info like username, email, and CANNOT YET:(need to add) key"
   echo "check or -cf - to check if the installed version is the newest version"
@@ -34,12 +37,28 @@ elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
   cd ArchGE
   g++ -c *.cpp
   ar rvs ArchGE.a *.o
+  rm *.o*
   cd ..
   g++ main.cpp ArchGE/ArchGE.a -lSDL2
   ./a.out
   rm *.o*
+elif [ "$1" == "engine" ] || [ "$1" == "-e" ]; then
+  cd ArchGE
+  g++ -c *.cpp
+  ar rvs ArchGE.a *.o
+  rm *.o
+  cd ..
+elif [ "$1" == "game" ] || [ "$1" == "-g" ]; then
+  if [ "$2" != NULL ]; then
+    g++ main.cpp ArchGE/ArchGE.a -lSDL2
+  else #THIS DOESNT WORK ... IDK ... I'LL FIX IT LATER
+    g++ main.cpp ArchGE/ArchGE.a -o "$2" -lSDL2
+  fi
+elif [ "$1" == "clean" ] || [ "$1" == "-cl" ]; then
+  rm *.o*
   cd ArchGE
   rm *.o*
+  rm *.a
   cd ..
 elif [ "$1" == "conf" ] || [ "$1" == "-cf" ]; then
   #NEED TO FINISH THIS
