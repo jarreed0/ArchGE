@@ -1,12 +1,10 @@
 #ifndef COORD_H
 #define COORD_H
 
-#include "global.h"
-
 /*
 This class stores coordinates.
 Created by: Avery Reed on 2/14/17
-Last Edited by: Avery Reed 2/14/17
+Last Edited by: Avery Reed 2/16/17
 */
 
 class Coord {

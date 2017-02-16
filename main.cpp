@@ -16,7 +16,8 @@ Last Edited by: Avery Reed 2/16/17
 int main() {
   Arch engine(320, 480, "Park Stroll"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications
-  //engine.Object grass(engine.Coord c(3, 3));
+  Coord c(3,3);
+  Object grass(c);
   /*engine.loadImage("res/tiles.png", "tilesimg");
   engine.loadImage("res/sprite.png", "playerimg");
   engine.loadImage("res/gui.png", "guiimg");
@@ -45,7 +46,7 @@ int main() {
     if(engine.input() = "right") { engine.moveMap("player", "right", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 3, 2); }
     if(engine.input() = "down") { engine.moveMap("player", "down", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 2, 3); }
     if(engine.input() = "up") { engine.moveMap("player", "up", engine.getEntitySpeed("player")); engine.setEntityFrame("player", 2, 1); }*/
-    //std::cout << "(" <<  grass.getCoord().getX() << " ," << grass.getCoord().getY() << ")" << endl;
+    std::cout << "(" <<  grass.getCoord().getX() << ", " << grass.getCoord().getY() << ")" << endl;
   }
   return 0;
 }
