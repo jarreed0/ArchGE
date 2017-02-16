@@ -38,6 +38,9 @@ elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
   g++ main.cpp ArchGE/ArchGE.a -lSDL2
   ./a.out
   rm *.o*
+  cd ArchGE
+  rm *.o*
+  cd ..
 elif [ "$1" == "conf" ] || [ "$1" == "-cf" ]; then
   #NEED TO FINISH THIS
   echo "This is still being worked on"
