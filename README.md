@@ -3,8 +3,11 @@
 #Under Heavy Development
 
 Build game engine library with:
+
 g++ -c *.cpp
+
 ar rvs ArchGE.a *.o
 
 Build sample game with:
+
 g++ main.cpp ArchGE/ArchGE.a -lSDL2
