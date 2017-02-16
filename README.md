@@ -1,23 +1,10 @@
-#*NOTICE: THIS IS NOT THE CURRENT BUILD*
-#I AM REDESIGNING IT ON MY PC RN AND NOT ON GITHUB
-#THE CODE SHOULD BE UP BY THE END OF THE WEEKEND
-#I JUST WANTED TO REDESIGN HOW IT WORKS
-#SO I'M STARTING SOME OF IT OVER FROM SCRATCH
-#ITS IMPLEMENTATIONS WILL RUN THE SAME
-#IT JUST NEEDS TO WORK AS A LIBRARY BETTER
+#Arch Game Engine is a 2D game engine written in C++ using SDL2
 
-#ArchGE is a Isometric 2D C++ Game Engine using SDL2
+#Under Heavy Development
 
-#UNDER HEAVY DEVELOPMENT
+Build game engine library with:
+g++ -c *.cpp
+ar rvs ArchGE.a *.o
 
-clone branch from terminal:
-
-git clone https://github.com/jarreed0/ArchGE.git
-
-Use the manage command to do things.
-
-(you may have to give it permission by: chmod u+wx manage)
-
-Install manage to the path: ./manage -s
-
-manage -h for help
+Build sample game with:
+g++ main.cpp ArchGE/ArchGE.a -lSDL2

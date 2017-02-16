@@ -1,9 +1,11 @@
-#include "arch.h"
+#include "ArchGE/H/arch.h"
+#include "ArchGE/H/object.h"
+#include "ArchGE/H/coord.h"
 
 /*
 This is a test main function in order to test out the game engine mechanics.
 Created by: Avery Reed on 2/10/17
-Last Edited by: Avery Reed 2/15/17
+Last Edited by: Avery Reed 2/16/17
 */
 
 //The commented code does not work
