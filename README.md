@@ -2,6 +2,8 @@
 
 #Under Heavy Development
 
+Note: the actual engine and library is in ArchGE/ and the sample code is in /
+
 Build game engine library with:
 
 g++ -c *.cpp
