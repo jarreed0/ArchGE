@@ -1,6 +1,9 @@
 #ifndef COORD_H
 #define COORD_H
 
+using namespace std;
+#include <iostream>
+
 /*
 This class stores coordinates.
 Created by: Avery Reed on 2/14/17

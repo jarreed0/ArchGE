@@ -1,6 +1,9 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
+using namespace std;
+#include <iostream>
+
 #include "coord.h"
 
 /*
@@ -12,10 +15,10 @@ Last Edited by: Avery Reed 2/16/17
 class Object {
 public:
   Object();
-  Object(Coord c);
+  Object(Coord c, string n);
   ~Object();
   Coord getCoord() const {return c;}
-  void setCoord(Coord ci) {c = ci;}
+  void setCoord(Coord ci) {c.setX(ci.getX()); c.setY(ci.getY());}
   string getName() const {return name;}
   void setName(string n) {name = n;}
 private:

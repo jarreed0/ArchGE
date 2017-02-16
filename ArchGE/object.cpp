@@ -9,8 +9,9 @@ Object::Object() {
 
 }
 
-Object::Object(Coord oc) {
-  c = oc;
+Object::Object(Coord oc, string n) {
+  setCoord(oc);
+  setName(n);
 }
 
 Object::~Object() {
