@@ -7,6 +7,7 @@ using namespace std;
 
 #include "object.h"
 #include "coord.h"
+#include "image.h"
 
 /*
 This is the main header file for the engine that will have most classes underneath.
@@ -43,12 +44,16 @@ public:
   int getWidth() const {return width;}
   int getHeight() const {return height;}
   string getTitle() const {return title;}
+
+  void drawBackground(Image bkg);
+  void drawImage(Image img, Object o);
 private:
   SDL_Window *win = NULL;
   SDL_Renderer *renderer = NULL;
   int posX, posY, width, height;
   string title;
   Uint32 flags;
+  Uint32 start;
 };
 
 #endif //ARCH_H

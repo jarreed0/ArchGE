@@ -60,7 +60,21 @@ bool Arch::loopCall() {
     }
   }
 
+  //Game loop
+  start=SDL_GetTicks();
+	//SDL_BlitSurface(background,&camera,screen,NULL);
   SDL_RenderClear(renderer);
   SDL_RenderPresent(renderer);
+  if(1000/30>(SDL_GetTicks()-start)) SDL_Delay(1000/30-(SDL_GetTicks()-start));
+  //
+
   return true;
+}
+
+void Arch::drawBackground(Image bkg) {
+
+}
+
+void Arch::drawImage(Image img, Object o) {
+
 }
