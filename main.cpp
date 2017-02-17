@@ -17,15 +17,19 @@ Last Edited by: Avery Reed 2/16/17
 int main() {
   Arch engine(320, 480, "Park Stroll"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications
+
   Coord c(3,3);
   Object grass(c, "grass");
-  Image background;
-  background.loadImage("ArchGE/Res/archge-bw.png");
+  //std::cout << "(" <<  grass.getCoord().getX() << ", " << grass.getCoord().getY() << ")" << endl;
+
+  Image background("bkg", "ArchGE/Res/archge-bw.png", engine.getRenderer());
+  engine.setBackground(background);
+
   bool loop = true;
-  std::cout << "(" <<  grass.getCoord().getX() << ", " << grass.getCoord().getY() << ")" << endl;
+
   while (loop) { //gameloop
     loop = engine.loopCall(); //calls loop from engine, if it fails the loop will end
-    engine.drawBackground(background);
   }
+
   return 0;
 }

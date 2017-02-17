@@ -2,6 +2,7 @@
 #define ARCH_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 using namespace std;
 #include <iostream>
 
@@ -29,6 +30,9 @@ public:
   void createWindow();
   bool loopCall();
 
+  SDL_Renderer* getRenderer() const {return renderer;}
+  void setRenderer(SDL_Renderer* r) {renderer = r;}
+
   void setPosX(int x) {posX = x;}
   void setPosY(int y) {posY = y;}
   void setWidth(int w) {width = w;}
@@ -45,8 +49,9 @@ public:
   int getHeight() const {return height;}
   string getTitle() const {return title;}
 
-  void drawBackground(Image bkg);
-  void drawImage(Image img, Object o);
+  void setBackground(Image b) {bkg = b;}
+  void drawBackground();
+
 private:
   SDL_Window *win = NULL;
   SDL_Renderer *renderer = NULL;
@@ -54,6 +59,7 @@ private:
   string title;
   Uint32 flags;
   Uint32 start;
+  Image bkg;
 };
 
 #endif //ARCH_H
