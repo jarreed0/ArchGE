@@ -39,7 +39,7 @@ elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
   ar rvs ArchGE.a *.o
   rm *.o*
   cd ..
-  g++ main.cpp ArchGE/ArchGE.a -lSDL2 -lSDL2_ttf -lSDL2_image
+  g++ main.cpp ArchGE/ArchGE.a -lSDL2 -lSDL_ttf -lSDL2_image
   ./a.out
   rm *.o*
 elif [ "$1" == "engine" ] || [ "$1" == "-e" ]; then
@@ -50,9 +50,9 @@ elif [ "$1" == "engine" ] || [ "$1" == "-e" ]; then
   cd ..
 elif [ "$1" == "game" ] || [ "$1" == "-g" ]; then
   if [ "$2" != NULL ]; then
-    g++ main.cpp ArchGE/ArchGE.a -lSDL2 -lSDL2_ttf -lSDL2_image
+    g++ main.cpp ArchGE/ArchGE.a -lSDL2 -lSDL_ttf -lSDL2_image
   else #THIS DOESNT WORK ... IDK ... I'LL FIX IT LATER
-    g++ main.cpp ArchGE/ArchGE.a -o "$2" -lSDL2 -lSDL2_ttf -lSDL2_image
+    g++ main.cpp ArchGE/ArchGE.a -o "$2" -lSDL -lSDL2_ttf -lSDL2_image
   fi
 elif [ "$1" == "clean" ] || [ "$1" == "-cl" ]; then
   rm *.o*
@@ -126,6 +126,8 @@ elif [ "$1" == "install" ] || [ "$1" == "-i" ]; then
   sudo apt-get install git
   sudo apt-get install g++
   sudo apt-get install gdb
+  sudo apt-get install libsdl2-2.0-0
+  sudo apt-get install libsdl-ttf2.0-0
 elif [ "$1" == "reg" ] || [ "$1" == "-r" ]; then
   echo -n "User Name: "
   read un
