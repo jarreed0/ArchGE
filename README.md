@@ -1,5 +1,7 @@
 #Arch Game Engine is a 2D game engine written in C++ using SDL2
 
+#I think that the Window and Image Loader need to be remade..
+
 #Under Heavy Development
 
 Note: the actual engine and library is in ArchGE/ and the sample code is in /
