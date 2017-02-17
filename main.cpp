@@ -14,7 +14,7 @@ Last Edited by: Avery Reed 2/16/17
 //Though it is not how the engine will work at all
 //The engine will have refrenced objects instead of just calling all functions just from the engine
 
-int main() {
+int main(int argc, char *argv[]) {
   Arch engine(320, 480, "Park Stroll"); //creates reference of engine and sets window specifications
   engine.createWindow(); //creates the window based on specifications
 
@@ -22,8 +22,8 @@ int main() {
   Object grass(c, "grass");
   //std::cout << "(" <<  grass.getCoord().getX() << ", " << grass.getCoord().getY() << ")" << endl;
 
-  Image background("bkg", "ArchGE/Res/archge-bw.png", engine.getRenderer());
-  engine.setBackground(background);
+  Image background("bkg", "ArchGE/Res/archge-bw.bmp", engine.getRenderer());
+  //engine.setBackground(background);
 
   bool loop = true;
 

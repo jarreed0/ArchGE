@@ -63,7 +63,7 @@ bool Arch::loopCall() {
   //Game loop
   start=SDL_GetTicks();
 	//SDL_BlitSurface(background,&camera,screen,NULL);
-  drawBackground();
+  if(!bkg.isNull()) drawBackground();
   SDL_RenderClear(renderer);
   SDL_RenderPresent(renderer);
   if(1000/30>(SDL_GetTicks()-start)) SDL_Delay(1000/30-(SDL_GetTicks()-start));
@@ -73,5 +73,5 @@ bool Arch::loopCall() {
 }
 
 void Arch::drawBackground() {
-  renderer = bkg.draw(renderer, 0, 0);
+  renderer = bkg.draw(renderer);
 }
