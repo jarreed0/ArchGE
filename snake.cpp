@@ -53,7 +53,7 @@ int Snake::exec() {
     }
     if(handle.checkKey(handle.quit)) done = true;;
     if(handle.checkKey(handle.esc)) done = true;
-    eng.setColor(0x00, 0x7f, 0x00);
+    eng.setColor(0x7f, 0x7f, 0x7f);
     eng.preLoop();
     auto currentTick = SDL_GetTicks();
     for (auto t = oldTick; t < currentTick; ++t)
