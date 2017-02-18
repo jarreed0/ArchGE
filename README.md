@@ -1,9 +1,35 @@
 #ArchGE - A 2D Game Engine written in C++ and using SDL2
 
-#DO NOT RUN THE PARK SAMPLE GAME - IT WILL CRASH YOUR COMPUTER HAHA
-#IT doesn't have anything to do with an engine problem, its just the game has an error.
+#DO NOT RUN THE PARK SAMPLE GAME - IT WILL (may) CRASH YOUR COMPUTER HAHA
+It doesn't have anything to do with an engine problem, its just the game has an error.
 
 #Under Heavy Development
+
+Try out manage:
+
+chmod u+wx manage
+
+./manage -s (or setup)
+
+manage -i (or install)
+
+Build engine with manage:
+
+manage engine (or -e)
+
+Build game with engine:
+
+manage game (or -g) GAMEDIR (the game needs a ./build.sh, just copy it from the snake one and edit it a bit)
+
+Test engine/game with the newest version
+
+manage test GAMEDIR
+
+Find out more:
+
+manage -h (or help)
+
+And yes I know it is a little cluttered and keep in mind it has a few errors.
 
 For Engine Devs:
 
