@@ -4,8 +4,15 @@ Park::Park() {
  window.init(WINDOW_WIDTH, WINDOW_HEIGHT, 0);
  //player.setImage("res/player.bmp", window.renderScreen());
  //coin.setImage("res/coin.bmp", window.renderScreen());
- grass.setSource(0, 0, 45, 45);
- int grassAmount = rand()%(50-10+1)+50;
+ int grassAmount = window.random(10, 50);
+ for(int i; i<grassAmount; i++) {
+  Object grasstmp;
+  grasstmp.setImage("res/grass.bmp", window.renderScreen());
+  grasstmp.setSource(0, 0, 45, 45);
+  grasstmp.setDest(i*window.random(8, 14), i*window.random(3, 19));
+  grasstmp.setAng(window.random(0, 180));
+  grass.push_back(grasstmp);
+ }
 }
 Park::~Park() {
  window.deconstruct();
@@ -22,7 +29,8 @@ int Park::start() {
   }
   return 0;
 }
-
 void Park::draw() {
-
+ for(int i; i<grass.size(); i++) {
+  window.pushToScreen(grass[i]);
+ }
 }

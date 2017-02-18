@@ -5,6 +5,7 @@
 #include <SDL2/SDL.h>
 using namespace std;
 #include <iostream>
+#include <cassert> 
 
 #include "image.h"
 #include "object.h"
@@ -24,6 +25,8 @@ public:
   void setColor(Uint32 r, Uint32 g, Uint32 b);
   void preLoop();
   void endLoop();
+  int random(int min, int max);
+  double random(double min, double max);
 private:
   SDL_Renderer* engren;
   SDL_Window *engwin;
