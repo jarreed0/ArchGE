@@ -1,3 +1,6 @@
+echo "lol as of now don't bother running this"
+echo "it may crash/freeze your computer"
+
 cd ../..
 cd engine
 g++ -c *.cpp

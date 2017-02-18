@@ -21,6 +21,14 @@ public:
   void setDY(int y);
   void setDW(int w);
   void setDH(int h);
+  int getSX();
+  int getSY();
+  int getSW();
+  int getSH();
+  int getDX();
+  int getDY();
+  int getDW();
+  int getDH();
   void setAng(int a);
   int getAng();
 private:

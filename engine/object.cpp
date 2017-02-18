@@ -28,6 +28,14 @@ void Object::setDX(int x) {dest.x = x;}
 void Object::setDY(int y) {dest.y = y;}
 void Object::setDW(int w) {dest.w = w;}
 void Object::setDH(int h) {dest.h = h;}
+int Object::getSX() {return rect.x;}
+int Object::getSY() {return rect.y;}
+int Object::getSW() {return rect.w;}
+int Object::getSH() {return rect.h;}
+int Object::getDX() {return dest.x;}
+int Object::getDY() {return dest.w;}
+int Object::getDW() {return dest.h;}
+int Object::getDH() {return dest.h;}
 void Object::setAng(int a) {
   angle = a;
 }
