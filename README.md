@@ -27,7 +27,7 @@ manage game (or -g) GAMEDIR (the game needs a ./build.sh, just copy it from the 
 
 manage test GAMEDIR
 
-Find out more:
+##Find out more:
 
 manage -h (or help)
 
