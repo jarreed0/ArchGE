@@ -5,7 +5,9 @@ It doesn't have anything to do with an engine problem, its just the game has an 
 
 #Under Heavy Development
 
-Try out manage:
+#Manage
+
+##Try out manage:
 
 chmod u+wx manage
 
@@ -13,15 +15,15 @@ chmod u+wx manage
 
 manage -i (or install)
 
-Build engine with manage:
+##Build engine with manage:
 
 manage engine (or -e)
 
-Build game with engine:
+##Build game with engine:
 
 manage game (or -g) GAMEDIR (the game needs a ./build.sh, just copy it from the snake one and edit it a bit)
 
-Test engine/game with the newest version
+##Test engine/game with the newest version
 
 manage test GAMEDIR
 
@@ -31,10 +33,10 @@ manage -h (or help)
 
 And yes I know it is a little cluttered and keep in mind it has a few errors.
 
-For Engine Devs:
+#For Engine Devs:
 
 rebuild engine and game with: ./build.sh
 
-For Game Devs:
+#For Game Devs:
 
 Tutorials on how to use the engine will be out soon as the engine advances.
