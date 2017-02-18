@@ -18,7 +18,7 @@ using namespace std;
 //I don't have any example functions that need to be created so just have at it and create whatever functions you want
 //Below and in the .cpp file I have an example function that moves an object towards another object
 
-class Physics() {
+class Physics {
 public:
   Physics();
   ~Physics();

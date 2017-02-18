@@ -5,11 +5,12 @@
 #include <SDL2/SDL.h>
 using namespace std;
 #include <iostream>
-#include <cassert> 
+#include <cassert>
 
 #include "image.h"
 #include "object.h"
 #include "input.h"
+#include "physics.h"
 
 class Engine {
 public:
