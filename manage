@@ -46,7 +46,7 @@ elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
   fi
 elif [ "$1" == "engine" ] || [ "$1" == "-e" ]; then
   cd engine
-  ./buid.sh
+  ./build.sh
 elif [ "$1" == "game" ] || [ "$1" == "-g" ]; then
   if [ "$2" = NULL ]; then
     echo "Specify games directory"
