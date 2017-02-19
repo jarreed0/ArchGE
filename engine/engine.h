@@ -11,6 +11,8 @@ using namespace std;
 #include "object.h"
 #include "input.h"
 #include "physics.h"
+#include "tile.h"
+#include "tileset.h"
 
 class Engine {
 public:
