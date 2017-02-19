@@ -18,6 +18,7 @@ public:
   void loadTiles(string filename, int iw, int ih);
   void addTile(Tile t); //push tile
   vector<Tile> getTilesToRender();
+  void move(int mx, int my);
 private:
   struct tile {
     int x;
@@ -38,7 +39,7 @@ private:
   int winWidth, winHeight;
   int layersize, xsize, ysize;
   vector < layer > tileset;
-  Tile tiles[];
+  Tile *tiles;
 };
 
 #endif //TILESET_H
