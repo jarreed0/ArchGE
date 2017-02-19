@@ -15,16 +15,29 @@ public:
   void setWindowSize(int ww, int wh);
   int getX();
   int getY();
-  void loadTiles(string filename);
+  void loadTiles(string filename, int iw, int ih);
   void addTile(Tile t); //push tile
   vector<Tile> getTilesToRender();
 private:
+  struct tile {
+    int x;
+    int y;
+    Tile tile;
+  };
+  struct layer {
+    int width;
+    int height;
+    int x;
+    int y;
+    int tw, th;
+    vector < tile > tiles;
+  };
   int angle;
   int x, y;
+  bool set;
   int winWidth, winHeight;
-  vector<int> width, height;
   int layersize, xsize, ysize;
-  vector < vector < vector < int > > > tileset;
+  vector < layer > tileset;
   Tile tiles[];
 };
 

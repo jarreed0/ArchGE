@@ -9,6 +9,8 @@ public:
   ~Tile();
   void setValue(int v);
   int getValue();
+
+  //Tile& operator=(const Tile& rhs);
 private:
   int value;
 };
