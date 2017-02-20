@@ -1,7 +1,7 @@
 #include "snake.h"
 
 Snake::Snake() {
-  eng.init(Width, Height, 0);
+  eng.init("Snake", Width, Height, 0);
 
   snake.setImage("sprites.bmp", eng.renderScreen());
   cherry.setImage("sprites.bmp", eng.renderScreen());
