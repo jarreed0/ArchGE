@@ -3,41 +3,49 @@
 Engine::Engine() {}
 Engine::~Engine() {}
 
-SDL_Renderer* Engine::init(const int& w, const int& h, int flag) {
+SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag) {
   int res = SDL_Init(SDL_INIT_EVERYTHING);
   SDL_CHECK(res == 0, "SDL_Init");
   SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
   SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED);
+  setName(s);
   return engren;
 }
-SDL_Renderer* Engine::init(const int& w, const int& h, int flag, int it) {
+SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int it) {
   int res = SDL_Init(it);
   SDL_CHECK(res == 0, "SDL_Init");
   SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
   SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED);
+  setName(s);
   return engren;
 }
-SDL_Renderer* Engine::init(const int& w, const int& h, int flag, int x, int y) {
+SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x, int y) {
   int res = SDL_Init(SDL_INIT_EVERYTHING);
   SDL_CHECK(res == 0, "SDL_Init");
   SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
   SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, x, y);
+  setName(s);
   return engren;
 }
-SDL_Renderer* Engine::init(const int& w, const int& h, int flag, int x, int y, int it) {
+SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x, int y, int it) {
   int res = SDL_Init(it);
   SDL_CHECK(res == 0, "SDL_Init");
   SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
   SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, x, y);
+  setName(s);
   return engren;
+}
+
+void Engine::setName(string s) {
+  SDL_SetWindowTitle(engwin, s.c_str());
 }
 
 void Engine::deconstruct(){

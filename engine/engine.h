@@ -18,10 +18,11 @@ class Engine {
 public:
   Engine();
   ~Engine();
-  SDL_Renderer* init(const int& w, const int& h, int flag);
-  SDL_Renderer* init(const int& w, const int& h, int flag, int it);
-  SDL_Renderer* init(const int& w, const int& h, int flag, int x, int y);
-  SDL_Renderer* init(const int& w, const int& h, int flag, int x, int y, int it);
+  SDL_Renderer* init(string s, const int& w, const int& h, int flag);
+  SDL_Renderer* init(string s, const int& w, const int& h, int flag, int it);
+  SDL_Renderer* init(string s, const int& w, const int& h, int flag, int x, int y);
+  SDL_Renderer* init(string s, const int& w, const int& h, int flag, int x, int y, int it);
+  void setName(string s);
   void deconstruct();
   void pushToScreen(Object obj);
   SDL_Renderer* renderScreen();
