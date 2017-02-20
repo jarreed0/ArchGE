@@ -9,10 +9,11 @@ public:
   ~Tile();
   void setValue(int v);
   int getValue();
-
-  //Tile& operator=(const Tile& rhs);
+  void setName(string s);
+  string getName();
 private:
   int value;
+  string name;
 };
 
 #endif //TILE_H

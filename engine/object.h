@@ -11,6 +11,8 @@ public:
   SDL_Texture* getImage();
   void setSource(int x, int y, int w, int h);
   void setDest(int w, int h);
+  void setDest(int w, int h, int x, int y);
+  void setDestCoord(int x, int y);
   SDL_Rect getSource();
   SDL_Rect getDest();
   void setSX(int x);

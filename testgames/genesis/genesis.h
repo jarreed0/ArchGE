@@ -32,28 +32,6 @@ private:
   string TITLE = "Genesis";
   Object background;
   Object player;
-  Tile grass;
-  Tile rock;
-  Tile flower;
-  Tile water;
-  Tile dirt;
-  Tile copper;
-  Tile iron;
-  Tile wood;
-  Tile torch;
-  Tile table;
-  Tile stone;
-  Tile brick;
-  Tile leaf;
-  Tile cobble;
-  Tile post;
-  Tile chamber;
-  Tile workbench;
-  Tile plank;
-  Tile chickenegg;
-  Tile sand;
-  Tile cactus;
-  Tile snow;
   vector<Tile> tiles;
 };
 

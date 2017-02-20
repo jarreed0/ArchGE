@@ -111,11 +111,4 @@ void Input::reset() {
   for(int i; i<50; i++) {
     keys[i] = 0;
   }
-  keys[10]=0;
-  keys[11]=0;
-  keys[12]=0;
-  keys[13]=0;
-  keys[43]=0;
-  keys[44]=0;
-  keys[45]=0;
 }

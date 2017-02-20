@@ -16,6 +16,14 @@ void Object::setDest(int w, int h) {
   setDW(w);
   setDH(h);
 }
+void Object::setDest(int w, int h, int x, int y) {
+  setDest(w, h);
+  setDestCoord(x, y);
+}
+void Object::setDestCoord(int x, int y) {
+   setDX(x);
+   setDY(y);
+}
 SDL_Rect Object::getSource() {
   return rect;
 }
