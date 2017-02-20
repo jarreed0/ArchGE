@@ -43,25 +43,24 @@ void Tileset::loadTiles(string filename, int iw, int ih) {
   in >> w;
   in >> h;
   int current;
-  //vector < vector <Tile> > tilevec;
   layer cur;
   cur.tw = iw;
-  cur.tw = ih;
+  cur.th = ih;
   cur.width = w;
   cur.height = h;
   for(int i=0;i<h;i++) {
-    tile tmp;
-    tmp.x=i;
           for(int j=0;j<w;j++) {
                   if(in.eof()) {
                           cout << "File end reached too soon" << endl;
                           return;
                   }
                   in >> current;
-                  tmp.y=current;
+                  tile tmp;
+                  tmp.tile = tiles[current];
+                  tmp.x=j;
+                  tmp.y=i;
+                  cur.tiles.push_back(tmp);
           }
-          tmp.tile = tiles[current];
-          cur.tiles.push_back(tmp);
   }
   if(!in.eof()) {
     int setX, setY;
@@ -84,18 +83,21 @@ vector<Tile> Tileset::getTilesToRender() {
   for(int i = 0; i<tileset.size(); i++) {
     int ttw = winWidth/tileset[i].tw;
     int tth = winHeight/tileset[i].tw;
-    int startx = tileset[i].x-(ttw/2)-1;
-    int starty = tileset[i].y-(tth/2)-1;
-    int endx = ttw+1;
-    int endy = tth+1;
+    int startx = tileset[i].x-(ttw/2)-tileset[i].tw;
+    int starty = tileset[i].y-(tth/2)-tileset[i].th;
+    int endx = ttw+tileset[i].tw;
+    int endy = tth+tileset[i].th;
     if(startx < 0) startx = 0;
     if(starty < 0) starty = 0;
     for(int j = 0; j<tileset[i].tiles.size(); j++) {
-      if(startx <= tileset[i].tiles[j].x <= endx ) {
-        if(starty <= tileset[i].tiles[j].y <= endy) {
+      //if(tileset[i].tiles[j].x <= endx && !(tileset[i].tiles[j].x < startx)) {
+        //if(tileset[i].tiles[j].y <= endy && !(tileset[i].tiles[j].y < starty)) {
+          tileset[i].tiles[j].tile.setDest(tileset[i].tw, tileset[i].th);
+          tileset[i].tiles[j].tile.setDX(tileset[i].tw*tileset[i].tiles[j].x);
+          tileset[i].tiles[j].tile.setDY(tileset[i].th*tileset[i].tiles[j].y);
           vec.push_back(tileset[i].tiles[j].tile);
-        }
-      }
+        //}
+      //}
     }
   }
   return vec;

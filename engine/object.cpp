@@ -1,18 +1,20 @@
 #include "object.h"
 
-Object::Object() {}
+Object::Object() {
+  angle = 0;
+}
 Object::~Object() {}
 void Object::setImage(string file, SDL_Renderer* ren) {img.loadImage(file, ren);}
 SDL_Texture* Object::getImage() {return img.getImage();}
 void Object::setSource(int x, int y, int w, int h) {
-  rect.x = x;
-  rect.y = y;
-  rect.w = w;
-  rect.h = h;
+  setSX(x);
+  setSY(y);
+  setSW(w);
+  setSH(h);
 }
 void Object::setDest(int w, int h) {
-  dest.w = w;
-  dest.h = h;
+  setDW(w);
+  setDH(h);
 }
 SDL_Rect Object::getSource() {
   return rect;
