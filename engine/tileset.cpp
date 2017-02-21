@@ -114,14 +114,14 @@ vector<Tile> Tileset::getTilesToRender() {
     if(startx < 0) startx = 0;
     if(starty < 0) starty = 0;
     for(int j = 0; j<tileset[i].tiles.size(); j++) {
-      //if(tileset[i].tiles[j].x <= endx && !(tileset[i].tiles[j].x < startx)) {
-        //if(tileset[i].tiles[j].y <= endy && !(tileset[i].tiles[j].y < starty)) {
+      if(tileset[i].tiles[j].x <= endx && (tileset[i].tiles[j].x < startx)) {
+        if(tileset[i].tiles[j].y <= endy && (tileset[i].tiles[j].y < starty)) {
           tileset[i].tiles[j].tile.setDest(tileset[i].tw, tileset[i].th);
           tileset[i].tiles[j].tile.setDX(tileset[i].tw*tileset[i].tiles[j].x);
           tileset[i].tiles[j].tile.setDY(tileset[i].th*tileset[i].tiles[j].y);
           vec.push_back(tileset[i].tiles[j].tile);
-        //}
-      //}
+        }
+      }
     }
   }
   return vec;

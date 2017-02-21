@@ -51,9 +51,6 @@ void Genesis::draw() {
   engine.pushToScreen(player);
   tiles = map.getTilesToRender();
   for(int i = 0; i<tiles.size(); i++) {
-    //tiles[i].setDest(TILE_SIZE, TILE_SIZE);
-    //tiles[i].setDX(50);
-    //tiles[i].setDY(50);
     engine.pushToScreen(tiles[i]);
   }
 }
