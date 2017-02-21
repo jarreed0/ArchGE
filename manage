@@ -23,6 +23,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "conf or -c - reconfigure makefile #in the works"
   echo "debug or -d - compile program and run it in debug mode"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
+  manage clean
   if [ "$2" != NULL ]; then
     git add $2
   else
