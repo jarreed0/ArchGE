@@ -78,29 +78,22 @@ void Tileset::loadTiles(string filename, int iw, int ih) {
 void Tileset::addTile(Tile t) {
   tiles[t.getValue()] = t;
 }
-void Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int c, int r, int width, int height) {
+Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int c, int r, int width, int height) {
   Tile tmp;
   tmp.setName(name);
   tmp.setSource(((r-1)*width), ((c-1)*height), width, height);
   tmp.setImage(file, ren);
   tmp.setValue(value);
   tiles[value] = tmp;
+  return tmp;
 }
-void Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height) {
-  Tile tmp;
-  tmp.setName(name);
-  tmp.setSource(((value-1)*width), 0, width, height);
-  tmp.setImage(file, ren);
-  tmp.setValue(value);
-  tiles[value] = tmp;
+Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height) {
+  Tile tmp = addTile(name, file, ren, value, 1, value, width, height);
+  return tmp;
 }
-void Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int size) {
-  Tile tmp;
-  tmp.setName(name);
-  tmp.setSource(((value-1)*size), 0, size, size);
-  tmp.setImage(file, ren);
-  tmp.setValue(value);
-  tiles[value] = tmp;
+Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int size) {
+  Tile tmp = addTile(name, file, ren, value, 1, value, size, size);
+  return tmp;
 }
 vector<Tile> Tileset::getTilesToRender() {
   vector <Tile> vec;

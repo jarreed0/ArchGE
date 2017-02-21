@@ -17,9 +17,9 @@ public:
   int getY();
   void loadTiles(string filename, int iw, int ih);
   void addTile(Tile t); //push tile
-  void addTile(string name, string file, SDL_Renderer* ren, int value, int r, int c, int width, int height);
-  void addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height);
-  void addTile(string name, string file, SDL_Renderer* ren, int value, int size);
+  Tile addTile(string name, string file, SDL_Renderer* ren, int value, int r, int c, int width, int height);
+  Tile addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height);
+  Tile addTile(string name, string file, SDL_Renderer* ren, int value, int size);
   vector<Tile> getTilesToRender();
   void move(int mx, int my);
 private:
