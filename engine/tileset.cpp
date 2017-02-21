@@ -98,8 +98,8 @@ Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, in
 vector<Tile> Tileset::getTilesToRender() {
   vector <Tile> vec;
   for(int i = 0; i<tileset.size(); i++) {
-    int ttw = winWidth/tileset[i].tw;
-    int tth = winHeight/tileset[i].tw;
+    int ttw = winWidth/tileset[i].tw/2+2;
+    int tth = winHeight/tileset[i].tw/2+2;
     int startx = tileset[i].x-(ttw/2)-tileset[i].tw;
     int starty = tileset[i].y-(tth/2)-tileset[i].th;
     int endx = ttw+tileset[i].tw;
@@ -109,9 +109,7 @@ vector<Tile> Tileset::getTilesToRender() {
     for(int j = 0; j<tileset[i].tiles.size(); j++) {
       if(tileset[i].tiles[j].x <= endx && (tileset[i].tiles[j].x < startx)) {
         if(tileset[i].tiles[j].y <= endy && (tileset[i].tiles[j].y < starty)) {
-          tileset[i].tiles[j].tile.setDest(tileset[i].tw, tileset[i].th);
-          tileset[i].tiles[j].tile.setDX(tileset[i].tw*tileset[i].tiles[j].x);
-          tileset[i].tiles[j].tile.setDY(tileset[i].th*tileset[i].tiles[j].y);
+          tileset[i].tiles[j].tile.setDest(tileset[i].tw, tileset[i].th,tileset[i].tw*tileset[i].tiles[j].x, tileset[i].th*tileset[i].tiles[j].y);
           vec.push_back(tileset[i].tiles[j].tile);
         }
       }
@@ -119,7 +117,15 @@ vector<Tile> Tileset::getTilesToRender() {
   }
   return vec;
 }
-void Tileset::move(int mx, int my) {
-  x = x + mx;
-  y = y = my;
+void Tileset::move(double mx, double my) {
+  for(int i=0; i<tileset.size(); i++) {
+    tileset[i].x += (mx/10);
+    tileset[i].y += (my/10);
+    for(int j=0; j<tileset[i].tiles.size(); j++) {
+      tileset[i].tiles[j].x -= (mx/10);
+      tileset[i].tiles[j].y += (my/10);
+    }
+  }
+  x += (mx/10);
+  y += (my/10);
 }

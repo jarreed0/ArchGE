@@ -21,23 +21,23 @@ public:
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height);
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int size);
   vector<Tile> getTilesToRender();
-  void move(int mx, int my);
+  void move(double mx, double my);
 private:
   struct tile {
-    int x;
-    int y;
+    double x;
+    double y;
     Tile tile;
   };
   struct layer {
     int width;
     int height;
-    int x;
-    int y;
+    double x;
+    double y;
     int tw, th;
     vector < tile > tiles;
   };
   int angle;
-  int x, y;
+  double x, y;
   bool set;
   int winWidth, winHeight;
   int layersize, xsize, ysize;
