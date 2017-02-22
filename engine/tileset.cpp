@@ -4,6 +4,7 @@ Tileset::Tileset(int amount) {
   tiles = new Tile[amount+1];
   layersize = xsize = ysize = 0;
   set=false;
+  loaded=true;
 }
 Tileset::~Tileset() {
   delete[]tiles;
@@ -33,12 +34,21 @@ int Tileset::getX() {
 int Tileset::getY() {
   return y;
 }
+vector<Tile> Tileset::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
+  vector<Tile> tmp;
+  while(!loaded) {
+  }
+  tmp = genMap(name, map, img, ren, width, height, r, count);
+  return tmp;
+}
 vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
+  loaded = false;
   vector<Tile> tmp;
   for(int i=0; i<(count-1); i++) {
     tmp.push_back(addTile(name, img, ren, i, r, i, width, height));
   }
   loadTiles(map, width, height);
+  loaded = true;
   return tmp;
 }
 void Tileset::loadTiles(string filename, int iw, int ih) {

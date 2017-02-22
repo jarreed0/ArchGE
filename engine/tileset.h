@@ -16,6 +16,7 @@ public:
   void setWindowSize(int ww, int wh);
   int getX();
   int getY();
+  vector<Tile> loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count);
   vector<Tile> genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count);
   void loadTiles(string filename, int iw, int ih);
   void addTile(Tile t); //push tile
@@ -53,6 +54,7 @@ private:
   Tile *tiles;
   Object camera;
   Object lens;
+  bool loaded;
 };
 
 #endif //TILESET_H
