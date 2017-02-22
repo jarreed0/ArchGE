@@ -129,3 +129,25 @@ void Tileset::move(double mx, double my) {
   x += (mx/10);
   y += (my/10);
 }
+void Tileset::setCameraMargin(int wm, int hm, int w, int h) {
+  camera.setDest(w-wm-wm, h-hm-hm, wm, hm);
+}
+void Tileset::centerCamera(int percentage, int w, int h) {
+  int wsize = (percentage/w)*w;
+  int hsize = (percentage/h)*h;
+  setCameraMargin(wsize, hsize, w, h);
+}
+Object Tileset::getCamera() {
+  return camera;
+}
+void Tileset::setLensMargin(int wm, int hm) {
+  camera.setDest(camera.getDW()-wm-wm, camera.getDH()-hm-hm, wm, hm);
+}
+void Tileset::centerLens(int percentage) {
+  int wsize = (percentage/camera.getDW())*camera.getDW();
+  int hsize = (percentage/camera.getDH())*camera.getDH();
+  setCameraMargin(wsize, hsize, camera.getDW(), camera.getDW());
+}
+Object Tileset::getLens() {
+  return lens;
+}

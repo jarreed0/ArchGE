@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include "tile.h"
+#include "object.h"
 
 class Tileset {
 public:
@@ -22,6 +23,12 @@ public:
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int size);
   vector<Tile> getTilesToRender();
   void move(double mx, double my);
+  void setCameraMargin(int wm, int hm, int w, int h);
+  void centerCamera(int percentage, int w, int h);
+  Object getCamera();
+  void setLensMargin(int wm, int hm);
+  void centerLens(int percentage);
+  Object getLens();
 private:
   struct tile {
     double x;
@@ -43,6 +50,8 @@ private:
   int layersize, xsize, ysize;
   vector < layer > tileset;
   Tile *tiles;
+  Object camera;
+  Object lens;
 };
 
 #endif //TILESET_H

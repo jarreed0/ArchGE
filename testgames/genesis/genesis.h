@@ -13,8 +13,8 @@ using namespace std;
 #include "../../engine/tileset.h"
 #include "../../engine/sdl_check.h"
 
-#define WIDTH 640
-#define HEIGHT 480
+#define WIDTH 1230
+#define HEIGHT 580
 #define TILE_SIZE 25
 
 class Genesis {
@@ -33,6 +33,7 @@ private:
   Object background;
   Object player;
   vector<Tile> tiles;
+  double speed;
 };
 
 #endif //GENESIS_H
