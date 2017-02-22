@@ -33,6 +33,7 @@ public:
   int getDH();
   void setAng(int a);
   int getAng();
+  void move(int mx, int my);
 private:
   Image img;
   SDL_Rect rect;

@@ -52,3 +52,7 @@ void Object::setAng(int a) {
 int Object::getAng() {
   return angle;
 }
+void Object::move(int mx, int my) {
+  setDX(getDX()+mx);
+  setDY(getDY()+my);
+}
