@@ -33,6 +33,14 @@ int Tileset::getX() {
 int Tileset::getY() {
   return y;
 }
+vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
+  vector<Tile> tmp;
+  for(int i=0; i<(count-1); i++) {
+    tmp.push_back(addTile(name, img, ren, i, r, i, width, height));
+  }
+  loadTiles(map, width, height);
+  return tmp;
+}
 void Tileset::loadTiles(string filename, int iw, int ih) {
   ifstream in(filename.c_str());
   if(!in.is_open()) {
