@@ -24,10 +24,10 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "debug or -d - compile program and run it in debug mode"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
-  if [ "$2" != NULL ]; then
-    git add $2
-  else
+  if [ "$2" = "*" ]; then
     git add *
+  else
+    git add $2
   fi
   echo "What did you change:"
   read change
