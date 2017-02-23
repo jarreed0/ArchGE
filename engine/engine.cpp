@@ -108,14 +108,19 @@ void Engine::setBackground(string file, int iw, int ih) {
   bkg = true;
 }
 void Engine::splash() {
-  setColor(0xff, 0xff, 0xff);
+  setColor(0xff, 0xff, 0xff); // Need to fix this so it uses this color instead of userset one
   Object b;
   //b.setImage("https://archeantus.net/images/splash.bmp", renderScreen());
-  b.setImage("/home/avery/Desktop/ArchGE/engine/res/engine-logo.bmp", renderScreen());
+  b.setImage("../../engine/res/engine-logo.bmp", renderScreen());
   b.setSource(0, 0, 256, 256);
   b.center(WIDTH, HEIGHT);
   pushToScreen(b, 4231998);
   endLoop();
   sleep(2.3);
   splashed=true;
+}
+void Engine::bypassSplash(int key) {
+  if(key = 4231998) {
+    splashed = true;
+  }
 }

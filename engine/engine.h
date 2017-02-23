@@ -34,6 +34,7 @@ public:
   void setBackground(string file);
   void setBackground(string file, int iw, int ih);
   void splash();
+  void bypassSplash(int key);
 private:
   SDL_Renderer* engren;
   SDL_Window *engwin;
