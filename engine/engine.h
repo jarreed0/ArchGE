@@ -29,6 +29,7 @@ public:
   void setColor(Uint32 r, Uint32 g, Uint32 b);
   void preLoop();
   void endLoop();
+  void setBackground(string file);
   void setBackground(string file, int iw, int ih);
 private:
   SDL_Renderer* engren;

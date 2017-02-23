@@ -86,6 +86,9 @@ void Engine::endLoop() {
   SDL_RenderPresent(engren);
 }
 
+void Engine::setBackground(string file) {
+  setBackground(file, WIDTH, HEIGHT);
+}
 void Engine::setBackground(string file, int iw, int ih) {
   background.setImage(file, renderScreen());
   background.setSource(0, 0, iw, ih);
