@@ -43,8 +43,8 @@ int Object::getSY() {return rect.y;}
 int Object::getSW() {return rect.w;}
 int Object::getSH() {return rect.h;}
 int Object::getDX() {return dest.x;}
-int Object::getDY() {return dest.w;}
-int Object::getDW() {return dest.h;}
+int Object::getDY() {return dest.y;}
+int Object::getDW() {return dest.w;}
 int Object::getDH() {return dest.h;}
 void Object::setAng(int a) {
   angle = a;
@@ -54,7 +54,7 @@ int Object::getAng() {
 }
 void Object::move(int mx, int my) {
   setDX(getDX()+mx);
-  setDY(getDY()+my);
+  setDY(getDY()-my);
 }
 void Object::center(int w, int h) {
   setDest(getSW(), getSH(), (w/2)-(getSW()/2), (h/2)-(getSH()/2));

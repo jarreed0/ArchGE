@@ -54,7 +54,6 @@ private:
   Tile *tiles;
   Object camera;
   Object lens;
-  bool loaded;
 };
 
 #endif //TILESET_H
