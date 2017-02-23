@@ -10,7 +10,7 @@ Park::Park() {
   grasstmp.setImage("res/grass.bmp", window.renderScreen());
   grasstmp.setSource(0, 0, 45, 45);
   grasstmp.setDest(i*window.random(8, 14), i*window.random(3, 19));
-  grasstmp.setAng(window.random(0, 180));
+  grasstmp.setAng(window.random(0, 30));
   grass.push_back(grasstmp);
  }
 }

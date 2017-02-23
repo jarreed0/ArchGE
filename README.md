@@ -2,9 +2,6 @@
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
-#DO NOT RUN THE PARK SAMPLE GAME - IT WILL (may) CRASH YOUR COMPUTER HAHA
-It doesn't have anything to do with an engine problem, its just the game has an error.
-
 #Under Heavy Development
 
 #Manage
