@@ -2,6 +2,7 @@
 
 Engine::Engine() {
   bkg = false;
+  splashed = false;
 }
 Engine::~Engine() {}
 
@@ -65,9 +66,19 @@ void Engine::deconstruct(){
 }
 
 void Engine::pushToScreen(Object obj) { //Insert NULL for source to display whole image
-  SDL_Rect tsrc = obj.getSource();
-  SDL_Rect tdes = obj.getDest();
-  SDL_RenderCopyEx(engren, obj.getImage(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
+  if(splashed) {
+    SDL_Rect tsrc = obj.getSource();
+    SDL_Rect tdes = obj.getDest();
+    SDL_RenderCopyEx(engren, obj.getImage(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
+  }
+}
+
+void Engine::pushToScreen(Object obj, int key) { //Insert NULL for source to display whole image
+  if(key = 4231998) {
+    SDL_Rect tsrc = obj.getSource();
+    SDL_Rect tdes = obj.getDest();
+    SDL_RenderCopyEx(engren, obj.getImage(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
+  }
 }
 
 SDL_Renderer* Engine::renderScreen() {
@@ -81,6 +92,7 @@ void Engine::setColor(Uint32 r, Uint32 g, Uint32 b) {
 void Engine::preLoop() {
   SDL_RenderClear(engren);
   if(bkg) pushToScreen(background);
+  if(!splashed) splash();
 }
 void Engine::endLoop() {
   SDL_RenderPresent(engren);
@@ -94,4 +106,16 @@ void Engine::setBackground(string file, int iw, int ih) {
   background.setSource(0, 0, iw, ih);
   background.setDest(WIDTH, HEIGHT, 0, 0);
   bkg = true;
+}
+void Engine::splash() {
+  setColor(0xff, 0xff, 0xff);
+  Object b;
+  //b.setImage("https://archeantus.net/images/splash.bmp", renderScreen());
+  b.setImage("/home/avery/Desktop/ArchGE/engine/res/engine-logo.bmp", renderScreen());
+  b.setSource(0, 0, 256, 256);
+  b.center(WIDTH, HEIGHT);
+  pushToScreen(b, 4231998);
+  endLoop();
+  sleep(2.3);
+  splashed=true;
 }

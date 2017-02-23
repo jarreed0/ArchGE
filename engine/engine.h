@@ -6,6 +6,7 @@
 using namespace std;
 #include <iostream>
 #include <cassert>
+#include <unistd.h>
 
 #include "image.h"
 #include "object.h"
@@ -25,18 +26,21 @@ public:
   void setName(string s);
   void deconstruct();
   void pushToScreen(Object obj);
+  void pushToScreen(Object obj, int key);
   SDL_Renderer* renderScreen();
   void setColor(Uint32 r, Uint32 g, Uint32 b);
   void preLoop();
   void endLoop();
   void setBackground(string file);
   void setBackground(string file, int iw, int ih);
+  void splash();
 private:
   SDL_Renderer* engren;
   SDL_Window *engwin;
   int WIDTH, HEIGHT;
   Object background;
   bool bkg;
+  bool splashed;
 };
 
 #endif //ENGINE_H
