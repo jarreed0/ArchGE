@@ -34,6 +34,7 @@ public:
   void setAng(int a);
   int getAng();
   void move(int mx, int my);
+  void center(int w, int h);
 private:
   Image img;
   SDL_Rect rect;

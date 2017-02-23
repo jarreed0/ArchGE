@@ -56,3 +56,6 @@ void Object::move(int mx, int my) {
   setDX(getDX()+mx);
   setDY(getDY()+my);
 }
+void Object::center(int w, int h) {
+  setDest(getSW(), getSH(), (w/2)-(getSW()/2), (h/2)-(getSH()/2));
+}

@@ -18,7 +18,7 @@ public:
   int getY();
   vector<Tile> loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count);
   vector<Tile> genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count);
-  void loadTiles(string filename);
+  void loadTiles(string filename, int iw, int ih);
   void addTile(Tile t); //push tile
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int r, int c, int width, int height);
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height);
