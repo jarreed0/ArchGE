@@ -29,11 +29,13 @@ public:
   void setColor(Uint32 r, Uint32 g, Uint32 b);
   void preLoop();
   void endLoop();
-  int random(int min, int max);
-  double random(double min, double max);
+  void setBackground(string file, int iw, int ih);
 private:
   SDL_Renderer* engren;
   SDL_Window *engwin;
+  int WIDTH, HEIGHT;
+  Object background;
+  bool bkg;
 };
 
 #endif //ENGINE_H

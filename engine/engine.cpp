@@ -1,6 +1,8 @@
 #include "engine.h"
 
-Engine::Engine() {}
+Engine::Engine() {
+  bkg = false;
+}
 Engine::~Engine() {}
 
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag) {
@@ -11,6 +13,8 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag) {
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED);
   setName(s);
+  WIDTH = w;
+  HEIGHT = h;
   return engren;
 }
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int it) {
@@ -21,6 +25,8 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int i
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED);
   setName(s);
+  WIDTH = w;
+  HEIGHT = h;
   return engren;
 }
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x, int y) {
@@ -31,6 +37,8 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, x, y);
   setName(s);
+  WIDTH = w;
+  HEIGHT = h;
   return engren;
 }
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x, int y, int it) {
@@ -41,6 +49,8 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   SDL_SetWindowPosition(engwin, x, y);
   setName(s);
+  WIDTH = w;
+  HEIGHT = h;
   return engren;
 }
 
@@ -70,24 +80,15 @@ void Engine::setColor(Uint32 r, Uint32 g, Uint32 b) {
 
 void Engine::preLoop() {
   SDL_RenderClear(engren);
+  if(bkg) pushToScreen(background);
 }
 void Engine::endLoop() {
   SDL_RenderPresent(engren);
 }
 
-int Engine::random(int min, int max) {
-   assert(min < max);
-   int num = (rand() % (max - min)) + min;
-   assert(min <= num && num <= max);
-
-   return num;
-}
-
-double Engine::random(double min, double max) {
-   assert(min < max);
-   double num = min + ((double)rand() / (double)RAND_MAX * (max - min));
-
-   assert(min <= num && num <= max);
-
-   return num;
+void Engine::setBackground(string file, int iw, int ih) {
+  background.setImage(file, renderScreen());
+  background.setSource(0, 0, iw, ih);
+  background.setDest(WIDTH, HEIGHT, 0, 0);
+  bkg = true;
 }
