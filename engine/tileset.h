@@ -33,16 +33,17 @@ public:
   Object getLens();
 private:
   struct tile {
-    double x;
-    double y;
+    double x = 0;
+    double y = 0;
     Tile tile;
   };
   struct layer {
-    int width;
-    int height;
-    double x;
-    double y;
-    int tw, th;
+    int width = 0;
+    int height = 0;
+    double x = 0;
+    double y = 0;
+    int tw = 0;
+    int th = 0;
     vector < tile > tiles;
   };
   int angle;

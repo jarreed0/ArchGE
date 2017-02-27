@@ -2,7 +2,7 @@
 
 Tileset::Tileset(int amount) {
   tiles = new Tile[amount+1];
-  layersize = xsize = ysize = 0;
+  layersize = xsize = ysize = x = y = 0;
   set=false;
 }
 Tileset::~Tileset() {
@@ -112,15 +112,16 @@ vector<Tile> Tileset::getTilesToRender() {
   for(int i = 0; i<tileset.size(); i++) {
     int ttw = winWidth/tileset[i].tw/2+2;
     int tth = winHeight/tileset[i].tw/2+2;
+    tileset[i].x = 0;
+    tileset[i].y = 0;
     int startx = tileset[i].x-(ttw/2)-tileset[i].tw;
     int starty = tileset[i].y-(tth/2)-tileset[i].th;
     int endx = ttw+tileset[i].tw;
     int endy = tth+tileset[i].th;
-    if(startx < 0) startx = 0;
-    if(starty < 0) starty = 0;
+    //cout << "SX: " << startx << ", EX: " << endx << "\nSY: " << starty << ", EY: " << endy << endl;
     for(int j = 0; j<tileset[i].tiles.size(); j++) {
-      if(tileset[i].tiles[j].x <= endx && (tileset[i].tiles[j].x < startx)) {
-        if(tileset[i].tiles[j].y <= endy && (tileset[i].tiles[j].y < starty)) {
+      if(tileset[i].tiles[j].x <= endx && (tileset[i].tiles[j].x > startx)) {
+        if(tileset[i].tiles[j].y <= endy && (tileset[i].tiles[j].y > starty)) {
           tileset[i].tiles[j].tile.setDest(tileset[i].tw, tileset[i].th,tileset[i].tw*tileset[i].tiles[j].x, tileset[i].th*tileset[i].tiles[j].y);
           vec.push_back(tileset[i].tiles[j].tile);
         }
@@ -131,15 +132,15 @@ vector<Tile> Tileset::getTilesToRender() {
 }
 void Tileset::move(double mx, double my) {
   for(int i=0; i<tileset.size(); i++) {
-    tileset[i].x += (mx/10);
-    tileset[i].y += (my/10);
+    //tileset[i].x += (mx/10);
+    //tileset[i].y += (my/10);
     for(int j=0; j<tileset[i].tiles.size(); j++) {
       tileset[i].tiles[j].x -= (mx/10);
       tileset[i].tiles[j].y += (my/10);
     }
   }
-  x += (mx/10);
-  y += (my/10);
+  //x += (mx/10);
+  //y += (my/10);
 }
 void Tileset::setCameraMargin(int wm, int hm, int w, int h) {
   camera.setDest(w-wm-wm, h-hm-hm, wm, hm);

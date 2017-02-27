@@ -2,7 +2,7 @@
 
 Genesis::Genesis() : map(28) {
   engine.init(TITLE, WIDTH, HEIGHT, 0);
-  engine.bypassSplash(4231998);
+  //engine.bypassSplash(4231998);
   running=true;
   engine.setBackground("res/bkg.bmp");
   player.setImage("res/player.bmp", engine.renderScreen());
@@ -34,16 +34,10 @@ void Genesis::draw() {
   engine.pushToScreen(background);
   tiles = map.getTilesToRender();
   if(tiles.empty()) {
-    cout << "No Tiles Loaded In!" << endl << "Trying To Reload Tiles." << endl;
-    /*vector<Tile> tmp1, tmp2;
-    tmp1 = map.loadMaps("wall", "res/avery.wall", "res/wall.bmp", engine.renderScreen(), TILE_SIZE, TILE_SIZE, 1, 7);
-    tmp2 = map.loadMaps("blocks", "res/avery.map", "res/blocks.bmp", engine.renderScreen(), TILE_SIZE, TILE_SIZE, 1, 22);
-    if(tmp1.empty())  cout << "Tiles is still empty." << endl;
-    if(tmp2.empty()) cout << "Tiles is still empty." << endl;
-    if(tiles.empty()) {*/
-      cout << "Failed To Load In Tiles.\nAborting...\n";
-      running = false;
-    //}
+    cout << "No Tiles Loaded In!" << endl << "Trying To Reload Tiles." << endl << "You most likely are out of map bounds.\n";
+    //cout << "Aborting...\n";
+    //exit (1);
+    //running = false;
   }
   for(int i = 0; i<tiles.size(); i++) {
     engine.pushToScreen(tiles[i]);

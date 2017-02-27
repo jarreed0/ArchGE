@@ -1,0 +1,11 @@
+while :
+ do
+
+ ./a.out
+
+ if [ $? == 1 ]; then
+  break
+ fi
+
+done
+
