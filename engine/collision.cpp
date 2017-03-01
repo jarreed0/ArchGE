@@ -4,9 +4,7 @@ Collision::Collision() {}
 Collision::~Collision() {}
 
 bool Collision::isTouching(Object a, Object b) {
-  if(!isAbove(a, b) && !isBelow(a, b)) {
-    return true;
-  } else if(!isRightOf(a, b) && !isLeftOf(a, b)) {
+  if(!outOfBoundsOf(a, b)) {
     return true;
   } else {
     return false;

@@ -10,10 +10,8 @@ Genesis::Genesis() : map(28) {
   player.center(WIDTH, HEIGHT);
   engine.setColor(0x9f, 0x9f, 0x9f);
   map.setWindowSize(WIDTH, HEIGHT);
-  map.setCameraMargin(WIDTH/6, HEIGHT/6);
-  //map.centerCamera(75);
-  //map.centerLens(25);
-  map.setLensMargin(WIDTH/10, HEIGHT/10);
+  map.centerCamera(50);
+  map.centerLens(50);
   engine.preLoop();
   input.reset();
   vector<Tile> tmp1, tmp2;
@@ -38,17 +36,6 @@ void Genesis::draw() {
   tiles = map.getTilesToRender();
   for(int i = 0; i<tiles.size(); i++) { engine.pushToScreen(tiles[i]); }
   engine.pushToScreen(player);
-  Object k = map.getCamera();
-  //Object l = map.getLens();
-  //Object l;
-  //k.setImage("res/bkg.bmp", engine.renderScreen());
-  //k.setSource(0, 0, k.getDW(), k.getDH());
-  //k.setDest(WIDTH-75-75, HEIGHT-75-75, 75, 75);
-  //engine.pushToScreen(k);
-  //l.setImage("res/bkg.bmp", engine.renderScreen());
-  //l.setDest(WIDTH-75-75-25-25, HEIGHT-75-75-25-25, k.getDX(), k.getDY());
-  //l.setSource(0, 0, 90, 90);
-  //engine.pushToScreen(l);
 }
 void Genesis::checkInput() {
   input.logPress();
@@ -64,6 +51,6 @@ void Genesis::checkInput() {
   if(input.checkKey(input.down)) {
     player = map.move(0, -speed, player);
   }
-  if(input.checkKey(input.quit)) { running=false; cout << "quit" << endl; }
-  if(input.checkKey(input.esc)) { running=false; cout << "esc" << endl; }
+  if(input.checkKey(input.quit)) { running=false; }
+  if(input.checkKey(input.esc)) { running=false; }
 }

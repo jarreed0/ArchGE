@@ -58,6 +58,7 @@ private:
   Object camera;
   Object lens;
   Collision colCheck;
+  bool activeCam, activeLens;
 };
 
 #endif //TILESET_H
