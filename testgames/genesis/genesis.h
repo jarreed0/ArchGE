@@ -11,6 +11,7 @@ using namespace std;
 #include "../../engine/physics.h"
 #include "../../engine/tile.h"
 #include "../../engine/tileset.h"
+#include "../../engine/collision.h"
 #include "../../engine/sdl_check.h"
 
 #define WIDTH 1230
