@@ -7,6 +7,13 @@ Genesis::Genesis() : map(28) {
   vector<Tile> tmp1, tmp2;
   tmp1 = map.loadMaps("wall", "res/avery.wall", "res/wall.bmp", engine.renderScreen(), TILE_SIZE, TILE_SIZE, 1, 7);
   tmp2 = map.loadMaps("blocks", "res/avery.map", "res/blocks.bmp", engine.renderScreen(), TILE_SIZE, TILE_SIZE, 1, 22);
+  map.setPassable(3, 4, 2);
+  map.setPassable(8, 10, 2);
+  map.setPassable(13, 2);
+  map.setPassable(15, 2);
+  map.setPassable(17, 2);
+  map.setPassable(19, 2);
+  map.setPassable(21, 2);
   engine.setBackground("res/bkg.bmp");
   player.setImage("res/player.bmp", engine.renderScreen());
   player.setSource(0, 0, TILE_SIZE, 45);
@@ -18,7 +25,7 @@ Genesis::Genesis() : map(28) {
   engine.preLoop();
   input.reset();
   map.setSolid(1);
-  //map.setAng(45);
+  map.setAng(45);
   speed = 5;
   start();
 }
@@ -36,7 +43,7 @@ void Genesis::start() {
 void Genesis::draw() {
   engine.pushToScreen(background);
   tiles = map.getTilesToRender();
-  for(int i = 0; i<tiles.size(); i++) { tiles[i].setAng(45); engine.pushToScreen(tiles[i]); }// player=colCheck.calibrate(player, tiles[i]);}
+  for(int i = 0; i<tiles.size(); i++) {engine.pushToScreen(tiles[i]); player=colCheck.calibrate(player, tiles[i]);}
   engine.pushToScreen(player);
 }
 void Genesis::checkInput() {
