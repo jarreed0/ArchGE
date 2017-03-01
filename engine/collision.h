@@ -9,6 +9,7 @@ public:
   Collision();
   ~Collision();
   bool isTouching(Object a, Object b);
+  bool outOfBoundsOf(Object a, Object b);
   bool isAbove(Object a, Object b);
   bool isBelow(Object a, Object b);
   bool isRightOf(Object a, Object b);

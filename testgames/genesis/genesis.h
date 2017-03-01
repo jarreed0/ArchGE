@@ -35,6 +35,7 @@ private:
   Object player;
   vector<Tile> tiles;
   double speed;
+  Collision col;
 };
 
 #endif //GENESIS_H

@@ -67,11 +67,13 @@ void Tileset::loadTiles(string filename, int iw, int ih) {
                           return;
                   }
                   in >> current;
-                  tile tmp;
-                  tmp.tile = tiles[current];
-                  tmp.x=j;
-                  tmp.y=i;
-                  cur.tiles.push_back(tmp);
+                  if(current != 0) {
+                    tile tmp;
+                    tmp.tile = tiles[current];
+                    tmp.x=j;
+                    tmp.y=i;
+                    cur.tiles.push_back(tmp);
+                  }
           }
   }
   if(!in.eof()) {
@@ -139,25 +141,69 @@ void Tileset::move(double mx, double my) {
   }
 }
 Object Tileset::move(double mx, double my, Object p) {
- if(colCheck.isTouching(p, camera)) {
-   if(colCheck.isTouching(p, lens)) {
-     p.move(mx, my);
-     cout << "in lens" << endl;
-   } else {
-     int pxs, pys, xs, ys;
-     pxs = mx*.35;
-     pys = my*.35;
-     xs = mx*.65;
-     ys = my*.65;
-     p.move(pxs, pys);
-     move(xs, ys);
-     cout << "in camera" << endl;
-   }
- } else {
-   move(mx, my);
-   cout << "out" << endl;
- }
- return p;
+  double pr = .5, r = .5;
+  int pxs = 0, pys = 0, xs = 0, ys = 0;
+  if(mx > 0) {
+    if(colCheck.isRightOf(p, lens)) {
+      if(colCheck.isRightOf(p, camera)) {
+        //outside of camera
+        xs = mx;
+      } else {
+        //outside of lens but in camera
+        pxs = mx*pr/2;
+        xs = mx*r/2;
+      }
+    } else {
+      //in lens
+      pxs = mx;
+    }
+  } else if(mx < 0) {
+    if(colCheck.isLeftOf(p, lens)) {
+      if(colCheck.isLeftOf(p, camera)) {
+        //outside of camera
+        xs = mx;
+      } else {
+        //outside of lens but in camera
+        pxs = mx*pr/2;
+        xs = mx*r/2;
+      }
+    } else {
+      //in lens
+      pxs = mx;
+    }
+  }
+  if(my > 0) {
+    if(colCheck.isAbove(p, lens)) {
+      if(colCheck.isAbove(p, camera)) {
+        //outside of camera
+        ys = my;
+      } else {
+        //outside of lens but in camera
+        pys = my*pr/2;
+        ys = my*r/2;
+      }
+    } else {
+      //in lens
+      pys = my;
+    }
+  } else if(my < 0) {
+    if(colCheck.isBelow(p, lens)) {
+      if(colCheck.isBelow(p, camera)) {
+        //outside of camera
+        ys = my;
+      } else {
+        //outside of lens but in camera
+        pys = my*pr/2;
+        ys = my*r/2;
+      }
+    } else {
+      //in lens
+      pys = my;
+    }
+  }
+  p.move(pxs, pys);
+  move(xs, ys);
+  return p;
 }
 void Tileset::setCameraMargin(int wm, int hm) {
   camera.setDest(winWidth-wm-wm, winHeight-hm-hm, wm, hm);

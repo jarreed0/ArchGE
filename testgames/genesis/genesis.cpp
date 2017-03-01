@@ -10,8 +10,8 @@ Genesis::Genesis() : map(28) {
   player.center(WIDTH, HEIGHT);
   engine.setColor(0x9f, 0x9f, 0x9f);
   map.setWindowSize(WIDTH, HEIGHT);
-  map.setCameraMargin(75, 75);
-  map.setLensMargin(15, 15);
+  map.setCameraMargin(WIDTH/6, HEIGHT/6);
+  map.setLensMargin(WIDTH/10, HEIGHT/10);
   engine.preLoop();
   input.reset();
   vector<Tile> tmp1, tmp2;

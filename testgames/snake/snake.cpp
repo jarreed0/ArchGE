@@ -2,6 +2,7 @@
 
 Snake::Snake() {
   eng.init("Snake", Width, Height, 0);
+  handle.reset();
 
   snake.setImage("sprites.bmp", eng.renderScreen());
   cherry.setImage("sprites.bmp", eng.renderScreen());
