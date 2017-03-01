@@ -33,6 +33,9 @@ public:
   void setLensMargin(int wm, int hm);
   void centerLens(int percentage);
   Object getLens();
+  void setSolid(int s, int l);
+  void setSolid(int s, int e, int l);
+  void setSolid(int l);
 private:
   struct tile {
     double x = 0;

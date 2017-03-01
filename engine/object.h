@@ -15,6 +15,7 @@ public:
   void setDestCoord(double x, double y);
   SDL_Rect getSource();
   SDL_Rect getDest();
+  SDL_Rect getBuff();
   void setSX(double x);
   void setSY(double y);
   void setSW(int w);
@@ -35,11 +36,15 @@ public:
   double getAng();
   void move(double mx, double my);
   void center(int w, int h);
+  bool collidable() {return solid;}
+  bool setSolid(bool s) {this->solid=s;}
 private:
   Image img;
   SDL_Rect rect;
   SDL_Rect dest;
+  SDL_Rect buff;
   double angle;
+  bool solid;
 };
 
 #endif //OBJECT_H

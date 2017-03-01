@@ -124,3 +124,6 @@ void Engine::bypassSplash(int key) {
     splashed = true;
   }
 }
+bool Engine::hasSplashed() {
+  return splashed;
+}

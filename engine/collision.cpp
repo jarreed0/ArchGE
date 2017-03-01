@@ -52,3 +52,20 @@ bool Collision::isLeftOf(Object a, Object b) {
     return false;
   }
 }
+Object Collision::calibrate(Object a, Object b) {
+  if(isTouching(a, b) && b.collidable()) {
+    int mx = a.getDX()-a.getBuff().x;
+    int my = a.getDY()-a.getBuff().y;
+    if(mx > 0) {
+      a.setDX(b.getDX());
+    } else if(mx < 0) {
+      a.setDX(b.getDX()+b.getDW());
+    }
+    if(my > 0) {
+      a.setDY(b.getDY()+b.getDW());
+    } else if(my < 0) {
+      a.setDY(b.getDY());
+    }
+  }
+  return a;
+}

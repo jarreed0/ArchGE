@@ -34,10 +34,10 @@ void Object::setSX(double x) {rect.x = x;}
 void Object::setSY(double y) {rect.y = y;}
 void Object::setSW(int w) {rect.w = w;}
 void Object::setSH(int h) {rect.h = h;}
-void Object::setDX(double x) {dest.x = x;}
-void Object::setDY(double y) {dest.y = y;}
-void Object::setDW(int w) {dest.w = w;}
-void Object::setDH(int h) {dest.h = h;}
+void Object::setDX(double x) {buff.x = dest.x; dest.x = x;}
+void Object::setDY(double y) {buff.y = dest.y; dest.y = y;}
+void Object::setDW(int w) {buff.w = dest.w; dest.w = w;}
+void Object::setDH(int h) {buff.h = dest.h; dest.h = h;}
 double Object::getSX() {return rect.x;}
 double Object::getSY() {return rect.y;}
 double Object::getSW() {return rect.w;}
@@ -46,6 +46,9 @@ double Object::getDX() {return dest.x;}
 double Object::getDY() {return dest.y;}
 double Object::getDW() {return dest.w;}
 double Object::getDH() {return dest.h;}
+SDL_Rect Object::getBuff() {
+  return buff;
+}
 void Object::setAng(double a) {
   angle = a;
 }

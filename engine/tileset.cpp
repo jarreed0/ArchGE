@@ -99,6 +99,7 @@ Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, in
   tmp.setSource(((r-1)*width), ((c-1)*height), width, height);
   tmp.setImage(file, ren);
   tmp.setValue(value);
+  tmp.setSolid(0);
   tiles[value] = tmp;
   return tmp;
 }
@@ -238,4 +239,15 @@ void Tileset::centerLens(int percentage) {
 }
 Object Tileset::getLens() {
   return lens;
+}
+void Tileset::setSolid(int s, int l) {
+  tileset[1].tiles[s].tile.setSolid(1);
+}
+void Tileset::setSolid(int s, int e, int l) {
+  for(int i = s-1; i<e; i++) {
+    setSolid(i, l);
+  }
+}
+void Tileset::setSolid(int l) {
+  setSolid(1, tileset[l].tiles.size()+1, l);
 }
