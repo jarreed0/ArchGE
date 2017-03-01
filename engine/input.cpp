@@ -1,6 +1,7 @@
 #include "input.h"
 
 Input::Input() {
+  reset();
   left = 10;
   right = 11;
   up = 12;

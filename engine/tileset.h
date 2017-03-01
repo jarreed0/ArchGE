@@ -5,6 +5,7 @@
 #include <fstream>
 #include "tile.h"
 #include "object.h"
+#include "collision.h"
 
 class Tileset {
 public:
@@ -25,8 +26,9 @@ public:
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int size);
   vector<Tile> getTilesToRender();
   void move(double mx, double my);
-  void setCameraMargin(int wm, int hm, int w, int h);
-  void centerCamera(int percentage, int w, int h);
+  Object move(double mx, double my, Object p);
+  void setCameraMargin(int wm, int hm);
+  void centerCamera(int percentage);
   Object getCamera();
   void setLensMargin(int wm, int hm);
   void centerLens(int percentage);
@@ -55,6 +57,7 @@ private:
   Tile *tiles;
   Object camera;
   Object lens;
+  Collision colCheck;
 };
 
 #endif //TILESET_H

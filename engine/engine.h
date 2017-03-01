@@ -14,6 +14,7 @@ using namespace std;
 #include "physics.h"
 #include "tile.h"
 #include "tileset.h"
+#include "collision.h"
 
 class Engine {
 public:

@@ -110,7 +110,7 @@ void Engine::setBackground(string file, int iw, int ih) {
 void Engine::splash() {
   setColor(0xff, 0xff, 0xff); // Need to fix this so it uses this color instead of userset one
   Object b;
-  //b.setImage("https://archeantus.net/images/splash.bmp", renderScreen());
+  //b.setImage("http://archeantus.net/images/splash.bmp", renderScreen());
   b.setImage("../../engine/res/engine-logo.bmp", renderScreen());
   b.setSource(0, 0, 256, 256);
   b.center(WIDTH, HEIGHT);

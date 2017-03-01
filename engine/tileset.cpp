@@ -132,34 +132,51 @@ vector<Tile> Tileset::getTilesToRender() {
 }
 void Tileset::move(double mx, double my) {
   for(int i=0; i<tileset.size(); i++) {
-    //tileset[i].x += (mx/10);
-    //tileset[i].y += (my/10);
     for(int j=0; j<tileset[i].tiles.size(); j++) {
       tileset[i].tiles[j].x -= (mx/10);
       tileset[i].tiles[j].y += (my/10);
     }
   }
-  //x += (mx/10);
-  //y += (my/10);
 }
-void Tileset::setCameraMargin(int wm, int hm, int w, int h) {
-  camera.setDest(w-wm-wm, h-hm-hm, wm, hm);
+Object Tileset::move(double mx, double my, Object p) {
+ if(colCheck.isTouching(p, camera)) {
+   if(colCheck.isTouching(p, lens)) {
+     p.move(mx, my);
+     cout << "in lens" << endl;
+   } else {
+     int pxs, pys, xs, ys;
+     pxs = mx*.35;
+     pys = my*.35;
+     xs = mx*.65;
+     ys = my*.65;
+     p.move(pxs, pys);
+     move(xs, ys);
+     cout << "in camera" << endl;
+   }
+ } else {
+   move(mx, my);
+   cout << "out" << endl;
+ }
+ return p;
 }
-void Tileset::centerCamera(int percentage, int w, int h) {
-  int wsize = (percentage/w)*w;
-  int hsize = (percentage/h)*h;
-  setCameraMargin(wsize, hsize, w, h);
+void Tileset::setCameraMargin(int wm, int hm) {
+  camera.setDest(winWidth-wm-wm, winHeight-hm-hm, wm, hm);
+}
+void Tileset::centerCamera(int percentage) {
+  int wsize = (percentage/winWidth)*winWidth;
+  int hsize = (percentage/winHeight)*winHeight;
+  setCameraMargin(wsize, hsize);
 }
 Object Tileset::getCamera() {
   return camera;
 }
 void Tileset::setLensMargin(int wm, int hm) {
-  camera.setDest(camera.getDW()-wm-wm, camera.getDH()-hm-hm, wm, hm);
+  lens.setDest(camera.getDW()-wm-wm, camera.getDH()-hm-hm, camera.getDX()+wm, camera.getDY()+hm);
 }
 void Tileset::centerLens(int percentage) {
   int wsize = (percentage/camera.getDW())*camera.getDW();
   int hsize = (percentage/camera.getDH())*camera.getDH();
-  setCameraMargin(wsize, hsize, camera.getDW(), camera.getDW());
+  setLensMargin(wsize, hsize);
 }
 Object Tileset::getLens() {
   return lens;
