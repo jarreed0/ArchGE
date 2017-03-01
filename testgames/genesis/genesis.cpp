@@ -18,6 +18,7 @@ Genesis::Genesis() : map(28) {
   engine.preLoop();
   input.reset();
   map.setSolid(1);
+  //map.setAng(45);
   speed = 5;
   start();
 }
@@ -35,7 +36,7 @@ void Genesis::start() {
 void Genesis::draw() {
   engine.pushToScreen(background);
   tiles = map.getTilesToRender();
-  for(int i = 0; i<tiles.size(); i++) { engine.pushToScreen(tiles[i]); player=colCheck.calibrate(player, tiles[i]);}
+  for(int i = 0; i<tiles.size(); i++) { tiles[i].setAng(45); engine.pushToScreen(tiles[i]); }// player=colCheck.calibrate(player, tiles[i]);}
   engine.pushToScreen(player);
 }
 void Genesis::checkInput() {

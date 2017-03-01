@@ -113,6 +113,7 @@ Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, in
 }
 vector<Tile> Tileset::getTilesToRender() {
   vector <Tile> vec;
+  pushAng();
   for(int i = 0; i<tileset.size(); i++) {
     int ttw = winWidth/tileset[i].tw/2+2;
     int tth = winHeight/tileset[i].tw/2+2;
