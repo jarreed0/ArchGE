@@ -11,6 +11,8 @@ Genesis::Genesis() : map(28) {
   engine.setColor(0x9f, 0x9f, 0x9f);
   map.setWindowSize(WIDTH, HEIGHT);
   map.setCameraMargin(WIDTH/6, HEIGHT/6);
+  //map.centerCamera(75);
+  //map.centerLens(25);
   map.setLensMargin(WIDTH/10, HEIGHT/10);
   engine.preLoop();
   input.reset();

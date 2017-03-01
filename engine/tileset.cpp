@@ -144,6 +144,68 @@ Object Tileset::move(double mx, double my, Object p) {
   double pr = .5, r = .5;
   int pxs = 0, pys = 0, xs = 0, ys = 0;
   if(mx > 0) {
+    if(colCheck.outOfBoundsOf(p, camera)) {
+      if(colCheck.isRightOf(p, camera)) {
+        xs = mx;
+      } else {
+        pxs = mx;
+      }
+    } else {
+      if(colCheck.outOfBoundsOf(p, lens)) {
+        pxs = mx*pr;
+        xs = mx*r;
+      } else {
+        pxs = mx;
+      }
+    }
+  } else if(mx < 0) {
+    if(colCheck.outOfBoundsOf(p, camera)) {
+      if(colCheck.isLeftOf(p, camera)) {
+        xs = mx;
+      } else {
+        pxs = mx;
+      }
+    } else {
+      if(colCheck.outOfBoundsOf(p, lens)) {
+        pxs = mx*pr;
+        xs = mx*r;
+      } else {
+        pxs = mx;
+      }
+    }
+  }
+  if(my > 0) {
+    if(colCheck.outOfBoundsOf(p, camera)) {
+      if(colCheck.isAbove(p, camera)) {
+        ys = my;
+      } else {
+        pys = my;
+      }
+    } else {
+      if(colCheck.outOfBoundsOf(p, lens)) {
+        pys = my*pr;
+        ys = my*r;
+      } else {
+        pys = my;
+      }
+    }
+  } else if(my < 0) {
+    if(colCheck.outOfBoundsOf(p, camera)) {
+      if(colCheck.isBelow(p, camera)) {
+        ys = my;
+      } else {
+        pys = my;
+      }
+    } else {
+      if(colCheck.outOfBoundsOf(p, lens)) {
+        pys = my*pr;
+        ys = my*r;
+      } else {
+        pys = my;
+      }
+    }
+  }
+  /*if(mx > 0) {
     if(colCheck.isRightOf(p, lens)) {
       if(colCheck.isRightOf(p, camera)) {
         //outside of camera
@@ -200,7 +262,7 @@ Object Tileset::move(double mx, double my, Object p) {
       //in lens
       pys = my;
     }
-  }
+  }*/
   p.move(pxs, pys);
   move(xs, ys);
   return p;
@@ -209,8 +271,8 @@ void Tileset::setCameraMargin(int wm, int hm) {
   camera.setDest(winWidth-wm-wm, winHeight-hm-hm, wm, hm);
 }
 void Tileset::centerCamera(int percentage) {
-  int wsize = (percentage/winWidth)*winWidth;
-  int hsize = (percentage/winHeight)*winHeight;
+  int wsize = (percentage*winWidth)*100;
+  int hsize = (percentage*winHeight)*100;
   setCameraMargin(wsize, hsize);
 }
 Object Tileset::getCamera() {
@@ -220,8 +282,8 @@ void Tileset::setLensMargin(int wm, int hm) {
   lens.setDest(camera.getDW()-wm-wm, camera.getDH()-hm-hm, camera.getDX()+wm, camera.getDY()+hm);
 }
 void Tileset::centerLens(int percentage) {
-  int wsize = (percentage/camera.getDW())*camera.getDW();
-  int hsize = (percentage/camera.getDH())*camera.getDH();
+  int wsize = (percentage*camera.getDW())*100;
+  int hsize = (percentage*camera.getDH())*100;
   setLensMargin(wsize, hsize);
 }
 Object Tileset::getLens() {
