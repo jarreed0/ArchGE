@@ -1,7 +1,6 @@
 cd ../..
 cd engine
-g++ -c *.cpp
-ar rvs engine.a *.o
+./build.sh
 rm *.o
 cd ..
 cd testgames/snake

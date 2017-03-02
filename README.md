@@ -26,6 +26,10 @@
 
 `manage test GAMEDIR`
 
+##Push back to main branch
+
+`manage push (all for everything -or- specifiy file)`
+
 ##Find out more:
 
 `manage -h (or help)`

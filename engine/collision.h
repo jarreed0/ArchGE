@@ -13,7 +13,7 @@ public:
   bool isBelow(Object a, Object b);
   bool isRightOf(Object a, Object b);
   bool isLeftOf(Object a, Object b);
-  Object calibrate(Object a, Object b);
+  Object calibrate(Object a, Object b, int pad);
 private:
 };
 

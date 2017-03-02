@@ -52,23 +52,34 @@ bool Collision::isLeftOf(Object a, Object b) {
     return false;
   }
 }
-Object Collision::calibrate(Object a, Object b) {
+Object Collision::calibrate(Object a, Object b, int pad) {
   if(isTouching(a, b) && b.collidable()) {
     /*int mx = a.getDX()-a.getBuff().x;
     int my = a.getDY()-a.getBuff().y;
     if(mx > 0) {
-      a.setDX(b.getDX());
-      a.setDX(a.getBuff().x);
+      a.setDX(b.getDX()+pad);
     } else if(mx < 0) {
-      a.setDX(b.getDX()+b.getDW());
+      a.setDX(b.getDX()+b.getDW()+pad);
     }
     if(my > 0) {
-      a.setDY(b.getDY()+b.getDW());
+      a.setDY(b.getDY()+pad);
     } else if(my < 0) {
-      a.setDY(b.getDY());
+      a.setDY(b.getDY()+b.getDW()+pad);
     }*/
-    a.setDX(a.getBuff().x);
-    a.setDY(a.getBuff().y);
+    //a.setDX(a.getBuff().x);
+    //a.setDY(a.getBuff().y);
+    Object c;
+    c.setDest(a.getDW(), a.getDH(), a.getBuff().x, a.getBuff().y);
+    if(isAbove(c, b)) {
+      a.setDY(b.getDY()+pad);
+    } else if(isBelow(c, b)) {
+      a.setDY(b.getDY()+b.getDH()+pad);
+    }
+    if(isRightOf(c, b)) {
+      a.setDX(b.getDX()+b.getDW()+pad);
+    } else if(isLeftOf(c, b)) {
+      a.setDX(b.getDX()+pad);
+    }
   }
   return a;
 }

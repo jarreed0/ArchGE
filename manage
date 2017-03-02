@@ -24,7 +24,7 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "debug or -d - compile program and run it in debug mode"
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
-  if [ "$2" = "*" ]; then
+  if [ "$2" = "all" ]; then
     git add *
   else
     git add $2
@@ -61,6 +61,9 @@ elif [ "$1" == "clean" ] || [ "$1" == "-cl" ]; then
   rm *.o*
   rm *.a
   cd ..
+  cd testgames
+  rm */a.out
+  cd ../..
 elif [ "$1" == "conf" ] || [ "$1" == "-cf" ]; then
   #NEED TO FINISH THIS
   echo "This is still being worked on"

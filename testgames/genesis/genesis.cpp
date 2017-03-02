@@ -43,7 +43,7 @@ void Genesis::start() {
 void Genesis::draw() {
   engine.pushToScreen(background);
   tiles = map.getTilesToRender();
-  for(int i = 0; i<tiles.size(); i++) {engine.pushToScreen(tiles[i]); player=colCheck.calibrate(player, tiles[i]);}
+  for(int i = 0; i<tiles.size(); i++) {engine.pushToScreen(tiles[i]);}// player=colCheck.calibrate(player, tiles[i], 0);}
   engine.pushToScreen(player);
 }
 void Genesis::checkInput() {
