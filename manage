@@ -32,6 +32,7 @@ elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   echo "What did you change:"
   read change
   git commit -m "$change"
+  manage -u
   git config --global push.defualt simple
   git push
 elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
