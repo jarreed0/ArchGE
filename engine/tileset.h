@@ -36,6 +36,9 @@ public:
   void setSolid(int s, int l);
   void setSolid(int s, int e, int l);
   void setSolid(int l);
+  void setPassable(int s, int l);
+  void setPassable(int s, int e, int l);
+  void setPassable(int l);
 private:
   struct tile {
     double x = 0;

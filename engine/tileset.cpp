@@ -14,8 +14,10 @@ void Tileset::setAng(int ang) {
   pushAng();
 }
 void Tileset::pushAng() {
-  for(int i = 0; i<sizeof(tiles); i++) {
-    tiles[i].setAng(angle);
+  for(int i = 0; i<tileset.size(); i++) {
+    //for(int j = 0; i<tileset[i].tiles.size(); j++) {
+      //tileset[i].tiles[j].tile.setAng(angle);
+    //}
   }
 }
 void Tileset::setCoord(int ix, int iy) {
@@ -250,5 +252,16 @@ void Tileset::setSolid(int s, int e, int l) {
   }
 }
 void Tileset::setSolid(int l) {
+  setSolid(1, tileset[l].tiles.size()+1, l);
+}
+void Tileset::setPassable(int s, int l) {
+  tileset[1].tiles[s-1].tile.setSolid(0);
+}
+void Tileset::setPassable(int s, int e, int l) {
+  for(int i = s-1; i<e; i++) {
+    setSolid(i, l);
+  }
+}
+void Tileset::setPassable(int l) {
   setSolid(1, tileset[l].tiles.size()+1, l);
 }
