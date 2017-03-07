@@ -1,5 +1,5 @@
-#ifndef GENESIS_H
-#define GENESIS_H
+#ifndef GAME_H
+#define GAME_H
 
 #include <iostream>
 using namespace std;
@@ -14,29 +14,24 @@ using namespace std;
 #include "../../engine/collision.h"
 #include "../../engine/sdl_check.h"
 
-#define WIDTH 1230
-#define HEIGHT 580
-#define TILE_SIZE 25
+#define WIDTH 1080
+#define HEIGHT 480
+#define TILE_SIZE 32
 
-class Genesis {
+class Game {
 public:
-  Genesis();
-  ~Genesis();
-  void start();
+  Game();
+  ~Game();
+  void loop();
   void draw();
-  void checkInput();
+  void input();
 private:
-  Engine engine;
-  Input input;
-  Tileset map;
+  Engine e;
+  Input i;
+  Tileset level;
+  string TITLE = "Hero";
   bool running;
-  string TITLE = "Genesis";
-  //Object background;
-  //Object black;
-  Object player;
-  vector<Tile> tiles;
-  double speed;
-  Collision colCheck;
+  vector<Tile> disp;
 };
 
-#endif //GENESIS_H
+#endif //GAME_H

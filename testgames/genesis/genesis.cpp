@@ -15,6 +15,9 @@ Genesis::Genesis() : map(28) {
   map.setPassable(19, 2);
   map.setPassable(21, 2);
   engine.setBackground("res/bkg.bmp");
+  //black.setImage("res/alphablack.bmp", engine.renderScreen());
+  //black.setSource(0, 0, 1080, 480);
+  //black.setDest(WIDTH, HEIGHT, 0, 0);
   player.setImage("res/player.bmp", engine.renderScreen());
   player.setSource(0, 0, TILE_SIZE, 45);
   player.center(WIDTH, HEIGHT);
@@ -41,10 +44,11 @@ void Genesis::start() {
   }
 }
 void Genesis::draw() {
-  engine.pushToScreen(background);
+  //engine.pushToScreen(background);
   tiles = map.getTilesToRender();
   for(int i = 0; i<tiles.size(); i++) {engine.pushToScreen(tiles[i]);}// player=colCheck.calibrate(player, tiles[i], 0);}
   engine.pushToScreen(player);
+  //engine.pushToScreen(black);
 }
 void Genesis::checkInput() {
   input.logPress();
