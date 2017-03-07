@@ -17,6 +17,7 @@ using namespace std;
 #define WIDTH 1080
 #define HEIGHT 480
 #define TILE_SIZE 32
+#define SPEED 2
 
 class Game {
 public:
