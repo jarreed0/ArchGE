@@ -1,12 +1,13 @@
 #include "game.h"
 
-Game::Game() : level(12) {
+Game::Game() : level(TOTAL_TILES) {
   i.logPress();
-  e.bypassSplash(4231998);
+  //e.bypassSplash(4231998);
+  e.customSplash("res/splash.bmp", 2, 600, 111);
   e.init(TITLE, WIDTH, HEIGHT, 0);
   level.setWindowSize(WIDTH, HEIGHT);
   loadLevel();
-  e.setColor(0xff, 0x8f, 0x33);
+  e.setColor(0x00, 0x77, 0x89);
   running = true;
   loop();
 }
@@ -38,12 +39,12 @@ void Game::input() {
     if(i.checkKey(i.down)) level.move(0, -SPEED);
     if(i.checkKey(i.quit)) running = false;
     if(i.checkKey(i.esc)) running = false;
-    if(i.checkKey(i.r)) {
-      loadLevel();
-    }
+    if(i.checkKey(i.r)) loadLevel();
+    if(i.checkKey(i.e)) { disp.clear(); level.loadMaps("tile", "res/level.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 2, 6, 12); }
   }
 }
 
 void Game::loadLevel() {
-  level.loadMaps("tile", "res/level.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 2, 6, 12);
+  disp.clear();
+  level.loadMaps("tile", "res/building.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 3, 6, TOTAL_TILES);
 }

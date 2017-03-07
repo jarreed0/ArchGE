@@ -3,6 +3,7 @@
 Engine::Engine() {
   bkg = false;
   splashed = false;
+  custom = false;
 }
 Engine::~Engine() {}
 
@@ -108,7 +109,7 @@ void Engine::setBackground(string file, int iw, int ih) {
   bkg = true;
 }
 void Engine::splash() {
-  setColor(0xff, 0xff, 0xff); // Need to fix this so it uses this color instead of userset one
+  //setColor(0xff, 0xff, 0xff); // Need to fix this so it uses this color instead of userset one
   Object b;
   //b.setImage("http://archeantus.net/images/splash.bmp", renderScreen());
   b.setImage("../../engine/res/engine-logo.bmp", renderScreen());
@@ -118,6 +119,7 @@ void Engine::splash() {
   endLoop();
   sleep(2.3);
   splashed=true;
+  if(custom) runCustomSplash();
 }
 void Engine::bypassSplash(int key) {
   if(key = 4231998) {
@@ -126,4 +128,21 @@ void Engine::bypassSplash(int key) {
 }
 bool Engine::hasSplashed() {
   return splashed;
+}
+bool Engine::runCustomSplash() {
+  Object b;
+  preLoop();
+  b.setImage(cf.c_str(), renderScreen());
+  b.setSource(0, 0, cw, ch);
+  b.center(WIDTH, HEIGHT);
+  pushToScreen(b);
+  endLoop();
+  sleep(ct);
+}
+void Engine::customSplash(string file, double time, int w, int h) {
+  cf = file;
+  ct = time;
+  cw = w;
+  ch = h;
+  custom = true;
 }

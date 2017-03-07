@@ -41,18 +41,6 @@ vector<Tile> Tileset::loadMaps(string name, string map, string img, SDL_Renderer
   return tmp;
 }
 vector<Tile> Tileset::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
-  /*vector<Tile> rtrn;
-  int counter = count;
-  for(int i=r; i>0; i--) {
-    vector<Tile> tmp;
-    counter-=rcount;
-    if(counter < 0) {
-      counter+=rcount;
-      tmp = loadMaps(name, map, img, ren, width, height, i, counter);
-    } else { tmp = loadMaps(name, map, img, ren, width, height, i, rcount); }
-    rtrn.insert(rtrn.end(), tmp.begin(), tmp.end());
-  }
-  return rtrn;*/
   vector<Tile> tmp;
   tmp = genMap(name, map, img, ren, width, height, r, rcount, count);
   return tmp;
@@ -68,12 +56,18 @@ vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* 
 vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
   vector<Tile> tmp;
   int tag = 1;
-  for(int i=0; i<(r); i++) {
-    for(int j=0; j<(rcount); j++) {
+  for(int i=0; i<r; i++) {
+    for(int j=0; j<rcount; j++) {
       tmp.push_back(addTile(name, img, ren, tag, i+1, j+1, width, height));
+      //cout << "loaded Tile " << tag << " at (" << j << ", " << i << ")\n";
       tag++;
+      if(tag>count) { break; }
     }
+    if(tag>count) break;
   }
+  /*for(int i=0; i<tmp.size(); i++) {
+    cout << "Tile " << tmp[i].getValue() << " at (" << tmp[i].getSX()/width << ", " << tmp[i].getSY()/height << ")\n";
+  }*/
   loadTiles(map, width, height);
   return tmp;
 }

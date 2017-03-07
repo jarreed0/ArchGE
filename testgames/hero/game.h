@@ -18,6 +18,7 @@ using namespace std;
 #define HEIGHT 480
 #define TILE_SIZE 32
 #define SPEED 2
+#define TOTAL_TILES 18
 
 class Game {
 public:

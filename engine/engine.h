@@ -37,13 +37,18 @@ public:
   void splash();
   void bypassSplash(int key);
   bool hasSplashed();
+  bool runCustomSplash();
+  void customSplash(string file, double time, int w, int h);
 private:
   SDL_Renderer* engren;
   SDL_Window *engwin;
   int WIDTH, HEIGHT;
   Object background;
   bool bkg;
-  bool splashed;
+  bool splashed, custom;
+  string cf;
+  double ct;
+  int cw, ch;
 };
 
 #endif //ENGINE_H
