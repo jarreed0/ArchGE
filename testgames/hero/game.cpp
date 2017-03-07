@@ -5,9 +5,8 @@ Game::Game() : level(12) {
   e.bypassSplash(4231998);
   e.init(TITLE, WIDTH, HEIGHT, 0);
   level.setWindowSize(WIDTH, HEIGHT);
-  level.loadMaps("wall", "res/level.wall", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 2, 8);
-  level.loadMaps("tile", "res/level.tile", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 1, 8);
-  e.setColor(0x00, 0x8f, 0x33);
+  loadLevel();
+  e.setColor(0xff, 0x8f, 0x33);
   running = true;
   loop();
 }
@@ -40,8 +39,11 @@ void Game::input() {
     if(i.checkKey(i.quit)) running = false;
     if(i.checkKey(i.esc)) running = false;
     if(i.checkKey(i.r)) {
-      level.loadMaps("wall", "res/level.wall", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 2, 8);
-      level.loadMaps("tile", "res/level.tile", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 1, 8);
+      loadLevel();
     }
   }
+}
+
+void Game::loadLevel() {
+  level.loadMaps("tile", "res/level.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 2, 6, 12);
 }

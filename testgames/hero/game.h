@@ -26,6 +26,7 @@ public:
   void loop();
   void draw();
   void input();
+  void loadLevel();
 private:
   Engine e;
   Input i;
