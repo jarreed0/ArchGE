@@ -160,6 +160,30 @@ vector<Tile> Tileset::getTilesToRender() {
   }
   return vec;
 }
+vector<Tile> Tileset::getTilesToRender(int w, int h) {
+  vector <Tile> vec;
+  pushAng();
+  for(int i = 0; i<tileset.size(); i++) {
+    int ttw = winWidth/w/2+2;
+    int tth = winHeight/w/2+2;
+    tileset[i].x = 0;
+    tileset[i].y = 0;
+    int startx = tileset[i].x-(ttw/2)-w;
+    int starty = tileset[i].y-(tth/2)-h;
+    int endx = ttw+w;
+    int endy = tth+h;
+    //cout << "SX: " << startx << ", EX: " << endx << "\nSY: " << starty << ", EY: " << endy << endl;
+    for(int j = 0; j<tileset[i].tiles.size(); j++) {
+      if(tileset[i].tiles[j].x <= endx*2 && (tileset[i].tiles[j].x > startx*2)) {
+        if(tileset[i].tiles[j].y <= endy && (tileset[i].tiles[j].y > starty)) {
+          tileset[i].tiles[j].tile.setDest(w, h, w*tileset[i].tiles[j].x, h*tileset[i].tiles[j].y);
+          vec.push_back(tileset[i].tiles[j].tile);
+        }
+      }
+    }
+  }
+  return vec;
+}
 void Tileset::move(double mx, double my) {
   for(int i=0; i<tileset.size(); i++) {
     for(int j=0; j<tileset[i].tiles.size(); j++) {

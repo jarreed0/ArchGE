@@ -2,7 +2,7 @@
 
 Game::Game() : level(TOTAL_TILES) {
   i.logPress();
-  //e.bypassSplash(4231998);
+  e.bypassSplash(4231998);
   e.customSplash("res/splash.bmp", 3, 600, 111);
   e.init(TITLE, WIDTH, HEIGHT, 0);
   level.centerCamera(80);
@@ -28,15 +28,15 @@ void Game::loop() {
 }
 
 void Game::draw() {
-  disp = level.getTilesToRender();
+  disp = level.getTilesToRender(16, 16);
   for(int i = 0; i < disp.size(); i++) e.pushToScreen(disp[i]);
 }
 
 void Game::input() {
   i.logPress();
   if(running) {
-    if(i.checkKey(i.left)) level.move(-SPEED, 0);
-    if(i.checkKey(i.right)) level.move(SPEED, 0);
+    if(i.checkKey(i.left)) level.move(SPEED, 0);
+    if(i.checkKey(i.right)) level.move(-SPEED, 0);
     if(i.checkKey(i.up)) level.move(0, SPEED);
     if(i.checkKey(i.down)) level.move(0, -SPEED);
     if(i.checkKey(i.quit)) running = false;

@@ -27,6 +27,7 @@ public:
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height);
   Tile addTile(string name, string file, SDL_Renderer* ren, int value, int size);
   vector<Tile> getTilesToRender();
+  vector<Tile> getTilesToRender(int w, int h);
   void move(double mx, double my);
   Object move(double mx, double my, Object p);
   void setCameraMargin(int wm, int hm);
