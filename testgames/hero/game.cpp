@@ -50,7 +50,7 @@ void Game::input() {
 
 void Game::loadLevel() {
   disp.clear();
-  level.loadMaps("tile", "res/building.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 3, 6, TOTAL_TILES);
+  level.loadMaps("tile", "res/building.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 11, 6, TOTAL_TILES);
 }
 
 void Game::mouseMove() {
