@@ -34,10 +34,14 @@ Input::Input() {
   lshift = 40;
   rshift = 41;
   shift = 42;
-  mouse = 43;
+  mouseleft = 43;
   quit = 44;
   esc = 45;
   w = 46;
+  mouseright = 47;
+  mousemiddle = 48;
+  mouseup = 49;
+  mousedown = 50;
 }
 Input::~Input() {}
 
@@ -96,9 +100,15 @@ void Input::logPress() {
         }
         break;
         case SDL_MOUSEBUTTONDOWN:
-          keys[mouse] = true;
-          break;
+          switch (event.button.button) {
+            //case SDL_BUTTON_WHEELUP: keys[mouseup] = true; break;
+            //case SDL_BUTTON_WHEELDOWN: keys[mousedown] = true; break;
+            case SDL_BUTTON_LEFT: keys[mouseleft] = true; break;
+            case SDL_BUTTON_RIGHT: keys[mouseright] = true; break;
+            case SDL_BUTTON_MIDDLE: keys[mousemiddle] = true; break;
+          }
         }
+        SDL_GetMouseState(&mousex, &mousey);
     }
 }
 

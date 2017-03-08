@@ -28,6 +28,7 @@ public:
   void draw();
   void input();
   void loadLevel();
+  void mouseMove();
 private:
   Engine e;
   Input i;
@@ -35,6 +36,7 @@ private:
   string TITLE = "Hero";
   bool running;
   vector<Tile> disp;
+  bool mm;
 };
 
 #endif //GAME_H
