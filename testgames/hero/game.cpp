@@ -2,8 +2,8 @@
 
 Game::Game() : level(TOTAL_TILES) {
   i.logPress();
-  e.bypassSplash(4231998);
-  e.customSplash("res/splash.bmp", 2, 600, 111);
+  //e.bypassSplash(4231998);
+  e.customSplash("res/splash.bmp", 3, 600, 111);
   e.init(TITLE, WIDTH, HEIGHT, 0);
   level.centerCamera(80);
   level.setWindowSize(WIDTH, HEIGHT);
@@ -21,7 +21,6 @@ Game::~Game() {
 void Game::loop() {
   while(running) {
     input();
-    if(mm) mouseMove();
     e.preLoop();
     draw();
     e.endLoop();
@@ -45,6 +44,7 @@ void Game::input() {
     if(i.checkKey(i.r)) loadLevel();
     if(i.checkKey(i.mousemiddle)) { if(mm) {mm=0;} else {mm=1;} }
     if(i.checkKey(i.e)) { disp.clear(); level.loadMaps("tile", "res/level.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 2, 6, 12); }
+    if(mm) mouseMove();
   }
 }
 
