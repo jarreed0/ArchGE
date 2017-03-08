@@ -35,8 +35,8 @@ void Game::draw() {
 void Game::input() {
   i.logPress();
   if(running) {
-    if(i.checkKey(i.left)) level.move(SPEED, 0);
-    if(i.checkKey(i.right)) level.move(-SPEED, 0);
+    if(i.checkKey(i.left)) level.move(-SPEED, 0);
+    if(i.checkKey(i.right)) level.move(SPEED, 0);
     if(i.checkKey(i.up)) level.move(0, SPEED);
     if(i.checkKey(i.down)) level.move(0, -SPEED);
     if(i.checkKey(i.quit)) running = false;
