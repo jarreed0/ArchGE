@@ -1,6 +1,8 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
+#include <vector>
+#include <iostream>
 #include "image.h"
 
 class Object {
@@ -38,6 +40,12 @@ public:
   void center(int w, int h);
   bool collidable() {return solid;}
   bool setSolid(bool s) {this->solid=s;}
+  void createFrameSet(string n, int count, int x, int y, int w, int h);
+  SDL_Rect createFrame(int x, int y, int w, int h);
+  void nextFrame();
+  void setCurFrame(int f);
+  void setCurFrameSet(string n) {activeFrameSet = n;}
+  void changeFrameOnMove(bool fom) {frameonmove = fom;}
 private:
   Image img;
   SDL_Rect rect;
@@ -45,6 +53,14 @@ private:
   SDL_Rect buff;
   double angle;
   bool solid;
+  struct frameset {
+    vector<SDL_Rect> frame;
+    string name;
+    int cur;
+  };
+  vector<frameset> set;
+  string activeFrameSet;
+  bool frameonmove;
 };
 
 #endif //OBJECT_H

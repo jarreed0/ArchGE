@@ -2,7 +2,7 @@
 
 Game::Game() : level(TOTAL_TILES) {
   i.logPress();
-  e.bypassSplash(4231998);
+  //e.bypassSplash(4231998);
   e.customSplash("res/splash.bmp", 3, 600, 111);
   e.init(TITLE, WIDTH, HEIGHT, 0);
   level.centerCamera(80);
@@ -50,7 +50,7 @@ void Game::input() {
 
 void Game::loadLevel() {
   disp.clear();
-  level.loadMaps("tile", "res/building.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, 11, 6, TOTAL_TILES);
+  level.loadMaps("tile", "res/building.tileset", "res/wall.bmp", e.renderScreen(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/6, 6, TOTAL_TILES);
 }
 
 void Game::mouseMove() {

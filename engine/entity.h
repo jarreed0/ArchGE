@@ -18,12 +18,17 @@ public:
   void setEmotion(int e) { emotion=e; }
   int getTeam() const { return team; }
   void setTeam(int t) { team=t; }
+  bool isActive() const { return active; }
+  void kill();
+  void deactivate();
+  void activate();
 private:
   double health;
   double maxHealth;
   //Inventory inv; //not yet created
   int emotion;
   int team;
+  bool active;
 };
 
 #endif //ENTITY_H
