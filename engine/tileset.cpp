@@ -113,15 +113,15 @@ void Tileset::loadTiles(string filename, int iw, int ih) {
     cur.x = setX;
     cur.y = setY;
     if(!set) {
-      setCoord(-cur.x, cur.y);
+      setCoord(-cur.x, -cur.y);
     } else {
       setCoord(0, 0);
     }
   }
   in.close();
   tileset.push_back(cur);
-  setCoord(-cur.x, cur.y);
-  move(-cur.x, cur.y);
+  setCoord(-cur.x, -cur.y);
+  move(-cur.x, -cur.y);
 }
 void Tileset::addTile(Tile t) {
   tiles[t.getValue()] = t;
@@ -310,15 +310,25 @@ Object Tileset::getLens() {
   return lens;
 }
 void Tileset::setSolid(int s, int l) {
-  tileset[1].tiles[s].tile.setSolid(1);
+  cout << l << endl;
+  tileset[l-1].tiles[s-1].tile.setSolid(1);
 }
 void Tileset::setSolid(int s, int e, int l) {
   for(int i = s-1; i<e; i++) {
     setSolid(i, l);
   }
-}
+}/*
 void Tileset::setSolid(int l) {
   setSolid(1, tileset[l].tiles.size()+1, l);
+}*/
+void Tileset::setSolid(int l) {
+  for(int i=0; i<tileset.size(); i++) {
+    for(int j=0; j<tileset[i].tiles.size(); j++) {
+      if(tileset[i].tiles[j].tile.getValue() == l) {
+        tileset[i].tiles[j].tile.setSolid(1);
+      }
+    }
+  }
 }
 void Tileset::setPassable(int s, int l) {
   tileset[1].tiles[s-1].tile.setSolid(0);

@@ -8,6 +8,9 @@ Game::Game() : level(TOTAL_TILES) {
   level.centerCamera(80);
   level.setWindowSize(WIDTH, HEIGHT);
   loadLevel();
+  level.setSolid(6);
+  level.setSolid(38);
+  level.setSolid(44);
   e.setColor(0x00, 0x77, 0x89);
   running = true;
   mm=0;
@@ -18,6 +21,8 @@ Game::Game() : level(TOTAL_TILES) {
   pRight = player.createNewFrameSet(1, 1, 1, 24, 32);
   pLeft  = player.createNewFrameSet(1, 2, 1, 24, 32);
   player.setCurFrameSet(pLeft);
+  visible = true;
+  del = uel = false;
   loop();
 }
 
@@ -36,8 +41,22 @@ void Game::loop() {
 
 void Game::draw() {
   disp = level.getTilesToRender(16, 16);
-  for(int i = 0; i < disp.size(); i++) e.pushToScreen(disp[i]);
-  e.pushToScreen(player);
+  for(int i = 0; i < disp.size(); i++) {
+    e.pushToScreen(disp[i]);
+    if(col.isTouching(player, disp[i])) {
+      //colliding
+      if(disp[i].getSolid()) { //solid object, unpassable
+      } else if(disp[i].getValue() == 22 || disp[i].getValue() == 23 || disp[i].getValue() == 28 || disp[i].getValue() == 29) {
+        uel = true;
+      } else if(disp[i].getValue() == 34 or disp[i].getValue() == 35 or disp[i].getValue() == 40 or disp[i].getValue() == 41) {
+        del = true;
+      } else {
+        del = false;
+        //uel = false;
+      }
+    }
+  }
+  if(visible) e.pushToScreen(player);
 }
 
 void Game::input() {
@@ -46,7 +65,16 @@ void Game::input() {
   if(running) {
     if(i.checkKey(i.left)) { level.move(-SPEED, 0); player.setCurFrameSet(pLeft); }
     if(i.checkKey(i.right)) { level.move(SPEED, 0); player.setCurFrameSet(pRight); }
-    if(i.checkKey(i.up)) level.move(0, SPEED);
+    if(i.checkKey(i.up)) {
+      if(uel || del) {
+        for(int i=0; i<50; i++) {
+          visible = false;
+          if(uel)level.move(0, SPEED);
+          if(del)level.move(0, -SPEED);
+        }
+        visible=true;
+      }
+    }
     if(i.checkKey(i.down)) level.move(0, -SPEED);
     if(i.checkKey(i.quit)) { running = false; cout << "quit\n"; }
     if(i.checkKey(i.esc)) { running = false; cout << "esc\n"; }

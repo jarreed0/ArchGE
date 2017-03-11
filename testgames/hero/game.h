@@ -44,6 +44,8 @@ private:
   //Player p;
   Object player;
   int pLeft, pRight;
+  bool visible, del, uel;
+  Collision col;
 };
 
 #endif //GAME_H
