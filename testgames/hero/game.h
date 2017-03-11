@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 #include <vector>
-/*#include "../../engine/engine.h"
+#include "../../engine/engine.h"
 #include "../../engine/image.h"
 #include "../../engine/input.h"
 #include "../../engine/object.h"
@@ -12,8 +12,11 @@ using namespace std;
 #include "../../engine/tile.h"
 #include "../../engine/tileset.h"
 #include "../../engine/collision.h"
-#include "../../engine/sdl_check.h"*/
-#include "../../engine/arch.h"
+#include "../../engine/sdl_check.h"
+#include "../../engine/entity.h"
+//#include "../../engine/arch.h" //make it so build also rebuilds headerfile
+
+#include "player.h"
 
 #define WIDTH 1080
 #define HEIGHT 480
@@ -38,6 +41,7 @@ private:
   bool running;
   vector<Tile> disp;
   bool mm;
+  Player p;
 };
 
 #endif //GAME_H

@@ -10,7 +10,9 @@ public:
   Object();
   ~Object();
   void setImage(string file, SDL_Renderer* ren);
-  SDL_Texture* getImage();
+  //void setImage(Image i) const {img = i;}
+  Image getImage() const {return img;}
+  SDL_Texture* getTexture();
   void setSource(double x, double y, int w, int h);
   void setDest(int w, int h);
   void setDest(int w, int h, double x, double y);
@@ -18,6 +20,9 @@ public:
   SDL_Rect getSource();
   SDL_Rect getDest();
   SDL_Rect getBuff();
+  void setSource(SDL_Rect s) {rect = s;}
+  void setDest(SDL_Rect d) {dest = d;}
+  void setBuff(SDL_Rect b) {buff = b;}
   void setSX(double x);
   void setSY(double y);
   void setSW(int w);
@@ -39,13 +44,8 @@ public:
   void move(double mx, double my);
   void center(int w, int h);
   bool collidable() {return solid;}
-  bool setSolid(bool s) {this->solid=s;}
-  void createFrameSet(string n, int count, int x, int y, int w, int h);
-  SDL_Rect createFrame(int x, int y, int w, int h);
-  void nextFrame();
-  void setCurFrame(int f);
-  void setCurFrameSet(string n) {activeFrameSet = n;}
-  void changeFrameOnMove(bool fom) {frameonmove = fom;}
+  void setSolid(bool s) {solid=s;}
+  bool getSolid() const {return solid;}
 private:
   Image img;
   SDL_Rect rect;
@@ -53,14 +53,6 @@ private:
   SDL_Rect buff;
   double angle;
   bool solid;
-  struct frameset {
-    vector<SDL_Rect> frame;
-    string name;
-    int cur;
-  };
-  vector<frameset> set;
-  string activeFrameSet;
-  bool frameonmove;
 };
 
 #endif //OBJECT_H

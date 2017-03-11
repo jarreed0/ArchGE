@@ -70,7 +70,7 @@ void Engine::pushToScreen(Object obj) { //Insert NULL for source to display whol
   if(splashed) {
     SDL_Rect tsrc = obj.getSource();
     SDL_Rect tdes = obj.getDest();
-    SDL_RenderCopyEx(engren, obj.getImage(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(engren, obj.getTexture(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
   }
 }
 
@@ -78,7 +78,7 @@ void Engine::pushToScreen(Object obj, int key) { //Insert NULL for source to dis
   if(key = 4231998) {
     SDL_Rect tsrc = obj.getSource();
     SDL_Rect tdes = obj.getDest();
-    SDL_RenderCopyEx(engren, obj.getImage(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(engren, obj.getTexture(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
   }
 }
 

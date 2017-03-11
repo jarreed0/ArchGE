@@ -2,7 +2,7 @@
 
 Game::Game() : level(TOTAL_TILES) {
   i.logPress();
-  //e.bypassSplash(4231998);
+  e.bypassSplash(4231998);
   e.customSplash("res/splash.bmp", 3, 600, 111);
   e.init(TITLE, WIDTH, HEIGHT, 0);
   level.centerCamera(80);

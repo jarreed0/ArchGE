@@ -2,11 +2,10 @@
 
 Object::Object() {
   setAng(0);
-  changeFrameOnMove(0);
 }
 Object::~Object() {}
 void Object::setImage(string file, SDL_Renderer* ren) {img.loadImage(file, ren);}
-SDL_Texture* Object::getImage() {return img.getImage();}
+SDL_Texture* Object::getTexture() {return img.getImage();}
 void Object::setSource(double x, double y, int w, int h) {
   setSX(x);
   setSY(y);
@@ -59,46 +58,7 @@ double Object::getAng() {
 void Object::move(double mx, double my) {
   setDX(getDX()+mx);
   setDY(getDY()-my);
-  if(frameonmove) nextFrame();
 }
 void Object::center(int w, int h) {
   setDest(getSW(), getSH(), (w/2)-(getSW()/2), (h/2)-(getSH()/2));
-}
-void Object::createFrameSet(string n, int count, int x, int y, int w, int h) {
-  frameset tmp;
-  tmp.name = n;
-  for(int i=0; i<(count-1); i++) {
-    tmp.frame.push_back(createFrame(x*i, y, w, h));
-  }
-  tmp.cur = 0;
-  set.push_back(tmp);
-}
-SDL_Rect Object::createFrame(int x, int y, int w, int h) {
-  SDL_Rect tmp;
-  tmp.x = x;
-  tmp.y = y;
-  tmp.w = w;
-  tmp.h = h;
-  return tmp;
-}
-void Object::nextFrame() {
-  for(int i=0; i<set.size(); i++) {
-    if(set[i].name == activeFrameSet) {
-      if(set[i].cur = set[i].frame.size()) {
-        set[i].cur=0;
-      } else {
-        set[i].cur++;
-      }
-      setSource(set[i].frame[set[i].cur].x, set[i].frame[set[i].cur].y, set[i].frame[set[i].cur].w, set[i].frame[set[i].cur].h);
-      break;
-    }
-  }
-}
-void Object::setCurFrame(int f) {
-  for(int i=0; i<set.size(); i++) {
-    if(set[i].name == activeFrameSet) {
-      set[i].cur = f;
-      break;
-    }
-  }
 }

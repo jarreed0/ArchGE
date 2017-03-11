@@ -12,6 +12,9 @@ public:
   ~Image();
   void loadImage(string file, SDL_Renderer* ren);
   SDL_Texture* getImage();
+  void setImage(SDL_Texture* t) {tex=t;}
+  string getFile() const {return filename;}
+  void setFile(string f) {filename=f;}
 private:
   SDL_Texture* tex;
   string filename;
