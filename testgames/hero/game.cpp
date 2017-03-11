@@ -23,6 +23,8 @@ Game::Game() : level(TOTAL_TILES) {
   player.setCurFrameSet(pLeft);
   visible = true;
   del = uel = false;
+  ver = hor = 0;
+  falling = true;
   loop();
 }
 
@@ -32,6 +34,14 @@ Game::~Game() {
 
 void Game::loop() {
   while(running) {
+    if(falling) {
+      ver=-SPEED;
+    } else {
+      ver=0;
+    }
+    falling=1;
+    level.move(hor, ver);
+    hor=ver=0;
     input();
     e.preLoop();
     draw();
@@ -45,14 +55,27 @@ void Game::draw() {
     e.pushToScreen(disp[i]);
     if(col.isTouching(player, disp[i])) {
       //colliding
+      bool elstop = false;
       if(disp[i].getSolid()) { //solid object, unpassable
-      } else if(disp[i].getValue() == 22 || disp[i].getValue() == 23 || disp[i].getValue() == 28 || disp[i].getValue() == 29) {
+        falling=0;
+      }
+      if(disp[i].getValue() == 22 || disp[i].getValue() == 23 || disp[i].getValue() == 28 || disp[i].getValue() == 29) {
         uel = true;
+        elstop = true;
+        ecount++;
       } else if(disp[i].getValue() == 34 or disp[i].getValue() == 35 or disp[i].getValue() == 40 or disp[i].getValue() == 41) {
         del = true;
+        elstop = true;
+        ecount++;
       } else {
-        del = false;
+        //del = false;
         //uel = false;
+      }
+      if(elstop) {
+        if(level.getY() < ely) {
+          ver=0;
+          visible=true;
+        }
       }
     }
   }
@@ -66,14 +89,8 @@ void Game::input() {
     if(i.checkKey(i.left)) { level.move(-SPEED, 0); player.setCurFrameSet(pLeft); }
     if(i.checkKey(i.right)) { level.move(SPEED, 0); player.setCurFrameSet(pRight); }
     if(i.checkKey(i.up)) {
-      if(uel || del) {
-        for(int i=0; i<50; i++) {
-          visible = false;
-          if(uel)level.move(0, SPEED);
-          if(del)level.move(0, -SPEED);
-        }
-        visible=true;
-      }
+      if(uel) ver=SPEED; ely=level.getY(); uel=del=false; visible=false;
+      if(del) ver=-SPEED; ely=level.getY(); uel=del=false; visible=false;
     }
     if(i.checkKey(i.down)) level.move(0, -SPEED);
     if(i.checkKey(i.quit)) { running = false; cout << "quit\n"; }

@@ -44,7 +44,9 @@ private:
   //Player p;
   Object player;
   int pLeft, pRight;
-  bool visible, del, uel;
+  bool visible, del, uel, falling;
+  int ver, hor;
+  int ely, ecount;
   Collision col;
 };
 
