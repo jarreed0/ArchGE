@@ -20,19 +20,23 @@ void Tileset::pushAng() {
     //}
   }
 }
-void Tileset::setCoord(int ix, int iy) {
+void Tileset::setCoord(double ix, double iy) {
+  move(ix-x, iy-y);
+}
+void Tileset::setCoord(double ix, double iy, double mx, double my) {
   x = ix;
   y = iy;
+  calcPos(mx, my);
   set=true;
 }
 void Tileset::setWindowSize(int ww, int wh) {
   winWidth = ww;
   winHeight = wh;
 }
-int Tileset::getX() {
+double Tileset::getX() {
   return x;
 }
-int Tileset::getY() {
+double Tileset::getY() {
   return y;
 }
 vector<Tile> Tileset::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
@@ -108,12 +112,16 @@ void Tileset::loadTiles(string filename, int iw, int ih) {
     in >> setY;
     cur.x = setX;
     cur.y = setY;
+    if(!set) {
+      setCoord(-cur.x, cur.y);
+    } else {
+      setCoord(0, 0);
+    }
   }
   in.close();
-  if(!set) {
-    setCoord(cur.x, cur.y);
-  }
   tileset.push_back(cur);
+  setCoord(-cur.x, cur.y);
+  move(-cur.x, cur.y);
 }
 void Tileset::addTile(Tile t) {
   tiles[t.getValue()] = t;
@@ -185,11 +193,22 @@ vector<Tile> Tileset::getTilesToRender(int w, int h) {
   return vec;
 }
 void Tileset::move(double mx, double my) {
+  setCoord(x-=(mx/10), y-=(my/10), mx, my);
+}
+void Tileset::calcPos(double mx, double my) {
   for(int i=0; i<tileset.size(); i++) {
-    for(int j=0; j<tileset[i].tiles.size(); j++) {
-      tileset[i].tiles[j].x -= (mx/10);
-      tileset[i].tiles[j].y += (my/10);
-    }
+    calcSetPos(i, mx, my);
+  }
+}
+void Tileset::calcSetPos(int i, double mx, double my) {
+  tileset[i].x -= (mx/10);
+  tileset[i].y -= (my/10);
+  calcTilesPos(i, mx, my);
+}
+void Tileset::calcTilesPos(int i, double mx, double my) {
+  for(int j=0; j<tileset[i].tiles.size(); j++) {
+    tileset[i].tiles[j].x -= (mx/10);
+    tileset[i].tiles[j].y += (my/10);
   }
 }
 Object Tileset::move(double mx, double my, Object p) {

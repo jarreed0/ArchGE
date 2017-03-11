@@ -41,7 +41,9 @@ private:
   bool running;
   vector<Tile> disp;
   bool mm;
-  Player p;
+  //Player p;
+  Object player;
+  int pLeft, pRight;
 };
 
 #endif //GAME_H

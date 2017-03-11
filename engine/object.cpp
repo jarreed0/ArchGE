@@ -62,3 +62,37 @@ void Object::move(double mx, double my) {
 void Object::center(int w, int h) {
   setDest(getSW(), getSH(), (w/2)-(getSW()/2), (h/2)-(getSH()/2));
 }
+int Object::createNewFrameSet(int fCount, int r, int c, int w, int h) {
+  vector <SDL_Rect> tmp;
+  for(int i=0; i<fCount; i++) {
+    tmp.push_back(createNewFrame(i+c, r, w, h));
+  }
+  frameset.push_back(tmp);
+  return frameset.size();
+}
+SDL_Rect Object::createNewFrame(int x, int y, int w, int h) {
+  SDL_Rect tmp;
+  tmp.x = (x-1)*w;
+  tmp.y = (y-1)*h;
+  tmp.w = w;
+  tmp.h = h;
+  return tmp;
+}
+void Object::setCurFrameSet(int fs) {
+  curFrameSet = fs;
+  setCurFrame(0);
+  nextFrame();
+}
+void Object::setCurFrame(int f) {
+  curFrame = f;
+}
+void Object::nextFrame() {
+  if(curFrame = frameset[curFrameSet-1].size()) {
+    resetFrameSet();
+  }
+  curFrame++;
+  setSource(frameset[curFrameSet-1][curFrame-1].x, frameset[curFrameSet-1][curFrame-1].y, frameset[curFrameSet-1][curFrame-1].w, frameset[curFrameSet-1][curFrame-1].h);
+}
+void Object::resetFrameSet() {
+  curFrame = 0;
+}

@@ -13,10 +13,11 @@ public:
   ~Tileset();
   void setAng(int ang);
   void pushAng();
-  void setCoord(int ix, int iy);
+  void setCoord(double ix, double iy);
+  void setCoord(double ix, double iy, double mx, double my);
   void setWindowSize(int ww, int wh);
-  int getX();
-  int getY();
+  double getX();
+  double getY();
   vector<Tile> loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count);
   vector<Tile> loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count);
   vector<Tile> genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count);
@@ -30,6 +31,9 @@ public:
   vector<Tile> getTilesToRender(int w, int h);
   void move(double mx, double my);
   Object move(double mx, double my, Object p);
+  void calcPos(double mx, double my);
+  void calcSetPos(int i, double mx, double my);
+  void calcTilesPos(int i, double mx, double my);
   void setCameraMargin(int wm, int hm);
   void centerCamera(int percentage);
   Object getCamera();

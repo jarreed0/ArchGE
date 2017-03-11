@@ -46,6 +46,14 @@ public:
   bool collidable() {return solid;}
   void setSolid(bool s) {solid=s;}
   bool getSolid() const {return solid;}
+  int createNewFrameSet(int fCount, int r, int c, int w, int h);
+  SDL_Rect createNewFrame(int x, int y, int w, int h);
+  void setCurFrameSet(int fs);
+  void setCurFrame(int f);
+  void nextFrame();
+  void resetFrameSet();
+  int getCurFrameSet() const {return curFrameSet;}
+  int getCurFrame() const {return curFrame;}
 private:
   Image img;
   SDL_Rect rect;
@@ -53,6 +61,9 @@ private:
   SDL_Rect buff;
   double angle;
   bool solid;
+  vector< vector <SDL_Rect> > frameset;
+  int curFrameSet;
+  int curFrame;
 };
 
 #endif //OBJECT_H
