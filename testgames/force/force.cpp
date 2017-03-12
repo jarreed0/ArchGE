@@ -13,11 +13,10 @@ Force::Force() : level(TOTAL_TILES) {
   player.setDest(24, 32);
   player.center(WIDTH, HEIGHT);
   pRight = player.createNewFrameSet(2, 1, 1, 24, 32);
-  pLeft  = player.createNewFrameSet(2, 2, 1, 24, 32);
+  pLeft = player.createNewFrameSet(2, 2, 1, 24, 32);
   player.setCurFrameSet(pLeft);
-  i.logPress();
-  i.reset();
-  falling = false;
+  falling = jumping = false;
+  jumpCount=0;
   loop();
 }
 
@@ -66,12 +65,13 @@ void Force::draw() {
   }
   if(moveRight) level.move(SPEED, 0);
   if(moveLeft) level.move(-SPEED, 0);
+  if(jumping) { level.move(0, SPEED); jumpCount++; falling=false; }
+  if(jumpCount > 50) { jumpCount=0; jumping=false; }
   e.pushToScreen(player);
 }
 
 void Force::input() {
   i.logPress();
-  i.reset();
   moveLeft=moveRight=false;
   if(running) {
     if(i.checkKey(i.left)) {
@@ -82,8 +82,8 @@ void Force::input() {
       moveRight = true;
       player.setCurFrameSet(pRight);
     }
-    if(i.checkKey(i.up)) { level.move(0, SPEED); }
-    if(i.checkKey(i.down)) { level.move(0, -SPEED); }
+    if(i.checkKey(i.up)) { jumping=true; }
+    //if(i.checkKey(i.down)) { level.move(0, -SPEED); }
     if(i.checkKey(i.quit)) { running = false; cout << "quit\n"; }
     if(i.checkKey(i.esc)) { running = false; cout << "esc\n"; }
   }

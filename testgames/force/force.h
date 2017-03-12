@@ -39,7 +39,8 @@ private:
   Entity player;
   int pLeft, pRight;
   Collision col;
-  bool falling, moveLeft, moveRight;
+  bool falling, jumping, moveLeft, moveRight;
+  int jumpCount;
 };
 
 #endif //FORCE_H

@@ -3,6 +3,7 @@
 
 #include "sdl_check.h"
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 using namespace std;
 #include <iostream>
 
@@ -11,6 +12,8 @@ public:
   Image();
   ~Image();
   void loadImage(string file, SDL_Renderer* ren);
+  void loadPNG(string file, SDL_Renderer* ren);
+  void loadBMP(string file, SDL_Renderer* ren);
   SDL_Texture* getImage();
   void setImage(SDL_Texture* t) {tex=t;}
   string getFile() const {return filename;}
