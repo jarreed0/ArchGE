@@ -80,7 +80,7 @@ SDL_Rect Object::createNewFrame(int x, int y, int w, int h) {
 }
 void Object::setCurFrameSet(int fs) {
   curFrameSet = fs;
-  setCurFrame(0);
+  //setCurFrame(0);
   nextFrame();
 }
 void Object::setCurFrame(int f) {
