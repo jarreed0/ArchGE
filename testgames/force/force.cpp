@@ -47,15 +47,15 @@ void Force::draw() {
     }
     if(moveRight) {
       Entity p = player;
-      p.move(SPEED, 0);
-      if(col.isLeftOf(p, disp[i]) && !col.isAbove(p, disp[i])) {
+      p.move(SPEED, SPEED);
+      if(col.isTouching(p, disp[i]) && disp[i].getValue() != 42) {
         moveRight=false;
       }
     }
     if(moveLeft) {
       Entity p = player;
-      p.move(-SPEED, 0);
-      if(col.isRightOf(p, disp[i]) && !col.isAbove(p, disp[i])) {
+      p.move(-SPEED, SPEED);
+      if(col.isTouching(p, disp[i]) && disp[i].getValue() != 42) {
         moveLeft=false;
       }
     }
