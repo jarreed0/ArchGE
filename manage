@@ -7,6 +7,12 @@
 # Last Edited by: Avery Reed 2/16/17
 ################################################################
 
+DIFF=$(diff manage /usr/local/bin/manage)
+if [ "$DIFF" != "" ]; then
+  echo "Manage is not upto date!"
+  ./manage -s
+fi
+
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "push or -p - push everything or specified file"
   echo "test or -t - build and test engine and sample project"
@@ -145,7 +151,7 @@ elif [ "$1" == "install" ] || [ "$1" == "-i" ]; then
   sudo apt-get install libsdl2-2.0-0
   sudo apt-get install libsdl2-image-2.0-0 libsdl2-image-dbg libsdl2-image-dev
   sudo apt-get install libsdl2-ttf-2.0-0 libsdl2-ttf-dbg libsdl2-ttf-dev
-  sudo apt-get install doxygen
+  sudo apt-get install doxygen graphviz
 elif [ "$1" == "reg" ] || [ "$1" == "-r" ]; then
   echo -n "User Name: "
   read un
