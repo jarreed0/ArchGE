@@ -11,6 +11,7 @@ DIFF=$(diff manage /usr/local/bin/manage)
 if [ "$DIFF" != "" ] && [ "$2" != "up" ]; then
   echo "Manage is not upto date!"
   ./manage -s up
+  manage -i
   manage $1 $2 $3 $4
   exit
 fi
@@ -25,12 +26,11 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "engine or -e - rebuild engine"
   echo "game or -g - build game based on current engine build"
   echo "clean or -cl - clean out all built files and engine library"
+  echo "doc or -dc - generate doc (html and pdf)"
   echo "In the works:"
   echo "reg or -r - CAN: register git info like username, email, and CANNOT YET:(need to add) key"
-  echo "check or -cf - to check if the installed version is the newest version"
   echo "conf or -c - reconfigure makefile #in the works"
   echo "debug or -d - compile program and run it in debug mode"
-  echo "doc or -dc - generate doc (html and pdf)"
 elif [ "$1" == "doc" ] || [ "$1" == "-dc" ]; then
   cd engine
   doxygen dconfig
