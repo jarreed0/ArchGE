@@ -8,9 +8,9 @@
 ################################################################
 
 DIFF=$(diff manage /usr/local/bin/manage)
-if [ "$DIFF" != "" ]; then
+if [ "$DIFF" != "" ] && [ "$2" != "up" ]; then
   echo "Manage is not upto date!"
-  ./manage -s
+  ./manage -s up
 fi
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
