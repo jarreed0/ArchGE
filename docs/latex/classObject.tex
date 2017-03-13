@@ -13,6 +13,10 @@ Class for storing an image and the source and distination to display.
 
 Inheritance diagram for Object\+:
 % FIG 0
+
+
+Collaboration diagram for Object\+:
+% FIG 1
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -148,6 +152,36 @@ int \hyperlink{classObject_a3de9dd15d8ba28785284bccd2cfc406c}{get\+Cur\+Frame\+S
 int \hyperlink{classObject_a21b245ca66eaee32f3d942759c0de620}{get\+Cur\+Frame} () const \hypertarget{classObject_a21b245ca66eaee32f3d942759c0de620}{}\label{classObject_a21b245ca66eaee32f3d942759c0de620}
 
 \begin{DoxyCompactList}\small\item\em Get the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImage}{Image} \hyperlink{classObject_a78cbd7ab6622400668b41dd6b32f2f4d}{img}\hypertarget{classObject_a78cbd7ab6622400668b41dd6b32f2f4d}{}\label{classObject_a78cbd7ab6622400668b41dd6b32f2f4d}
+
+\begin{DoxyCompactList}\small\item\em The Objects image. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_ac2bf39eb033cf8c8fc9220d607842dbe}{rect}\hypertarget{classObject_ac2bf39eb033cf8c8fc9220d607842dbe}{}\label{classObject_ac2bf39eb033cf8c8fc9220d607842dbe}
+
+\begin{DoxyCompactList}\small\item\em The images source. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_a65a8afd007a1a0dbd67d6997b33b271b}{dest}\hypertarget{classObject_a65a8afd007a1a0dbd67d6997b33b271b}{}\label{classObject_a65a8afd007a1a0dbd67d6997b33b271b}
+
+\begin{DoxyCompactList}\small\item\em The display destination. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_adff14724f0adf5774e2241eabe7965c8}{buff}\hypertarget{classObject_adff14724f0adf5774e2241eabe7965c8}{}\label{classObject_adff14724f0adf5774e2241eabe7965c8}
+
+\begin{DoxyCompactList}\small\item\em Previous display destination. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_aa08efab6c2c6898b1d0d7103076d8674}{angle}\hypertarget{classObject_aa08efab6c2c6898b1d0d7103076d8674}{}\label{classObject_aa08efab6c2c6898b1d0d7103076d8674}
+
+\begin{DoxyCompactList}\small\item\em Angle to be displayed. \end{DoxyCompactList}\item 
+bool \hyperlink{classObject_a4cb593f1e74999419dd38fceaa8ad474}{solid}\hypertarget{classObject_a4cb593f1e74999419dd38fceaa8ad474}{}\label{classObject_a4cb593f1e74999419dd38fceaa8ad474}
+
+\begin{DoxyCompactList}\small\item\em Boolean for if the \hyperlink{classObject}{Object} is collidable/solid. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ S\+D\+L\+\_\+\+Rect $>$ $>$ \hyperlink{classObject_a6dea9199db9c71cadb54202448a85fc4}{frameset}\hypertarget{classObject_a6dea9199db9c71cadb54202448a85fc4}{}\label{classObject_a6dea9199db9c71cadb54202448a85fc4}
+
+\begin{DoxyCompactList}\small\item\em 2D vector of framesets that store frames. \end{DoxyCompactList}\item 
+int \hyperlink{classObject_a2a137e8005d1923f22d90d965b2d11f0}{cur\+Frame\+Set}\hypertarget{classObject_a2a137e8005d1923f22d90d965b2d11f0}{}\label{classObject_a2a137e8005d1923f22d90d965b2d11f0}
+
+\begin{DoxyCompactList}\small\item\em Current frameset. \end{DoxyCompactList}\item 
+int \hyperlink{classObject_aac9e198e982b2fb98d94ee66483d2880}{cur\+Frame}\hypertarget{classObject_aac9e198e982b2fb98d94ee66483d2880}{}\label{classObject_aac9e198e982b2fb98d94ee66483d2880}
+
+\begin{DoxyCompactList}\small\item\em Current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

@@ -10,7 +10,7 @@
 //! Class for loading in maps, tileset images, and then displaying them.
 class Tileset {
 public:
-  //amout of types of tiles
+  //! Amout of types of tiles
   Tileset(int amount);
   ~Tileset();
   //! Set the angle of all the tiles. Calls pushAng().

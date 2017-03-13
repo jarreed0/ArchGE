@@ -1,9 +1,11 @@
 \indexentry{Collision@{Collision}|hyperpage}{5}
 \indexentry{Engine@{Engine}|hyperpage}{6}
-\indexentry{Entity@{Entity}|hyperpage}{7}
+\indexentry{Entity@{Entity}|hyperpage}{6}
 \indexentry{Image@{Image}|hyperpage}{7}
 \indexentry{Input@{Input}|hyperpage}{8}
-\indexentry{Object@{Object}|hyperpage}{9}
-\indexentry{Physics@{Physics}|hyperpage}{12}
-\indexentry{Tile@{Tile}|hyperpage}{12}
-\indexentry{Tileset@{Tileset}|hyperpage}{13}
+\indexentry{Tileset\+::layer@{Tileset\+::layer}|hyperpage}{10}
+\indexentry{Object@{Object}|hyperpage}{11}
+\indexentry{Physics@{Physics}|hyperpage}{14}
+\indexentry{Tile@{Tile}|hyperpage}{15}
+\indexentry{Tileset\+::tile@{Tileset\+::tile}|hyperpage}{15}
+\indexentry{Tileset@{Tileset}|hyperpage}{16}

@@ -5,7 +5,7 @@
   \indexspace
 
   \item {Engine}, \hyperpage{6}
-  \item {Entity}, \hyperpage{7}
+  \item {Entity}, \hyperpage{6}
 
   \indexspace
 
@@ -14,15 +14,17 @@
 
   \indexspace
 
-  \item {Object}, \hyperpage{9}
+  \item {Object}, \hyperpage{11}
 
   \indexspace
 
-  \item {Physics}, \hyperpage{12}
+  \item {Physics}, \hyperpage{14}
 
   \indexspace
 
-  \item {Tile}, \hyperpage{12}
-  \item {Tileset}, \hyperpage{13}
+  \item {Tile}, \hyperpage{15}
+  \item {Tileset}, \hyperpage{16}
+  \item {Tileset\+::layer}, \hyperpage{10}
+  \item {Tileset\+::tile}, \hyperpage{15}
 
 \end{theindex}

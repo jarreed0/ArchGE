@@ -12,3 +12,84 @@ Class for storing health, emotion, team, etc. of an \hyperlink{classObject}{Obje
 
 
 Inheritance diagram for Entity\+:
+% FIG 0
+
+
+Collaboration diagram for Entity\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classEntity_a19c16788d1361e72ac26abb48c7d760f}{get\+Health} () const \hypertarget{classEntity_a19c16788d1361e72ac26abb48c7d760f}{}\label{classEntity_a19c16788d1361e72ac26abb48c7d760f}
+
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classEntity}{Entity}\textquotesingle{}s health. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a4f521d321ea874c474cc0506ff78da08}{set\+Health} (double h)\hypertarget{classEntity_a4f521d321ea874c474cc0506ff78da08}{}\label{classEntity_a4f521d321ea874c474cc0506ff78da08}
+
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classEntity}{Entity}\textquotesingle{}s health. If the health is higher then the max health it will set it to the max health. \end{DoxyCompactList}\item 
+double \hyperlink{classEntity_a5db2ad1ad9e13953207fec9786e632ca}{get\+Max\+Health} () const \hypertarget{classEntity_a5db2ad1ad9e13953207fec9786e632ca}{}\label{classEntity_a5db2ad1ad9e13953207fec9786e632ca}
+
+\begin{DoxyCompactList}\small\item\em Get max health. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a375385b808ac7fd4632d6b71f15b0e1c}{set\+Max\+Health} (double mh)\hypertarget{classEntity_a375385b808ac7fd4632d6b71f15b0e1c}{}\label{classEntity_a375385b808ac7fd4632d6b71f15b0e1c}
+
+\begin{DoxyCompactList}\small\item\em Set max health. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_af7fb432e778f9fcfe4584d09b6a73294}{damage} (double d)\hypertarget{classEntity_af7fb432e778f9fcfe4584d09b6a73294}{}\label{classEntity_af7fb432e778f9fcfe4584d09b6a73294}
+
+\begin{DoxyCompactList}\small\item\em Deal damage. Subtracted from health. If health is less then zero it kills the entity. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_aef00fa78f66829c0ecb8c27c65bd3a92}{heal} (double h)\hypertarget{classEntity_aef00fa78f66829c0ecb8c27c65bd3a92}{}\label{classEntity_aef00fa78f66829c0ecb8c27c65bd3a92}
+
+\begin{DoxyCompactList}\small\item\em Give health to the \hyperlink{classEntity}{Entity}. \end{DoxyCompactList}\item 
+int \hyperlink{classEntity_af1e50595c209b7c90fc9e98ce93883d4}{get\+Emotion} () const \hypertarget{classEntity_af1e50595c209b7c90fc9e98ce93883d4}{}\label{classEntity_af1e50595c209b7c90fc9e98ce93883d4}
+
+\begin{DoxyCompactList}\small\item\em Get current emotion state. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a79056ef5d580c09fe6cf34b989b14589}{set\+Emotion} (int e)\hypertarget{classEntity_a79056ef5d580c09fe6cf34b989b14589}{}\label{classEntity_a79056ef5d580c09fe6cf34b989b14589}
+
+\begin{DoxyCompactList}\small\item\em Set current emotion state. \end{DoxyCompactList}\item 
+int \hyperlink{classEntity_a413d08d1c89b90286c39ec0476613abf}{get\+Team} () const \hypertarget{classEntity_a413d08d1c89b90286c39ec0476613abf}{}\label{classEntity_a413d08d1c89b90286c39ec0476613abf}
+
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classEntity}{Entity}\textquotesingle{}s team. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a9fe88f82909f89087ad17d4d7ce6b22e}{set\+Team} (int t)\hypertarget{classEntity_a9fe88f82909f89087ad17d4d7ce6b22e}{}\label{classEntity_a9fe88f82909f89087ad17d4d7ce6b22e}
+
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classEntity}{Entity}\textquotesingle{}s team. \end{DoxyCompactList}\item 
+bool \hyperlink{classEntity_a6b9926025e54639201b59b447da5365b}{is\+Active} () const \hypertarget{classEntity_a6b9926025e54639201b59b447da5365b}{}\label{classEntity_a6b9926025e54639201b59b447da5365b}
+
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classEntity}{Entity} is active. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a522648b330daab91b49f78f0737a943f}{kill} ()\hypertarget{classEntity_a522648b330daab91b49f78f0737a943f}{}\label{classEntity_a522648b330daab91b49f78f0737a943f}
+
+\begin{DoxyCompactList}\small\item\em Sets health to zero and deactives the \hyperlink{classEntity}{Entity}. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}{deactivate} ()\hypertarget{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}{}\label{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}
+
+\begin{DoxyCompactList}\small\item\em Sets active to false. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{activate} ()\hypertarget{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{}\label{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}
+
+\begin{DoxyCompactList}\small\item\em Sets active to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classEntity_af5e13d4ed49e8f2954112784a73939ce}{health}\hypertarget{classEntity_af5e13d4ed49e8f2954112784a73939ce}{}\label{classEntity_af5e13d4ed49e8f2954112784a73939ce}
+
+\begin{DoxyCompactList}\small\item\em Int for the \hyperlink{classEntity}{Entity}\textquotesingle{}s health. \end{DoxyCompactList}\item 
+double \hyperlink{classEntity_a814aed95740c20b413e7acf387da9e9b}{max\+Health}\hypertarget{classEntity_a814aed95740c20b413e7acf387da9e9b}{}\label{classEntity_a814aed95740c20b413e7acf387da9e9b}
+
+\begin{DoxyCompactList}\small\item\em Int for the Enitity\textquotesingle{}s max health. \end{DoxyCompactList}\item 
+int \hyperlink{classEntity_a85a5efaff91b778e660972a9edcd1f27}{emotion}\hypertarget{classEntity_a85a5efaff91b778e660972a9edcd1f27}{}\label{classEntity_a85a5efaff91b778e660972a9edcd1f27}
+
+\begin{DoxyCompactList}\small\item\em Int for creating a range of emotional states. \end{DoxyCompactList}\item 
+int \hyperlink{classEntity_ad87a0ad851b569ef13889d903d502079}{team}\hypertarget{classEntity_ad87a0ad851b569ef13889d903d502079}{}\label{classEntity_ad87a0ad851b569ef13889d903d502079}
+
+\begin{DoxyCompactList}\small\item\em Int for setting the team the \hyperlink{classEntity}{Entity} is on. \end{DoxyCompactList}\item 
+bool \hyperlink{classEntity_a939da33e8b67b1d2ee227930aa72da3b}{active}\hypertarget{classEntity_a939da33e8b67b1d2ee227930aa72da3b}{}\label{classEntity_a939da33e8b67b1d2ee227930aa72da3b}
+
+\begin{DoxyCompactList}\small\item\em Boolean for declaring if an entity is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for storing health, emotion, team, etc. of an \hyperlink{classObject}{Object}. 
+
+Definition at line 8 of file entity.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+entity.\+h\item 
+entity.\+cpp\end{DoxyCompactItemize}

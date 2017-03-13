@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTileset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tileset Class Reference</div>  </div>
@@ -96,11 +97,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classTileset.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="tileset_8h_source.html">tileset.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Tileset:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTileset__coll__graph.png" border="0" usemap="#Tileset_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTileset_1_1layer.html">layer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a set of tiles, the width and height of the set, the x and y coordinate of the set, and the Tiles width and height.  <a href="structTileset_1_1layer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTileset_1_1tile.html">tile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a> and its x and y coordinate.  <a href="structTileset_1_1tile.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a438bd441809f8e9508a6052580cfdc8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a438bd441809f8e9508a6052580cfdc8b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Tileset</b> (int amount)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a438bd441809f8e9508a6052580cfdc8b">Tileset</a> (int amount)</td></tr>
+<tr class="memdesc:a438bd441809f8e9508a6052580cfdc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amout of types of tiles. <br /></td></tr>
 <tr class="separator:a438bd441809f8e9508a6052580cfdc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f751647f22bce36f58fd738b97a67bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f751647f22bce36f58fd738b97a67bd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a1f751647f22bce36f58fd738b97a67bd">setAng</a> (int ang)</td></tr>
@@ -242,6 +259,68 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a8bf20786d91f89d46e0aca5667a79164">setPassable</a> (int l)</td></tr>
 <tr class="memdesc:a8bf20786d91f89d46e0aca5667a79164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a certain tile value to passable (not solid). (I don't think this works yet). <br /></td></tr>
 <tr class="separator:a8bf20786d91f89d46e0aca5667a79164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a14a536a131ec50f70506ebeb6b023eb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14a536a131ec50f70506ebeb6b023eb3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a14a536a131ec50f70506ebeb6b023eb3">angle</a></td></tr>
+<tr class="memdesc:a14a536a131ec50f70506ebeb6b023eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display angle. <br /></td></tr>
+<tr class="separator:a14a536a131ec50f70506ebeb6b023eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3790af3bd81b898b6c8187dc8864b87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3790af3bd81b898b6c8187dc8864b87"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#ac3790af3bd81b898b6c8187dc8864b87">x</a></td></tr>
+<tr class="memdesc:ac3790af3bd81b898b6c8187dc8864b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display/map coordinates. <br /></td></tr>
+<tr class="separator:ac3790af3bd81b898b6c8187dc8864b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45bf461d2f34cf65cf4c9538250df1e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45bf461d2f34cf65cf4c9538250df1e2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="separator:a45bf461d2f34cf65cf4c9538250df1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eaff329102c53490295885e81d2ab39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eaff329102c53490295885e81d2ab39"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a2eaff329102c53490295885e81d2ab39">set</a></td></tr>
+<tr class="memdesc:a2eaff329102c53490295885e81d2ab39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that says if the maps coordinates has already been set. <br /></td></tr>
+<tr class="separator:a2eaff329102c53490295885e81d2ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cb91f14b9266523ced0cda8fe20ada"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47cb91f14b9266523ced0cda8fe20ada"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a47cb91f14b9266523ced0cda8fe20ada">winWidth</a></td></tr>
+<tr class="memdesc:a47cb91f14b9266523ced0cda8fe20ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window width and height. <br /></td></tr>
+<tr class="separator:a47cb91f14b9266523ced0cda8fe20ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09af95ee2033f299bcf7ded7bd7f4fad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09af95ee2033f299bcf7ded7bd7f4fad"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>winHeight</b></td></tr>
+<tr class="separator:a09af95ee2033f299bcf7ded7bd7f4fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f918235d7a593c27902453100ba346"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8f918235d7a593c27902453100ba346"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#ae8f918235d7a593c27902453100ba346">layersize</a></td></tr>
+<tr class="memdesc:ae8f918235d7a593c27902453100ba346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layer, x, and y size. (I don't think these are actually used). <br /></td></tr>
+<tr class="separator:ae8f918235d7a593c27902453100ba346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e6d05b755a0ef6a6553f0e0a927bb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2e6d05b755a0ef6a6553f0e0a927bb2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>xsize</b></td></tr>
+<tr class="separator:ab2e6d05b755a0ef6a6553f0e0a927bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c8ff51bb30ce67abaea923e3f872d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01c8ff51bb30ce67abaea923e3f872d9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ysize</b></td></tr>
+<tr class="separator:a01c8ff51bb30ce67abaea923e3f872d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81af66347f72322f800deb3c149f23f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81af66347f72322f800deb3c149f23f7"></a>
+vector&lt; <a class="el" href="structTileset_1_1layer.html">layer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a81af66347f72322f800deb3c149f23f7">tileset</a></td></tr>
+<tr class="memdesc:a81af66347f72322f800deb3c149f23f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of layers (tilesets). <br /></td></tr>
+<tr class="separator:a81af66347f72322f800deb3c149f23f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d83e4d7659ba7e3a2b4ea5670ea351"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8d83e4d7659ba7e3a2b4ea5670ea351"></a>
+<a class="el" href="classTile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#ad8d83e4d7659ba7e3a2b4ea5670ea351">tiles</a></td></tr>
+<tr class="memdesc:ad8d83e4d7659ba7e3a2b4ea5670ea351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of tiles with undeclared size. <br /></td></tr>
+<tr class="separator:ad8d83e4d7659ba7e3a2b4ea5670ea351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a6f99c17241db7156403f4a9db24a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66a6f99c17241db7156403f4a9db24a6"></a>
+<a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a66a6f99c17241db7156403f4a9db24a6">camera</a></td></tr>
+<tr class="memdesc:a66a6f99c17241db7156403f4a9db24a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera object. When in the Camera, the map and <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a> move. <br /></td></tr>
+<tr class="separator:a66a6f99c17241db7156403f4a9db24a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e38c7eaa26c431a7d9e7852072954f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74e38c7eaa26c431a7d9e7852072954f"></a>
+<a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a74e38c7eaa26c431a7d9e7852072954f">lens</a></td></tr>
+<tr class="memdesc:a74e38c7eaa26c431a7d9e7852072954f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lens object. When in the Lens, only the given <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a> moves. <br /></td></tr>
+<tr class="separator:a74e38c7eaa26c431a7d9e7852072954f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c70ebbbd2ed213f4485b953f65ce3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16c70ebbbd2ed213f4485b953f65ce3a"></a>
+<a class="el" href="classCollision.html">Collision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a16c70ebbbd2ed213f4485b953f65ce3a">colCheck</a></td></tr>
+<tr class="memdesc:a16c70ebbbd2ed213f4485b953f65ce3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of <a class="el" href="classCollision.html" title="Class used for calculating different types of collision between given Objects. ">Collision</a>. <br /></td></tr>
+<tr class="separator:a16c70ebbbd2ed213f4485b953f65ce3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7dd26d0c9f4e14b0e8d03d48359a90e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7dd26d0c9f4e14b0e8d03d48359a90e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#ac7dd26d0c9f4e14b0e8d03d48359a90e">activeCam</a></td></tr>
+<tr class="memdesc:ac7dd26d0c9f4e14b0e8d03d48359a90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that shows if the Camera and Lens have been activated. <br /></td></tr>
+<tr class="separator:ac7dd26d0c9f4e14b0e8d03d48359a90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49bf1c831399e566e2661029f9d24bd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49bf1c831399e566e2661029f9d24bd1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>activeLens</b></td></tr>
+<tr class="separator:a49bf1c831399e566e2661029f9d24bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for loading in maps, tileset images, and then displaying them. </p>

@@ -9,12 +9,23 @@ Class for loading in maps, tileset images, and then displaying them.
 
 {\ttfamily \#include $<$tileset.\+h$>$}
 
+
+
+Collaboration diagram for Tileset\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTileset_1_1layer}{layer}
+\begin{DoxyCompactList}\small\item\em Contains a set of tiles, the width and height of the set, the x and y coordinate of the set, and the Tiles width and height. \end{DoxyCompactList}\item 
+struct \hyperlink{structTileset_1_1tile}{tile}
+\begin{DoxyCompactList}\small\item\em Contains the \hyperlink{classTile}{Tile} and its x and y coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Tileset} (int amount)\hypertarget{classTileset_a438bd441809f8e9508a6052580cfdc8b}{}\label{classTileset_a438bd441809f8e9508a6052580cfdc8b}
+\hyperlink{classTileset_a438bd441809f8e9508a6052580cfdc8b}{Tileset} (int amount)\hypertarget{classTileset_a438bd441809f8e9508a6052580cfdc8b}{}\label{classTileset_a438bd441809f8e9508a6052580cfdc8b}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Amout of types of tiles. \end{DoxyCompactList}\item 
 void \hyperlink{classTileset_a1f751647f22bce36f58fd738b97a67bd}{set\+Ang} (int ang)\hypertarget{classTileset_a1f751647f22bce36f58fd738b97a67bd}{}\label{classTileset_a1f751647f22bce36f58fd738b97a67bd}
 
 \begin{DoxyCompactList}\small\item\em Set the angle of all the tiles. Calls \hyperlink{classTileset_adf1b34b6c742198c3d05b620ed3c25e1}{push\+Ang()}. \end{DoxyCompactList}\item 
@@ -120,6 +131,57 @@ void \hyperlink{classTileset_aec937b8a59ca974a5218d701306fd131}{set\+Passable} (
 void \hyperlink{classTileset_a8bf20786d91f89d46e0aca5667a79164}{set\+Passable} (int l)\hypertarget{classTileset_a8bf20786d91f89d46e0aca5667a79164}{}\label{classTileset_a8bf20786d91f89d46e0aca5667a79164}
 
 \begin{DoxyCompactList}\small\item\em Set a certain tile value to passable (not solid). (I don\textquotesingle{}t think this works yet). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classTileset_a14a536a131ec50f70506ebeb6b023eb3}{angle}\hypertarget{classTileset_a14a536a131ec50f70506ebeb6b023eb3}{}\label{classTileset_a14a536a131ec50f70506ebeb6b023eb3}
+
+\begin{DoxyCompactList}\small\item\em Display angle. \end{DoxyCompactList}\item 
+double \hyperlink{classTileset_ac3790af3bd81b898b6c8187dc8864b87}{x}\hypertarget{classTileset_ac3790af3bd81b898b6c8187dc8864b87}{}\label{classTileset_ac3790af3bd81b898b6c8187dc8864b87}
+
+\begin{DoxyCompactList}\small\item\em Display/map coordinates. \end{DoxyCompactList}\item 
+double {\bfseries y}\hypertarget{classTileset_a45bf461d2f34cf65cf4c9538250df1e2}{}\label{classTileset_a45bf461d2f34cf65cf4c9538250df1e2}
+
+\item 
+bool \hyperlink{classTileset_a2eaff329102c53490295885e81d2ab39}{set}\hypertarget{classTileset_a2eaff329102c53490295885e81d2ab39}{}\label{classTileset_a2eaff329102c53490295885e81d2ab39}
+
+\begin{DoxyCompactList}\small\item\em Boolean that says if the maps coordinates has already been set. \end{DoxyCompactList}\item 
+int \hyperlink{classTileset_a47cb91f14b9266523ced0cda8fe20ada}{win\+Width}\hypertarget{classTileset_a47cb91f14b9266523ced0cda8fe20ada}{}\label{classTileset_a47cb91f14b9266523ced0cda8fe20ada}
+
+\begin{DoxyCompactList}\small\item\em Window width and height. \end{DoxyCompactList}\item 
+int {\bfseries win\+Height}\hypertarget{classTileset_a09af95ee2033f299bcf7ded7bd7f4fad}{}\label{classTileset_a09af95ee2033f299bcf7ded7bd7f4fad}
+
+\item 
+int \hyperlink{classTileset_ae8f918235d7a593c27902453100ba346}{layersize}\hypertarget{classTileset_ae8f918235d7a593c27902453100ba346}{}\label{classTileset_ae8f918235d7a593c27902453100ba346}
+
+\begin{DoxyCompactList}\small\item\em Layer, x, and y size. (I don\textquotesingle{}t think these are actually used). \end{DoxyCompactList}\item 
+int {\bfseries xsize}\hypertarget{classTileset_ab2e6d05b755a0ef6a6553f0e0a927bb2}{}\label{classTileset_ab2e6d05b755a0ef6a6553f0e0a927bb2}
+
+\item 
+int {\bfseries ysize}\hypertarget{classTileset_a01c8ff51bb30ce67abaea923e3f872d9}{}\label{classTileset_a01c8ff51bb30ce67abaea923e3f872d9}
+
+\item 
+vector$<$ \hyperlink{structTileset_1_1layer}{layer} $>$ \hyperlink{classTileset_a81af66347f72322f800deb3c149f23f7}{tileset}\hypertarget{classTileset_a81af66347f72322f800deb3c149f23f7}{}\label{classTileset_a81af66347f72322f800deb3c149f23f7}
+
+\begin{DoxyCompactList}\small\item\em Vector of layers (tilesets). \end{DoxyCompactList}\item 
+\hyperlink{classTile}{Tile} $\ast$ \hyperlink{classTileset_ad8d83e4d7659ba7e3a2b4ea5670ea351}{tiles}\hypertarget{classTileset_ad8d83e4d7659ba7e3a2b4ea5670ea351}{}\label{classTileset_ad8d83e4d7659ba7e3a2b4ea5670ea351}
+
+\begin{DoxyCompactList}\small\item\em Array of tiles with undeclared size. \end{DoxyCompactList}\item 
+\hyperlink{classObject}{Object} \hyperlink{classTileset_a66a6f99c17241db7156403f4a9db24a6}{camera}\hypertarget{classTileset_a66a6f99c17241db7156403f4a9db24a6}{}\label{classTileset_a66a6f99c17241db7156403f4a9db24a6}
+
+\begin{DoxyCompactList}\small\item\em Camera object. When in the Camera, the map and \hyperlink{classObject}{Object} move. \end{DoxyCompactList}\item 
+\hyperlink{classObject}{Object} \hyperlink{classTileset_a74e38c7eaa26c431a7d9e7852072954f}{lens}\hypertarget{classTileset_a74e38c7eaa26c431a7d9e7852072954f}{}\label{classTileset_a74e38c7eaa26c431a7d9e7852072954f}
+
+\begin{DoxyCompactList}\small\item\em Lens object. When in the Lens, only the given \hyperlink{classObject}{Object} moves. \end{DoxyCompactList}\item 
+\hyperlink{classCollision}{Collision} \hyperlink{classTileset_a16c70ebbbd2ed213f4485b953f65ce3a}{col\+Check}\hypertarget{classTileset_a16c70ebbbd2ed213f4485b953f65ce3a}{}\label{classTileset_a16c70ebbbd2ed213f4485b953f65ce3a}
+
+\begin{DoxyCompactList}\small\item\em Instance of \hyperlink{classCollision}{Collision}. \end{DoxyCompactList}\item 
+bool \hyperlink{classTileset_ac7dd26d0c9f4e14b0e8d03d48359a90e}{active\+Cam}\hypertarget{classTileset_ac7dd26d0c9f4e14b0e8d03d48359a90e}{}\label{classTileset_ac7dd26d0c9f4e14b0e8d03d48359a90e}
+
+\begin{DoxyCompactList}\small\item\em Boolean that shows if the Camera and Lens have been activated. \end{DoxyCompactList}\item 
+bool {\bfseries active\+Lens}\hypertarget{classTileset_a49bf1c831399e566e2661029f9d24bd1}{}\label{classTileset_a49bf1c831399e566e2661029f9d24bd1}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

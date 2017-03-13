@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['object',['Object',['../classObject.html',1,'']]]
+  ['layer',['layer',['../structTileset_1_1layer.html',1,'Tileset']]]
 ];

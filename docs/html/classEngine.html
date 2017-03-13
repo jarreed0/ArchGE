@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classEngine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Engine Class Reference</div>  </div>
@@ -95,6 +96,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classEngine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="engine_8h_source.html">engine.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Engine:</div>
+<div class="dyncontent">
+<div class="center"><img src="classEngine__coll__graph.png" border="0" usemap="#Engine_coll__map" alt="Collaboration graph"/></div>
+<map name="Engine_coll__map" id="Engine_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -174,6 +182,54 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a0960e415d0b9ed92099eee6677d7ea51">customSplash</a> (string file, double time, int w, int h)</td></tr>
 <tr class="memdesc:a0960e415d0b9ed92099eee6677d7ea51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image. <br /></td></tr>
 <tr class="separator:a0960e415d0b9ed92099eee6677d7ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1e579e93e790357bac1cfffd78b0286e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e579e93e790357bac1cfffd78b0286e"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a1e579e93e790357bac1cfffd78b0286e">engren</a></td></tr>
+<tr class="memdesc:a1e579e93e790357bac1cfffd78b0286e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL Renderer. <br /></td></tr>
+<tr class="separator:a1e579e93e790357bac1cfffd78b0286e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea9af2afce867a361cd8deaf9fcec16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea9af2afce867a361cd8deaf9fcec16"></a>
+SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a0ea9af2afce867a361cd8deaf9fcec16">engwin</a></td></tr>
+<tr class="memdesc:a0ea9af2afce867a361cd8deaf9fcec16"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL Window. <br /></td></tr>
+<tr class="separator:a0ea9af2afce867a361cd8deaf9fcec16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4936cdde2d50255f762466c05d69155d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4936cdde2d50255f762466c05d69155d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a4936cdde2d50255f762466c05d69155d">WIDTH</a></td></tr>
+<tr class="memdesc:a4936cdde2d50255f762466c05d69155d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width and height of the window. <br /></td></tr>
+<tr class="separator:a4936cdde2d50255f762466c05d69155d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb283222e500da8011acde9683a380ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb283222e500da8011acde9683a380ea"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>HEIGHT</b></td></tr>
+<tr class="separator:aeb283222e500da8011acde9683a380ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019b277554748849fcc29d8b57fc3e65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a019b277554748849fcc29d8b57fc3e65"></a>
+<a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a019b277554748849fcc29d8b57fc3e65">background</a></td></tr>
+<tr class="memdesc:a019b277554748849fcc29d8b57fc3e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background object incase the user sets on from <a class="el" href="classEngine.html#a671bd48802debd6c16638de60d32375d" title="Give path file for a window background. ">setBackground()</a>. <br /></td></tr>
+<tr class="separator:a019b277554748849fcc29d8b57fc3e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1392f77c91da64239d2d644acddf21a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1392f77c91da64239d2d644acddf21a0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a1392f77c91da64239d2d644acddf21a0">bkg</a></td></tr>
+<tr class="memdesc:a1392f77c91da64239d2d644acddf21a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that shows if there is a set background. <br /></td></tr>
+<tr class="separator:a1392f77c91da64239d2d644acddf21a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebef67a62082435a9bd7d2b3a70889b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebef67a62082435a9bd7d2b3a70889b4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aebef67a62082435a9bd7d2b3a70889b4">splashed</a></td></tr>
+<tr class="memdesc:aebef67a62082435a9bd7d2b3a70889b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that shows if the splashscreen has occured. <br /></td></tr>
+<tr class="separator:aebef67a62082435a9bd7d2b3a70889b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571947abb4b69c3f9fbe81d8135829e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a571947abb4b69c3f9fbe81d8135829e8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>custom</b></td></tr>
+<tr class="separator:a571947abb4b69c3f9fbe81d8135829e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5917b4f27bb16bf68b074b62c0e5587"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5917b4f27bb16bf68b074b62c0e5587"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#af5917b4f27bb16bf68b074b62c0e5587">cf</a></td></tr>
+<tr class="memdesc:af5917b4f27bb16bf68b074b62c0e5587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom splashscreen file path. <br /></td></tr>
+<tr class="separator:af5917b4f27bb16bf68b074b62c0e5587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e76eccd4f6e976a2068b9eb0acb4e85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e76eccd4f6e976a2068b9eb0acb4e85"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a6e76eccd4f6e976a2068b9eb0acb4e85">ct</a></td></tr>
+<tr class="memdesc:a6e76eccd4f6e976a2068b9eb0acb4e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom splashscreen duration. <br /></td></tr>
+<tr class="separator:a6e76eccd4f6e976a2068b9eb0acb4e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6e103dd58c2ea3b7798e7bc52db361"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff6e103dd58c2ea3b7798e7bc52db361"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aff6e103dd58c2ea3b7798e7bc52db361">cw</a></td></tr>
+<tr class="memdesc:aff6e103dd58c2ea3b7798e7bc52db361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom splashcreen width and height. <br /></td></tr>
+<tr class="separator:aff6e103dd58c2ea3b7798e7bc52db361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acd0bd074160e654d076376d36a3479"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2acd0bd074160e654d076376d36a3479"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ch</b></td></tr>
+<tr class="separator:a2acd0bd074160e654d076376d36a3479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for declaring an engine, which does basic SDL commands like creating the window and renderer. </p>

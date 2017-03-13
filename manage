@@ -145,6 +145,7 @@ elif [ "$1" == "install" ] || [ "$1" == "-i" ]; then
   sudo apt-get install libsdl2-2.0-0
   sudo apt-get install libsdl2-image-2.0-0 libsdl2-image-dbg libsdl2-image-dev
   sudo apt-get install libsdl2-ttf-2.0-0 libsdl2-ttf-dbg libsdl2-ttf-dev
+  sudo apt-get install doxygen
 elif [ "$1" == "reg" ] || [ "$1" == "-r" ]; then
   echo -n "User Name: "
   read un
