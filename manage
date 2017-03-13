@@ -37,7 +37,10 @@ elif [ "$1" == "doc" ] || [ "$1" == "-dc" ]; then
   cd ../..
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
-  manage doc
+  STAT=$(git status | grep engine)
+  if [ "$STAT" != "" ]; then
+    manage doc
+  fi
   if [ "$2" = "all" ]; then
     git add *
   else
