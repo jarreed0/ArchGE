@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classObject.html" title="Class for storing an image and the source and distination to display. " alt="" coords="5,31,65,57"/>
+<area shape="rect" id="node2" href="$classEntity.html" title="Class for storing health, emotion, team, etc. of an Object. " alt="" coords="113,5,169,32"/>
+<area shape="rect" id="node3" href="$classTile.html" title="An Object class that stores the a tile value and name. " alt="" coords="120,56,163,83"/>
+</map>

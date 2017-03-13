@@ -1,0 +1,4 @@
+<map id="Object" name="Object">
+<area shape="rect" id="node2" href="$classEntity.html" title="Class for storing health, emotion, team, etc. of an Object. " alt="" coords="5,80,61,107"/>
+<area shape="rect" id="node3" href="$classTile.html" title="An Object class that stores the a tile value and name. " alt="" coords="85,80,128,107"/>
+</map>

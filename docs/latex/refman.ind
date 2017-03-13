@@ -5,26 +5,26 @@
   \indexspace
 
   \item {Engine}, \hyperpage{6}
-  \item {Entity}, \hyperpage{6}
+  \item {Entity}, \hyperpage{8}
 
   \indexspace
 
-  \item {Image}, \hyperpage{7}
-  \item {Input}, \hyperpage{8}
+  \item {Image}, \hyperpage{10}
+  \item {Input}, \hyperpage{10}
 
   \indexspace
 
-  \item {Object}, \hyperpage{11}
+  \item {Object}, \hyperpage{14}
 
   \indexspace
 
-  \item {Physics}, \hyperpage{14}
+  \item {Physics}, \hyperpage{17}
 
   \indexspace
 
-  \item {Tile}, \hyperpage{15}
-  \item {Tileset}, \hyperpage{16}
-  \item {Tileset\+::layer}, \hyperpage{10}
-  \item {Tileset\+::tile}, \hyperpage{15}
+  \item {Tile}, \hyperpage{18}
+  \item {Tileset}, \hyperpage{20}
+  \item {Tileset\+::layer}, \hyperpage{13}
+  \item {Tileset\+::tile}, \hyperpage{19}
 
 \end{theindex}
