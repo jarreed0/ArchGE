@@ -2,10 +2,10 @@
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
-#Under Heavy Development
+#Check out our NEW PDF documentation for ArchGE!
+[PDF](docs/latex/refman.pdf)
 
-Check out our new documents!
-* [[file:docs/latex/refman.pdf][PDF]]
+#Under Heavy Development
 
 #Manage
 
