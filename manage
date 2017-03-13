@@ -22,8 +22,16 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "check or -cf - to check if the installed version is the newest version"
   echo "conf or -c - reconfigure makefile #in the works"
   echo "debug or -d - compile program and run it in debug mode"
+  echo "doc or -dc - generate doc (html and pdf)"
+elif [ "$1" == "doc" ] || [ "$1" == "-dc" ]; then
+  cd engine
+  doxygen dconfig
+  cd ../docs/latex/
+  make
+  cd ../..
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
+  manage doc
   if [ "$2" = "all" ]; then
     git add *
   else
