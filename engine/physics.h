@@ -18,11 +18,14 @@ using namespace std;
 //I don't have any example functions that need to be created so just have at it and create whatever functions you want
 //Below and in the .cpp file I have an example function that moves an object towards another object
 
+
+//! Class for doing physics functions.
 class Physics {
 public:
   Physics();
   ~Physics();
   //This function will take two sets of points, and return the next of coordinates based on a set speed that head towards the second coordinate (des)
+  //! Returns modified first Object that is moving towards the second object (I THINK).
   Object moveTowards(Object cur, Object des);
   //this function can be remade with different parameters
   //for example say you want an object to just move towards coordinates instead of an object you could do this:

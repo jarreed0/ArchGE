@@ -1,0 +1,163 @@
+\hypertarget{classObject}{}\section{Object Class Reference}
+\label{classObject}\index{Object@{Object}}
+
+
+Class for storing an image and the source and distination to display.  
+
+
+
+
+{\ttfamily \#include $<$object.\+h$>$}
+
+
+
+Inheritance diagram for Object\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classObject_a7f984ff2fb0c60b942a1018fc48417ae}{set\+Image} (string file, S\+D\+L\+\_\+\+Renderer $\ast$ren)\hypertarget{classObject_a7f984ff2fb0c60b942a1018fc48417ae}{}\label{classObject_a7f984ff2fb0c60b942a1018fc48417ae}
+
+\begin{DoxyCompactList}\small\item\em Set the Objects image with a B\+MP image path and the renderer. \end{DoxyCompactList}\item 
+\hyperlink{classImage}{Image} \hyperlink{classObject_a76748c591087e0a3c676daea6f257e08}{get\+Image} () const \hypertarget{classObject_a76748c591087e0a3c676daea6f257e08}{}\label{classObject_a76748c591087e0a3c676daea6f257e08}
+
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classObject}{Object}\textquotesingle{}s \hyperlink{classImage}{Image}. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{classObject_af8ae0f74940285c54e90f19027bba3a7}{get\+Texture} ()\hypertarget{classObject_af8ae0f74940285c54e90f19027bba3a7}{}\label{classObject_af8ae0f74940285c54e90f19027bba3a7}
+
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classImage}{Image}\textquotesingle{}s texture. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a094e6dc25b31cfac9d745869a878bd8b}{set\+Source} (double x, double y, int w, int h)\hypertarget{classObject_a094e6dc25b31cfac9d745869a878bd8b}{}\label{classObject_a094e6dc25b31cfac9d745869a878bd8b}
+
+\begin{DoxyCompactList}\small\item\em Set the images source with the width, height, and x and y coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a0ba46a30886b3d30e2b9a8a263b6c9b9}{set\+Dest} (int w, int h)\hypertarget{classObject_a0ba46a30886b3d30e2b9a8a263b6c9b9}{}\label{classObject_a0ba46a30886b3d30e2b9a8a263b6c9b9}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations width and height. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a9338eab393a21158dd0087b3b9d2e5e2}{set\+Dest} (int w, int h, double x, double y)\hypertarget{classObject_a9338eab393a21158dd0087b3b9d2e5e2}{}\label{classObject_a9338eab393a21158dd0087b3b9d2e5e2}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations width, height, and x and y coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a92a957d9f65d973c087367d26b358f0b}{set\+Dest\+Coord} (double x, double y)\hypertarget{classObject_a92a957d9f65d973c087367d26b358f0b}{}\label{classObject_a92a957d9f65d973c087367d26b358f0b}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations x and y coordinates. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_a411820194b7a02fcec714a51382c0c0c}{get\+Source} ()\hypertarget{classObject_a411820194b7a02fcec714a51382c0c0c}{}\label{classObject_a411820194b7a02fcec714a51382c0c0c}
+
+\begin{DoxyCompactList}\small\item\em Get the S\+D\+L\+\_\+\+Rect of the Objects image source. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_ab081a97a21c840bbcf3fd8ed3510f71d}{get\+Dest} ()\hypertarget{classObject_ab081a97a21c840bbcf3fd8ed3510f71d}{}\label{classObject_ab081a97a21c840bbcf3fd8ed3510f71d}
+
+\begin{DoxyCompactList}\small\item\em Get the current S\+D\+L\+\_\+\+Rect for the Objects destination. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_ad6363cce8614921f01b9ed9c1e068f65}{get\+Buff} ()\hypertarget{classObject_ad6363cce8614921f01b9ed9c1e068f65}{}\label{classObject_ad6363cce8614921f01b9ed9c1e068f65}
+
+\begin{DoxyCompactList}\small\item\em Get the previous display destination. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_ab53b92a384c274bc1805eb50617d5117}{set\+Source} (S\+D\+L\+\_\+\+Rect s)\hypertarget{classObject_ab53b92a384c274bc1805eb50617d5117}{}\label{classObject_ab53b92a384c274bc1805eb50617d5117}
+
+\begin{DoxyCompactList}\small\item\em Set the image source destination with an S\+D\+L\+\_\+\+Rect. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a0edcf4141d5f6b86337597ecac4f8df2}{set\+Dest} (S\+D\+L\+\_\+\+Rect d)\hypertarget{classObject_a0edcf4141d5f6b86337597ecac4f8df2}{}\label{classObject_a0edcf4141d5f6b86337597ecac4f8df2}
+
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classObject}{Object}\textquotesingle{}s display destination with an S\+D\+L\+\_\+\+Rect. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_aa4a5d9d35931d9a0ad47557c3ca23ac7}{set\+Buff} (S\+D\+L\+\_\+\+Rect b)\hypertarget{classObject_aa4a5d9d35931d9a0ad47557c3ca23ac7}{}\label{classObject_aa4a5d9d35931d9a0ad47557c3ca23ac7}
+
+\begin{DoxyCompactList}\small\item\em Set the object\textquotesingle{}s previous display destination with an S\+D\+L\+\_\+\+Rect. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a63266f7fbaade4768bf6d60d0b313508}{set\+SX} (double x)\hypertarget{classObject_a63266f7fbaade4768bf6d60d0b313508}{}\label{classObject_a63266f7fbaade4768bf6d60d0b313508}
+
+\begin{DoxyCompactList}\small\item\em Set the image sources x coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a48c2da85369813e9bf1eb71eee579e8f}{set\+SY} (double y)\hypertarget{classObject_a48c2da85369813e9bf1eb71eee579e8f}{}\label{classObject_a48c2da85369813e9bf1eb71eee579e8f}
+
+\begin{DoxyCompactList}\small\item\em Set the image sources y coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a90577eaa8ea00ed7d01bf6829719322b}{set\+SW} (int w)\hypertarget{classObject_a90577eaa8ea00ed7d01bf6829719322b}{}\label{classObject_a90577eaa8ea00ed7d01bf6829719322b}
+
+\begin{DoxyCompactList}\small\item\em Set the image sources width. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a91800313b280d6812e2b374608172d7f}{set\+SH} (int h)\hypertarget{classObject_a91800313b280d6812e2b374608172d7f}{}\label{classObject_a91800313b280d6812e2b374608172d7f}
+
+\begin{DoxyCompactList}\small\item\em Set the image sources height. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a7c068c88758bf95a147b123ce52026a0}{set\+DX} (double x)\hypertarget{classObject_a7c068c88758bf95a147b123ce52026a0}{}\label{classObject_a7c068c88758bf95a147b123ce52026a0}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations x coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a9e7d9c484f3cdeac79edf6b1b13942d0}{set\+DY} (double y)\hypertarget{classObject_a9e7d9c484f3cdeac79edf6b1b13942d0}{}\label{classObject_a9e7d9c484f3cdeac79edf6b1b13942d0}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations y coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a7c9fcca4e1bab0097443557d02eaa498}{set\+DW} (int w)\hypertarget{classObject_a7c9fcca4e1bab0097443557d02eaa498}{}\label{classObject_a7c9fcca4e1bab0097443557d02eaa498}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations width. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a2c7a299d4311e4b2515022383f90b82a}{set\+DH} (int h)\hypertarget{classObject_a2c7a299d4311e4b2515022383f90b82a}{}\label{classObject_a2c7a299d4311e4b2515022383f90b82a}
+
+\begin{DoxyCompactList}\small\item\em Set the display destinations height. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a0f2d1703de76d3b7df5695962fe9dcc1}{get\+SX} ()\hypertarget{classObject_a0f2d1703de76d3b7df5695962fe9dcc1}{}\label{classObject_a0f2d1703de76d3b7df5695962fe9dcc1}
+
+\begin{DoxyCompactList}\small\item\em Get the image sources x coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a1ca9433993915dfb694d52c83494e73f}{get\+SY} ()\hypertarget{classObject_a1ca9433993915dfb694d52c83494e73f}{}\label{classObject_a1ca9433993915dfb694d52c83494e73f}
+
+\begin{DoxyCompactList}\small\item\em Get the image sources y coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_aace84f90379d216d6f1e54b0aa4442d5}{get\+SW} ()\hypertarget{classObject_aace84f90379d216d6f1e54b0aa4442d5}{}\label{classObject_aace84f90379d216d6f1e54b0aa4442d5}
+
+\begin{DoxyCompactList}\small\item\em Get the image sources width. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a45fac8f64cae5bbc8566e69fb80037bf}{get\+SH} ()\hypertarget{classObject_a45fac8f64cae5bbc8566e69fb80037bf}{}\label{classObject_a45fac8f64cae5bbc8566e69fb80037bf}
+
+\begin{DoxyCompactList}\small\item\em Get the image sources height. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a16e291133d12358785e1bcc044615bcd}{get\+DX} ()\hypertarget{classObject_a16e291133d12358785e1bcc044615bcd}{}\label{classObject_a16e291133d12358785e1bcc044615bcd}
+
+\begin{DoxyCompactList}\small\item\em Get the display destinations x coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a6b011de1c1529d64b2cf3828f0450180}{get\+DY} ()\hypertarget{classObject_a6b011de1c1529d64b2cf3828f0450180}{}\label{classObject_a6b011de1c1529d64b2cf3828f0450180}
+
+\begin{DoxyCompactList}\small\item\em Get the display destinations y coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_aa02be608cc4043a38675b93d69f5b42f}{get\+DW} ()\hypertarget{classObject_aa02be608cc4043a38675b93d69f5b42f}{}\label{classObject_aa02be608cc4043a38675b93d69f5b42f}
+
+\begin{DoxyCompactList}\small\item\em Get the display destinations width. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a9bb26c1b30e1a77a6ae4de340c4ab2f4}{get\+DH} ()\hypertarget{classObject_a9bb26c1b30e1a77a6ae4de340c4ab2f4}{}\label{classObject_a9bb26c1b30e1a77a6ae4de340c4ab2f4}
+
+\begin{DoxyCompactList}\small\item\em Get the display destinations height. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a660b00ecff522cd7dfef7b0f736456e6}{set\+Ang} (double a)\hypertarget{classObject_a660b00ecff522cd7dfef7b0f736456e6}{}\label{classObject_a660b00ecff522cd7dfef7b0f736456e6}
+
+\begin{DoxyCompactList}\small\item\em Set the Objects angle. \end{DoxyCompactList}\item 
+double \hyperlink{classObject_a9d6545d0250767ddb6e9d4c6fbf41d4b}{get\+Ang} ()\hypertarget{classObject_a9d6545d0250767ddb6e9d4c6fbf41d4b}{}\label{classObject_a9d6545d0250767ddb6e9d4c6fbf41d4b}
+
+\begin{DoxyCompactList}\small\item\em Get the Objects angle. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a31ef66bafcc755414112789c9231a8be}{move} (double mx, double my)\hypertarget{classObject_a31ef66bafcc755414112789c9231a8be}{}\label{classObject_a31ef66bafcc755414112789c9231a8be}
+
+\begin{DoxyCompactList}\small\item\em Move the \hyperlink{classObject}{Object} x and y amount. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a95af63b61c22ac2a8117742b9fa0efb5}{center} (int w, int h)\hypertarget{classObject_a95af63b61c22ac2a8117742b9fa0efb5}{}\label{classObject_a95af63b61c22ac2a8117742b9fa0efb5}
+
+\begin{DoxyCompactList}\small\item\em Center the \hyperlink{classObject}{Object}\textquotesingle{}s destination by the given screens (or anythings) width and height. \end{DoxyCompactList}\item 
+bool \hyperlink{classObject_a2a09d094befe949a0b879a62244de46e}{collidable} ()\hypertarget{classObject_a2a09d094befe949a0b879a62244de46e}{}\label{classObject_a2a09d094befe949a0b879a62244de46e}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classObject}{Object} is solid, or collidable. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a470cdfc175b5fb0bd324a585ee5fce3f}{set\+Solid} (bool s)\hypertarget{classObject_a470cdfc175b5fb0bd324a585ee5fce3f}{}\label{classObject_a470cdfc175b5fb0bd324a585ee5fce3f}
+
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classObject}{Object} to be collidable/solid. \end{DoxyCompactList}\item 
+bool \hyperlink{classObject_a5efbee91dd5bf04c6fb4bffef99ceba8}{get\+Solid} () const \hypertarget{classObject_a5efbee91dd5bf04c6fb4bffef99ceba8}{}\label{classObject_a5efbee91dd5bf04c6fb4bffef99ceba8}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classObject}{Object} is solid. \end{DoxyCompactList}\item 
+int \hyperlink{classObject_a21238c368f570c14722cb00b74353732}{create\+New\+Frame\+Set} (int f\+Count, int r, int c, int w, int h)\hypertarget{classObject_a21238c368f570c14722cb00b74353732}{}\label{classObject_a21238c368f570c14722cb00b74353732}
+
+\begin{DoxyCompactList}\small\item\em Create a new frameset with the given framecount for the set, the row to get the frameset from, the column to start at, and the width and height of each frame. Returns an int ID for the frameset. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classObject_a7a2350db0bae3e53ca9f928e08241159}{create\+New\+Frame} (int x, int y, int w, int h)\hypertarget{classObject_a7a2350db0bae3e53ca9f928e08241159}{}\label{classObject_a7a2350db0bae3e53ca9f928e08241159}
+
+\begin{DoxyCompactList}\small\item\em Create a new frame with a given x and y coordinate and width and height. Automatically called from \hyperlink{classObject_a21238c368f570c14722cb00b74353732}{create\+New\+Frame\+Set()}. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a061542647f10e3f30565ad9f56dc64c4}{set\+Cur\+Frame\+Set} (int fs)\hypertarget{classObject_a061542647f10e3f30565ad9f56dc64c4}{}\label{classObject_a061542647f10e3f30565ad9f56dc64c4}
+
+\begin{DoxyCompactList}\small\item\em Set the current frameset with the given frameset ID from calling \hyperlink{classObject_a21238c368f570c14722cb00b74353732}{create\+New\+Frame\+Set()}. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_aef259fb0225c8995ec2c0ebe04c98cd9}{set\+Cur\+Frame} (int f)\hypertarget{classObject_aef259fb0225c8995ec2c0ebe04c98cd9}{}\label{classObject_aef259fb0225c8995ec2c0ebe04c98cd9}
+
+\begin{DoxyCompactList}\small\item\em Set current frame in the frameset. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_a2c123e98f36c3779f5172afefacbf69c}{next\+Frame} ()\hypertarget{classObject_a2c123e98f36c3779f5172afefacbf69c}{}\label{classObject_a2c123e98f36c3779f5172afefacbf69c}
+
+\begin{DoxyCompactList}\small\item\em Change to the next frame. If it reaches its end, it restarts. Called in \hyperlink{classObject_a061542647f10e3f30565ad9f56dc64c4}{set\+Cur\+Frame\+Set()}. \end{DoxyCompactList}\item 
+void \hyperlink{classObject_ab2a55c6e2908f754992cc1c281b01be8}{reset\+Frame\+Set} ()\hypertarget{classObject_ab2a55c6e2908f754992cc1c281b01be8}{}\label{classObject_ab2a55c6e2908f754992cc1c281b01be8}
+
+\begin{DoxyCompactList}\small\item\em Set current frame to the beginning. Called in \hyperlink{classObject_a2c123e98f36c3779f5172afefacbf69c}{next\+Frame()} when it has reached its end. \end{DoxyCompactList}\item 
+int \hyperlink{classObject_a3de9dd15d8ba28785284bccd2cfc406c}{get\+Cur\+Frame\+Set} () const \hypertarget{classObject_a3de9dd15d8ba28785284bccd2cfc406c}{}\label{classObject_a3de9dd15d8ba28785284bccd2cfc406c}
+
+\begin{DoxyCompactList}\small\item\em Get the current frameset. \end{DoxyCompactList}\item 
+int \hyperlink{classObject_a21b245ca66eaee32f3d942759c0de620}{get\+Cur\+Frame} () const \hypertarget{classObject_a21b245ca66eaee32f3d942759c0de620}{}\label{classObject_a21b245ca66eaee32f3d942759c0de620}
+
+\begin{DoxyCompactList}\small\item\em Get the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for storing an image and the source and distination to display. 
+
+Definition at line 10 of file object.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+object.\+h\item 
+object.\+cpp\end{DoxyCompactItemize}
