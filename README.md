@@ -5,7 +5,7 @@
 #Under Heavy Development
 
 Check out our new documents!
-[[file:docs/latex/refman.pdf][PDF]]
+* [[file:docs/latex/refman.pdf][PDF]]
 
 #Manage
 
