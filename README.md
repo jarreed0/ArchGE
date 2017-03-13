@@ -3,7 +3,7 @@
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
 #Check out our NEW PDF documentation for ArchGE!
-[a relative link](docs/latex/refman.pdf)
+[PDF](docs/latex/refman.pdf)
 
 #Under Heavy Development
 
