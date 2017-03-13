@@ -1,16 +1,11 @@
-#+TITLE: ArchGE
-#+LANGUAGE: en
-#+OPTIONS: H:4 num:nil toc:nil \n:nil @:t ::t |:t ^:t *:t TeX:t LaTeX:t
-#+STARTUP: showeverything entitiespretty
-
 #ArchGE - A 2D Game Engine written in C++ and using SDL2
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
-#Under Heavy Development
+#Check out our NEW PDF documentation for ArchGE!
+[a relative link](docs/latex/refman.pdf)
 
-Check out our new documents!
-* [[file:docs/latex/refman.pdf][PDF]]
+#Under Heavy Development
 
 #Manage
 
