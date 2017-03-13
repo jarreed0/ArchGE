@@ -11,6 +11,8 @@ DIFF=$(diff manage /usr/local/bin/manage)
 if [ "$DIFF" != "" ] && [ "$2" != "up" ]; then
   echo "Manage is not upto date!"
   ./manage -s up
+  manage $1 $2 $3 $4
+  exit
 fi
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
