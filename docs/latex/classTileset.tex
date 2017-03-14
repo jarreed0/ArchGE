@@ -7,7 +7,7 @@ Class for loading in maps, tileset images, and then displaying them.
 
 
 
-{\ttfamily \#include $<$tileset.\+h$>$}
+{\ttfamily \#include $<$tileset-\/tmp.\+h$>$}
 
 
 
@@ -85,6 +85,12 @@ vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a25d1e2559b0d2
 vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a2f21ec594886baf1bbb990a57dca8bfc}{get\+Tiles\+To\+Render} (int w, int h)\hypertarget{classTileset_a2f21ec594886baf1bbb990a57dca8bfc}{}\label{classTileset_a2f21ec594886baf1bbb990a57dca8bfc}
 
 \begin{DoxyCompactList}\small\item\em Get tiles to renderer based on screen size, location, and given tile width and height. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a2ae52c2d3b6bf86775456837cc3b2269}{render\+Tiles} (\hyperlink{classEngine}{Engine} e)\hypertarget{classTileset_a2ae52c2d3b6bf86775456837cc3b2269}{}\label{classTileset_a2ae52c2d3b6bf86775456837cc3b2269}
+
+\begin{DoxyCompactList}\small\item\em Get Tiles to renderer based on screen size and location and then it renders them given the \hyperlink{classEngine}{Engine}. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a91610c970654958029f8d89526846460}{render\+Tiles} (int w, int h, \hyperlink{classEngine}{Engine} e)\hypertarget{classTileset_a91610c970654958029f8d89526846460}{}\label{classTileset_a91610c970654958029f8d89526846460}
+
+\begin{DoxyCompactList}\small\item\em Get tiles to renderer based on screen size, location, and given tile width and height and then it renders them given the \hyperlink{classEngine}{Engine}. \end{DoxyCompactList}\item 
 void \hyperlink{classTileset_a592ad17ba76112a7ee46df52f9a44e3a}{move} (double mx, double my)\hypertarget{classTileset_a592ad17ba76112a7ee46df52f9a44e3a}{}\label{classTileset_a592ad17ba76112a7ee46df52f9a44e3a}
 
 \begin{DoxyCompactList}\small\item\em Move map x and y amount. \end{DoxyCompactList}\item 
@@ -117,25 +123,7 @@ void \hyperlink{classTileset_a0738a218f43e5dd0cfed224ac7db02c5}{center\+Lens} (i
 \begin{DoxyCompactList}\small\item\em Set the Lens based on the percentage of the Camera to cover. \end{DoxyCompactList}\item 
 \hyperlink{classObject}{Object} \hyperlink{classTileset_a1dfdb1ee8aa546ddf4acc23cd68774e1}{get\+Lens} ()\hypertarget{classTileset_a1dfdb1ee8aa546ddf4acc23cd68774e1}{}\label{classTileset_a1dfdb1ee8aa546ddf4acc23cd68774e1}
 
-\begin{DoxyCompactList}\small\item\em Get the Lens. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a752eb3d100602fe71e7ec306e892388a}{set\+Solid} (int s, int l)\hypertarget{classTileset_a752eb3d100602fe71e7ec306e892388a}{}\label{classTileset_a752eb3d100602fe71e7ec306e892388a}
-
-\begin{DoxyCompactList}\small\item\em Sets all tiles from a given start to end to solid. (I don\textquotesingle{}t think this works yet). \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a1d8e5e7ff9a7895d8fc80a6f392fe598}{set\+Solid} (int l)\hypertarget{classTileset_a1d8e5e7ff9a7895d8fc80a6f392fe598}{}\label{classTileset_a1d8e5e7ff9a7895d8fc80a6f392fe598}
-
-\begin{DoxyCompactList}\small\item\em Sets all tiles in a given tileset from a given start to end to solid. (I don\textquotesingle{}t think this works yet). \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a2b4b667b8864e0e99c65970aeabd69cc}{set\+Solid} (int s, int e, int l)\hypertarget{classTileset_a2b4b667b8864e0e99c65970aeabd69cc}{}\label{classTileset_a2b4b667b8864e0e99c65970aeabd69cc}
-
-\begin{DoxyCompactList}\small\item\em Sets a certain tile value to solid. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a9daba755264c94a3ef853078757257df}{set\+Passable} (int s, int l)\hypertarget{classTileset_a9daba755264c94a3ef853078757257df}{}\label{classTileset_a9daba755264c94a3ef853078757257df}
-
-\begin{DoxyCompactList}\small\item\em Sets all tiles from a given start to end to passable (not solid). (I don\textquotesingle{}t think this works yet). \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_aec937b8a59ca974a5218d701306fd131}{set\+Passable} (int s, int e, int l)\hypertarget{classTileset_aec937b8a59ca974a5218d701306fd131}{}\label{classTileset_aec937b8a59ca974a5218d701306fd131}
-
-\begin{DoxyCompactList}\small\item\em Set all tiles in a given tileset from a given start to end to passable (not solid). (I don\textquotesingle{}t think this works yet). \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a8bf20786d91f89d46e0aca5667a79164}{set\+Passable} (int l)\hypertarget{classTileset_a8bf20786d91f89d46e0aca5667a79164}{}\label{classTileset_a8bf20786d91f89d46e0aca5667a79164}
-
-\begin{DoxyCompactList}\small\item\em Set a certain tile value to passable (not solid). (I don\textquotesingle{}t think this works yet). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the Lens. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -192,11 +180,11 @@ bool {\bfseries active\+Lens}\hypertarget{classTileset_a49bf1c831399e566e2661029
 \subsection{Detailed Description}
 Class for loading in maps, tileset images, and then displaying them. 
 
-Definition at line 11 of file tileset.\+h.
+Definition at line 13 of file tileset-\/tmp.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tileset.\+h\item 
-tileset.\+cpp\end{DoxyCompactItemize}
+tileset-\/tmp.\+h\item 
+tileset-\/tmp.\+cpp\end{DoxyCompactItemize}

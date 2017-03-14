@@ -24,7 +24,7 @@ Collaboration diagram for Entity\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=125pt]{classEntity__coll__graph}
+\includegraphics[width=198pt]{classEntity__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -71,7 +71,22 @@ void \hyperlink{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}{deactivate} ()\hy
 \begin{DoxyCompactList}\small\item\em Sets active to false. \end{DoxyCompactList}\item 
 void \hyperlink{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{activate} ()\hypertarget{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{}\label{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}
 
-\begin{DoxyCompactList}\small\item\em Sets active to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets active to true. \end{DoxyCompactList}\item 
+void {\bfseries check\+Displayable} (\hyperlink{classObject}{Object} screen)\hypertarget{classEntity_a63aac9638f79f0608b08f28b8cdc718e}{}\label{classEntity_a63aac9638f79f0608b08f28b8cdc718e}
+
+\item 
+S\+D\+L\+\_\+\+Rect {\bfseries get\+Detect} () const \hypertarget{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}{}\label{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}
+
+\item 
+void {\bfseries set\+Detect} (S\+D\+L\+\_\+\+Rect d)\hypertarget{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}{}\label{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}
+
+\item 
+void {\bfseries set\+Detect\+Range} (int r)\hypertarget{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{}\label{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}
+
+\item 
+void {\bfseries set\+Detect\+Range} (int w, int h)\hypertarget{classEntity_af4b91451301036e4aed029e90a7ba726}{}\label{classEntity_af4b91451301036e4aed029e90a7ba726}
+
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -89,13 +104,19 @@ int \hyperlink{classEntity_ad87a0ad851b569ef13889d903d502079}{team}\hypertarget{
 \begin{DoxyCompactList}\small\item\em Int for setting the team the \hyperlink{classEntity}{Entity} is on. \end{DoxyCompactList}\item 
 bool \hyperlink{classEntity_a939da33e8b67b1d2ee227930aa72da3b}{active}\hypertarget{classEntity_a939da33e8b67b1d2ee227930aa72da3b}{}\label{classEntity_a939da33e8b67b1d2ee227930aa72da3b}
 
-\begin{DoxyCompactList}\small\item\em Boolean for declaring if an entity is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Boolean for declaring if an entity is active. \end{DoxyCompactList}\item 
+\hyperlink{classCollision}{Collision} {\bfseries col}\hypertarget{classEntity_ac09df9ac08d40a60519392f49bed4fa1}{}\label{classEntity_ac09df9ac08d40a60519392f49bed4fa1}
+
+\item 
+S\+D\+L\+\_\+\+Rect {\bfseries detect}\hypertarget{classEntity_a6c75cb5ab8a495f4c0bfda53a53e8432}{}\label{classEntity_a6c75cb5ab8a495f4c0bfda53a53e8432}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for storing health, emotion, team, etc. of an \hyperlink{classObject}{Object}. 
 
-Definition at line 8 of file entity.\+h.
+Definition at line 9 of file entity.\+h.
 
 
 

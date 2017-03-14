@@ -1,4 +1,4 @@
-g++ -c *.cpp -std=gnu++11
-ar rvs engine.a *.o
+g++ -c *.cpp -std=c++11
+ar rvs arch.a *.o
 rm *.o
 

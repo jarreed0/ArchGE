@@ -1,25 +1,45 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#include "sdl_check.h"
 #include <SDL2/SDL.h>
 using namespace std;
 #include <iostream>
 #include <cassert>
 #include <unistd.h>
+#include <sys/time.h>
 
 #include "image.h"
 #include "object.h"
-#include "input.h"
-#include "physics.h"
+#include "background.h"
 #include "tile.h"
-#include "tileset.h"
+#include "entity.h"
 #include "collision.h"
+#include "tileset-tmp.h"
+#include "input-tmp.h"
+#include "physics-tmp.h"
+/*
+#include "splash.h"
+#include "level.h"
+*/
 
 //! Class for declaring an engine, which does basic SDL commands like creating the window and renderer.
 class Engine {
+private:
+  SDL_Renderer* engren; //!< SDL Renderer.
+  SDL_Window *engwin; //!< SDL Window.
+  int WIDTH, HEIGHT; //!< Width and height of the window.
+  int simulationTime, realTime; //!< Timestamps used for fps loop.
+  bool fps; //!< Boolean for loop.
+  bool bkg; //!< Boolean for if there is a set background.
+  Background background; //!< Background to display.
+  Uint8 red, green, blue; //!< Colors for background.
+  bool splashed, custom;  //!< Boolean that shows if the splashscreen has occured.
+  string cf; //!< Custom splashscreen file path.
+  double ct; //!< Custom splashscreen duration.
+  int cw, ch; //!< Custom splashcreen width and height.
 public:
   Engine();
+  //! Decontructs renderer and window and then quits SDL.
   ~Engine();
   //! Create a window with a given name, width, height, and anyother SDL_Window flags.
   SDL_Renderer* init(string s, const int& w, const int& h, int flag);
@@ -31,24 +51,31 @@ public:
   SDL_Renderer* init(string s, const int& w, const int& h, int flag, int x, int y, int it);
   //! Set window name.
   void setName(string s);
-  //! Call in game deconstructor to destroy renderer, window, and to quit SDL.
-  void deconstruct();
-  //! Draw an object on the screen.
-  void pushToScreen(Object obj);
-  //! Draw an object on the screen during splashscreen, requires key.
-  void pushToScreen(Object obj, int key);
+  //! Set window position.
+  void setPos(int x, int y);
+  //! Set window size.
+  void setSize(int w, int y);
   //! Returns screen renderer.
-  SDL_Renderer* renderScreen();
+  SDL_Renderer* getRenderer();
   //! Sets SDL color.
-  void setColor(Uint32 r, Uint32 g, Uint32 b);
-  //! Call this at the beginning of the game loop.
-  void preLoop();
-  //! Call this at the end of the game loop.
-  void endLoop();
-  //! Give path file for a window background.
-  void setBackground(string file);
-  //! Give path file for a window background and width and height of the image to display.
-  void setBackground(string file, int iw, int ih);
+  void setColor(Uint8 r, Uint8 g, Uint8 b);
+  //! Call this at the end of the game loop to render.
+  void render();
+  //! Get fps.
+  bool FPS() const { return fps; }
+  //! Update loop time.
+  void update();
+  //! Set background.
+  void setBackground(Background b) { background = b; }
+  //! Set background with filename.
+  void setBackground(string filename);
+  //! Get background.
+  Background getBackground() const { return background; }
+  //! Draw background.
+  void drawBackground();
+  //! Draw an object on the screen.
+  void draw(Object obj);
+  void draw(Object obj, int key);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
   void splash();
   //! Deactives the splashscreen, requires key.
@@ -59,25 +86,6 @@ public:
   bool runCustomSplash();
   //! Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image.
   void customSplash(string file, double time, int w, int h);
-private:
-  //! SDL Renderer.
-  SDL_Renderer* engren;
-  //! SDL Window.
-  SDL_Window *engwin;
-  //! Width and height of the window.
-  int WIDTH, HEIGHT;
-  //! Background object incase the user sets on from setBackground().
-  Object background;
-  //! Boolean that shows if there is a set background.
-  bool bkg;
-  //! Boolean that shows if the splashscreen has occured.
-  bool splashed, custom;
-  //! Custom splashscreen file path.
-  string cf;
-  //! Custom splashscreen duration.
-  double ct;
-  //! Custom splashcreen width and height.
-  int cw, ch;
 };
 
 #endif //ENGINE_H

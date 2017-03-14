@@ -8,9 +8,3 @@ void Tile::setValue(int v) {
 int Tile::getValue() {
   return value;
 }
-void Tile::setName(string s) {
-  name = s;
-}
-string Tile::getName() {
-  return name;
-}

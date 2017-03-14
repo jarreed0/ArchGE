@@ -1,4 +1,4 @@
 <map id="Tile" name="Tile">
-<area shape="rect" id="node2" href="$classObject.html" title="Class for storing an image and the source and distination to display. " alt="" coords="5,95,65,121"/>
+<area shape="rect" id="node2" href="$classObject.html" title="Object" alt="" coords="5,95,65,121"/>
 <area shape="rect" id="node3" href="$classImage.html" title="Class for loading in SDL Textures. " alt="" coords="6,5,65,32"/>
 </map>

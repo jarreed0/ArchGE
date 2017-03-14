@@ -33,9 +33,9 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "debug or -d - compile program and run it in debug mode"
 elif [ "$1" == "doc" ] || [ "$1" == "-dc" ]; then
   cd engine
-  doxygen dconfig
+  doxygen dconfig* > /dev/null
   cd ../docs/latex/
-  make
+  make > /dev/null
   cd ../..
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
@@ -150,13 +150,13 @@ elif [ "$1" == "debug" ] || [ "$1" == "-d" ]; then
     gdb $2
   fi
 elif [ "$1" == "install" ] || [ "$1" == "-i" ]; then
-  sudo apt-get install git
-  sudo apt-get install g++
-  sudo apt-get install gdb
-  sudo apt-get install libsdl2-2.0-0
-  sudo apt-get install libsdl2-image-2.0-0 libsdl2-image-dbg libsdl2-image-dev
-  sudo apt-get install libsdl2-ttf-2.0-0 libsdl2-ttf-dbg libsdl2-ttf-dev
-  sudo apt-get install doxygen graphviz
+  sudo apt-get install git > /dev/null
+  sudo apt-get install g++ > /dev/null
+  sudo apt-get install gdb > /dev/null
+  sudo apt-get install libsdl2-2.0-0 > /dev/null
+  sudo apt-get install libsdl2-image-2.0-0 libsdl2-image-dbg libsdl2-image-dev > /dev/null
+  sudo apt-get install libsdl2-ttf-2.0-0 libsdl2-ttf-dbg libsdl2-ttf-dev > /dev/null
+  sudo apt-get install doxygen graphviz > /dev/null
 elif [ "$1" == "reg" ] || [ "$1" == "-r" ]; then
   echo -n "User Name: "
   read un

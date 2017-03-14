@@ -1,122 +1,113 @@
 #include "engine.h"
 
 Engine::Engine() {
-  bkg = false;
+  simulationTime = 0;
+  realTime = 0;
+  fps = 1;
+  bkg = 0;
   splashed = false;
   custom = false;
 }
-Engine::~Engine() {}
+Engine::~Engine() {
+  SDL_DestroyRenderer(engren);
+  SDL_DestroyWindow(engwin);
+  SDL_Quit();
+}
 
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag) {
-  int res = SDL_Init(SDL_INIT_EVERYTHING);
-  SDL_CHECK(res == 0, "SDL_Init");
-  SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
-  SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
-  SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
-  SDL_SetWindowPosition(engwin, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED);
-  setName(s);
-  WIDTH = w;
-  HEIGHT = h;
+  init(s, w, h, flag, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SDL_INIT_EVERYTHING);
   return engren;
 }
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int it) {
-  int res = SDL_Init(it);
-  SDL_CHECK(res == 0, "SDL_Init");
-  SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
-  SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
-  SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
-  SDL_SetWindowPosition(engwin, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED);
-  setName(s);
-  WIDTH = w;
-  HEIGHT = h;
+  init(s, w, h, flag, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, it);
   return engren;
 }
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x, int y) {
-  int res = SDL_Init(SDL_INIT_EVERYTHING);
-  SDL_CHECK(res == 0, "SDL_Init");
-  SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
-  SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
-  SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
-  SDL_SetWindowPosition(engwin, x, y);
-  setName(s);
-  WIDTH = w;
-  HEIGHT = h;
+  init(s, w, h, flag, x, y, SDL_INIT_EVERYTHING);
   return engren;
 }
 SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x, int y, int it) {
   int res = SDL_Init(it);
   SDL_CHECK(res == 0, "SDL_Init");
-  SDL_CreateWindowAndRenderer(w, h, flag, &engwin, &engren);
+  setSize(w, h);
+  SDL_CreateWindowAndRenderer(WIDTH, HEIGHT, flag, &engwin, &engren);
   SDL_CHECK(engwin, "SDL_CreateWindowAndRenderer");
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
-  SDL_SetWindowPosition(engwin, x, y);
+  setPos(x, y);
   setName(s);
-  WIDTH = w;
-  HEIGHT = h;
+  render();
   return engren;
 }
 
 void Engine::setName(string s) {
   SDL_SetWindowTitle(engwin, s.c_str());
 }
-
-void Engine::deconstruct(){
-  SDL_DestroyRenderer(engren);
-  SDL_DestroyWindow(engwin);
-  SDL_Quit();
+void Engine::setPos(int x, int y) {
+  SDL_SetWindowPosition(engwin, x, y);
+}
+void Engine::setSize(int w, int h) {
+  WIDTH = w;
+  HEIGHT = h;
 }
 
-void Engine::pushToScreen(Object obj) { //Insert NULL for source to display whole image
-  if(splashed) {
-    SDL_Rect tsrc = obj.getSource();
-    SDL_Rect tdes = obj.getDest();
-    SDL_RenderCopyEx(engren, obj.getTexture(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
-  }
-}
-
-void Engine::pushToScreen(Object obj, int key) { //Insert NULL for source to display whole image
-  if(key = 4231998) {
-    SDL_Rect tsrc = obj.getSource();
-    SDL_Rect tdes = obj.getDest();
-    SDL_RenderCopyEx(engren, obj.getTexture(), &tsrc, &tdes, obj.getAng(), NULL, SDL_FLIP_NONE);
-  }
-}
-
-SDL_Renderer* Engine::renderScreen() {
+SDL_Renderer* Engine::getRenderer() {
   return engren;
 }
 
-void Engine::setColor(Uint32 r, Uint32 g, Uint32 b) {
-  SDL_SetRenderDrawColor(engren, r, g, b, 0xff);
+void Engine::setColor(Uint8 r, Uint8 g, Uint8 b) {
+  red = r;
+  green = g;
+  blue = b;
 }
 
-void Engine::preLoop() {
+void Engine::render() {
+  if(!splashed) { splash(); cout << "splash" << endl; }
+  SDL_SetRenderDrawColor(engren, red, green, blue, 0xff);
   SDL_RenderClear(engren);
-  if(bkg) pushToScreen(background);
-  if(!splashed) splash();
-}
-void Engine::endLoop() {
+  if(bkg) drawBackground();
   SDL_RenderPresent(engren);
+  timeval a;
+  realTime = gettimeofday(&a, 0);
+}
+void Engine::update() {
+  simulationTime += 16;
+  if(simulationTime < realTime) { fps = true; } else { fps = false; }
 }
 
-void Engine::setBackground(string file) {
-  setBackground(file, WIDTH, HEIGHT);
+void Engine::draw(Object obj) {
+  if(splashed) {
+    SDL_Rect src = obj.getFrame();
+    SDL_Rect des = obj.getDest();
+    SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
+  }
 }
-void Engine::setBackground(string file, int iw, int ih) {
-  background.setImage(file, renderScreen());
-  background.setSource(0, 0, iw, ih);
-  background.setDest(WIDTH, HEIGHT, 0, 0);
+void Engine::draw(Object obj, int key) {
+  if(key = 4231998) {
+    SDL_Rect src = obj.getFrame();
+    SDL_Rect des = obj.getDest();
+    SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
+  }
+}
+
+void Engine::setBackground(string filename) {
+  Background b;
+  b.setBackground(filename, WIDTH, HEIGHT, engren);
+  background = b;
   bkg = true;
 }
+void Engine::drawBackground() {
+  draw(background);
+}
+
 void Engine::splash() {
-  //setColor(0xff, 0xff, 0xff); // Need to fix this so it uses this color instead of userset one
-  Object b;
-  //b.setImage("http://archeantus.net/images/splash.bmp", renderScreen());
-  b.setImage("../../engine/res/engine-logo.bmp", renderScreen());
-  b.setSource(0, 0, 256, 256);
-  b.center(WIDTH, HEIGHT);
-  pushToScreen(b, 4231998);
-  endLoop();
+  setColor(0xff, 0xff, 0xff);
+  Object s;
+  //b.setImage("http://archeantus.net/images/splash.bmp", getRenderer());
+  s.setImage("/home/avery/Desktop/ArchGE(old_copies)/ArchGE_10/engine/res/engine-logo.png", getRenderer());
+  s.setFrame(0, 0, 256, 256);
+  s.center(WIDTH, HEIGHT);
+  draw(s, 4231998);
+  render();
   sleep(2.3);
   splashed=true;
   if(custom) runCustomSplash();
@@ -131,12 +122,11 @@ bool Engine::hasSplashed() {
 }
 bool Engine::runCustomSplash() {
   Object b;
-  preLoop();
-  b.setImage(cf.c_str(), renderScreen());
-  b.setSource(0, 0, cw, ch);
+  b.setImage(cf.c_str(), getRenderer());
+  b.setFrame(0, 0, cw, ch);
   b.center(WIDTH, HEIGHT);
-  pushToScreen(b);
-  endLoop();
+  draw(b);
+  render();
   sleep(ct);
 }
 void Engine::customSplash(string file, double time, int w, int h) {

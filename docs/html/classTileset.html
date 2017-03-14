@@ -96,14 +96,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Class for loading in maps, tileset images, and then displaying them.  
  <a href="classTileset.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="tileset_8h_source.html">tileset.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="tileset-tmp_8h_source.html">tileset-tmp.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Tileset:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTileset__coll__graph.png" border="0" usemap="#Tileset_coll__map" alt="Collaboration graph"/></div>
 <map name="Tileset_coll__map" id="Tileset_coll__map">
 <area shape="rect" id="node2" href="classCollision.html" title="Class used for calculating different types of collision between given Objects. " alt="" coords="5,172,77,199"/>
-<area shape="rect" id="node3" href="classObject.html" title="Class for storing an image and the source and distination to display. " alt="" coords="111,95,171,121"/>
+<area shape="rect" id="node3" href="classObject.html" title="Object" alt="" coords="111,95,171,121"/>
 <area shape="rect" id="node5" href="classTile.html" title="An Object class that stores the a tile value and name. " alt="" coords="197,172,240,199"/>
 <area shape="rect" id="node4" href="classImage.html" title="Class for loading in SDL Textures. " alt="" coords="112,5,171,32"/>
 </map>
@@ -196,13 +196,21 @@ vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class
 vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a2f21ec594886baf1bbb990a57dca8bfc">getTilesToRender</a> (int w, int h)</td></tr>
 <tr class="memdesc:a2f21ec594886baf1bbb990a57dca8bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tiles to renderer based on screen size, location, and given tile width and height. <br /></td></tr>
 <tr class="separator:a2f21ec594886baf1bbb990a57dca8bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae52c2d3b6bf86775456837cc3b2269"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ae52c2d3b6bf86775456837cc3b2269"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a2ae52c2d3b6bf86775456837cc3b2269">renderTiles</a> (<a class="el" href="classEngine.html">Engine</a> e)</td></tr>
+<tr class="memdesc:a2ae52c2d3b6bf86775456837cc3b2269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Tiles to renderer based on screen size and location and then it renders them given the <a class="el" href="classEngine.html" title="Class for declaring an engine, which does basic SDL commands like creating the window and renderer...">Engine</a>. <br /></td></tr>
+<tr class="separator:a2ae52c2d3b6bf86775456837cc3b2269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91610c970654958029f8d89526846460"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91610c970654958029f8d89526846460"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a91610c970654958029f8d89526846460">renderTiles</a> (int w, int h, <a class="el" href="classEngine.html">Engine</a> e)</td></tr>
+<tr class="memdesc:a91610c970654958029f8d89526846460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tiles to renderer based on screen size, location, and given tile width and height and then it renders them given the <a class="el" href="classEngine.html" title="Class for declaring an engine, which does basic SDL commands like creating the window and renderer...">Engine</a>. <br /></td></tr>
+<tr class="separator:a91610c970654958029f8d89526846460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a592ad17ba76112a7ee46df52f9a44e3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a592ad17ba76112a7ee46df52f9a44e3a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a592ad17ba76112a7ee46df52f9a44e3a">move</a> (double mx, double my)</td></tr>
 <tr class="memdesc:a592ad17ba76112a7ee46df52f9a44e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move map x and y amount. <br /></td></tr>
 <tr class="separator:a592ad17ba76112a7ee46df52f9a44e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3351adc4d2828b2d276955c0c7cbfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3351adc4d2828b2d276955c0c7cbfe"></a>
 <a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a1e3351adc4d2828b2d276955c0c7cbfe">move</a> (double mx, double my, <a class="el" href="classObject.html">Object</a> p)</td></tr>
-<tr class="memdesc:a1e3351adc4d2828b2d276955c0c7cbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given x and y amount to move and a given <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a> that also need to be moved, this function calculates the movement based on the Camera and Lens and then moves the <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a> and map if needed then returns the modified <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a>. <br /></td></tr>
+<tr class="memdesc:a1e3351adc4d2828b2d276955c0c7cbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given x and y amount to move and a given <a class="el" href="classObject.html">Object</a> that also need to be moved, this function calculates the movement based on the Camera and Lens and then moves the <a class="el" href="classObject.html">Object</a> and map if needed then returns the modified <a class="el" href="classObject.html">Object</a>. <br /></td></tr>
 <tr class="separator:a1e3351adc4d2828b2d276955c0c7cbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5910c3fdfcabddbc45c81d8337acbef6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5910c3fdfcabddbc45c81d8337acbef6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a5910c3fdfcabddbc45c81d8337acbef6">calcPos</a> (double mx, double my)</td></tr>
@@ -240,30 +248,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a1dfdb1ee8aa546ddf4acc23cd68774e1">getLens</a> ()</td></tr>
 <tr class="memdesc:a1dfdb1ee8aa546ddf4acc23cd68774e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Lens. <br /></td></tr>
 <tr class="separator:a1dfdb1ee8aa546ddf4acc23cd68774e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a752eb3d100602fe71e7ec306e892388a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752eb3d100602fe71e7ec306e892388a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a752eb3d100602fe71e7ec306e892388a">setSolid</a> (int s, int l)</td></tr>
-<tr class="memdesc:a752eb3d100602fe71e7ec306e892388a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all tiles from a given start to end to solid. (I don't think this works yet). <br /></td></tr>
-<tr class="separator:a752eb3d100602fe71e7ec306e892388a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d8e5e7ff9a7895d8fc80a6f392fe598"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d8e5e7ff9a7895d8fc80a6f392fe598"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a1d8e5e7ff9a7895d8fc80a6f392fe598">setSolid</a> (int l)</td></tr>
-<tr class="memdesc:a1d8e5e7ff9a7895d8fc80a6f392fe598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all tiles in a given tileset from a given start to end to solid. (I don't think this works yet). <br /></td></tr>
-<tr class="separator:a1d8e5e7ff9a7895d8fc80a6f392fe598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b4b667b8864e0e99c65970aeabd69cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b4b667b8864e0e99c65970aeabd69cc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a2b4b667b8864e0e99c65970aeabd69cc">setSolid</a> (int s, int e, int l)</td></tr>
-<tr class="memdesc:a2b4b667b8864e0e99c65970aeabd69cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a certain tile value to solid. <br /></td></tr>
-<tr class="separator:a2b4b667b8864e0e99c65970aeabd69cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9daba755264c94a3ef853078757257df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9daba755264c94a3ef853078757257df"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a9daba755264c94a3ef853078757257df">setPassable</a> (int s, int l)</td></tr>
-<tr class="memdesc:a9daba755264c94a3ef853078757257df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all tiles from a given start to end to passable (not solid). (I don't think this works yet). <br /></td></tr>
-<tr class="separator:a9daba755264c94a3ef853078757257df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec937b8a59ca974a5218d701306fd131"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec937b8a59ca974a5218d701306fd131"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#aec937b8a59ca974a5218d701306fd131">setPassable</a> (int s, int e, int l)</td></tr>
-<tr class="memdesc:aec937b8a59ca974a5218d701306fd131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all tiles in a given tileset from a given start to end to passable (not solid). (I don't think this works yet). <br /></td></tr>
-<tr class="separator:aec937b8a59ca974a5218d701306fd131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bf20786d91f89d46e0aca5667a79164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bf20786d91f89d46e0aca5667a79164"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a8bf20786d91f89d46e0aca5667a79164">setPassable</a> (int l)</td></tr>
-<tr class="memdesc:a8bf20786d91f89d46e0aca5667a79164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a certain tile value to passable (not solid). (I don't think this works yet). <br /></td></tr>
-<tr class="separator:a8bf20786d91f89d46e0aca5667a79164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -309,11 +293,11 @@ vector&lt; <a class="el" href="structTileset_1_1layer.html">layer</a> &gt;&#160;
 <tr class="separator:ad8d83e4d7659ba7e3a2b4ea5670ea351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a6f99c17241db7156403f4a9db24a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66a6f99c17241db7156403f4a9db24a6"></a>
 <a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a66a6f99c17241db7156403f4a9db24a6">camera</a></td></tr>
-<tr class="memdesc:a66a6f99c17241db7156403f4a9db24a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera object. When in the Camera, the map and <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a> move. <br /></td></tr>
+<tr class="memdesc:a66a6f99c17241db7156403f4a9db24a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera object. When in the Camera, the map and <a class="el" href="classObject.html">Object</a> move. <br /></td></tr>
 <tr class="separator:a66a6f99c17241db7156403f4a9db24a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e38c7eaa26c431a7d9e7852072954f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74e38c7eaa26c431a7d9e7852072954f"></a>
 <a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a74e38c7eaa26c431a7d9e7852072954f">lens</a></td></tr>
-<tr class="memdesc:a74e38c7eaa26c431a7d9e7852072954f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lens object. When in the Lens, only the given <a class="el" href="classObject.html" title="Class for storing an image and the source and distination to display. ">Object</a> moves. <br /></td></tr>
+<tr class="memdesc:a74e38c7eaa26c431a7d9e7852072954f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lens object. When in the Lens, only the given <a class="el" href="classObject.html">Object</a> moves. <br /></td></tr>
 <tr class="separator:a74e38c7eaa26c431a7d9e7852072954f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16c70ebbbd2ed213f4485b953f65ce3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16c70ebbbd2ed213f4485b953f65ce3a"></a>
 <a class="el" href="classCollision.html">Collision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a16c70ebbbd2ed213f4485b953f65ce3a">colCheck</a></td></tr>
@@ -330,10 +314,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>activeLens</b></td></
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for loading in maps, tileset images, and then displaying them. </p>
 
-<p>Definition at line <a class="el" href="tileset_8h_source.html#l00011">11</a> of file <a class="el" href="tileset_8h_source.html">tileset.h</a>.</p>
+<p>Definition at line <a class="el" href="tileset-tmp_8h_source.html#l00013">13</a> of file <a class="el" href="tileset-tmp_8h_source.html">tileset-tmp.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="tileset_8h_source.html">tileset.h</a></li>
-<li><a class="el" href="tileset_8cpp_source.html">tileset.cpp</a></li>
+<li><a class="el" href="tileset-tmp_8h_source.html">tileset-tmp.h</a></li>
+<li><a class="el" href="tileset-tmp_8cpp_source.html">tileset-tmp.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

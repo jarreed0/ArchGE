@@ -1,10 +1,11 @@
 #ifndef COLLISION_H
 #define COLLISION_H
 
-#include "object.h"
+class Object;
 
 //! Class used for calculating different types of collision between given Objects.
 class Collision {
+private:
 public:
   Collision();
   ~Collision();
@@ -20,9 +21,6 @@ public:
   bool isRightOf(Object a, Object b);
   //! Check if the first object is to the left of the second object.
   bool isLeftOf(Object a, Object b);
-  //! Check if first object is colliding with the second object and then return the first objects new position based on a given padding.
-  Object calibrate(Object a, Object b, int pad); 
-private:
 };
 
 #endif //COLLISION_H

@@ -2,10 +2,20 @@
 #define ENTITY_H
 
 #include "object.h"
+#include "collision.h"
 //#include "inventory.h" //not yet created
 
 //! Class for storing health, emotion, team, etc. of an Object.
 class Entity : public Object {
+private:
+  double health; //!< Int for the Entity's health.
+  double maxHealth; //!< Int for the Enitity's max health.
+  //Inventory inv; //!< Not yet created. Is going to be an instance of an Inventory class that need to be made.
+  int emotion; //!< Int for creating a range of emotional states.
+  int team; //!< Int for setting the team the Entity is on.
+  bool active; //!< Boolean for declaring if an entity is active.
+  Collision col;
+  SDL_Rect detect;
 public:
   Entity();
   ~Entity();
@@ -16,7 +26,7 @@ public:
   //! Get max health.
   double getMaxHealth() const { return maxHealth; }
   //! Set max health.
-  void setMaxHealth(double mh) { maxHealth=mh; }'
+  void setMaxHealth(double mh) { maxHealth=mh; }
   //! Deal damage. Subtracted from health. If health is less then zero it kills the entity.
   void damage(double d);
   //! Give health to the Entity.
@@ -37,18 +47,11 @@ public:
   void deactivate();
   //! Sets active to true.
   void activate();
-private:
-  //! Int for the Entity's health.
-  double health;
-  //! Int for the Enitity's max health.
-  double maxHealth;
-  //Inventory inv; //! Not yet created. Is going to be an instance of an Inventory class that need to be made.
-  //! Int for creating a range of emotional states.
-  int emotion;
-  //! Int for setting the team the Entity is on.
-  int team;
-  //! Boolean for declaring if an entity is active.
-  bool active;
+  void checkDisplayable(Object screen);
+  SDL_Rect getDetect() const { return detect; }
+  void setDetect(SDL_Rect d) { detect = d; }
+  void setDetectRange(int r);
+  void setDetectRange(int w, int h);
 };
 
 #endif //ENTITY_H

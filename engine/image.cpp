@@ -3,9 +3,10 @@
 Image::Image() {}
 Image::~Image() {}
 void Image::loadImage(string file, SDL_Renderer* ren) {
-  loadBMP(file, ren);
+  if(file.substr(file.length() - 3) == "bmp") loadBMP(file, ren);
+  if(file.substr(file.length() - 3) == "png") loadPNG(file, ren);
 }
-SDL_Texture* Image::getImage() {
+SDL_Texture* Image::getTexture() {
   return tex;
 }
 void Image::loadBMP(string file, SDL_Renderer* ren) {

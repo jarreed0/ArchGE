@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['collision',['Collision',['../classCollision.html',1,'']]]
+  ['background',['Background',['../classBackground.html',1,'']]]
 ];

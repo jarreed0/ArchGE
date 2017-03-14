@@ -1,124 +1,88 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-#include <vector>
-#include <iostream>
 #include "image.h"
+#include <SDL2/SDL.h>
 
+class Collision;
 
-//! Class for storing an image and the source and distination to display.
 class Object {
+private:
+  Image img;
+  SDL_Rect frame, dest, pos;
+  double angle;
+  string name;
+  double x, y;
+  bool displayable;
 public:
   Object();
   ~Object();
-  //! Set the Objects image with a BMP image path and the renderer.
-  void setImage(string file, SDL_Renderer* ren);
-  //void setImage(Image i) const {img = i;}
-  //! Get the Object's Image.
-  Image getImage() const {return img;}
-  //! Get the Image's texture.
-  SDL_Texture* getTexture();
-  //! Set the images source with the width, height, and x and y coordinates.
-  void setSource(double x, double y, int w, int h);
-  //! Set the display destinations width and height.
-  void setDest(int w, int h);
-  //! Set the display destinations width, height, and x and y coordinates.
-  void setDest(int w, int h, double x, double y);
-  //! Set the display destinations x and y coordinates.
-  void setDestCoord(double x, double y);
-  //! Get the SDL_Rect of the Objects image source.
-  SDL_Rect getSource();
-  //! Get the current SDL_Rect for the Objects destination.
-  SDL_Rect getDest();
-  //! Get the previous display destination.
-  SDL_Rect getBuff();
-  //! Set the image source destination with an SDL_Rect.
-  void setSource(SDL_Rect s) {rect = s;}
-  //! Set the Object's display destination with an SDL_Rect.
-  void setDest(SDL_Rect d) {dest = d;}
-  //! Set the object's previous display destination with an SDL_Rect.
-  void setBuff(SDL_Rect b) {buff = b;}
-  //! Set the image sources x coordinate.
-  void setSX(double x);
-  //! Set the image sources y coordinate.
-  void setSY(double y);
-  //! Set the image sources width.
-  void setSW(int w);
-  //! Set the image sources height.
-  void setSH(int h);
-  //! Set the display destinations x coordinate.
-  void setDX(double x);
-  //! Set the display destinations y coordinate.
-  void setDY(double y);
-  //! Set the display destinations width.
-  void setDW(int w);
-  //! Set the display destinations height.
-  void setDH(int h);
-  //! Get the image sources x coordinate.
-  double getSX();
-  //! Get the image sources y coordinate.
-  double getSY();
-  //! Get the image sources width.
-  double getSW();
-  //! Get the image sources height.
-  double getSH();
-  //! Get the display destinations x coordinate.
-  double getDX();
-  //! Get the display destinations y coordinate.
-  double getDY();
-  //! Get the display destinations width.
-  double getDW();
-  //! Get the display destinations height.
-  double getDH();
-  //! Set the Objects angle.
-  void setAng(double a);
-  //! Get the Objects angle.
-  double getAng();
-  //! Move the Object x and y amount.
-  void move(double mx, double my);
-  //! Center the Object's destination by the given screens (or anythings) width and height.
+  void setDisplayable(bool d) { displayable = d; }
+  bool isDisplayable(Object screen) { checkDisplayable(screen); return displayable; }
+  virtual void checkDisplayable(Object screen);
+  void setCoord(double x, double y) { setX(x); setY(y); }
+  void setX(double x) { this->x = x; }
+  void setY(double y) { this->y = y; }
+  void move(double x, double y) { moveX(x); moveY(y); }
+  void moveX(double x) { this->x += x; }
+  void moveY(double y) { this->y += y; }
+  double getX() const { return x; }
+  double getY() const { return y; }
+  Image getImage() const { return img; }
+  void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); }
+  double getAngle() const { return angle; }
+  void setAngle(double a) { angle = a; }
   void center(int w, int h);
-  //! Check if the Object is solid, or collidable.
-  bool collidable() {return solid;}
-  //! Set the Object to be collidable/solid.
-  void setSolid(bool s) {solid=s;}
-  //! Check if the Object is solid.
-  bool getSolid() const {return solid;}
-  //! Create a new frameset with the given framecount for the set, the row to get the frameset from, the column to start at, and the width and height of each frame. Returns an int ID for the frameset.
-  int createNewFrameSet(int fCount, int r, int c, int w, int h);
-  //! Create a new frame with a given x and y coordinate and width and height. Automatically called from createNewFrameSet().
-  SDL_Rect createNewFrame(int x, int y, int w, int h);
- //! Set the current frameset with the given frameset ID from calling createNewFrameSet().
-  void setCurFrameSet(int fs);
-  //! Set current frame in the frameset.
-  void setCurFrame(int f);
-  //! Change to the next frame. If it reaches its end, it restarts. Called in setCurFrameSet().
-  void nextFrame();
-  //! Set current frame to the beginning. Called in nextFrame() when it has reached its end.
-  void resetFrameSet();
-  //! Get the current frameset.
-  int getCurFrameSet() const {return curFrameSet;}
-  //! Get the current frame.
-  int getCurFrame() const {return curFrame;}
-private:
-  //! The Objects image.
-  Image img;
-  //! The images source.
-  SDL_Rect rect;
-  //! The display destination.
-  SDL_Rect dest;
-  //! Previous display destination.
-  SDL_Rect buff;
-  //! Angle to be displayed.
-  double angle;
-  //! Boolean for if the Object is collidable/solid.
-  bool solid;
-  //! 2D vector of framesets that store frames.
-  vector< vector <SDL_Rect> > frameset;
-  //! Current frameset.
-  int curFrameSet;
-  //! Current frame.
-  int curFrame;
+  SDL_Rect getFrame() const { return frame; }
+  SDL_Rect getDest() const { return dest; }
+  SDL_Rect getPos() const { return pos; }
+  void setFrame(SDL_Rect i) { frame = i; }
+  void setDest(SDL_Rect i) { dest = i; }
+  void setPos(SDL_Rect i) { pos = i; }
+  void setFrame(int x, int y, int w, int h) { setFrameCoord(x, y); setFrameSize(w, h); }
+  void setFrameCoord(int x, int y) { setFrameX(x); setFrameY(y); }
+  void setFrameSize(int w, int h) { setFrameW(w); setFrameH(h); }
+  void setFrameX(int x) { frame.x = x; }
+  void setFrameY(int y) { frame.y = y; }
+  void setFrameW(int w) { frame.w = w; }
+  void setFrameH(int h) { frame.h = h; }
+  int getFrameX() const { return frame.x; }
+  int getFrameY() const { return frame.y; }
+  int getFrameW() const { return frame.w; }
+  int getFrameH() const { return frame.h; }
+  void setDest(int x, int y, int w, int h) { setDestCoord(x, y); setDestSize(w, h); }
+  void setDestCoord(int x, int y) { setDestX(x); setDestY(y); }
+  void setDestSize(int w, int h) { setDestW(w); setDestH(h); }
+  void setDestX(int x) { dest.x = x; }
+  void setDestY(int y) { dest.y = y; }
+  void setDestW(int w) { dest.w = w; }
+  void setDestH(int h) { dest.h = h; }
+  int getDestX() const { return dest.x; }
+  int getDestY() const { return dest.y; }
+  int getDestW() const { return dest.w; }
+  int getDestH() const { return dest.h; }
+  void setPos(int x, int y, int w, int h) { setPosCoord(x, y); setPosSize(w, h); }
+  void setPosCoord(int x, int y) { setPosX(x); setPosY(y); }
+  void setPosSize(int w, int h) { setPosW(w); setPosH(h); }
+  void setPosX(int x) { pos.x = x; }
+  void setPosY(int y) { pos.y = y; }
+  void setPosW(int w) { pos.w = w; }
+  void setPosH(int h) { pos.h = h; }
+  int getPosX() const { return pos.x; }
+  int getPosY() const { return pos.y; }
+  int getPosW() const { return pos.w; }
+  int getPosH() const { return pos.h; }
+  void moveFrame(int x, int y) { moveFrameX(x); moveFrameY(y); }
+  void moveFrameX(int x) { frame.x += x; }
+  void moveFrameY(int y) { frame.y += y; }
+  void moveDest(int x, int y) { moveDestX(x); moveDestY(y); }
+  void moveDestX(int x) { dest.x += x; }
+  void moveDestY(int y) { dest.y += y; }
+  void movePos(int x, int y) { movePosX(x); movePosY(y); }
+  void movePosX(int x) { pos.x += x; }
+  void movePosY(int y) { pos.y += y; }
+  void setName(string s);
+  string getName();
 };
 
 #endif //OBJECT_H

@@ -1,4 +1,5 @@
 <map id="Engine" name="Engine">
-<area shape="rect" id="node2" href="$classObject.html" title="Class for storing an image and the source and distination to display. " alt="" coords="7,95,67,121"/>
-<area shape="rect" id="node3" href="$classImage.html" title="Class for loading in SDL Textures. " alt="" coords="7,5,66,32"/>
+<area shape="rect" id="node2" href="$classBackground.html" title="Background" alt="" coords="5,171,96,197"/>
+<area shape="rect" id="node3" href="$classObject.html" title="Object" alt="" coords="21,95,81,121"/>
+<area shape="rect" id="node4" href="$classImage.html" title="Class for loading in SDL Textures. " alt="" coords="21,5,80,32"/>
 </map>
