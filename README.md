@@ -6,8 +6,7 @@ Also the splashscreen doesn't work anymore so bypass it like how it in this [exa
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
-#Check out our NEW PDF documentation for ArchGE!
-[PDF](docs/latex/refman.pdf)
+#Check out our NEW [PDF](docs/latex/refman.pdf) documentation for ArchGE!
 
 #Under Heavy Development
 
