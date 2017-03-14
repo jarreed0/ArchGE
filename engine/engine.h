@@ -18,6 +18,7 @@ using namespace std;
 #include "tileset-tmp.h"
 #include "input-tmp.h"
 #include "physics-tmp.h"
+#include "stage.h"
 /*
 #include "splash.h"
 #include "level.h"

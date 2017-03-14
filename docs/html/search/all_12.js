@@ -21,5 +21,6 @@ var searchData=
   ['setvalue',['setValue',['../classTile.html#ae3d9e4ace265389dd0e0cf3d62ad6ff3',1,'Tile']]],
   ['setwindowsize',['setWindowSize',['../classTilesettmp.html#aacf8d226f112ce839c1a6bf6e5880cef',1,'Tilesettmp']]],
   ['shift',['shift',['../classInput.html#a934fa19ab0a751a68f9e9ef2e976e032',1,'Input']]],
-  ['splash',['splash',['../classEngine.html#adb6f1426c5c57f9d60be1e10d8eb2506',1,'Engine']]]
+  ['splash',['splash',['../classEngine.html#adb6f1426c5c57f9d60be1e10d8eb2506',1,'Engine']]],
+  ['stage',['Stage',['../classStage.html',1,'']]]
 ];

@@ -17,13 +17,13 @@
 \contentsline {subsection}{\numberline {3.6.1}Detailed Description}{14}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Tilesettmp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:layer Struct Reference}{14}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}Detailed Description}{15}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Level Class Reference}{15}{section.3.8}
+\contentsline {section}{\numberline {3.8}Map Class Reference}{15}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}Detailed Description}{16}{subsection.3.8.1}
-\contentsline {section}{\numberline {3.9}Map Class Reference}{16}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{17}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Object Class Reference}{17}{section.3.10}
-\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{19}{subsection.3.10.1}
-\contentsline {section}{\numberline {3.11}Physics Class Reference}{19}{section.3.11}
+\contentsline {section}{\numberline {3.9}Object Class Reference}{16}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{18}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}Physics Class Reference}{18}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{18}{subsection.3.10.1}
+\contentsline {section}{\numberline {3.11}Stage Class Reference}{19}{section.3.11}
 \contentsline {subsection}{\numberline {3.11.1}Detailed Description}{19}{subsection.3.11.1}
 \contentsline {section}{\numberline {3.12}Tile Class Reference}{20}{section.3.12}
 \contentsline {subsection}{\numberline {3.12.1}Detailed Description}{21}{subsection.3.12.1}
