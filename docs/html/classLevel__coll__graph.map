@@ -1,4 +1,8 @@
 <map id="Level" name="Level">
-<area shape="rect" id="node2" href="$classTileset.html" title="Tileset" alt="" coords="5,5,67,32"/>
-<area shape="rect" id="node3" href="$classMap.html" title="Map" alt="" coords="91,5,138,32"/>
+<area shape="rect" id="node2" href="$classCollision.html" title="Class used for calculating different types of collision between given Objects. " alt="" coords="5,95,77,121"/>
+<area shape="rect" id="node3" href="$classStage.html" title="Stage" alt="" coords="101,95,157,121"/>
+<area shape="rect" id="node4" href="$classTileset.html" title="Tileset" alt="" coords="23,5,84,32"/>
+<area shape="rect" id="node5" href="$classMap.html" title="Map" alt="" coords="109,5,155,32"/>
+<area shape="rect" id="node6" href="$classObject.html" title="Object" alt="" coords="182,95,242,121"/>
+<area shape="rect" id="node7" href="$classImage.html" title="Class for loading in SDL Textures. " alt="" coords="183,5,241,32"/>
 </map>

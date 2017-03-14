@@ -35,8 +35,10 @@ void Tileset::addTile(Tile t) {
 }
 Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int c, int r, int width, int height) {
   Tile tmp;
-  setName(name, value);
+  tmp.setName(name);
   tmp.setFrame(((r-1)*width), ((c-1)*height), width, height);
+  tmp.setDestSize(width, height);
+  tmp.setPosSize(width, height);
   tmp.setImage(file, ren);
   tmp.setValue(value);
   addTile(tmp);

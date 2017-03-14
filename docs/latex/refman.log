@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  14 MAR 2017 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  14 MAR 2017 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1225,7 +1225,7 @@ Chapter 2.
 ]
 Chapter 3.
 (./classBackground.tex
-<classBackground__inherit__graph.pdf, id=282, 148.555pt x 156.585pt>
+<classBackground__inherit__graph.pdf, id=306, 148.555pt x 156.585pt>
 File: classBackground__inherit__graph.pdf Graphic file (type pdf)
 
 <use classBackground__inherit__graph.pdf>
@@ -1233,7 +1233,7 @@ Package pdftex.def Info: classBackground__inherit__graph.pdf used on input line
  9.
 (pdftex.def)             Requested size: 148.0pt x 156.0064pt.
 
-<classBackground__coll__graph.pdf, id=283, 148.555pt x 224.84pt>
+<classBackground__coll__graph.pdf, id=307, 148.555pt x 224.84pt>
 File: classBackground__coll__graph.pdf Graphic file (type pdf)
 
 <use classBackground__coll__graph.pdf>
@@ -1271,7 +1271,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 17.
 ) (./classEngine.tex
-<classEngine__coll__graph.pdf, id=321, 168.63pt x 292.09125pt>
+<classEngine__coll__graph.pdf, id=346, 168.63pt x 292.09125pt>
 File: classEngine__coll__graph.pdf Graphic file (type pdf)
 
 <use classEngine__coll__graph.pdf>
@@ -1283,113 +1283,128 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 26.
  [7 <./classEngine__coll__graph.pdf>]
-[8]) (./classEntity.tex
-<classEntity__inherit__graph.pdf, id=433, 125.46875pt x 156.585pt>
+[8]
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 174.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 6.29996pt on input line 174.
+LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 174.
+LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
+(Font)              scaled to size 8.99994pt on input line 174.
+) (./classEntity.tex
+<classEntity__inherit__graph.pdf, id=463, 125.46875pt x 156.585pt>
 File: classEntity__inherit__graph.pdf Graphic file (type pdf)
 
 <use classEntity__inherit__graph.pdf>
 Package pdftex.def Info: classEntity__inherit__graph.pdf used on input line 18.
 
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
-
-<classEntity__coll__graph.pdf, id=434, 198.7425pt x 234.8775pt>
+ [9]
+<classEntity__coll__graph.pdf, id=480, 198.7425pt x 234.8775pt>
 File: classEntity__coll__graph.pdf Graphic file (type pdf)
 
 <use classEntity__coll__graph.pdf>
 Package pdftex.def Info: classEntity__coll__graph.pdf used on input line 27.
 (pdftex.def)             Requested size: 198.0pt x 234.00601pt.
- [9 <./classEntity__inherit__graph.pdf>]
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 35.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 35.
+ [10 <./classEntity__inherit__graph.pdf> <./classEntity__coll__graph.pdf
 
-[10 <./classEntity__coll__graph.pdf>]) (./classImage.tex [11])
-(./classInput.tex [12] [13]) (./structTilesettmp_1_1layer.tex
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 1.
- [14])
+pdfTeX warning: pdflatex (file ./classEntity__coll__graph.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>]) (./classImage.tex [11]) (./classInput.tex [12] [13] [14])
+(./structTilesettmp_1_1layer.tex) (./classLevel.tex
+<classLevel__coll__graph.pdf, id=702, 258.9675pt x 234.8775pt>
+File: classLevel__coll__graph.pdf Graphic file (type pdf)
+
+<use classLevel__coll__graph.pdf>
+Package pdftex.def Info: classLevel__coll__graph.pdf used on input line 10.
+(pdftex.def)             Requested size: 258.0pt x 234.02394pt.
+ [15] [16 <./classLevel__coll__graph.pdf>])
 (./classMap.tex) (./classObject.tex
-<classObject__inherit__graph.pdf, id=672, 258.9675pt x 156.585pt>
+<classObject__inherit__graph.pdf, id=761, 258.9675pt x 156.585pt>
 File: classObject__inherit__graph.pdf Graphic file (type pdf)
 
 <use classObject__inherit__graph.pdf>
 Package pdftex.def Info: classObject__inherit__graph.pdf used on input line 9.
 (pdftex.def)             Requested size: 258.0pt x 156.01595pt.
- [15]
-<classObject__coll__graph.pdf, id=695, 125.46875pt x 167.62625pt>
+
+<classObject__coll__graph.pdf, id=762, 125.46875pt x 167.62625pt>
 File: classObject__coll__graph.pdf Graphic file (type pdf)
 
 <use classObject__coll__graph.pdf>
 Package pdftex.def Info: classObject__coll__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 125.0pt x 167.0094pt.
- [16 <./classObject__inherit__graph.pdf> <./classObject__coll__graph.pdf
+ [17] [18 <./classObject__inherit__graph.pdf> <./classObject__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classObject__coll__graph.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
->] [17]) (./classPhysics.tex) (./classStage.tex
-<classStage__coll__graph.pdf, id=787, 180.675pt x 167.62625pt>
+>] [19]) (./classPhysics.tex) (./classStage.tex
+<classStage__coll__graph.pdf, id=876, 180.675pt x 167.62625pt>
 File: classStage__coll__graph.pdf Graphic file (type pdf)
 
 <use classStage__coll__graph.pdf>
-Package pdftex.def Info: classStage__coll__graph.pdf used on input line 10.
+Package pdftex.def Info: classStage__coll__graph.pdf used on input line 9.
 (pdftex.def)             Requested size: 180.0pt x 167.00172pt.
- [18]) (./classTile.tex [19 <./classStage__coll__graph.pdf>]
-<classTile__inherit__graph.pdf, id=855, 125.46875pt x 156.585pt>
+ [20]) (./classTile.tex [21 <./classStage__coll__graph.pdf>]
+<classTile__inherit__graph.pdf, id=938, 125.46875pt x 156.585pt>
 File: classTile__inherit__graph.pdf Graphic file (type pdf)
 
 <use classTile__inherit__graph.pdf>
 Package pdftex.def Info: classTile__inherit__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
 
-<classTile__coll__graph.pdf, id=856, 125.46875pt x 224.84pt>
+<classTile__coll__graph.pdf, id=939, 125.46875pt x 224.84pt>
 File: classTile__coll__graph.pdf Graphic file (type pdf)
 
 <use classTile__coll__graph.pdf>
 Package pdftex.def Info: classTile__coll__graph.pdf used on input line 27.
 (pdftex.def)             Requested size: 125.0pt x 224.01262pt.
- [20 <./classTile__inherit__graph.pdf> <./classTile__coll__graph.pdf
+ [22 <./classTile__inherit__graph.pdf> <./classTile__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTile__coll__graph.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >]) (./structTilesettmp_1_1tile.tex
-<structTilesettmp_1_1tile__coll__graph.pdf, id=885, 161.60374pt x 292.09125pt>
+<structTilesettmp_1_1tile__coll__graph.pdf, id=968, 161.60374pt x 292.09125pt>
 File: structTilesettmp_1_1tile__coll__graph.pdf Graphic file (type pdf)
 
 <use structTilesettmp_1_1tile__coll__graph.pdf>
 Package pdftex.def Info: structTilesettmp_1_1tile__coll__graph.pdf used on inpu
 t line 14.
 (pdftex.def)             Requested size: 161.0pt x 291.01639pt.
- [21 <./structTilesettmp_1_1tile__coll__graph.pdf>]) (./classTileset.tex [22]) 
+ [23 <./structTilesettmp_1_1tile__coll__graph.pdf>]) (./classTileset.tex [24]) 
 (./classTilesettmp.tex
-<classTilesettmp__coll__graph.pdf, id=948, 256.96pt x 294.09875pt>
+<classTilesettmp__coll__graph.pdf, id=1032, 256.96pt x 294.09875pt>
 File: classTilesettmp__coll__graph.pdf Graphic file (type pdf)
 
 <use classTilesettmp__coll__graph.pdf>
 Package pdftex.def Info: classTilesettmp__coll__graph.pdf used on input line 18
 .
 (pdftex.def)             Requested size: 256.0pt x 293.021pt.
- [23 <./classTilesettmp__coll__graph.pdf>] [24] [25]) [26] (./refman.ind [27
+ [25 <./classTilesettmp__coll__graph.pdf>] [26] [27]) [28] (./refman.ind [29
 
 
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: FAC04127BF6DC5543210A1A5570D4A36;6867.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
+(rerunfilecheck)             Checksum: D1036B6ECA04FEEE82E52105122A8BA2;7737.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 15598 strings out of 494953
- 241888 string characters out of 6180977
- 321635 words of memory out of 5000000
- 18170 multiletter control sequences out of 15000+600000
- 53329 words of font info for 61 fonts, out of 8000000 for 9000
+ 15680 strings out of 494953
+ 244715 string characters out of 6180977
+ 323085 words of memory out of 5000000
+ 18209 multiletter control sequences out of 15000+600000
+ 59216 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,16n,92p,415b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1397,12 +1412,13 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
-/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (31 pages, 193026 bytes).
+/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (33 pages, 209532 bytes).
 PDF statistics:
- 1254 PDF objects out of 1440 (max. 8388607)
- 1178 compressed objects within 12 object streams
- 430 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1352 PDF objects out of 1440 (max. 8388607)
+ 1270 compressed objects within 13 object streams
+ 466 named destinations out of 1000 (max. 500000)
+ 386 words of extra memory for PDF output out of 10000 (max. 10000000)
 

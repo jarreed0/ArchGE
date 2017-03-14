@@ -29,6 +29,7 @@ public:
   double getX() const { return x; }
   double getY() const { return y; }
   Image getImage() const { return img; }
+  void setImage(Image i) { img = i; } 
   void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); }
   double getAngle() const { return angle; }
   void setAngle(double a) { angle = a; }

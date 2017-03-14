@@ -5,6 +5,7 @@ var searchData=
   ['layersize',['layersize',['../classTilesettmp.html#a9a24c245c8ba4ae85c9e0c386f06c067',1,'Tilesettmp']]],
   ['left',['left',['../classInput.html#aa5becba821fbe9c146c332091ebcc6f2',1,'Input']]],
   ['lens',['lens',['../classTilesettmp.html#a17c54918a5f571e2cbedb0d03f67ac03',1,'Tilesettmp']]],
+  ['level',['Level',['../classLevel.html',1,'']]],
   ['loadbmp',['loadBMP',['../classImage.html#ad37ad8bd7d9572be7fbbd921a299d235',1,'Image']]],
   ['loadimage',['loadImage',['../classImage.html#a776ab55f3884f994512aa092cd7fa250',1,'Image']]],
   ['loadmap',['loadMap',['../classMap.html#a51e1c9c777bc6c4171707f1528a73dc6',1,'Map']]],

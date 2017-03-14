@@ -7,61 +7,79 @@ Collaboration diagram for Level\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=180pt]{classLevel__coll__graph}
+\includegraphics[width=258pt]{classLevel__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries create\+Level} (\hyperlink{classMap}{Map} m, \hyperlink{classTileset}{Tileset} t)\hypertarget{classLevel_a864fb9f328b7cf5be2a39e858e9681f5}{}\label{classLevel_a864fb9f328b7cf5be2a39e858e9681f5}
+void {\bfseries create} ()\hypertarget{classLevel_a81689e48aaf6d5421721bd06f480e4e1}{}\label{classLevel_a81689e48aaf6d5421721bd06f480e4e1}
 
 \item 
-void {\bfseries create\+Level} (string filename, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classLevel_a6346afdfc5eba1ce98254d5cdb39776d}{}\label{classLevel_a6346afdfc5eba1ce98254d5cdb39776d}
+void {\bfseries set\+Stage} (\hyperlink{classStage}{Stage} s)\hypertarget{classLevel_ac9bb5473dece11462e702fe418590f24}{}\label{classLevel_ac9bb5473dece11462e702fe418590f24}
 
 \item 
-void {\bfseries create\+Level} (string filename, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classLevel_aaa9e17c51ed13c6a2b11ff04e3e4d81e}{}\label{classLevel_aaa9e17c51ed13c6a2b11ff04e3e4d81e}
+void {\bfseries set\+Stage} (\hyperlink{classMap}{Map} m, \hyperlink{classTileset}{Tileset} t)\hypertarget{classLevel_a962fd10cb871d2fdd98230dc079bff34}{}\label{classLevel_a962fd10cb871d2fdd98230dc079bff34}
 
 \item 
-void {\bfseries create\+Level} (string filename, int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classLevel_a698588721ec86ea8bc1002b58543ac14}{}\label{classLevel_a698588721ec86ea8bc1002b58543ac14}
+void {\bfseries set\+Scale} (int w, int h)\hypertarget{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}{}\label{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}
 
 \item 
-void {\bfseries create\+Level} (string filename, int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classLevel_af9b3321b7dff0ba6077ac43e9d49756d}{}\label{classLevel_af9b3321b7dff0ba6077ac43e9d49756d}
+void {\bfseries set\+Scale} (int s)\hypertarget{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}{}\label{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}
 
 \item 
-void {\bfseries set\+Map} (\hyperlink{classMap}{Map} m)\hypertarget{classLevel_a825b41113f6da7e1294f42f463f98a4c}{}\label{classLevel_a825b41113f6da7e1294f42f463f98a4c}
+void {\bfseries calc\+Pos} ()\hypertarget{classLevel_a02e915f95e181dcfe95553e923a73a39}{}\label{classLevel_a02e915f95e181dcfe95553e923a73a39}
 
 \item 
-\hyperlink{classMap}{Map} {\bfseries set\+Map} (string filename)\hypertarget{classLevel_a97b3a35b145204905ad4bdb4c19e36c7}{}\label{classLevel_a97b3a35b145204905ad4bdb4c19e36c7}
+vector$<$ \hyperlink{classTile}{Tile} $>$ {\bfseries get\+Tiles\+To\+Render} ()\hypertarget{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{}\label{classLevel_ade9e45f70f2f3f81c120bb161f87218f}
 
 \item 
-\hyperlink{classMap}{Map} {\bfseries get\+Map} () const \hypertarget{classLevel_ae40b6bfd8916e65cbcd10790702b1782}{}\label{classLevel_ae40b6bfd8916e65cbcd10790702b1782}
+void {\bfseries move} (int mx, int my)\hypertarget{classLevel_a9184b25173fbf468a63a633bd3510bd6}{}\label{classLevel_a9184b25173fbf468a63a633bd3510bd6}
 
 \item 
-void {\bfseries set\+Tileset} (\hyperlink{classTileset}{Tileset} t)\hypertarget{classLevel_a684434ce7be09c5956e6a93a08b5076f}{}\label{classLevel_a684434ce7be09c5956e6a93a08b5076f}
+void {\bfseries set\+Coord} (double x, double y)\hypertarget{classLevel_a3ff79425060f959496d64aa052ef3cf6}{}\label{classLevel_a3ff79425060f959496d64aa052ef3cf6}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries set\+Tileset} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classLevel_af2efc35f43fcfba60a0dd5a43e412c2e}{}\label{classLevel_af2efc35f43fcfba60a0dd5a43e412c2e}
+void {\bfseries setX} (double x)\hypertarget{classLevel_a6212b3c03b3efc82cf69e642cc093959}{}\label{classLevel_a6212b3c03b3efc82cf69e642cc093959}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries set\+Tileset} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classLevel_a6e1874e8e365179362e6caf3c60d707a}{}\label{classLevel_a6e1874e8e365179362e6caf3c60d707a}
+void {\bfseries setY} (double y)\hypertarget{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}{}\label{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries set\+Tileset} (int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classLevel_ae735629e2ed290aa68545acb67ad3877}{}\label{classLevel_ae735629e2ed290aa68545acb67ad3877}
+double {\bfseries getX} () const \hypertarget{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}{}\label{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries set\+Tileset} (int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classLevel_a92388f78f651f7aea81d39f227c1cae3}{}\label{classLevel_a92388f78f651f7aea81d39f227c1cae3}
+double {\bfseries getY} () const \hypertarget{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}{}\label{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries get\+Tileset} () const \hypertarget{classLevel_af6e51b47f493d8282b6648ec9e4054a3}{}\label{classLevel_af6e51b47f493d8282b6648ec9e4054a3}
+void {\bfseries set\+Screen\+Size} (int w, int h)\hypertarget{classLevel_a22a202624bb540acc74b678b74b60c9d}{}\label{classLevel_a22a202624bb540acc74b678b74b60c9d}
 
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMap}{Map} {\bfseries map}\hypertarget{classLevel_acd59c9055fdd6c15b0a1adf6e451f0ba}{}\label{classLevel_acd59c9055fdd6c15b0a1adf6e451f0ba}
+\hyperlink{classStage}{Stage} {\bfseries stage}\hypertarget{classLevel_a70b63ddb6ddfa55ddf21ba9ee1ceea7b}{}\label{classLevel_a70b63ddb6ddfa55ddf21ba9ee1ceea7b}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries tileset}\hypertarget{classLevel_a7f2da1fccdb1b0dd6742649f3367324b}{}\label{classLevel_a7f2da1fccdb1b0dd6742649f3367324b}
+vector$<$ vector$<$ \hyperlink{classTile}{Tile} $>$ $>$ {\bfseries tiles}\hypertarget{classLevel_aca83d54bba8108db360d158c23cf3b05}{}\label{classLevel_aca83d54bba8108db360d158c23cf3b05}
+
+\item 
+double {\bfseries x}\hypertarget{classLevel_aec07d9a0c48ff9e91faa4bfd963ce7ac}{}\label{classLevel_aec07d9a0c48ff9e91faa4bfd963ce7ac}
+
+\item 
+double {\bfseries y}\hypertarget{classLevel_a8a0e61d7df45f96fd93deff6d52c6d57}{}\label{classLevel_a8a0e61d7df45f96fd93deff6d52c6d57}
+
+\item 
+int {\bfseries tilewidth}\hypertarget{classLevel_ac8ef0ca1e4fd96fa82c32bf59767d051}{}\label{classLevel_ac8ef0ca1e4fd96fa82c32bf59767d051}
+
+\item 
+int {\bfseries tileheight}\hypertarget{classLevel_a206b74c28bb8eb3be5bf30f7611815dc}{}\label{classLevel_a206b74c28bb8eb3be5bf30f7611815dc}
+
+\item 
+\hyperlink{classObject}{Object} {\bfseries screen}\hypertarget{classLevel_ae40a7c1aec8beb39a60876d07338f88f}{}\label{classLevel_ae40a7c1aec8beb39a60876d07338f88f}
+
+\item 
+\hyperlink{classCollision}{Collision} {\bfseries col}\hypertarget{classLevel_a703a2892808b942817dd84072de22bc5}{}\label{classLevel_a703a2892808b942817dd84072de22bc5}
 
 \end{DoxyCompactItemize}
 
@@ -69,7 +87,7 @@ void {\bfseries set\+Tileset} (\hyperlink{classTileset}{Tileset} t)\hypertarget{
 \subsection{Detailed Description}
 
 
-Definition at line 7 of file level.\+h.
+Definition at line 8 of file level.\+h.
 
 
 

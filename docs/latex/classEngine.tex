@@ -75,8 +75,13 @@ void \hyperlink{classEngine_aa84c13e84d00fd3b0389a9a076ec194f}{draw\+Background}
 void \hyperlink{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}{draw} (\hyperlink{classObject}{Object} obj)\hypertarget{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}{}\label{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}
 
 \begin{DoxyCompactList}\small\item\em Draw an object on the screen. \end{DoxyCompactList}\item 
+void {\bfseries draw} (vector$<$ \hyperlink{classObject}{Object} $>$ objs)\hypertarget{classEngine_a212b1b788cae7931fda927c0cbd2e165}{}\label{classEngine_a212b1b788cae7931fda927c0cbd2e165}
+
+\item 
 void {\bfseries draw} (\hyperlink{classObject}{Object} obj, int key)\hypertarget{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}{}\label{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}
 
+\item 
+void \hyperlink{classEngine_aa2eff336a5e306177bdc43c229aeff62}{draw\+Level} (\hyperlink{classLevel}{Level} lvl)
 \item 
 void \hyperlink{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
 
@@ -155,8 +160,38 @@ int \hyperlink{classEngine_a2acd0bd074160e654d076376d36a3479}{ch}\hypertarget{cl
 \subsection{Detailed Description}
 Class for declaring an engine, which does basic S\+DL commands like creating the window and renderer. 
 
-Definition at line 28 of file engine.\+h.
+Definition at line 29 of file engine.\+h.
 
+
+
+\subsection{Member Function Documentation}
+\index{Engine@{Engine}!draw\+Level@{draw\+Level}}
+\index{draw\+Level@{draw\+Level}!Engine@{Engine}}
+\subsubsection[{\texorpdfstring{draw\+Level(\+Level lvl)}{drawLevel(Level lvl)}}]{\setlength{\rightskip}{0pt plus 5cm}void Engine\+::draw\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf Level}}]{lvl}
+\end{DoxyParamCaption}
+)}\hypertarget{classEngine_aa2eff336a5e306177bdc43c229aeff62}{}\label{classEngine_aa2eff336a5e306177bdc43c229aeff62}
+$<$$<$$<$$<$$<$ D\+O\+ES N\+OT C\+O\+PY I\+M\+A\+GE R\+I\+G\+HT 
+
+Definition at line 101 of file engine.\+cpp.
+
+
+\begin{DoxyCode}
+101                                 \{
+102   \textcolor{keywordflow}{if}(splashed) \{
+103     vector<Tile> tmp;
+104     tmp = lvl.getTilesToRender();
+105     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<tmp.size(); i++) \{
+106       \hyperlink{classObject}{Object} obj;
+107       obj.setFrame(tmp[i].getFrame());
+108       obj.setDest(tmp[i].getDest());
+109       obj.setImage(obj.getImage()); 
+110       \hyperlink{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}{draw}(obj);
+111     \}
+112   \}
+113 \}
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

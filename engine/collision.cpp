@@ -23,7 +23,7 @@ bool Collision::outOfBoundsOf(Object a, Object b) {
 }
 
 bool Collision::isAbove(Object a, Object b) {
-  if((a.getDestY() + a.getDestH()) < b.getDestY()) {
+  if((a.getPosY() + a.getPosH()) < b.getPosY()) {
     return true;
   } else {
     return false;
@@ -31,7 +31,7 @@ bool Collision::isAbove(Object a, Object b) {
 }
 
 bool Collision::isBelow(Object a, Object b) {
-  if(a.getDestY() > (b.getDestY() + b.getDestH())) {
+  if(a.getPosY() > (b.getPosY() + b.getPosH())) {
     return true;
   } else {
     return false;
@@ -39,7 +39,7 @@ bool Collision::isBelow(Object a, Object b) {
 }
 
 bool Collision::isRightOf(Object a, Object b) {
-  if(a.getDestX() > (b.getDestX() + b.getDestW())) {
+  if(a.getPosX() > (b.getPosX() + b.getPosW())) {
     return true;
   } else {
     return false;
@@ -47,7 +47,7 @@ bool Collision::isRightOf(Object a, Object b) {
 }
 
 bool Collision::isLeftOf(Object a, Object b) {
-  if((a.getDestX() + a.getDestW()) < b.getDestX()) {
+  if((a.getPosX() + a.getPosW()) < b.getPosX()) {
     return true;
   } else {
     return false;

@@ -7,6 +7,7 @@ using namespace std;
 #include <cassert>
 #include <unistd.h>
 #include <sys/time.h>
+#include <vector>
 
 #include "image.h"
 #include "object.h"
@@ -19,9 +20,9 @@ using namespace std;
 #include "input-tmp.h"
 #include "physics-tmp.h"
 #include "stage.h"
+#include "level.h"
 /*
 #include "splash.h"
-#include "level.h"
 */
 
 //! Class for declaring an engine, which does basic SDL commands like creating the window and renderer.
@@ -77,7 +78,9 @@ public:
   void drawBackground();
   //! Draw an object on the screen.
   void draw(Object obj);
+  void draw(vector<Object> objs);
   void draw(Object obj, int key);
+  void drawLevel(Level lvl);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
   void splash();
   //! Deactives the splashscreen, requires key.

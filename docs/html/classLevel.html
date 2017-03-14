@@ -96,68 +96,90 @@ Collaboration diagram for Level:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLevel__coll__graph.png" border="0" usemap="#Level_coll__map" alt="Collaboration graph"/></div>
 <map name="Level_coll__map" id="Level_coll__map">
-<area shape="rect" id="node2" href="classTileset.html" title="Tileset" alt="" coords="5,5,67,32"/>
-<area shape="rect" id="node3" href="classMap.html" title="Map" alt="" coords="91,5,138,32"/>
+<area shape="rect" id="node2" href="classCollision.html" title="Class used for calculating different types of collision between given Objects. " alt="" coords="5,95,77,121"/>
+<area shape="rect" id="node3" href="classStage.html" title="Stage" alt="" coords="101,95,157,121"/>
+<area shape="rect" id="node4" href="classTileset.html" title="Tileset" alt="" coords="23,5,84,32"/>
+<area shape="rect" id="node5" href="classMap.html" title="Map" alt="" coords="109,5,155,32"/>
+<area shape="rect" id="node6" href="classObject.html" title="Object" alt="" coords="182,95,242,121"/>
+<area shape="rect" id="node7" href="classImage.html" title="Class for loading in SDL Textures. " alt="" coords="183,5,241,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a864fb9f328b7cf5be2a39e858e9681f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a864fb9f328b7cf5be2a39e858e9681f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createLevel</b> (<a class="el" href="classMap.html">Map</a> m, <a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
-<tr class="separator:a864fb9f328b7cf5be2a39e858e9681f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6346afdfc5eba1ce98254d5cdb39776d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6346afdfc5eba1ce98254d5cdb39776d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createLevel</b> (string filename, string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
-<tr class="separator:a6346afdfc5eba1ce98254d5cdb39776d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9e17c51ed13c6a2b11ff04e3e4d81e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa9e17c51ed13c6a2b11ff04e3e4d81e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createLevel</b> (string filename, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
-<tr class="separator:aaa9e17c51ed13c6a2b11ff04e3e4d81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698588721ec86ea8bc1002b58543ac14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a698588721ec86ea8bc1002b58543ac14"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createLevel</b> (string filename, int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
-<tr class="separator:a698588721ec86ea8bc1002b58543ac14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9b3321b7dff0ba6077ac43e9d49756d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9b3321b7dff0ba6077ac43e9d49756d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createLevel</b> (string filename, int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
-<tr class="separator:af9b3321b7dff0ba6077ac43e9d49756d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825b41113f6da7e1294f42f463f98a4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a825b41113f6da7e1294f42f463f98a4c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (<a class="el" href="classMap.html">Map</a> m)</td></tr>
-<tr class="separator:a825b41113f6da7e1294f42f463f98a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97b3a35b145204905ad4bdb4c19e36c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b3a35b145204905ad4bdb4c19e36c7"></a>
-<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (string filename)</td></tr>
-<tr class="separator:a97b3a35b145204905ad4bdb4c19e36c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae40b6bfd8916e65cbcd10790702b1782"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae40b6bfd8916e65cbcd10790702b1782"></a>
-<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getMap</b> () const </td></tr>
-<tr class="separator:ae40b6bfd8916e65cbcd10790702b1782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684434ce7be09c5956e6a93a08b5076f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a684434ce7be09c5956e6a93a08b5076f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (<a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
-<tr class="separator:a684434ce7be09c5956e6a93a08b5076f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2efc35f43fcfba60a0dd5a43e412c2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2efc35f43fcfba60a0dd5a43e412c2e"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
-<tr class="separator:af2efc35f43fcfba60a0dd5a43e412c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e1874e8e365179362e6caf3c60d707a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e1874e8e365179362e6caf3c60d707a"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
-<tr class="separator:a6e1874e8e365179362e6caf3c60d707a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae735629e2ed290aa68545acb67ad3877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae735629e2ed290aa68545acb67ad3877"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
-<tr class="separator:ae735629e2ed290aa68545acb67ad3877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92388f78f651f7aea81d39f227c1cae3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92388f78f651f7aea81d39f227c1cae3"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
-<tr class="separator:a92388f78f651f7aea81d39f227c1cae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e51b47f493d8282b6648ec9e4054a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6e51b47f493d8282b6648ec9e4054a3"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getTileset</b> () const </td></tr>
-<tr class="separator:af6e51b47f493d8282b6648ec9e4054a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81689e48aaf6d5421721bd06f480e4e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81689e48aaf6d5421721bd06f480e4e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> ()</td></tr>
+<tr class="separator:a81689e48aaf6d5421721bd06f480e4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bb5473dece11462e702fe418590f24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9bb5473dece11462e702fe418590f24"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStage</b> (<a class="el" href="classStage.html">Stage</a> s)</td></tr>
+<tr class="separator:ac9bb5473dece11462e702fe418590f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962fd10cb871d2fdd98230dc079bff34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a962fd10cb871d2fdd98230dc079bff34"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStage</b> (<a class="el" href="classMap.html">Map</a> m, <a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+<tr class="separator:a962fd10cb871d2fdd98230dc079bff34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcaa774a00e39090336b5a61d88e3e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcaa774a00e39090336b5a61d88e3e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (int w, int h)</td></tr>
+<tr class="separator:a3fcaa774a00e39090336b5a61d88e3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fe8bc2dd6623fcbaa739403a239d77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6fe8bc2dd6623fcbaa739403a239d77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (int s)</td></tr>
+<tr class="separator:af6fe8bc2dd6623fcbaa739403a239d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e915f95e181dcfe95553e923a73a39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e915f95e181dcfe95553e923a73a39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>calcPos</b> ()</td></tr>
+<tr class="separator:a02e915f95e181dcfe95553e923a73a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9e45f70f2f3f81c120bb161f87218f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade9e45f70f2f3f81c120bb161f87218f"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTilesToRender</b> ()</td></tr>
+<tr class="separator:ade9e45f70f2f3f81c120bb161f87218f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9184b25173fbf468a63a633bd3510bd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9184b25173fbf468a63a633bd3510bd6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (int mx, int my)</td></tr>
+<tr class="separator:a9184b25173fbf468a63a633bd3510bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff79425060f959496d64aa052ef3cf6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ff79425060f959496d64aa052ef3cf6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoord</b> (double x, double y)</td></tr>
+<tr class="separator:a3ff79425060f959496d64aa052ef3cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6212b3c03b3efc82cf69e642cc093959"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6212b3c03b3efc82cf69e642cc093959"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setX</b> (double x)</td></tr>
+<tr class="separator:a6212b3c03b3efc82cf69e642cc093959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c67443008f7e0f4b5d1630ff2dcf179"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c67443008f7e0f4b5d1630ff2dcf179"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (double y)</td></tr>
+<tr class="separator:a7c67443008f7e0f4b5d1630ff2dcf179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5dca509c0e480d8a7b6b1d6b411375"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f5dca509c0e480d8a7b6b1d6b411375"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const </td></tr>
+<tr class="separator:a6f5dca509c0e480d8a7b6b1d6b411375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5b4e5e0bf364142fa0facc7badea4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb5b4e5e0bf364142fa0facc7badea4a"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const </td></tr>
+<tr class="separator:acb5b4e5e0bf364142fa0facc7badea4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a202624bb540acc74b678b74b60c9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22a202624bb540acc74b678b74b60c9d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScreenSize</b> (int w, int h)</td></tr>
+<tr class="separator:a22a202624bb540acc74b678b74b60c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:acd59c9055fdd6c15b0a1adf6e451f0ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd59c9055fdd6c15b0a1adf6e451f0ba"></a>
-<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>map</b></td></tr>
-<tr class="separator:acd59c9055fdd6c15b0a1adf6e451f0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f2da1fccdb1b0dd6742649f3367324b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f2da1fccdb1b0dd6742649f3367324b"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileset</b></td></tr>
-<tr class="separator:a7f2da1fccdb1b0dd6742649f3367324b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b63ddb6ddfa55ddf21ba9ee1ceea7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70b63ddb6ddfa55ddf21ba9ee1ceea7b"></a>
+<a class="el" href="classStage.html">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stage</b></td></tr>
+<tr class="separator:a70b63ddb6ddfa55ddf21ba9ee1ceea7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca83d54bba8108db360d158c23cf3b05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca83d54bba8108db360d158c23cf3b05"></a>
+vector&lt; vector&lt; <a class="el" href="classTile.html">Tile</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tiles</b></td></tr>
+<tr class="separator:aca83d54bba8108db360d158c23cf3b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec07d9a0c48ff9e91faa4bfd963ce7ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec07d9a0c48ff9e91faa4bfd963ce7ac"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="separator:aec07d9a0c48ff9e91faa4bfd963ce7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0e61d7df45f96fd93deff6d52c6d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a0e61d7df45f96fd93deff6d52c6d57"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="separator:a8a0e61d7df45f96fd93deff6d52c6d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ef0ca1e4fd96fa82c32bf59767d051"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8ef0ca1e4fd96fa82c32bf59767d051"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tilewidth</b></td></tr>
+<tr class="separator:ac8ef0ca1e4fd96fa82c32bf59767d051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206b74c28bb8eb3be5bf30f7611815dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a206b74c28bb8eb3be5bf30f7611815dc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tileheight</b></td></tr>
+<tr class="separator:a206b74c28bb8eb3be5bf30f7611815dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40a7c1aec8beb39a60876d07338f88f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae40a7c1aec8beb39a60876d07338f88f"></a>
+<a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><b>screen</b></td></tr>
+<tr class="separator:ae40a7c1aec8beb39a60876d07338f88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703a2892808b942817dd84072de22bc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a703a2892808b942817dd84072de22bc5"></a>
+<a class="el" href="classCollision.html">Collision</a>&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
+<tr class="separator:a703a2892808b942817dd84072de22bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="level_8h_source.html#l00007">7</a> of file <a class="el" href="level_8h_source.html">level.h</a>.</p>
+<p>Definition at line <a class="el" href="level_8h_source.html#l00008">8</a> of file <a class="el" href="level_8h_source.html">level.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="level_8h_source.html">level.h</a></li>
 <li><a class="el" href="level_8cpp_source.html">level.cpp</a></li>
