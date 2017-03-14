@@ -18,22 +18,26 @@
 
   \indexspace
 
-  \item {Map}, \hyperpage{15}
+  \item {Level}, \hyperpage{15}
 
   \indexspace
 
-  \item {Object}, \hyperpage{16}
+  \item {Map}, \hyperpage{16}
 
   \indexspace
 
-  \item {Physics}, \hyperpage{18}
+  \item {Object}, \hyperpage{17}
+
+  \indexspace
+
+  \item {Physics}, \hyperpage{19}
 
   \indexspace
 
   \item {Tile}, \hyperpage{20}
-  \item {Tileset}, \hyperpage{21}
-  \item {Tilesettmp}, \hyperpage{22}
+  \item {Tileset}, \hyperpage{22}
+  \item {Tilesettmp}, \hyperpage{23}
   \item {Tilesettmp\+::layer}, \hyperpage{14}
-  \item {Tilesettmp\+::tile}, \hyperpage{19}
+  \item {Tilesettmp\+::tile}, \hyperpage{21}
 
 \end{theindex}

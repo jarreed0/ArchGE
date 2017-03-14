@@ -2,11 +2,13 @@
 #define MAP_H
 
 #include <vector>
+#include <iostream>
+using namespace std;
 #include <fstream>
 
 class Map {
 private:
-  vector< vector <int> > map;
+  vector< vector<int> > map;
   int startX, startY;
 public:
   Map();
@@ -15,7 +17,7 @@ public:
   void loadMap(string filename);
   int getX() const { return startX; }
   int getY() const { return startY; }
-  vector< vector <int> > getMap() const { return map; }
+  vector< vector<int> > getMap() const { return map; }
 };
 
 #endif //MAP_H

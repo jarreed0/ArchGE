@@ -6,29 +6,28 @@ Tileset::Tileset() {
 Tileset::~Tileset() {}
 
 vector<Tile> Tileset::create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
-  vector<Tile> tmp = create(1, name, img, ren, width, height, r, count);
-  return tmp;
+  create(1, name, img, ren, width, height, r, count);
+  return tiles;
 }
 vector<Tile> Tileset::create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
-  vector<Tile> tmp  = create(1, name, img, ren, width, height, r, rcount, count);
-  return tmp;
+  create(1, name, img, ren, width, height, r, rcount, count);
+  return tiles;
 }
 vector<Tile> Tileset::create(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
-  vector<Tile> tmp = create(startid, name, img, ren, width, height, r, count, count);
-  return tmp;
+  create(startid, name, img, ren, width, height, r, count, count);
+  return tiles;
 }
 vector<Tile> Tileset::create(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
-  vector<Tile> tmp;
   int tag = 0;
   for(int i=0; i<r; i++) {
     for(int j=0; j<rcount; j++) {
-      tmp.push_back(addTile(name, img, ren, tag+startid, i+1, j+1, width, height));
+      tiles.push_back(addTile(name, img, ren, tag+startid, i+1, j+1, width, height));
       tag++;
       if(tag>count) { break; }
     }
     if(tag>count) break;
   }
-  return tmp;
+  return tiles;
 }
 
 void Tileset::addTile(Tile t) {
