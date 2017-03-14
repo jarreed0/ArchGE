@@ -37,10 +37,11 @@ void Force::loop() {
 }
 
 void Force::draw() {
-  disp = level.getTilesToRender();
+  //disp = level.getTilesToRender();
+  disp = level.renderTiles(e);
   bool colliding = false;
   for(int i = 0; i < disp.size(); i++) {
-    e.pushToScreen(disp[i]);
+    //e.pushToScreen(disp[i]);
     if(col.isTouching(player, disp[i])) {
       colliding = true;
     }

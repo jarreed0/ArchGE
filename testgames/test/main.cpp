@@ -1,4 +1,5 @@
-#include "engine.h"
+#include "../../engine/engine.h"
+#include "../../engine/input-tmp.h"
 using namespace std;
 
 int main() {
@@ -7,14 +8,14 @@ int main() {
  e.init("test", 300, 400, 0);
  e.setColor(0x00, 0xff, 0x80);
  bool running = 1;
- int x = 0;
- e.setBackground("/home/avery/Desktop/ArchGE(old_copies)/ArchGE_10/engine/res/engine-logo.png");
+ Input i;
+ e.setBackground("../../engine/res/engine-logo.png");
  while(running) {
-  if(x>10000) running=false;
   bool frame = true;
   while(frame) {
    e.update();
-   x++;
+   i.logPress();
+   if(i.checkKey(i.esc) || i.checkKey(i.quit)) running = false;
    if(!e.FPS()) frame=false;
   }
   e.render();

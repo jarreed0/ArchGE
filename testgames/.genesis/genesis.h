@@ -6,11 +6,11 @@ using namespace std;
 #include <vector>
 #include "../../engine/engine.h"
 #include "../../engine/image.h"
-#include "../../engine/input.h"
+#include "../../engine/input-tmp.h"
 #include "../../engine/object.h"
-#include "../../engine/physics.h"
+#include "../../engine/physics-tmp.h"
 #include "../../engine/tile.h"
-#include "../../engine/tileset.h"
+#include "../../engine/tileset-tmp.h"
 #include "../../engine/collision.h"
 #include "../../engine/sdl_check.h"
 

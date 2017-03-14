@@ -6,4 +6,4 @@ cd engine
 ./build.sh
 cd ..
 cd testgames/genesis
-g++ *.cpp ../../engine/engine.a -lSDL2 -std=c++11
+g++ *.cpp ../../engine/arch.a -lSDL2 -std=c++11
