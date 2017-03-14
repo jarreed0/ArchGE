@@ -1,6 +1,6 @@
 var searchData=
 [
   ['w',['w',['../classInput.html#a50cd82a148ff2ee1bd6f1692277ae5d2',1,'Input']]],
-  ['width',['width',['../structTileset_1_1layer.html#ad6b12441392f6fb36c810a36400f62d9',1,'Tileset::layer']]],
-  ['winwidth',['winWidth',['../classTileset.html#a47cb91f14b9266523ced0cda8fe20ada',1,'Tileset']]]
+  ['width',['width',['../structTilesettmp_1_1layer.html#a6fb9b7d5b76a8ed3f2ff5edd008cdc7c',1,'Tilesettmp::layer']]],
+  ['winwidth',['winWidth',['../classTilesettmp.html#adad23274c489e0b7933227ee090e3f24',1,'Tilesettmp']]]
 ];

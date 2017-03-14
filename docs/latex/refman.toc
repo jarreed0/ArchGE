@@ -15,16 +15,18 @@
 \contentsline {subsection}{\numberline {3.5.1}Detailed Description}{12}{subsection.3.5.1}
 \contentsline {section}{\numberline {3.6}Input Class Reference}{12}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Detailed Description}{14}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Tileset\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:layer Struct Reference}{14}{section.3.7}
+\contentsline {section}{\numberline {3.7}Tilesettmp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:layer Struct Reference}{14}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}Detailed Description}{15}{subsection.3.7.1}
 \contentsline {section}{\numberline {3.8}Object Class Reference}{15}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}Detailed Description}{17}{subsection.3.8.1}
 \contentsline {section}{\numberline {3.9}Physics Class Reference}{18}{section.3.9}
 \contentsline {subsection}{\numberline {3.9.1}Detailed Description}{18}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Tile Class Reference}{18}{section.3.10}
+\contentsline {section}{\numberline {3.10}Tilesettmp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:tile Struct Reference}{18}{section.3.10}
 \contentsline {subsection}{\numberline {3.10.1}Detailed Description}{19}{subsection.3.10.1}
-\contentsline {section}{\numberline {3.11}Tileset\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:tile Struct Reference}{20}{section.3.11}
+\contentsline {section}{\numberline {3.11}Tile Class Reference}{19}{section.3.11}
 \contentsline {subsection}{\numberline {3.11.1}Detailed Description}{20}{subsection.3.11.1}
 \contentsline {section}{\numberline {3.12}Tileset Class Reference}{21}{section.3.12}
-\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{24}{subsection.3.12.1}
-\contentsline {chapter}{Index}{25}{section*.34}
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{21}{subsection.3.12.1}
+\contentsline {section}{\numberline {3.13}Tilesettmp Class Reference}{22}{section.3.13}
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{25}{subsection.3.13.1}
+\contentsline {chapter}{Index}{27}{section*.36}

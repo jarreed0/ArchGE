@@ -7,6 +7,7 @@
 class Tile : public Object {
 private:
   int value; //!< Tiles value. Used for reading from a map file, etc.
+  bool solid;
 public:
   Tile();
   ~Tile();
@@ -14,6 +15,9 @@ public:
   void setValue(int v);
   //! Get the value of the tile.
   int getValue();
+  void setSolid() { solid = true; }
+  void setPassable() { solid = false; }
+  bool isSolid() const { return solid; }
 };
 
 #endif //TILE_H

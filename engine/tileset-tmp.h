@@ -1,5 +1,5 @@
-#ifndef TILESET_H
-#define TILESET_H
+#ifndef TILESETTMP_H
+#define TILESETTMP_H
 
 #include <vector>
 #include <fstream>
@@ -10,11 +10,11 @@
 class Engine;
 
 //! Class for loading in maps, tileset images, and then displaying them.
-class Tileset {
+class Tilesettmp {
 public:
   //! Amout of types of tiles
-  Tileset(int amount);
-  ~Tileset();
+  Tilesettmp(int amount);
+  ~Tilesettmp();
   //! Set the angle of all the tiles. Calls pushAng().
   void setAng(int ang);
   //! Sets all tiles to the angle (I don't think this is working yet).
@@ -128,4 +128,4 @@ private:
   bool activeCam, activeLens;
 };
 
-#endif //TILESET_H
+#endif //TILESETTMP_H

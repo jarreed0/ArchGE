@@ -26,9 +26,10 @@
 
   \indexspace
 
-  \item {Tile}, \hyperpage{18}
+  \item {Tile}, \hyperpage{19}
   \item {Tileset}, \hyperpage{21}
-  \item {Tileset\+::layer}, \hyperpage{14}
-  \item {Tileset\+::tile}, \hyperpage{20}
+  \item {Tilesettmp}, \hyperpage{22}
+  \item {Tilesettmp\+::layer}, \hyperpage{14}
+  \item {Tilesettmp\+::tile}, \hyperpage{18}
 
 \end{theindex}

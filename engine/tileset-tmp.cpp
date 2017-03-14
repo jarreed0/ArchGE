@@ -1,56 +1,56 @@
 #include "tileset-tmp.h"
 #include "engine.h"
 
-Tileset::Tileset(int amount) {
+Tilesettmp::Tilesettmp(int amount) {
   tiles = new Tile[amount+1];
   layersize = xsize = ysize = x = y = 0;
   set=false;
   activeCam = activeLens = 0;
 }
-Tileset::~Tileset() {
+Tilesettmp::~Tilesettmp() {
   delete[]tiles;
 }
-void Tileset::setAng(int ang) {
+void Tilesettmp::setAng(int ang) {
   angle = ang;
   pushAng();
 }
-void Tileset::pushAng() {
+void Tilesettmp::pushAng() {
   for(int i = 0; i<tileset.size(); i++) {
     //for(int j = 0; i<tileset[i].tiles.size(); j++) {
       //tileset[i].tiles[j].tile.setAng(angle);
     //}
   }
 }
-void Tileset::setCoord(double ix, double iy) {
+void Tilesettmp::setCoord(double ix, double iy) {
   move(ix-x, iy-y);
 }
-void Tileset::setCoord(double ix, double iy, double mx, double my) {
+void Tilesettmp::setCoord(double ix, double iy, double mx, double my) {
   x = ix;
   y = iy;
   calcPos(mx, my);
   set=true;
 }
-void Tileset::setWindowSize(int ww, int wh) {
+void Tilesettmp::setWindowSize(int ww, int wh) {
   winWidth = ww;
   winHeight = wh;
 }
-double Tileset::getX() {
+double Tilesettmp::getX() {
   return x;
 }
-double Tileset::getY() {
+double Tilesettmp::getY() {
   return y;
 }
-vector<Tile> Tileset::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
+vector<Tile> Tilesettmp::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
   vector<Tile> tmp;
   tmp = genMap(name, map, img, ren, width, height, r, count);
   return tmp;
 }
-vector<Tile> Tileset::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
+vector<Tile> Tilesettmp::loadMaps(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
   vector<Tile> tmp;
   tmp = genMap(name, map, img, ren, width, height, r, rcount, count);
   return tmp;
 }
-vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
+vector<Tile> Tilesettmp::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
   vector<Tile> tmp;
   for(int i=0; i<(count-1); i++) {
     tmp.push_back(addTile(name, img, ren, i, r, i, width, height));
@@ -58,7 +58,7 @@ vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* 
   loadTiles(map, width, height);
   return tmp;
 }
-vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
+vector<Tile> Tilesettmp::genMap(string name, string map, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
   vector<Tile> tmp;
   int tag = 1;
   for(int i=0; i<r; i++) {
@@ -76,7 +76,7 @@ vector<Tile> Tileset::genMap(string name, string map, string img, SDL_Renderer* 
   loadTiles(map, width, height);
   return tmp;
 }
-void Tileset::loadTiles(string filename, int iw, int ih) {
+void Tilesettmp::loadTiles(string filename, int iw, int ih) {
   ifstream in(filename.c_str());
   if(!in.is_open()) {
           cout << "Problem with loading the file" << endl;
@@ -124,10 +124,10 @@ void Tileset::loadTiles(string filename, int iw, int ih) {
   setCoord(-cur.x, -cur.y);
   move(-cur.x, -cur.y);
 }
-void Tileset::addTile(Tile t) {
+void Tilesettmp::addTile(Tile t) {
   tiles[t.getValue()] = t;
 }
-Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int c, int r, int width, int height) {
+Tile Tilesettmp::addTile(string name, string file, SDL_Renderer* ren, int value, int c, int r, int width, int height) {
   Tile tmp;
   tmp.setName(name);
   tmp.setFrame(((r-1)*width), ((c-1)*height), width, height);
@@ -136,15 +136,15 @@ Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, in
   tiles[value] = tmp;
   return tmp;
 }
-Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height) {
+Tile Tilesettmp::addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height) {
   Tile tmp = addTile(name, file, ren, value, 1, value, width, height);
   return tmp;
 }
-Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int size) {
+Tile Tilesettmp::addTile(string name, string file, SDL_Renderer* ren, int value, int size) {
   Tile tmp = addTile(name, file, ren, value, 1, value, size, size);
   return tmp;
 }
-vector<Tile> Tileset::getTilesToRender() {
+vector<Tile> Tilesettmp::getTilesToRender() {
   vector <Tile> vec;
   pushAng();
   for(int i = 0; i<tileset.size(); i++) {
@@ -168,7 +168,7 @@ vector<Tile> Tileset::getTilesToRender() {
   }
   return vec;
 }
-vector<Tile> Tileset::getTilesToRender(int w, int h) {
+vector<Tile> Tilesettmp::getTilesToRender(int w, int h) {
   vector <Tile> vec;
   pushAng();
   for(int i = 0; i<tileset.size(); i++) {
@@ -192,26 +192,26 @@ vector<Tile> Tileset::getTilesToRender(int w, int h) {
   }
   return vec;
 }
-void Tileset::move(double mx, double my) {
+void Tilesettmp::move(double mx, double my) {
   setCoord(x-=(mx/10), y-=(my/10), mx, my);
 }
-void Tileset::calcPos(double mx, double my) {
+void Tilesettmp::calcPos(double mx, double my) {
   for(int i=0; i<tileset.size(); i++) {
     calcSetPos(i, mx, my);
   }
 }
-void Tileset::calcSetPos(int i, double mx, double my) {
+void Tilesettmp::calcSetPos(int i, double mx, double my) {
   tileset[i].x -= (mx/10);
   tileset[i].y -= (my/10);
   calcTilesPos(i, mx, my);
 }
-void Tileset::calcTilesPos(int i, double mx, double my) {
+void Tilesettmp::calcTilesPos(int i, double mx, double my) {
   for(int j=0; j<tileset[i].tiles.size(); j++) {
     tileset[i].tiles[j].x -= (mx/10);
     tileset[i].tiles[j].y += (my/10);
   }
 }
-Object Tileset::move(double mx, double my, Object p) {
+Object Tilesettmp::move(double mx, double my, Object p) {
   double pr = 1, r = 1;
   int pxs = 0, pys = 0, xs = 0, ys = 0;
   if(mx > 0) {
@@ -285,37 +285,37 @@ Object Tileset::move(double mx, double my, Object p) {
   move(xs, ys);
   return p;
 }
-void Tileset::setCameraMargin(int wm, int hm) {
+void Tilesettmp::setCameraMargin(int wm, int hm) {
   camera.setDest(winWidth-wm-wm, winHeight-hm-hm, wm, hm);
   activeCam = true;
 }
-void Tileset::centerCamera(int percentage) {
+void Tilesettmp::centerCamera(int percentage) {
   int wsize = ((percentage/2)*winWidth)/100;
   int hsize = ((percentage/2)*winHeight)/100;
   setCameraMargin(wsize, hsize);
 }
-Object Tileset::getCamera() {
+Object Tilesettmp::getCamera() {
   return camera;
 }
-void Tileset::setLensMargin(int wm, int hm) {
+void Tilesettmp::setLensMargin(int wm, int hm) {
   lens.setDest(camera.getDestW()-wm-wm, camera.getDestH()-hm-hm, camera.getDestX()+wm, camera.getDestY()+hm);
   activeLens = true;
 }
-void Tileset::centerLens(int percentage) {
+void Tilesettmp::centerLens(int percentage) {
   int wsize = ((percentage/2)*camera.getDestW())/100;
   int hsize = ((percentage/2)*camera.getDestH())/100;
   setLensMargin(wsize, hsize);
 }
-Object Tileset::getLens() {
+Object Tilesettmp::getLens() {
   return lens;
-}vector<Tile> Tileset::renderTiles(Engine e) {
+}vector<Tile> Tilesettmp::renderTiles(Engine e) {
   vector<Tile> rt = getTilesToRender();
   for(int i = 0; i < rt.size(); i++) {
     e.draw(rt[i]);
   }
   return rt;
 }
-vector<Tile> Tileset::renderTiles(int w, int h, Engine e) {
+vector<Tile> Tilesettmp::renderTiles(int w, int h, Engine e) {
   vector<Tile> rt = getTilesToRender(w, h);
   for(int i = 0; i < rt.size(); i++) {
     e.draw(rt[i]);

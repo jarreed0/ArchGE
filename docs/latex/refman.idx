@@ -4,9 +4,10 @@
 \indexentry{Entity@{Entity}|hyperpage}{9}
 \indexentry{Image@{Image}|hyperpage}{11}
 \indexentry{Input@{Input}|hyperpage}{12}
-\indexentry{Tileset\+::layer@{Tileset\+::layer}|hyperpage}{14}
+\indexentry{Tilesettmp\+::layer@{Tilesettmp\+::layer}|hyperpage}{14}
 \indexentry{Object@{Object}|hyperpage}{15}
 \indexentry{Physics@{Physics}|hyperpage}{18}
-\indexentry{Tile@{Tile}|hyperpage}{18}
-\indexentry{Tileset\+::tile@{Tileset\+::tile}|hyperpage}{20}
+\indexentry{Tilesettmp\+::tile@{Tilesettmp\+::tile}|hyperpage}{18}
+\indexentry{Tile@{Tile}|hyperpage}{19}
 \indexentry{Tileset@{Tileset}|hyperpage}{21}
+\indexentry{Tilesettmp@{Tilesettmp}|hyperpage}{22}

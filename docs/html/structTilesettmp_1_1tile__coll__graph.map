@@ -1,0 +1,5 @@
+<map id="Tilesettmp::tile" name="Tilesettmp::tile">
+<area shape="rect" id="node2" href="$classTile.html" title="An Object class that stores the a tile value and name. " alt="" coords="38,171,81,197"/>
+<area shape="rect" id="node3" href="$classObject.html" title="Object" alt="" coords="29,95,89,121"/>
+<area shape="rect" id="node4" href="$classImage.html" title="Class for loading in SDL Textures. " alt="" coords="30,5,89,32"/>
+</map>

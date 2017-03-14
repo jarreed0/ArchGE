@@ -1,72 +1,14 @@
 \hypertarget{classTileset}{}\section{Tileset Class Reference}
 \label{classTileset}\index{Tileset@{Tileset}}
-
-
-Class for loading in maps, tileset images, and then displaying them.  
-
-
-
-
-{\ttfamily \#include $<$tileset-\/tmp.\+h$>$}
-
-
-
-Collaboration diagram for Tileset\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=256pt]{classTileset__coll__graph}
-\end{center}
-\end{figure}
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \hyperlink{structTileset_1_1layer}{layer}
-\begin{DoxyCompactList}\small\item\em Contains a set of tiles, the width and height of the set, the x and y coordinate of the set, and the Tiles width and height. \end{DoxyCompactList}\item 
-struct \hyperlink{structTileset_1_1tile}{tile}
-\begin{DoxyCompactList}\small\item\em Contains the \hyperlink{classTile}{Tile} and its x and y coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classTileset_a438bd441809f8e9508a6052580cfdc8b}{Tileset} (int amount)\hypertarget{classTileset_a438bd441809f8e9508a6052580cfdc8b}{}\label{classTileset_a438bd441809f8e9508a6052580cfdc8b}
-
-\begin{DoxyCompactList}\small\item\em Amout of types of tiles. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a1f751647f22bce36f58fd738b97a67bd}{set\+Ang} (int ang)\hypertarget{classTileset_a1f751647f22bce36f58fd738b97a67bd}{}\label{classTileset_a1f751647f22bce36f58fd738b97a67bd}
-
-\begin{DoxyCompactList}\small\item\em Set the angle of all the tiles. Calls \hyperlink{classTileset_adf1b34b6c742198c3d05b620ed3c25e1}{push\+Ang()}. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_adf1b34b6c742198c3d05b620ed3c25e1}{push\+Ang} ()\hypertarget{classTileset_adf1b34b6c742198c3d05b620ed3c25e1}{}\label{classTileset_adf1b34b6c742198c3d05b620ed3c25e1}
-
-\begin{DoxyCompactList}\small\item\em Sets all tiles to the angle (I don\textquotesingle{}t think this is working yet). \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_acc04d7d0538f4ef33cb64d638d380c96}{set\+Coord} (double ix, double iy)\hypertarget{classTileset_acc04d7d0538f4ef33cb64d638d380c96}{}\label{classTileset_acc04d7d0538f4ef33cb64d638d380c96}
-
-\begin{DoxyCompactList}\small\item\em Set the coordinate with a given x and y. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a34cf0bb5a6326a6dbcbe3f352f3ea7a5}{set\+Coord} (double ix, double iy, double mx, double my)\hypertarget{classTileset_a34cf0bb5a6326a6dbcbe3f352f3ea7a5}{}\label{classTileset_a34cf0bb5a6326a6dbcbe3f352f3ea7a5}
-
-\begin{DoxyCompactList}\small\item\em Set the coordinate with the given x and y and the amount to move by on the x and y. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a138b26fa4cb2241a8c9a5e58327a6f6c}{set\+Window\+Size} (int ww, int wh)\hypertarget{classTileset_a138b26fa4cb2241a8c9a5e58327a6f6c}{}\label{classTileset_a138b26fa4cb2241a8c9a5e58327a6f6c}
-
-\begin{DoxyCompactList}\small\item\em Set the window width and height. \end{DoxyCompactList}\item 
-double \hyperlink{classTileset_a1c2c75bb6d7c130158487d7f438e4dd1}{getX} ()\hypertarget{classTileset_a1c2c75bb6d7c130158487d7f438e4dd1}{}\label{classTileset_a1c2c75bb6d7c130158487d7f438e4dd1}
-
-\begin{DoxyCompactList}\small\item\em Gets the current x coordinate. \end{DoxyCompactList}\item 
-double \hyperlink{classTileset_a6f15c38bfae4739e932fa58e30bfba4c}{getY} ()\hypertarget{classTileset_a6f15c38bfae4739e932fa58e30bfba4c}{}\label{classTileset_a6f15c38bfae4739e932fa58e30bfba4c}
-
-\begin{DoxyCompactList}\small\item\em Gets the current y cooridnate. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_ae10b6721f116102fff75d3ad5eea6ae0}{load\+Maps} (string name, string map, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classTileset_ae10b6721f116102fff75d3ad5eea6ae0}{}\label{classTileset_ae10b6721f116102fff75d3ad5eea6ae0}
+vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_ad11cd044d9a2907003fee3baacba86e7}{create} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classTileset_ad11cd044d9a2907003fee3baacba86e7}{}\label{classTileset_ad11cd044d9a2907003fee3baacba86e7}
 
 \begin{DoxyCompactList}\small\item\em Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the S\+DL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a7896a6a2c52ff570854ea4aaa9ca6503}{load\+Maps} (string name, string map, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classTileset_a7896a6a2c52ff570854ea4aaa9ca6503}{}\label{classTileset_a7896a6a2c52ff570854ea4aaa9ca6503}
+vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a1435c7ce70c5aa6da6388762971917aa}{create} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classTileset_a1435c7ce70c5aa6da6388762971917aa}{}\label{classTileset_a1435c7ce70c5aa6da6388762971917aa}
 
 \begin{DoxyCompactList}\small\item\em Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, S\+DL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a6ab8298e8749b87eb7581510fb659f53}{gen\+Map} (string name, string map, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classTileset_a6ab8298e8749b87eb7581510fb659f53}{}\label{classTileset_a6ab8298e8749b87eb7581510fb659f53}
-
-\begin{DoxyCompactList}\small\item\em Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the S\+DL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_abafacb40bbcddc60e39f031fac531b02}{gen\+Map} (string name, string map, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classTileset_abafacb40bbcddc60e39f031fac531b02}{}\label{classTileset_abafacb40bbcddc60e39f031fac531b02}
-
-\begin{DoxyCompactList}\small\item\em Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, S\+DL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a5359de30fef35821e69a2b13300e8cba}{load\+Tiles} (string filename, int iw, int ih)\hypertarget{classTileset_a5359de30fef35821e69a2b13300e8cba}{}\label{classTileset_a5359de30fef35821e69a2b13300e8cba}
-
-\begin{DoxyCompactList}\small\item\em Read in map file with given path to the file and width and height of the tiles. \end{DoxyCompactList}\item 
 void \hyperlink{classTileset_a26acaabd06601aba2e277fdd2b750fc7}{add\+Tile} (\hyperlink{classTile}{Tile} t)\hypertarget{classTileset_a26acaabd06601aba2e277fdd2b750fc7}{}\label{classTileset_a26acaabd06601aba2e277fdd2b750fc7}
 
 \begin{DoxyCompactList}\small\item\em Push \hyperlink{classTile}{Tile} in tile with given \hyperlink{classTile}{Tile}. \end{DoxyCompactList}\item 
@@ -79,112 +21,46 @@ void \hyperlink{classTileset_a26acaabd06601aba2e277fdd2b750fc7}{add\+Tile} (\hyp
 \hyperlink{classTile}{Tile} \hyperlink{classTileset_adc54ffeda362f79668abb0bad2f73296}{add\+Tile} (string name, string file, S\+D\+L\+\_\+\+Renderer $\ast$ren, int value, int size)\hypertarget{classTileset_adc54ffeda362f79668abb0bad2f73296}{}\label{classTileset_adc54ffeda362f79668abb0bad2f73296}
 
 \begin{DoxyCompactList}\small\item\em Generate and push \hyperlink{classTile}{Tile} with a given name, path to the image, S\+DL renderer, value, and size (used for width and height). \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a25d1e2559b0d260fa64ce21f02622920}{get\+Tiles\+To\+Render} ()\hypertarget{classTileset_a25d1e2559b0d260fa64ce21f02622920}{}\label{classTileset_a25d1e2559b0d260fa64ce21f02622920}
+void \hyperlink{classTileset_ab1dab8dd83a80e5d49dcdb95f9841898}{set\+Angle} (int ang)\hypertarget{classTileset_ab1dab8dd83a80e5d49dcdb95f9841898}{}\label{classTileset_ab1dab8dd83a80e5d49dcdb95f9841898}
 
-\begin{DoxyCompactList}\small\item\em Get Tiles to renderer based on screen size and location. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a2f21ec594886baf1bbb990a57dca8bfc}{get\+Tiles\+To\+Render} (int w, int h)\hypertarget{classTileset_a2f21ec594886baf1bbb990a57dca8bfc}{}\label{classTileset_a2f21ec594886baf1bbb990a57dca8bfc}
+\begin{DoxyCompactList}\small\item\em Set the angle of all the tiles. Calls push\+Ang(). \end{DoxyCompactList}\item 
+void {\bfseries set\+Solid} ()\hypertarget{classTileset_a87978787ae2529b915c0436b5872dd48}{}\label{classTileset_a87978787ae2529b915c0436b5872dd48}
 
-\begin{DoxyCompactList}\small\item\em Get tiles to renderer based on screen size, location, and given tile width and height. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a2ae52c2d3b6bf86775456837cc3b2269}{render\+Tiles} (\hyperlink{classEngine}{Engine} e)\hypertarget{classTileset_a2ae52c2d3b6bf86775456837cc3b2269}{}\label{classTileset_a2ae52c2d3b6bf86775456837cc3b2269}
+\item 
+void {\bfseries set\+Solid} (int t)\hypertarget{classTileset_aa4dd63b2c6422ed5a9b7d772963fe255}{}\label{classTileset_aa4dd63b2c6422ed5a9b7d772963fe255}
 
-\begin{DoxyCompactList}\small\item\em Get Tiles to renderer based on screen size and location and then it renders them given the \hyperlink{classEngine}{Engine}. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a91610c970654958029f8d89526846460}{render\+Tiles} (int w, int h, \hyperlink{classEngine}{Engine} e)\hypertarget{classTileset_a91610c970654958029f8d89526846460}{}\label{classTileset_a91610c970654958029f8d89526846460}
+\item 
+void {\bfseries set\+Solid} (int s, int e)\hypertarget{classTileset_a6d40a14146a3dedd0217a412a66f4c9a}{}\label{classTileset_a6d40a14146a3dedd0217a412a66f4c9a}
 
-\begin{DoxyCompactList}\small\item\em Get tiles to renderer based on screen size, location, and given tile width and height and then it renders them given the \hyperlink{classEngine}{Engine}. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a592ad17ba76112a7ee46df52f9a44e3a}{move} (double mx, double my)\hypertarget{classTileset_a592ad17ba76112a7ee46df52f9a44e3a}{}\label{classTileset_a592ad17ba76112a7ee46df52f9a44e3a}
+\item 
+void {\bfseries set\+Passable} ()\hypertarget{classTileset_a9fc3756317f238121769629ea20a9849}{}\label{classTileset_a9fc3756317f238121769629ea20a9849}
 
-\begin{DoxyCompactList}\small\item\em Move map x and y amount. \end{DoxyCompactList}\item 
-\hyperlink{classObject}{Object} \hyperlink{classTileset_a1e3351adc4d2828b2d276955c0c7cbfe}{move} (double mx, double my, \hyperlink{classObject}{Object} p)\hypertarget{classTileset_a1e3351adc4d2828b2d276955c0c7cbfe}{}\label{classTileset_a1e3351adc4d2828b2d276955c0c7cbfe}
+\item 
+void {\bfseries set\+Passable} (int t)\hypertarget{classTileset_a231401092d65e28b7dea12e97e3232ad}{}\label{classTileset_a231401092d65e28b7dea12e97e3232ad}
 
-\begin{DoxyCompactList}\small\item\em Given x and y amount to move and a given \hyperlink{classObject}{Object} that also need to be moved, this function calculates the movement based on the Camera and Lens and then moves the \hyperlink{classObject}{Object} and map if needed then returns the modified \hyperlink{classObject}{Object}. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a5910c3fdfcabddbc45c81d8337acbef6}{calc\+Pos} (double mx, double my)\hypertarget{classTileset_a5910c3fdfcabddbc45c81d8337acbef6}{}\label{classTileset_a5910c3fdfcabddbc45c81d8337acbef6}
+\item 
+void {\bfseries set\+Passable} (int s, int e)\hypertarget{classTileset_a84b12096b06c7162ca4bb9058a232d21}{}\label{classTileset_a84b12096b06c7162ca4bb9058a232d21}
 
-\begin{DoxyCompactList}\small\item\em Moves all tilesets by looping through them and calling \hyperlink{classTileset_afbcba6ec8087f3b14d96a538159cc3a3}{calc\+Set\+Pos()} given movement on the x and y coordinate. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_afbcba6ec8087f3b14d96a538159cc3a3}{calc\+Set\+Pos} (int i, double mx, double my)\hypertarget{classTileset_afbcba6ec8087f3b14d96a538159cc3a3}{}\label{classTileset_afbcba6ec8087f3b14d96a538159cc3a3}
+\item 
+void {\bfseries set\+Name} (string n, int id)\hypertarget{classTileset_ad5f3a60a84cec25c6e11856a7cd36d84}{}\label{classTileset_ad5f3a60a84cec25c6e11856a7cd36d84}
 
-\begin{DoxyCompactList}\small\item\em Moves all tiles in a given tileset by looping through and calling \hyperlink{classTileset_ad3601a9387ed892072e7c05a3b3081eb}{calc\+Tiles\+Pos()} given the point in the array the tileset is and the movement on the x and coordinates. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_ad3601a9387ed892072e7c05a3b3081eb}{calc\+Tiles\+Pos} (int i, double mx, double my)\hypertarget{classTileset_ad3601a9387ed892072e7c05a3b3081eb}{}\label{classTileset_ad3601a9387ed892072e7c05a3b3081eb}
-
-\begin{DoxyCompactList}\small\item\em Moves tile given the point on the array the tile is and the movement on the x and y coordinate. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_ac731488d266bd1a46d0514ee52344fa9}{set\+Camera\+Margin} (int wm, int hm)\hypertarget{classTileset_ac731488d266bd1a46d0514ee52344fa9}{}\label{classTileset_ac731488d266bd1a46d0514ee52344fa9}
-
-\begin{DoxyCompactList}\small\item\em Set the width and height of the Camera. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a07c27b0da0fe3da1737d03478f070b6b}{center\+Camera} (int percentage)\hypertarget{classTileset_a07c27b0da0fe3da1737d03478f070b6b}{}\label{classTileset_a07c27b0da0fe3da1737d03478f070b6b}
-
-\begin{DoxyCompactList}\small\item\em Set the Camera size based on percentage of window to cover. \end{DoxyCompactList}\item 
-\hyperlink{classObject}{Object} \hyperlink{classTileset_a1ca6be7ebfff987439c52224a48870c3}{get\+Camera} ()\hypertarget{classTileset_a1ca6be7ebfff987439c52224a48870c3}{}\label{classTileset_a1ca6be7ebfff987439c52224a48870c3}
-
-\begin{DoxyCompactList}\small\item\em Get the Camera. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a6fe1de5d0b2f388521b85549c20b1dfb}{set\+Lens\+Margin} (int wm, int hm)\hypertarget{classTileset_a6fe1de5d0b2f388521b85549c20b1dfb}{}\label{classTileset_a6fe1de5d0b2f388521b85549c20b1dfb}
-
-\begin{DoxyCompactList}\small\item\em Set the width and height of the Lens. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a0738a218f43e5dd0cfed224ac7db02c5}{center\+Lens} (int percentage)\hypertarget{classTileset_a0738a218f43e5dd0cfed224ac7db02c5}{}\label{classTileset_a0738a218f43e5dd0cfed224ac7db02c5}
-
-\begin{DoxyCompactList}\small\item\em Set the Lens based on the percentage of the Camera to cover. \end{DoxyCompactList}\item 
-\hyperlink{classObject}{Object} \hyperlink{classTileset_a1dfdb1ee8aa546ddf4acc23cd68774e1}{get\+Lens} ()\hypertarget{classTileset_a1dfdb1ee8aa546ddf4acc23cd68774e1}{}\label{classTileset_a1dfdb1ee8aa546ddf4acc23cd68774e1}
-
-\begin{DoxyCompactList}\small\item\em Get the Lens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{classTileset_a14a536a131ec50f70506ebeb6b023eb3}{angle}\hypertarget{classTileset_a14a536a131ec50f70506ebeb6b023eb3}{}\label{classTileset_a14a536a131ec50f70506ebeb6b023eb3}
-
-\begin{DoxyCompactList}\small\item\em Display angle. \end{DoxyCompactList}\item 
-double \hyperlink{classTileset_ac3790af3bd81b898b6c8187dc8864b87}{x}\hypertarget{classTileset_ac3790af3bd81b898b6c8187dc8864b87}{}\label{classTileset_ac3790af3bd81b898b6c8187dc8864b87}
-
-\begin{DoxyCompactList}\small\item\em Display/map coordinates. \end{DoxyCompactList}\item 
-double {\bfseries y}\hypertarget{classTileset_a45bf461d2f34cf65cf4c9538250df1e2}{}\label{classTileset_a45bf461d2f34cf65cf4c9538250df1e2}
-
-\item 
-bool \hyperlink{classTileset_a2eaff329102c53490295885e81d2ab39}{set}\hypertarget{classTileset_a2eaff329102c53490295885e81d2ab39}{}\label{classTileset_a2eaff329102c53490295885e81d2ab39}
-
-\begin{DoxyCompactList}\small\item\em Boolean that says if the maps coordinates has already been set. \end{DoxyCompactList}\item 
-int \hyperlink{classTileset_a47cb91f14b9266523ced0cda8fe20ada}{win\+Width}\hypertarget{classTileset_a47cb91f14b9266523ced0cda8fe20ada}{}\label{classTileset_a47cb91f14b9266523ced0cda8fe20ada}
-
-\begin{DoxyCompactList}\small\item\em Window width and height. \end{DoxyCompactList}\item 
-int {\bfseries win\+Height}\hypertarget{classTileset_a09af95ee2033f299bcf7ded7bd7f4fad}{}\label{classTileset_a09af95ee2033f299bcf7ded7bd7f4fad}
-
-\item 
-int \hyperlink{classTileset_ae8f918235d7a593c27902453100ba346}{layersize}\hypertarget{classTileset_ae8f918235d7a593c27902453100ba346}{}\label{classTileset_ae8f918235d7a593c27902453100ba346}
-
-\begin{DoxyCompactList}\small\item\em Layer, x, and y size. (I don\textquotesingle{}t think these are actually used). \end{DoxyCompactList}\item 
-int {\bfseries xsize}\hypertarget{classTileset_ab2e6d05b755a0ef6a6553f0e0a927bb2}{}\label{classTileset_ab2e6d05b755a0ef6a6553f0e0a927bb2}
-
-\item 
-int {\bfseries ysize}\hypertarget{classTileset_a01c8ff51bb30ce67abaea923e3f872d9}{}\label{classTileset_a01c8ff51bb30ce67abaea923e3f872d9}
-
-\item 
-vector$<$ \hyperlink{structTileset_1_1layer}{layer} $>$ \hyperlink{classTileset_a81af66347f72322f800deb3c149f23f7}{tileset}\hypertarget{classTileset_a81af66347f72322f800deb3c149f23f7}{}\label{classTileset_a81af66347f72322f800deb3c149f23f7}
-
-\begin{DoxyCompactList}\small\item\em Vector of layers (tilesets). \end{DoxyCompactList}\item 
-\hyperlink{classTile}{Tile} $\ast$ \hyperlink{classTileset_ad8d83e4d7659ba7e3a2b4ea5670ea351}{tiles}\hypertarget{classTileset_ad8d83e4d7659ba7e3a2b4ea5670ea351}{}\label{classTileset_ad8d83e4d7659ba7e3a2b4ea5670ea351}
-
-\begin{DoxyCompactList}\small\item\em Array of tiles with undeclared size. \end{DoxyCompactList}\item 
-\hyperlink{classObject}{Object} \hyperlink{classTileset_a66a6f99c17241db7156403f4a9db24a6}{camera}\hypertarget{classTileset_a66a6f99c17241db7156403f4a9db24a6}{}\label{classTileset_a66a6f99c17241db7156403f4a9db24a6}
-
-\begin{DoxyCompactList}\small\item\em Camera object. When in the Camera, the map and \hyperlink{classObject}{Object} move. \end{DoxyCompactList}\item 
-\hyperlink{classObject}{Object} \hyperlink{classTileset_a74e38c7eaa26c431a7d9e7852072954f}{lens}\hypertarget{classTileset_a74e38c7eaa26c431a7d9e7852072954f}{}\label{classTileset_a74e38c7eaa26c431a7d9e7852072954f}
-
-\begin{DoxyCompactList}\small\item\em Lens object. When in the Lens, only the given \hyperlink{classObject}{Object} moves. \end{DoxyCompactList}\item 
-\hyperlink{classCollision}{Collision} \hyperlink{classTileset_a16c70ebbbd2ed213f4485b953f65ce3a}{col\+Check}\hypertarget{classTileset_a16c70ebbbd2ed213f4485b953f65ce3a}{}\label{classTileset_a16c70ebbbd2ed213f4485b953f65ce3a}
-
-\begin{DoxyCompactList}\small\item\em Instance of \hyperlink{classCollision}{Collision}. \end{DoxyCompactList}\item 
-bool \hyperlink{classTileset_ac7dd26d0c9f4e14b0e8d03d48359a90e}{active\+Cam}\hypertarget{classTileset_ac7dd26d0c9f4e14b0e8d03d48359a90e}{}\label{classTileset_ac7dd26d0c9f4e14b0e8d03d48359a90e}
-
-\begin{DoxyCompactList}\small\item\em Boolean that shows if the Camera and Lens have been activated. \end{DoxyCompactList}\item 
-bool {\bfseries active\+Lens}\hypertarget{classTileset_a49bf1c831399e566e2661029f9d24bd1}{}\label{classTileset_a49bf1c831399e566e2661029f9d24bd1}
+vector$<$ \hyperlink{classTile}{Tile} $>$ {\bfseries tiles}\hypertarget{classTileset_adeb7a1446a0f6d7ac4bf09602fe81c3f}{}\label{classTileset_adeb7a1446a0f6d7ac4bf09602fe81c3f}
 
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class for loading in maps, tileset images, and then displaying them. 
 
-Definition at line 13 of file tileset-\/tmp.\+h.
+
+Definition at line 7 of file tileset.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tileset-\/tmp.\+h\item 
-tileset-\/tmp.\+cpp\end{DoxyCompactItemize}
+tileset.\+h\item 
+tileset.\+cpp\end{DoxyCompactItemize}

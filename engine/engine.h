@@ -14,6 +14,7 @@ using namespace std;
 #include "tile.h"
 #include "entity.h"
 #include "collision.h"
+#include "tileset.h"
 #include "tileset-tmp.h"
 #include "input-tmp.h"
 #include "physics-tmp.h"

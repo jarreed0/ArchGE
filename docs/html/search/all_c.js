@@ -9,6 +9,6 @@ var searchData=
   ['mouseup',['mouseup',['../classInput.html#a66df7023e5db7300d0f9bcdafd140bf5',1,'Input']]],
   ['mousex',['mousex',['../classInput.html#a332eaea23f6cb9689caaa189b11efef7',1,'Input']]],
   ['mousey',['mousey',['../classInput.html#a8ef4889d960150cf103f78639584c73b',1,'Input']]],
-  ['move',['move',['../classTileset.html#a592ad17ba76112a7ee46df52f9a44e3a',1,'Tileset::move(double mx, double my)'],['../classTileset.html#a1e3351adc4d2828b2d276955c0c7cbfe',1,'Tileset::move(double mx, double my, Object p)']]],
+  ['move',['move',['../classTilesettmp.html#a1db4864fe47ce5c36f1e3822d1d9c19c',1,'Tilesettmp::move(double mx, double my)'],['../classTilesettmp.html#a844814afdd47f4e5b4694d6d255d78df',1,'Tilesettmp::move(double mx, double my, Object p)']]],
   ['movetowards',['moveTowards',['../classPhysics.html#a8e53f9bf088c0d4f208b3c2029d69ab2',1,'Physics']]]
 ];
