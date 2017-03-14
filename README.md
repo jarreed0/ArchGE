@@ -1,5 +1,7 @@
 #ArchGE - A 2D Game Engine written in C++ and using SDL2
 
+#ArchGE is being drastically reconfigured right now on my PC. I will update the newest version in a few days.
+
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
 #Check out our NEW PDF documentation for ArchGE!
