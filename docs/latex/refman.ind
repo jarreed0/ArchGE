@@ -18,7 +18,11 @@
 
   \indexspace
 
-  \item {Object}, \hyperpage{15}
+  \item {Map}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Object}, \hyperpage{16}
 
   \indexspace
 
@@ -26,10 +30,10 @@
 
   \indexspace
 
-  \item {Tile}, \hyperpage{19}
+  \item {Tile}, \hyperpage{20}
   \item {Tileset}, \hyperpage{21}
   \item {Tilesettmp}, \hyperpage{22}
   \item {Tilesettmp\+::layer}, \hyperpage{14}
-  \item {Tilesettmp\+::tile}, \hyperpage{18}
+  \item {Tilesettmp\+::tile}, \hyperpage{19}
 
 \end{theindex}

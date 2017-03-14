@@ -14,6 +14,10 @@ public:
   vector<Tile> create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int count);
   //! Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, SDL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image.
   vector<Tile> create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count);
+  //! Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the SDL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image.
+  vector<Tile> create(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int count);
+  //! Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, SDL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image.
+  vector<Tile> create(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count);
   //! Push Tile in tile with given Tile.
   void addTile(Tile t);
   //! Generate and push Tile with tile name, path tot he tile image, SDL renderer, tile value, row and columg the tile as on in the image, the tiles width and height.

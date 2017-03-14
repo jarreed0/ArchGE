@@ -6,18 +6,23 @@ Tileset::Tileset() {
 Tileset::~Tileset() {}
 
 vector<Tile> Tileset::create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
-  vector<Tile> tmp;
-  for(int i=0; i<(count-1); i++) {
-    tmp.push_back(addTile(name, img, ren, i, r, i, width, height));
-  }
+  vector<Tile> tmp = create(1, name, img, ren, width, height, r, count);
   return tmp;
 }
 vector<Tile> Tileset::create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
+  vector<Tile> tmp  = create(1, name, img, ren, width, height, r, rcount, count);
+  return tmp;
+}
+vector<Tile> Tileset::create(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int count) {
+  vector<Tile> tmp = create(startid, name, img, ren, width, height, r, count, count);
+  return tmp;
+}
+vector<Tile> Tileset::create(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
   vector<Tile> tmp;
-  int tag = 1;
+  int tag = 0;
   for(int i=0; i<r; i++) {
     for(int j=0; j<rcount; j++) {
-      tmp.push_back(addTile(name, img, ren, tag, i+1, j+1, width, height));
+      tmp.push_back(addTile(name, img, ren, tag+startid, i+1, j+1, width, height));
       tag++;
       if(tag>count) { break; }
     }
@@ -27,15 +32,15 @@ vector<Tile> Tileset::create(string name, string img, SDL_Renderer* ren, int wid
 }
 
 void Tileset::addTile(Tile t) {
-  tiles[t.getValue()] = t;
+  tiles.push_back(t);
 }
 Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int c, int r, int width, int height) {
   Tile tmp;
-  tmp.setName(name);
+  setName(name, value);
   tmp.setFrame(((r-1)*width), ((c-1)*height), width, height);
   tmp.setImage(file, ren);
   tmp.setValue(value);
-  tiles[value] = tmp;
+  addTile(tmp);
   return tmp;
 }
 Tile Tileset::addTile(string name, string file, SDL_Renderer* ren, int value, int width, int height) {
@@ -78,5 +83,5 @@ void Tileset::setPassable(int s, int e) {
 }
 
 void Tileset::setName(string n, int id) {
-  tiles[id].setName(n);
+  tiles[id-1].setName(n);
 }
