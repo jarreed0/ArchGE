@@ -20,6 +20,7 @@ Created by Archeantus Games
  - - - -
 
 ![alt tag](docs/screenshots/hero.png)
+![alt tag](http://archeantus.net/images/logo.png)
 
 ## New Version of ArchGE ##
 After several long hours we finally released a new version of Arch Game Engine. The new engine implements the coordinate system, map, tilesets, and levels differently. Because of this the old sample games are no longer supported with **ArchGE 0.2**.
@@ -196,5 +197,7 @@ And yes I know it is a little cluttered and keep in mind it has a few errors.
 - - - -
 
 Archeantus Games
+
 [Website](http://archeantus.net/)
+
 ![alt tag](http://archeantus.net/images/logo.png)
