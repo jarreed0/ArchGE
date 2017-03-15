@@ -2,6 +2,7 @@
 Created by Archeantus Games
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
+
 ![alt tag](http://archeantus.net/images/logo.png)
 
 # Check out our NEW [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) documentation for ArchGE! #
