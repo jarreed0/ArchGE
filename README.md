@@ -37,20 +37,20 @@ Just below this news section we have some tutorials on how to set up a game usin
 ## Docs! ##
 Along with the tutorials we have tons of docs generated with doxygen from the incode-comments.
 
-It is limited now but you can check it out in the docs refman PDF and even in the HTML code.
+Check out the [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) or the [website](http://jar.ylimaf.com/archge/docs/html/annotated.html)
 
 ## Problems ##
 Currently **ArchGE 0.2** has a few minor bugs.
 
 The known bugs include the following:
 
-*The splashscreen no longer works.
- *We are currently working on this right now!
- *Bypass it with the debug() feature: `engine.debug()` after initialization.
-*Input! Input! Input!
- *The input class, sadly didn't have any sort of overhaul in the latest update.
- *Because of this there is a few bugs from the previous ArchGE version.
- *Update on the way!
+-The splashscreen no longer works.
+ -We are currently working on this right now!
+ -Bypass it with the debug() feature: `engine.debug()` after initialization.
+-Input! Input! Input!
+ -The input class, sadly didn't have any sort of overhaul in the latest update.
+ -Because of this there is a few bugs from the previous ArchGE version.
+ -Update on the way!
 
 Know of any other bugs? Let us know!
 
@@ -150,6 +150,47 @@ Move the Level
 
 `level.move(mx, my)`
 
+# Creating an Object #
+
+Declaration of an Object
+```
+Object chest;
+chest.setImage("chest.png");
+chest.setFrame(0, 0, 25, 45); //x, y, width, height of source to parse from image
+chest.setDest(100, 200, 25, 45); //x, y, width, height of where to display the object
+chest.setPost(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
+```
+
+Declaration of an Entity
+```
+Entity character;
+character.setImage("player.png");
+character.setFrame(0, 0, 25, 45); //x, y, width, height of source to parse from image
+character.setDest(100, 200, 25, 45); //x, y, width, height of where to display the object
+character.setPost(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
+character.setMaxHealth(100);
+character.setHealth(90);
+```
+You can also damage and heal the Entity
+```
+character.damage(10);
+character.heal(15);
+```
+
+Drawing the Object
+```
+e.draw(character);
+e.draw(chest);
+```
+You can also draw vectors of Objects
+```
+vector<Object> objects;
+objects.push_back(chest);
+objects.push_back(character);
+e.draw(objects);
+```
+
+
 ## Build The Game ##
 `g++ *.cpp arch.a -lSDL2 -lSDL2_image -std=c++11`
 
@@ -168,7 +209,7 @@ Makefile generation coming soon.
 
 `manage -i (or install)`
 
-## Update now and neverhave to remember to update again! ##
+## Update now and never have to remember to update again! ##
 The newest version of manage can check for updates! and let you know about them and update without distubring your current manage process.
 
 Update with: `./manage -s`
