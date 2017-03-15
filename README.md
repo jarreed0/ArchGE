@@ -44,13 +44,13 @@ Currently **ArchGE 0.2** has a few minor bugs.
 
 The known bugs include the following:
 
--The splashscreen no longer works.
- -We are currently working on this right now!
- -Bypass it with the debug() feature: `engine.debug()` after initialization.
--Input! Input! Input!
- -The input class, sadly didn't have any sort of overhaul in the latest update.
- -Because of this there is a few bugs from the previous ArchGE version.
- -Update on the way!
+- The splashscreen no longer works.
+ - We are currently working on this right now!
+ - Bypass it with the debug() feature: `engine.debug()` after initialization.
+- Input! Input! Input!
+ - The input class, sadly didn't have any sort of overhaul in the latest update.
+ - Because of this there is a few bugs from the previous ArchGE version.
+ - Update on the way!
 
 Know of any other bugs? Let us know!
 
@@ -150,7 +150,7 @@ Move the Level
 
 `level.move(mx, my)`
 
-# Creating an Object #
+## Creating an Object ##
 
 Declaration of an Object
 ```
