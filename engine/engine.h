@@ -85,7 +85,7 @@ public:
   //! Draw an object with a pass key before/during splash.
   void draw(Object obj, int key);
   //! Draw the level.
-  void drawLevel(Level lvl);
+  void draw(Level lvl);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
   void splash();
   //! Deactives the splashscreen, requires key.

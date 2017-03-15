@@ -99,7 +99,7 @@ void Engine::draw(Object obj, int key) {
     SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
   }
 }
-void Engine::drawLevel(Level lvl) {
+void Engine::draw(Level lvl) {
   if(splashed) {
     vector<Tile> tmp;
     tmp = lvl.getTilesToRender();

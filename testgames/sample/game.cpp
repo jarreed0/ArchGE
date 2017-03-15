@@ -15,6 +15,10 @@ Game::Game() {
   //level.setScale(40, 40);
   level.setScreenSize(WIDTH, HEIGHT);
   running = true;
+  player.setImage("res/player.bmp", e.getRenderer());
+  player.setFrame(0, 0, 42/2, 64/2);
+  player.setDest(250, 200, 42/2, 64/2);
+  player.setPos(0, 0, 42/2, 64/2);
   loop();
 }
 Game::~Game() {
@@ -36,7 +40,8 @@ void Game::loop() {
 }
 
 void Game::draw() {
-  e.drawLevel(level);
+  e.draw(level);
+  e.draw(player);
 }
 
 void Game::input() {

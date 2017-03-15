@@ -28,6 +28,7 @@ private:
   Map map;
   Tileset tileset;
   bool l, r, u, d;
+  Entity player;
 public:
   Game();
   ~Game();

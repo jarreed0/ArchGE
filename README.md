@@ -166,7 +166,7 @@ chest.setPos(250, 350, 55, 35); //x, y, width, height of where the object is rel
 Declaration of an Entity
 ```
 Entity character;
-character.setImage("player.png");
+character.setImage("player.png", e.getRenderer());
 character.setFrame(0, 0, 25, 45); //x, y, width, height of source to parse from image
 character.setDest(100, 200, 25, 45); //x, y, width, height of where to display the object
 character.setPos(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
