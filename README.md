@@ -2,6 +2,7 @@
 Created by Archeantus Games
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
+![alt tag](http://archeantus.net/images/logo.png)
 
 # Check out our NEW [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) documentation for ArchGE! #
 # Check out the NEW [online docs](http://jar.ylimaf.com/archge/docs/html/annotated.html) #
@@ -20,7 +21,6 @@ Created by Archeantus Games
  - - - -
 
 ![alt tag](docs/screenshots/hero.png)
-![alt tag](http://archeantus.net/images/logo.png)
 
 ## New Version of ArchGE ##
 After several long hours we finally released a new version of Arch Game Engine. The new engine implements the coordinate system, map, tilesets, and levels differently. Because of this the old sample games are no longer supported with **ArchGE 0.2**.
