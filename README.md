@@ -45,12 +45,12 @@ Currently **ArchGE 0.2** has a few minor bugs.
 The known bugs include the following:
 
 - The splashscreen no longer works.
- - We are currently working on this right now!
- - Bypass it with the debug() feature: `engine.debug()` after initialization.
+ We are currently working on this right now!
+ Bypass it with the debugMode() feature: `engine.debug()` after initialization.
 - Input! Input! Input!
- - The input class, sadly didn't have any sort of overhaul in the latest update.
- - Because of this there is a few bugs from the previous ArchGE version.
- - Update on the way!
+ The input class, sadly didn't have any sort of overhaul in the latest update.
+ Because of this there is a few bugs from the previous ArchGE version.
+ Update on the way!
 
 Know of any other bugs? Let us know!
 
@@ -77,7 +77,8 @@ Setting in debug mode (required as of now because of broken splashscreen)
 Currently the debug mode is only used to bypass the splashscreen, eventually is will have more tools for debuggers.
 
 Creating the window
-```string NAME = "Window Title";
+```
+string NAME = "Window Title";
 int WIDTH = 750; //Window width;
 int HEIGHt = 530; //Window height;
 e.init(NAME, WIDTH, HEIGHT, 0); //0 is for extra SDL_Init flags.
