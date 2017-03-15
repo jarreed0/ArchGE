@@ -128,11 +128,11 @@ Loading them in
 tileset.create("tiles", "res/tiles.bmp", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/12, 12, TOTAL_TILES); //Name of tileset, file for tiles (BMP or PNG), renderer, width of a tile, height of a tile, how many rows there are, how may tiles per row, how many tiles.
   map.loadMap("res/1.level");
   level.setPrecise(true); //Precision makes it so that the coordinates at the end of a map file are either per pixel instead of per Tile
-  stage.createStage(map, tileset);
-  level.setStage(stage);
-  level.create();
-  level.setScale(40, 40);
-  level.setScreenSize(WIDTH, HEIGHT);
+stage.createStage(map, tileset);
+level.setStage(stage);
+level.create();
+level.setScale(40, 40);
+level.setScreenSize(WIDTH, HEIGHT);
 ```
 There are other ways to do this. Check out the docs for them.
 
@@ -182,12 +182,3 @@ Update with: `./manage -s`
 
 And yes I know it is a little cluttered and keep in mind it has a few errors.
 
-# For Engine Devs: #
- - - - -
-
-rebuild engine and game with: `./build.sh`
-
-# For Game Devs: #
- - - - -
-
-Tutorials on how to use the engine will be out soon as the engine advances.
