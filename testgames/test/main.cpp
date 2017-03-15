@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
  Engine e;
- e.bypassSplash(4231998);
+ e.debugMode(true);
  e.init("test", 300, 400, 0);
  e.setColor(0x00, 0xff, 0x80);
  bool running = 1;

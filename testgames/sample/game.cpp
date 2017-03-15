@@ -1,7 +1,7 @@
 #include "game.h"
 
 Game::Game() {
-  e.bypassSplash(4231998);
+  e.debugMode(true);
   e.init("sample", WIDTH, HEIGHT, 0); //SPLASH DOESN'T WORK, NEED TO FIX!!!
   //e.setColor(0x00, 0xff, 0x80);
   e.setColor(0x00, 0x08, 0x99);

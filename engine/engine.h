@@ -39,6 +39,7 @@ private:
   string cf; //!< Custom splashscreen file path.
   double ct; //!< Custom splashscreen duration.
   int cw, ch; //!< Custom splashcreen width and height.
+  bool debug;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -95,6 +96,8 @@ public:
   bool runCustomSplash();
   //! Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image.
   void customSplash(string file, double time, int w, int h);
+  //! Active debugger with Boolean
+  void debugMode(bool d);
 };
 
 #endif //ENGINE_H

@@ -7,6 +7,7 @@ Engine::Engine() {
   bkg = 0;
   splashed = false;
   custom = false;
+  debug = false;
 }
 Engine::~Engine() {
   SDL_DestroyRenderer(engren);
@@ -156,4 +157,11 @@ void Engine::customSplash(string file, double time, int w, int h) {
   cw = w;
   ch = h;
   custom = true;
+}
+
+void Engine::debugMode(bool d) {
+  debug = true;
+  splashed = true;
+  cout << "In debug mode!" << endl;
+  cout << "Which at this time only means bypassing the splashscreen." << endl;
 }
