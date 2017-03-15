@@ -9,32 +9,24 @@
 \contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Engine Class Reference}{7}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Detailed Description}{9}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Member Function Documentation}{9}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}draw\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level(\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level lvl)}{9}{subsubsection.3.3.2.1}
-\contentsline {section}{\numberline {3.4}Entity Class Reference}{10}{section.3.4}
+\contentsline {section}{\numberline {3.4}Entity Class Reference}{9}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Detailed Description}{11}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Image Class Reference}{12}{section.3.5}
+\contentsline {section}{\numberline {3.5}Image Class Reference}{11}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Detailed Description}{12}{subsection.3.5.1}
 \contentsline {section}{\numberline {3.6}Input Class Reference}{12}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{15}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Tilesettmp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:layer Struct Reference}{15}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{15}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Level Class Reference}{16}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{17}{subsection.3.8.1}
-\contentsline {section}{\numberline {3.9}Map Class Reference}{17}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{17}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Object Class Reference}{18}{section.3.10}
-\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{20}{subsection.3.10.1}
-\contentsline {section}{\numberline {3.11}Physics Class Reference}{20}{section.3.11}
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{14}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Level Class Reference}{15}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{16}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.8}Map Class Reference}{16}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{16}{subsection.3.8.1}
+\contentsline {section}{\numberline {3.9}Object Class Reference}{17}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{19}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}Physics Class Reference}{19}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{19}{subsection.3.10.1}
+\contentsline {section}{\numberline {3.11}Stage Class Reference}{20}{section.3.11}
 \contentsline {subsection}{\numberline {3.11.1}Detailed Description}{20}{subsection.3.11.1}
-\contentsline {section}{\numberline {3.12}Stage Class Reference}{21}{section.3.12}
-\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{21}{subsection.3.12.1}
-\contentsline {section}{\numberline {3.13}Tile Class Reference}{22}{section.3.13}
+\contentsline {section}{\numberline {3.12}Tile Class Reference}{21}{section.3.12}
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{22}{subsection.3.12.1}
+\contentsline {section}{\numberline {3.13}Tileset Class Reference}{22}{section.3.13}
 \contentsline {subsection}{\numberline {3.13.1}Detailed Description}{23}{subsection.3.13.1}
-\contentsline {section}{\numberline {3.14}Tilesettmp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}:tile Struct Reference}{23}{section.3.14}
-\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{24}{subsection.3.14.1}
-\contentsline {section}{\numberline {3.15}Tileset Class Reference}{24}{section.3.15}
-\contentsline {subsection}{\numberline {3.15.1}Detailed Description}{25}{subsection.3.15.1}
-\contentsline {section}{\numberline {3.16}Tilesettmp Class Reference}{25}{section.3.16}
-\contentsline {subsection}{\numberline {3.16.1}Detailed Description}{28}{subsection.3.16.1}
-\contentsline {chapter}{Index}{29}{section*.44}
+\contentsline {chapter}{Index}{25}{section*.37}

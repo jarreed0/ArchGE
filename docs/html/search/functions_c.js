@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pushang',['pushAng',['../classTilesettmp.html#a807f8e7b30f7705693b9b26a8991d791',1,'Tilesettmp']]]
+  ['reset',['reset',['../classInput.html#a8bec96dd53baf5ec754c199af3c957c8',1,'Input']]],
+  ['runcustomsplash',['runCustomSplash',['../classEngine.html#a5c87c90c9dd6b3fd652e24af0c7e935d',1,'Engine']]]
 ];

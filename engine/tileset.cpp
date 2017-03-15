@@ -21,7 +21,7 @@ vector<Tile> Tileset::create(int startid, string name, string img, SDL_Renderer*
   int tag = 0;
   for(int i=0; i<r; i++) {
     for(int j=0; j<rcount; j++) {
-      tiles.push_back(addTile(name, img, ren, tag+startid, i+1, j+1, width, height));
+      addTile(name, img, ren, tag+startid, i+1, j+1, width, height);
       tag++;
       if(tag>count) { break; }
     }

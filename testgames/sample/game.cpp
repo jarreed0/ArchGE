@@ -2,14 +2,16 @@
 
 Game::Game() {
   e.bypassSplash(4231998);
-  e.init("sample", WIDTH, HEIGHT, 0);
-  e.setColor(0x00, 0xff, 0x80);
-  e.setBackground("../../engine/res/engine-logo.png");
+  e.init("sample", WIDTH, HEIGHT, 0); //SPLASH DOESN'T WORK, NEED TO FIX!!!
+  //e.setColor(0x00, 0xff, 0x80);
+  e.setColor(0x00, 0x08, 0x99);
+  //e.setBackground("../../engine/res/engine-logo.png");
   tileset.create("tiles", "res/tiles.bmp", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/12, 12, TOTAL_TILES);
   map.loadMap("res/1.level");
   stage.createStage(map, tileset);
   level.setStage(stage);
   level.create();
+  level.setScale(40, 40);
   level.setScreenSize(WIDTH, HEIGHT);
   running = true;
   loop();
@@ -19,15 +21,16 @@ Game::~Game() {
 
 void Game::loop() {
   while(running) {
-   bool frame = true;
-   while(frame) {
-    e.update();
-    input();
-    update();
-    draw();
-    if(!e.FPS()) frame=false;
-   }
-   e.render();
+    e.loopStart();
+    bool frame = true;
+    while(frame) {
+      e.update();
+      input();
+      update();
+      draw();
+      if(!e.FPS()) frame=false;
+    }
+    e.render();
   }
 }
 

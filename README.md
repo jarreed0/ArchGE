@@ -1,7 +1,5 @@
 #ArchGE - A 2D Game Engine written in C++ and using SDL2
 
-#ArchGE is being drastically reconfigured right now on my PC. The "tmp" classes are from the last version of ArchGE, so they are being remade. Any functions in them are subject to change.
-
 Also the splashscreen doesn't work anymore so bypass it like how it in this [example](testgames/test/main.cpp).
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)

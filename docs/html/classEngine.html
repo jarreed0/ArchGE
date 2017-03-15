@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arch Game Engine
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
   </td>
  </tr>
@@ -149,9 +149,12 @@ SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aeee842a402f260e38e0502e1d95b920b">setColor</a> (Uint8 r, Uint8 g, Uint8 b)</td></tr>
 <tr class="memdesc:aeee842a402f260e38e0502e1d95b920b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets SDL color. <br /></td></tr>
 <tr class="separator:aeee842a402f260e38e0502e1d95b920b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7602820f1b9d75ec1b59f2a6111085e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7602820f1b9d75ec1b59f2a6111085e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ad7602820f1b9d75ec1b59f2a6111085e">loopStart</a> ()</td></tr>
+<tr class="memdesc:ad7602820f1b9d75ec1b59f2a6111085e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this at the end of the game loop to render. <br /></td></tr>
+<tr class="separator:ad7602820f1b9d75ec1b59f2a6111085e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7960743aefd62e846e7f3cd92c18bc73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7960743aefd62e846e7f3cd92c18bc73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a7960743aefd62e846e7f3cd92c18bc73">render</a> ()</td></tr>
-<tr class="memdesc:a7960743aefd62e846e7f3cd92c18bc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this at the end of the game loop to render. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
 <tr class="separator:a7960743aefd62e846e7f3cd92c18bc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5932cbe5ddf7772028bb6250c5ce75fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5932cbe5ddf7772028bb6250c5ce75fc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a5932cbe5ddf7772028bb6250c5ce75fc">FPS</a> () const </td></tr>
@@ -187,7 +190,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (vector&lt; 
 <tr class="memitem:a81d89df09ee2577fd7deaf2f5e27f93a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81d89df09ee2577fd7deaf2f5e27f93a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (<a class="el" href="classObject.html">Object</a> obj, int key)</td></tr>
 <tr class="separator:a81d89df09ee2577fd7deaf2f5e27f93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2eff336a5e306177bdc43c229aeff62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aa2eff336a5e306177bdc43c229aeff62">drawLevel</a> (<a class="el" href="classLevel.html">Level</a> lvl)</td></tr>
+<tr class="memitem:aa2eff336a5e306177bdc43c229aeff62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2eff336a5e306177bdc43c229aeff62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawLevel</b> (<a class="el" href="classLevel.html">Level</a> lvl)</td></tr>
 <tr class="separator:aa2eff336a5e306177bdc43c229aeff62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb6f1426c5c57f9d60be1e10d8eb2506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb6f1426c5c57f9d60be1e10d8eb2506"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#adb6f1426c5c57f9d60be1e10d8eb2506">splash</a> ()</td></tr>
@@ -282,30 +286,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for declaring an engine, which does basic SDL commands like creating the window and renderer. </p>
 
-<p>Definition at line <a class="el" href="engine_8h_source.html#l00029">29</a> of file <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa2eff336a5e306177bdc43c229aeff62"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Engine::drawLevel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classLevel.html">Level</a>&#160;</td>
-          <td class="paramname"><em>lvl</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>&lt;&lt;&lt;&lt;&lt; DOES NOT COPY IMAGE RIGHT </p>
-
-<p>Definition at line <a class="el" href="engine_8cpp_source.html#l00101">101</a> of file <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                {</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span>(splashed) {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    vector&lt;Tile&gt; tmp;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    tmp = lvl.getTilesToRender();</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;tmp.size(); i++) {</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <a class="code" href="classObject.html">Object</a> obj;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      obj.setFrame(tmp[i].getFrame());</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      obj.setDest(tmp[i].getDest());</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      obj.setImage(obj.getImage()); </div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <a class="code" href="classEngine.html#a276e63ae5648c36051c21c5b7c5dfb4b">draw</a>(obj);</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div><div class="ttc" id="classObject_html"><div class="ttname"><a href="classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00009">object.h:9</a></div></div>
-<div class="ttc" id="classEngine_html_a276e63ae5648c36051c21c5b7c5dfb4b"><div class="ttname"><a href="classEngine.html#a276e63ae5648c36051c21c5b7c5dfb4b">Engine::draw</a></div><div class="ttdeci">void draw(Object obj)</div><div class="ttdoc">Draw an object on the screen. </div><div class="ttdef"><b>Definition:</b> <a href="engine_8cpp_source.html#l00078">engine.cpp:78</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<p>Definition at line <a class="el" href="engine_8h_source.html#l00028">28</a> of file <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="engine_8h_source.html">engine.h</a></li>
 <li><a class="el" href="engine_8cpp_source.html">engine.cpp</a></li>
 </ul>

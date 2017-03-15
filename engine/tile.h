@@ -14,7 +14,7 @@ public:
   //! Set value of the tile. This is used when reading from a map file, etc.
   void setValue(int v);
   //! Get the value of the tile.
-  int getValue();
+  int getValue() const { return value; }
   void setSolid() { solid = true; }
   void setPassable() { solid = false; }
   bool isSolid() const { return solid; }

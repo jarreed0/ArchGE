@@ -16,7 +16,6 @@ using namespace std;
 #include "entity.h"
 #include "collision.h"
 #include "tileset.h"
-#include "tileset-tmp.h"
 #include "input-tmp.h"
 #include "physics-tmp.h"
 #include "stage.h"
@@ -63,6 +62,7 @@ public:
   //! Sets SDL color.
   void setColor(Uint8 r, Uint8 g, Uint8 b);
   //! Call this at the end of the game loop to render.
+  void loopStart();
   void render();
   //! Get fps.
   bool FPS() const { return fps; }

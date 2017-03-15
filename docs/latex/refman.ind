@@ -8,46 +8,37 @@
 
   \indexspace
 
-  \item {draw\+Level}
-    \subitem {Engine}, \hyperpage{9}
-
-  \indexspace
-
   \item {Engine}, \hyperpage{7}
-    \subitem {draw\+Level}, \hyperpage{9}
-  \item {Entity}, \hyperpage{10}
+  \item {Entity}, \hyperpage{9}
 
   \indexspace
 
-  \item {Image}, \hyperpage{12}
+  \item {Image}, \hyperpage{11}
   \item {Input}, \hyperpage{12}
 
   \indexspace
 
-  \item {Level}, \hyperpage{16}
+  \item {Level}, \hyperpage{15}
 
   \indexspace
 
-  \item {Map}, \hyperpage{17}
+  \item {Map}, \hyperpage{16}
 
   \indexspace
 
-  \item {Object}, \hyperpage{18}
+  \item {Object}, \hyperpage{17}
 
   \indexspace
 
-  \item {Physics}, \hyperpage{20}
+  \item {Physics}, \hyperpage{19}
 
   \indexspace
 
-  \item {Stage}, \hyperpage{21}
+  \item {Stage}, \hyperpage{20}
 
   \indexspace
 
-  \item {Tile}, \hyperpage{22}
-  \item {Tileset}, \hyperpage{24}
-  \item {Tilesettmp}, \hyperpage{25}
-  \item {Tilesettmp\+::layer}, \hyperpage{15}
-  \item {Tilesettmp\+::tile}, \hyperpage{23}
+  \item {Tile}, \hyperpage{21}
+  \item {Tileset}, \hyperpage{22}
 
 \end{theindex}

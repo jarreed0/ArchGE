@@ -21,15 +21,15 @@ public:
   bool isDisplayable(Object screen) { checkDisplayable(screen); return displayable; }
   virtual void checkDisplayable(Object screen);
   void setCoord(double x, double y) { setX(x); setY(y); }
-  void setX(double x) { this->x = x; }
-  void setY(double y) { this->y = y; }
+  void setX(double sx) { x = sx; }
+  void setY(double sy) { y = sy; }
   void move(double x, double y) { moveX(x); moveY(y); }
-  void moveX(double x) { this->x += x; }
-  void moveY(double y) { this->y += y; }
+  void moveX(double mx) { x += mx; }
+  void moveY(double my) { y += my; }
   double getX() const { return x; }
   double getY() const { return y; }
   Image getImage() const { return img; }
-  void setImage(Image i) { img = i; } 
+  void setImage(Image i) { img = i; }
   void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); }
   double getAngle() const { return angle; }
   void setAngle(double a) { angle = a; }

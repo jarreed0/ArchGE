@@ -35,6 +35,7 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
   SDL_CHECK(engren, "SDL_CreateWindowAndRenderer");
   setPos(x, y);
   setName(s);
+  loopStart();
   render();
   return engren;
 }
@@ -60,12 +61,13 @@ void Engine::setColor(Uint8 r, Uint8 g, Uint8 b) {
   blue = b;
 }
 
+void Engine::loopStart() {
+  SDL_RenderClear(engren);
+  SDL_SetRenderDrawColor(engren, red, green, blue, 0xff);
+  if(bkg) drawBackground();
+}
 void Engine::render() {
   if(!splashed) { splash(); cout << "splash" << endl; }
-  SDL_SetRenderDrawColor(engren, red, green, blue, 0xff);
-  SDL_RenderClear(engren);
-  cout << "background:"<< endl;
-  if(bkg) drawBackground();
   SDL_RenderPresent(engren);
   timeval a;
   realTime = gettimeofday(&a, 0);
@@ -80,8 +82,6 @@ void Engine::draw(Object obj) {
     SDL_Rect src = obj.getFrame();
     SDL_Rect des = obj.getDest();
     SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
-    cout << ": " << obj.getDestW() << "x" << obj.getDestH() << " - (" << obj.getDestX() << ", " << obj.getDestY() << ")\n";
-    //background.setImage(obj.getImage());
   }
 }
 void Engine::draw(vector<Object> objs) {
@@ -103,11 +103,9 @@ void Engine::drawLevel(Level lvl) {
     vector<Tile> tmp;
     tmp = lvl.getTilesToRender();
     for(int i=0; i<tmp.size(); i++) {
-      Object obj;
-      obj.setFrame(tmp[i].getFrame());
-      obj.setDest(tmp[i].getDest());
-      obj.setImage(obj.getImage()); ///<<<<< DOES NOT COPY IMAGE RIGHT
-      draw(obj);
+      SDL_Rect src = tmp[i].getFrame();
+      SDL_Rect des = tmp[i].getDest();
+      SDL_RenderCopyEx(engren, tmp[i].getImage().getTexture(), &src, &des, tmp[i].getAngle(), NULL, SDL_FLIP_NONE);
     }
   }
 }

@@ -51,9 +51,12 @@ S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_ae42b73be55ab0fa034a0f7dea
 void \hyperlink{classEngine_aeee842a402f260e38e0502e1d95b920b}{set\+Color} (Uint8 r, Uint8 g, Uint8 b)\hypertarget{classEngine_aeee842a402f260e38e0502e1d95b920b}{}\label{classEngine_aeee842a402f260e38e0502e1d95b920b}
 
 \begin{DoxyCompactList}\small\item\em Sets S\+DL color. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{render} ()\hypertarget{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{}\label{classEngine_a7960743aefd62e846e7f3cd92c18bc73}
+void \hyperlink{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}{loop\+Start} ()\hypertarget{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}{}\label{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}
 
 \begin{DoxyCompactList}\small\item\em Call this at the end of the game loop to render. \end{DoxyCompactList}\item 
+void {\bfseries render} ()\hypertarget{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{}\label{classEngine_a7960743aefd62e846e7f3cd92c18bc73}
+
+\item 
 bool \hyperlink{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}{F\+PS} () const \hypertarget{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}{}\label{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}
 
 \begin{DoxyCompactList}\small\item\em Get fps. \end{DoxyCompactList}\item 
@@ -81,7 +84,8 @@ void {\bfseries draw} (vector$<$ \hyperlink{classObject}{Object} $>$ objs)\hyper
 void {\bfseries draw} (\hyperlink{classObject}{Object} obj, int key)\hypertarget{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}{}\label{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}
 
 \item 
-void \hyperlink{classEngine_aa2eff336a5e306177bdc43c229aeff62}{draw\+Level} (\hyperlink{classLevel}{Level} lvl)
+void {\bfseries draw\+Level} (\hyperlink{classLevel}{Level} lvl)\hypertarget{classEngine_aa2eff336a5e306177bdc43c229aeff62}{}\label{classEngine_aa2eff336a5e306177bdc43c229aeff62}
+
 \item 
 void \hyperlink{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
 
@@ -160,38 +164,8 @@ int \hyperlink{classEngine_a2acd0bd074160e654d076376d36a3479}{ch}\hypertarget{cl
 \subsection{Detailed Description}
 Class for declaring an engine, which does basic S\+DL commands like creating the window and renderer. 
 
-Definition at line 29 of file engine.\+h.
+Definition at line 28 of file engine.\+h.
 
-
-
-\subsection{Member Function Documentation}
-\index{Engine@{Engine}!draw\+Level@{draw\+Level}}
-\index{draw\+Level@{draw\+Level}!Engine@{Engine}}
-\subsubsection[{\texorpdfstring{draw\+Level(\+Level lvl)}{drawLevel(Level lvl)}}]{\setlength{\rightskip}{0pt plus 5cm}void Engine\+::draw\+Level (
-\begin{DoxyParamCaption}
-\item[{{\bf Level}}]{lvl}
-\end{DoxyParamCaption}
-)}\hypertarget{classEngine_aa2eff336a5e306177bdc43c229aeff62}{}\label{classEngine_aa2eff336a5e306177bdc43c229aeff62}
-$<$$<$$<$$<$$<$ D\+O\+ES N\+OT C\+O\+PY I\+M\+A\+GE R\+I\+G\+HT 
-
-Definition at line 101 of file engine.\+cpp.
-
-
-\begin{DoxyCode}
-101                                 \{
-102   \textcolor{keywordflow}{if}(splashed) \{
-103     vector<Tile> tmp;
-104     tmp = lvl.getTilesToRender();
-105     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<tmp.size(); i++) \{
-106       \hyperlink{classObject}{Object} obj;
-107       obj.setFrame(tmp[i].getFrame());
-108       obj.setDest(tmp[i].getDest());
-109       obj.setImage(obj.getImage()); 
-110       \hyperlink{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}{draw}(obj);
-111     \}
-112   \}
-113 \}
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
