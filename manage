@@ -37,6 +37,11 @@ elif [ "$1" == "doc" ] || [ "$1" == "-dc" ]; then
   cd ../docs/latex/
   make > /dev/null
   cd ../..
+  echo "You may get errors here. That is okay."
+  cp -R docs/ ../eportfolio/archge/
+  cd ../eportfolio
+  ./rsycn.sh
+  cd ../ArchGE
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
   STAT=$(git status | grep engine)
