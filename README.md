@@ -9,7 +9,7 @@
 ## Next Update: (will include) ##
 - [] Object coordinate system
 - [] Object movement
-- [] Adding Objects (and there children to a Level)
+- [] Adding Objects (and there children) to a Level
 - [] Have screen follow a specific Object (the player).
 - [] Set up Camera/Lens movement
 - [] Fix bugs
@@ -23,7 +23,7 @@
 ## New Version of ArchGE ##
 After several long hours we finally released a new version of Arch Game Engine. The new engine implements the coordinate system, map, tilesets, and levels differently. Because of this the old sample games are no longer supported with **ArchGE 0.2**.
 
-## Update now and neverhave to remember to update again! ##
+## Update now and never have to remember to update again! ##
 The newest version of manage can check for updates! and let you know about them and update without distubring your current manage process.
 
 Update with: `./manage -s`
@@ -72,11 +72,6 @@ Setting in debug mode (required as of now because of broken splashscreen)
 `e.debugMode(true);`
 
 Currently the debug mode is only used to bypass the splashscreen, eventually is will have more tools for debuggers.
-
-## Build The Game ##
-`g++ *.cpp arch.a -lSDL2 -lSDL2_image -std=c++11`
-
-Makefile generation coming soon.
 
 Creating the window
 ```string NAME = "Window Title";
@@ -151,6 +146,11 @@ Draw the Level
 Move the Level
 
 `level.move(mx, my)`
+
+## Build The Game ##
+`g++ *.cpp arch.a -lSDL2 -lSDL2_image -std=c++11`
+
+Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
