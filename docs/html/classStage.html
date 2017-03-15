@@ -85,29 +85,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classStage-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Stage Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for Stage:</div>
-<div class="dyncontent">
-<div class="center"><img src="classStage__coll__graph.png" border="0" usemap="#Stage_coll__map" alt="Collaboration graph"/></div>
-<map name="Stage_coll__map" id="Stage_coll__map">
-<area shape="rect" id="node2" href="classTileset.html" title="Tileset" alt="" coords="5,5,67,32"/>
-<area shape="rect" id="node3" href="classMap.html" title="Map" alt="" coords="91,5,138,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+
+<p>The <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> class stores a <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a> and <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a>.  
+ <a href="classStage.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stage_8h_source.html">stage.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a716561c7b2b148b67e7cf4952bae937b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a716561c7b2b148b67e7cf4952bae937b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createStage</b> (<a class="el" href="classMap.html">Map</a> m, <a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#a716561c7b2b148b67e7cf4952bae937b">createStage</a> (<a class="el" href="classMap.html">Map</a> m, <a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+<tr class="memdesc:a716561c7b2b148b67e7cf4952bae937b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a stage by passing in a <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a> and <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a>. <br /></td></tr>
 <tr class="separator:a716561c7b2b148b67e7cf4952bae937b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad552bc548e34ff668944a6fc20b2aa0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad552bc548e34ff668944a6fc20b2aa0d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createStage</b> (string filename, string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#ad552bc548e34ff668944a6fc20b2aa0d">createStage</a> (string filename, string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
+<tr class="memdesc:ad552bc548e34ff668944a6fc20b2aa0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a stage by passing in the maps file, a name for the tiles, file of the tile image, the renderer, width and height of a tile, what row of the image the tiles are onem and how many tiles there are. <br /></td></tr>
 <tr class="separator:ad552bc548e34ff668944a6fc20b2aa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871e4913cf2566a1a3a21c9d2e962648"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a871e4913cf2566a1a3a21c9d2e962648"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>createStage</b> (string filename, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
@@ -119,16 +116,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>createStage</b> (stri
 void&#160;</td><td class="memItemRight" valign="bottom"><b>createStage</b> (string filename, int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
 <tr class="separator:a2d9071d75c90883539cd303c128a6b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a215785ca66ffae354c350aee1800e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47a215785ca66ffae354c350aee1800e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (<a class="el" href="classMap.html">Map</a> m)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#a47a215785ca66ffae354c350aee1800e">setMap</a> (<a class="el" href="classMap.html">Map</a> m)</td></tr>
+<tr class="memdesc:a47a215785ca66ffae354c350aee1800e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a> by passing in a <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a>. <br /></td></tr>
 <tr class="separator:a47a215785ca66ffae354c350aee1800e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b7cabe85812fda7513d14d6b21ff6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11b7cabe85812fda7513d14d6b21ff6a"></a>
-<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setMap</b> (string filename)</td></tr>
+<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#a11b7cabe85812fda7513d14d6b21ff6a">setMap</a> (string filename)</td></tr>
+<tr class="memdesc:a11b7cabe85812fda7513d14d6b21ff6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load in a new map by passing in the map file. <br /></td></tr>
 <tr class="separator:a11b7cabe85812fda7513d14d6b21ff6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f18e19add54b6919e9d316e4c0cdaf1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f18e19add54b6919e9d316e4c0cdaf1"></a>
-<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getMap</b> () const </td></tr>
+<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#a5f18e19add54b6919e9d316e4c0cdaf1">getMap</a> () const </td></tr>
+<tr class="memdesc:a5f18e19add54b6919e9d316e4c0cdaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a>. <br /></td></tr>
 <tr class="separator:a5f18e19add54b6919e9d316e4c0cdaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63a19b471f7c54d68f3f7e4419eca8ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63a19b471f7c54d68f3f7e4419eca8ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (<a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#a63a19b471f7c54d68f3f7e4419eca8ac">setTileset</a> (<a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+<tr class="memdesc:a63a19b471f7c54d68f3f7e4419eca8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a> with a given <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a>. <br /></td></tr>
 <tr class="separator:a63a19b471f7c54d68f3f7e4419eca8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab62ad01c46da0337c294c4790020306f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab62ad01c46da0337c294c4790020306f"></a>
 <a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
@@ -143,21 +144,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (<a cl
 <a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTileset</b> (int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
 <tr class="separator:a42ee2fbdb79971f90984f603fcad54d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c41f0bf5dcdac398169c5a2e92196f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c41f0bf5dcdac398169c5a2e92196f3"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getTileset</b> () const </td></tr>
+<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStage.html#a7c41f0bf5dcdac398169c5a2e92196f3">getTileset</a> () const </td></tr>
+<tr class="memdesc:a7c41f0bf5dcdac398169c5a2e92196f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a>. <br /></td></tr>
 <tr class="separator:a7c41f0bf5dcdac398169c5a2e92196f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:acd462363f1438577ea16bb7b6407eb66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd462363f1438577ea16bb7b6407eb66"></a>
-<a class="el" href="classMap.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>map</b></td></tr>
-<tr class="separator:acd462363f1438577ea16bb7b6407eb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a263a0cbb2777538824425edf15b5f224"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a263a0cbb2777538824425edf15b5f224"></a>
-<a class="el" href="classTileset.html">Tileset</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileset</b></td></tr>
-<tr class="separator:a263a0cbb2777538824425edf15b5f224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="stage_8h_source.html#l00007">7</a> of file <a class="el" href="stage_8h_source.html">stage.h</a>.</p>
+<div class="textblock"><p>The <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> class stores a <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a> and <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a>. </p>
+
+<p>Definition at line <a class="el" href="stage_8h_source.html#l00008">8</a> of file <a class="el" href="stage_8h_source.html">stage.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="stage_8h_source.html">stage.h</a></li>
 <li><a class="el" href="stage_8cpp_source.html">stage.cpp</a></li>

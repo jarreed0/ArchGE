@@ -11,6 +11,7 @@ int main() {
  Input i;
  e.setBackground("../../engine/res/engine-logo.png");
  while(running) {
+  e.loopStart();
   bool frame = true;
   while(frame) {
    e.update();

@@ -2,7 +2,6 @@ var searchData=
 [
   ['m',['m',['../classInput.html#a89a18f05d113c6b7de320477a3b0f3c3',1,'Input']]],
   ['map',['Map',['../classMap.html',1,'']]],
-  ['maxhealth',['maxHealth',['../classEntity.html#a814aed95740c20b413e7acf387da9e9b',1,'Entity']]],
   ['mousedown',['mousedown',['../classInput.html#a254eb8e3616257909a23449a7b87175e',1,'Input']]],
   ['mouseleft',['mouseleft',['../classInput.html#aca8ecc3d3a5c0e579b78e7915dfe7cce',1,'Input']]],
   ['mousemiddle',['mousemiddle',['../classInput.html#aeada901dbf556cb13f81d8326943dd08',1,'Input']]],
@@ -10,5 +9,8 @@ var searchData=
   ['mouseup',['mouseup',['../classInput.html#a66df7023e5db7300d0f9bcdafd140bf5',1,'Input']]],
   ['mousex',['mousex',['../classInput.html#a332eaea23f6cb9689caaa189b11efef7',1,'Input']]],
   ['mousey',['mousey',['../classInput.html#a8ef4889d960150cf103f78639584c73b',1,'Input']]],
-  ['movetowards',['moveTowards',['../classPhysics.html#a8e53f9bf088c0d4f208b3c2029d69ab2',1,'Physics']]]
+  ['move',['move',['../classLevel.html#a9184b25173fbf468a63a633bd3510bd6',1,'Level::move()'],['../classObject.html#af4133db64f4051294dc103a2f3553a6a',1,'Object::move()']]],
+  ['movetowards',['moveTowards',['../classPhysics.html#a8e53f9bf088c0d4f208b3c2029d69ab2',1,'Physics']]],
+  ['movex',['moveX',['../classObject.html#a43f3220cb27a282c28afaea57ac9a098',1,'Object']]],
+  ['movey',['moveY',['../classObject.html#a58bab6e78efd8282996d742530c98034',1,'Object']]]
 ];

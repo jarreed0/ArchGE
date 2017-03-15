@@ -13,10 +13,13 @@ public:
   ~Tile();
   //! Set value of the tile. This is used when reading from a map file, etc.
   void setValue(int v);
-  //! Get the value of the tile.
+  //! Get the value of the Tile.
   int getValue() const { return value; }
+  //! Set if the Tile is solid.
   void setSolid() { solid = true; }
+  //! Set if the Tile is passable (not solid).
   void setPassable() { solid = false; }
+  //! Check if the Tile is solid.
   bool isSolid() const { return solid; }
 };
 

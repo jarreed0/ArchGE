@@ -2,91 +2,67 @@
 \label{classLevel}\index{Level@{Level}}
 
 
-Collaboration diagram for Level\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=258pt]{classLevel__coll__graph}
-\end{center}
-\end{figure}
+This class stores a \hyperlink{classStage}{Stage} and Objects and can move them and display them.  
+
+
+
+
+{\ttfamily \#include $<$level.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries create} ()\hypertarget{classLevel_a81689e48aaf6d5421721bd06f480e4e1}{}\label{classLevel_a81689e48aaf6d5421721bd06f480e4e1}
+void \hyperlink{classLevel_a81689e48aaf6d5421721bd06f480e4e1}{create} ()\hypertarget{classLevel_a81689e48aaf6d5421721bd06f480e4e1}{}\label{classLevel_a81689e48aaf6d5421721bd06f480e4e1}
 
-\item 
-void {\bfseries set\+Stage} (\hyperlink{classStage}{Stage} s)\hypertarget{classLevel_ac9bb5473dece11462e702fe418590f24}{}\label{classLevel_ac9bb5473dece11462e702fe418590f24}
+\begin{DoxyCompactList}\small\item\em Create the \hyperlink{classLevel}{Level} based on the given stage. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_ac9bb5473dece11462e702fe418590f24}{set\+Stage} (\hyperlink{classStage}{Stage} s)\hypertarget{classLevel_ac9bb5473dece11462e702fe418590f24}{}\label{classLevel_ac9bb5473dece11462e702fe418590f24}
 
-\item 
-void {\bfseries set\+Stage} (\hyperlink{classMap}{Map} m, \hyperlink{classTileset}{Tileset} t)\hypertarget{classLevel_a962fd10cb871d2fdd98230dc079bff34}{}\label{classLevel_a962fd10cb871d2fdd98230dc079bff34}
+\begin{DoxyCompactList}\small\item\em Give a \hyperlink{classStage}{Stage} to the \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a962fd10cb871d2fdd98230dc079bff34}{set\+Stage} (\hyperlink{classMap}{Map} m, \hyperlink{classTileset}{Tileset} t)\hypertarget{classLevel_a962fd10cb871d2fdd98230dc079bff34}{}\label{classLevel_a962fd10cb871d2fdd98230dc079bff34}
 
-\item 
-void {\bfseries set\+Scale} (int w, int h)\hypertarget{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}{}\label{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classStage}{Stage} for the \hyperlink{classLevel}{Level} by giving a \hyperlink{classMap}{Map} and a \hyperlink{classTileset}{Tileset}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}{set\+Scale} (int w, int h)\hypertarget{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}{}\label{classLevel_a3fcaa774a00e39090336b5a61d88e3e2}
 
-\item 
-void {\bfseries set\+Scale} (int s)\hypertarget{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}{}\label{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}
+\begin{DoxyCompactList}\small\item\em Scale the \hyperlink{classLevel}{Level} by giving it the width and height to scale by. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}{set\+Scale} (int s)\hypertarget{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}{}\label{classLevel_af6fe8bc2dd6623fcbaa739403a239d77}
 
-\item 
-void {\bfseries calc\+Pos} ()\hypertarget{classLevel_a02e915f95e181dcfe95553e923a73a39}{}\label{classLevel_a02e915f95e181dcfe95553e923a73a39}
+\begin{DoxyCompactList}\small\item\em Scale the \hyperlink{classLevel}{Level} by giving it a single integer to scale by. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a02e915f95e181dcfe95553e923a73a39}{calc\+Pos} ()\hypertarget{classLevel_a02e915f95e181dcfe95553e923a73a39}{}\label{classLevel_a02e915f95e181dcfe95553e923a73a39}
 
-\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ {\bfseries get\+Tiles\+To\+Render} ()\hypertarget{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{}\label{classLevel_ade9e45f70f2f3f81c120bb161f87218f}
+\begin{DoxyCompactList}\small\item\em Calculate the position of the level based on coordinates. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{get\+Tiles\+To\+Render} ()\hypertarget{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{}\label{classLevel_ade9e45f70f2f3f81c120bb161f87218f}
 
-\item 
-void {\bfseries move} (int mx, int my)\hypertarget{classLevel_a9184b25173fbf468a63a633bd3510bd6}{}\label{classLevel_a9184b25173fbf468a63a633bd3510bd6}
+\begin{DoxyCompactList}\small\item\em Return the Tiles that are currently on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a9184b25173fbf468a63a633bd3510bd6}{move} (int mx, int my)\hypertarget{classLevel_a9184b25173fbf468a63a633bd3510bd6}{}\label{classLevel_a9184b25173fbf468a63a633bd3510bd6}
 
-\item 
-void {\bfseries set\+Coord} (double x, double y)\hypertarget{classLevel_a3ff79425060f959496d64aa052ef3cf6}{}\label{classLevel_a3ff79425060f959496d64aa052ef3cf6}
+\begin{DoxyCompactList}\small\item\em Move the screen by passing in how much to move on the x and y coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a3ff79425060f959496d64aa052ef3cf6}{set\+Coord} (double x, double y)\hypertarget{classLevel_a3ff79425060f959496d64aa052ef3cf6}{}\label{classLevel_a3ff79425060f959496d64aa052ef3cf6}
 
-\item 
-void {\bfseries setX} (double x)\hypertarget{classLevel_a6212b3c03b3efc82cf69e642cc093959}{}\label{classLevel_a6212b3c03b3efc82cf69e642cc093959}
+\begin{DoxyCompactList}\small\item\em Set the coordinate for the screen with a given x and y. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a6212b3c03b3efc82cf69e642cc093959}{setX} (double x)\hypertarget{classLevel_a6212b3c03b3efc82cf69e642cc093959}{}\label{classLevel_a6212b3c03b3efc82cf69e642cc093959}
 
-\item 
-void {\bfseries setY} (double y)\hypertarget{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}{}\label{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}
+\begin{DoxyCompactList}\small\item\em Set the x coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}{setY} (double y)\hypertarget{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}{}\label{classLevel_a7c67443008f7e0f4b5d1630ff2dcf179}
 
-\item 
-double {\bfseries getX} () const \hypertarget{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}{}\label{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}
+\begin{DoxyCompactList}\small\item\em Set the y coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}{getX} () const \hypertarget{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}{}\label{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}
 
-\item 
-double {\bfseries getY} () const \hypertarget{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}{}\label{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}
+\begin{DoxyCompactList}\small\item\em Get the x coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}{getY} () const \hypertarget{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}{}\label{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}
 
-\item 
-void {\bfseries set\+Screen\+Size} (int w, int h)\hypertarget{classLevel_a22a202624bb540acc74b678b74b60c9d}{}\label{classLevel_a22a202624bb540acc74b678b74b60c9d}
+\begin{DoxyCompactList}\small\item\em Get the y coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a22a202624bb540acc74b678b74b60c9d}{set\+Screen\+Size} (int w, int h)\hypertarget{classLevel_a22a202624bb540acc74b678b74b60c9d}{}\label{classLevel_a22a202624bb540acc74b678b74b60c9d}
 
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classStage}{Stage} {\bfseries stage}\hypertarget{classLevel_a70b63ddb6ddfa55ddf21ba9ee1ceea7b}{}\label{classLevel_a70b63ddb6ddfa55ddf21ba9ee1ceea7b}
+\begin{DoxyCompactList}\small\item\em Set the size of the screen by passing in the width and height. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a6f522671fde4a9d25945a9df651f6e28}{set\+Precise} (bool p)\hypertarget{classLevel_a6f522671fde4a9d25945a9df651f6e28}{}\label{classLevel_a6f522671fde4a9d25945a9df651f6e28}
 
-\item 
-vector$<$ vector$<$ \hyperlink{classTile}{Tile} $>$ $>$ {\bfseries tiles}\hypertarget{classLevel_aca83d54bba8108db360d158c23cf3b05}{}\label{classLevel_aca83d54bba8108db360d158c23cf3b05}
-
-\item 
-double {\bfseries x}\hypertarget{classLevel_aec07d9a0c48ff9e91faa4bfd963ce7ac}{}\label{classLevel_aec07d9a0c48ff9e91faa4bfd963ce7ac}
-
-\item 
-double {\bfseries y}\hypertarget{classLevel_a8a0e61d7df45f96fd93deff6d52c6d57}{}\label{classLevel_a8a0e61d7df45f96fd93deff6d52c6d57}
-
-\item 
-int {\bfseries tilewidth}\hypertarget{classLevel_ac8ef0ca1e4fd96fa82c32bf59767d051}{}\label{classLevel_ac8ef0ca1e4fd96fa82c32bf59767d051}
-
-\item 
-int {\bfseries tileheight}\hypertarget{classLevel_a206b74c28bb8eb3be5bf30f7611815dc}{}\label{classLevel_a206b74c28bb8eb3be5bf30f7611815dc}
-
-\item 
-\hyperlink{classObject}{Object} {\bfseries screen}\hypertarget{classLevel_ae40a7c1aec8beb39a60876d07338f88f}{}\label{classLevel_ae40a7c1aec8beb39a60876d07338f88f}
-
-\item 
-\hyperlink{classCollision}{Collision} {\bfseries col}\hypertarget{classLevel_a703a2892808b942817dd84072de22bc5}{}\label{classLevel_a703a2892808b942817dd84072de22bc5}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that \hyperlink{classTile}{Tile}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+This class stores a \hyperlink{classStage}{Stage} and Objects and can move them and display them. 
 
-
-Definition at line 8 of file level.\+h.
+Definition at line 9 of file level.\+h.
 
 
 

@@ -61,8 +61,9 @@ public:
   SDL_Renderer* getRenderer();
   //! Sets SDL color.
   void setColor(Uint8 r, Uint8 g, Uint8 b);
-  //! Call this at the end of the game loop to render.
+  //! Call this at the beginning of a loop to initilaize the loop.
   void loopStart();
+  //! Call this at the end of the game loop to render.
   void render();
   //! Get fps.
   bool FPS() const { return fps; }
@@ -78,8 +79,11 @@ public:
   void drawBackground();
   //! Draw an object on the screen.
   void draw(Object obj);
+  //! Draw a vector of Objects
   void draw(vector<Object> objs);
+  //! Draw an object with a pass key before/during splash.
   void draw(Object obj, int key);
+  //! Draw the level.
   void drawLevel(Level lvl);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
   void splash();

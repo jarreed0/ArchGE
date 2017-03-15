@@ -1,7 +1,7 @@
 #include "map.h"
 
 Map::Map() {
-
+  startX = startY = 0;
 }
 Map::~Map() {}
 

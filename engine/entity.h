@@ -47,10 +47,15 @@ public:
   void deactivate();
   //! Sets active to true.
   void activate();
+  //! Checks if an the Entity is in the current screen by passing the screen to it.
   void checkDisplayable(Object screen);
+  //! Returns the detection radius.
   SDL_Rect getDetect() const { return detect; }
+  //! Sets the detection with another SDL_Rect.
   void setDetect(SDL_Rect d) { detect = d; }
+  //! Sets the detection radius with a single given distance.
   void setDetectRange(int r);
+  //! Sets the detection radius with two given distances in both directions.
   void setDetectRange(int w, int h);
 };
 

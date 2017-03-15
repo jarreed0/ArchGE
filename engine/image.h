@@ -15,7 +15,7 @@ private:
 public:
   Image();
   ~Image();
-  //! Load in either a BMP or PNG file with the path and renderer..
+  //! Load in either a BMP or PNG file with the path and renderer.
   void loadImage(string file, SDL_Renderer* ren);
   //! Load in a PNG image with the path to the PNG file and the renderer.
   void loadPNG(string file, SDL_Renderer* ren);

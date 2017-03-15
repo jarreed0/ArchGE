@@ -4,8 +4,8 @@ Snake::Snake() {
   eng.init("Snake", Width, Height, 0);
   handle.reset();
 
-  snake.setImage("sprites.bmp", eng.renderScreen());
-  cherry.setImage("sprites.bmp", eng.renderScreen());
+  snake.setImage("sprites.bmp", eng.getRenderer());
+  cherry.setImage("sprites.bmp", eng.getRenderer());
 
   segmentsList.push_back(std::make_pair(5, 5));
   segmentsList.push_back(std::make_pair(5, 6));
@@ -29,13 +29,18 @@ void Snake::generateFruit() {
 }
 
 Snake::~Snake() {
-  eng.deconstruct();
+
 }
 
 int Snake::exec() {
-  auto oldTick = SDL_GetTicks();
-  for (auto done = false; !done;) {
-    handle.logPress();
+
+  bool done = true;
+  while(done) {
+    eng.loopStart();
+    bool frame = true;
+    while(frame) {
+      eng.update();
+	handle.logPress();
     if(handle.checkKey(handle.down)) {
       dx = 0;
       dy = 1;
@@ -55,14 +60,12 @@ int Snake::exec() {
     if(handle.checkKey(handle.quit)) done = true;;
     if(handle.checkKey(handle.esc)) done = true;
     eng.setColor(0x7f, 0x7f, 0x7f);
-    eng.preLoop();
-    auto currentTick = SDL_GetTicks();
-    for (auto t = oldTick; t < currentTick; ++t)
-      if (!tick())
-        return 1;
-    oldTick = currentTick;
+
+
     draw();
-    eng.endLoop();
+      if(!eng.FPS()) frame=false;
+    }
+    eng.render();
   }
   return 0;
 }
@@ -88,10 +91,10 @@ bool Snake::tick() {
 }
 
 void Snake::draw() {
-  snake.setSource(0, 0, 64, 64);
-  snake.setDest(64, 64);
-  cherry.setSource(0, 0, 64, 64);
-  cherry.setDest(64, 64);
+  snake.setFrame(0, 0, 64, 64);
+  snake.setDestSize(64, 64);
+  cherry.setFrame(0, 0, 64, 64);
+  cherry.setDestSize(64, 64);
   int ds[][3] = {
     { -1, 0, 0 },
     { 0, -1, 90 },
@@ -99,29 +102,29 @@ void Snake::draw() {
     { 0, 1, -90 },
   };
   for (auto iter = std::begin(segmentsList); iter != std::end(segmentsList); ++iter) {
-    snake.setAng(0);
+    snake.setAngle(0);
     const auto &segment = *iter;
     if (iter == std::begin(segmentsList)) {
       if (iter->first + dx == fruitX && iter->second + dy == fruitY)
-        snake.setSX(HeadOpenMouth * 64);
+        snake.setFrameX(HeadOpenMouth * 64);
       else
-        snake.setSX(Head * 64);
+        snake.setFrameX(Head * 64);
       if (iter + 1 != std::end(segmentsList)) {
         const auto &nextSegment = *(iter + 1);
         for (const auto &d: ds) {
           if (segment.first + d[0] == nextSegment.first && segment.second + d[1] == nextSegment.second) {
-            snake.setAng(d[2]);
+            snake.setAngle(d[2]);
             break;
           }
         }
       }
     }
     else if (iter + 1 == std::end(segmentsList)) {
-      snake.setSX(Tail * 64);
+      snake.setFrameX(Tail * 64);
       const auto &prevSegment = *(iter - 1);
       for (const auto &d: ds) {
         if (segment.first == prevSegment.first + d[0] && segment.second == prevSegment.second + d[1]) {
-          snake.setAng(d[2]);
+          snake.setAngle(d[2]);
           break;
         }
       }
@@ -130,15 +133,15 @@ void Snake::draw() {
       const auto &nextSegment = *(iter + 1);
       const auto &prevSegment = *(iter - 1);
       if (nextSegment.first == prevSegment.first) {
-        snake.setSX(Straight * 64);
-        snake.setAng(90);
+        snake.setFrameX(Straight * 64);
+        snake.setAngle(90);
       }
       else if (nextSegment.second == prevSegment.second) {
-        snake.setSX(Straight * 64);
-        snake.setAng(0);
+        snake.setFrameX(Straight * 64);
+        snake.setAngle(0);
       }
       else {
-        snake.setSX(Turn * 64);
+        snake.setFrameX(Turn * 64);
         bool up = false;
         if (segment.first == nextSegment.first && segment.second - 1 == nextSegment.second)
           up = true;
@@ -160,23 +163,23 @@ void Snake::draw() {
         if (segment.first - 1 == prevSegment.first && segment.second == prevSegment.second)
           left = true;
         if (up && right)
-          snake.setAng(0);
+          snake.setAngle(0);
         else if (right && down)
-          snake.setAng(90);
+          snake.setAngle(90);
         else if (down && left)
-          snake.setAng(180);
+          snake.setAngle(180);
         else if (left && up)
-          snake.setAng(270);
+          snake.setAngle(270);
       }
     }
 
-    snake.setDX(64 * segment.first);
-    snake.setDY(64 * segment.second);
-    eng.pushToScreen(snake);
+    snake.setDestX(64 * segment.first);
+    snake.setDestY(64 * segment.second);
+    eng.draw(snake);
   }
-  cherry.setSX(Fruit * 64);
-  cherry.setDX(fruitX * 64);
-  cherry.setDY(fruitY * 64);
-  cherry.setAng(0);
-  eng.pushToScreen(cherry);
+  cherry.setFrameX(Fruit * 64);
+  cherry.setDestX(fruitX * 64);
+  cherry.setDestY(fruitY * 64);
+  cherry.setAngle(0);
+  eng.draw(cherry);
 }

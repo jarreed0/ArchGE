@@ -2,22 +2,22 @@
 \label{classStage}\index{Stage@{Stage}}
 
 
-Collaboration diagram for Stage\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=180pt]{classStage__coll__graph}
-\end{center}
-\end{figure}
+The \hyperlink{classStage}{Stage} class stores a \hyperlink{classMap}{Map} and \hyperlink{classTileset}{Tileset}.  
+
+
+
+
+{\ttfamily \#include $<$stage.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries create\+Stage} (\hyperlink{classMap}{Map} m, \hyperlink{classTileset}{Tileset} t)\hypertarget{classStage_a716561c7b2b148b67e7cf4952bae937b}{}\label{classStage_a716561c7b2b148b67e7cf4952bae937b}
+void \hyperlink{classStage_a716561c7b2b148b67e7cf4952bae937b}{create\+Stage} (\hyperlink{classMap}{Map} m, \hyperlink{classTileset}{Tileset} t)\hypertarget{classStage_a716561c7b2b148b67e7cf4952bae937b}{}\label{classStage_a716561c7b2b148b67e7cf4952bae937b}
 
-\item 
-void {\bfseries create\+Stage} (string filename, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classStage_ad552bc548e34ff668944a6fc20b2aa0d}{}\label{classStage_ad552bc548e34ff668944a6fc20b2aa0d}
+\begin{DoxyCompactList}\small\item\em Create a stage by passing in a \hyperlink{classMap}{Map} and \hyperlink{classTileset}{Tileset}. \end{DoxyCompactList}\item 
+void \hyperlink{classStage_ad552bc548e34ff668944a6fc20b2aa0d}{create\+Stage} (string filename, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classStage_ad552bc548e34ff668944a6fc20b2aa0d}{}\label{classStage_ad552bc548e34ff668944a6fc20b2aa0d}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Create a stage by passing in the maps file, a name for the tiles, file of the tile image, the renderer, width and height of a tile, what row of the image the tiles are onem and how many tiles there are. \end{DoxyCompactList}\item 
 void {\bfseries create\+Stage} (string filename, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classStage_a871e4913cf2566a1a3a21c9d2e962648}{}\label{classStage_a871e4913cf2566a1a3a21c9d2e962648}
 
 \item 
@@ -27,18 +27,18 @@ void {\bfseries create\+Stage} (string filename, int startid, string name, strin
 void {\bfseries create\+Stage} (string filename, int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classStage_a2d9071d75c90883539cd303c128a6b7d}{}\label{classStage_a2d9071d75c90883539cd303c128a6b7d}
 
 \item 
-void {\bfseries set\+Map} (\hyperlink{classMap}{Map} m)\hypertarget{classStage_a47a215785ca66ffae354c350aee1800e}{}\label{classStage_a47a215785ca66ffae354c350aee1800e}
+void \hyperlink{classStage_a47a215785ca66ffae354c350aee1800e}{set\+Map} (\hyperlink{classMap}{Map} m)\hypertarget{classStage_a47a215785ca66ffae354c350aee1800e}{}\label{classStage_a47a215785ca66ffae354c350aee1800e}
 
-\item 
-\hyperlink{classMap}{Map} {\bfseries set\+Map} (string filename)\hypertarget{classStage_a11b7cabe85812fda7513d14d6b21ff6a}{}\label{classStage_a11b7cabe85812fda7513d14d6b21ff6a}
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classMap}{Map} by passing in a \hyperlink{classMap}{Map}. \end{DoxyCompactList}\item 
+\hyperlink{classMap}{Map} \hyperlink{classStage_a11b7cabe85812fda7513d14d6b21ff6a}{set\+Map} (string filename)\hypertarget{classStage_a11b7cabe85812fda7513d14d6b21ff6a}{}\label{classStage_a11b7cabe85812fda7513d14d6b21ff6a}
 
-\item 
-\hyperlink{classMap}{Map} {\bfseries get\+Map} () const \hypertarget{classStage_a5f18e19add54b6919e9d316e4c0cdaf1}{}\label{classStage_a5f18e19add54b6919e9d316e4c0cdaf1}
+\begin{DoxyCompactList}\small\item\em Load in a new map by passing in the map file. \end{DoxyCompactList}\item 
+\hyperlink{classMap}{Map} \hyperlink{classStage_a5f18e19add54b6919e9d316e4c0cdaf1}{get\+Map} () const \hypertarget{classStage_a5f18e19add54b6919e9d316e4c0cdaf1}{}\label{classStage_a5f18e19add54b6919e9d316e4c0cdaf1}
 
-\item 
-void {\bfseries set\+Tileset} (\hyperlink{classTileset}{Tileset} t)\hypertarget{classStage_a63a19b471f7c54d68f3f7e4419eca8ac}{}\label{classStage_a63a19b471f7c54d68f3f7e4419eca8ac}
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classMap}{Map}. \end{DoxyCompactList}\item 
+void \hyperlink{classStage_a63a19b471f7c54d68f3f7e4419eca8ac}{set\+Tileset} (\hyperlink{classTileset}{Tileset} t)\hypertarget{classStage_a63a19b471f7c54d68f3f7e4419eca8ac}{}\label{classStage_a63a19b471f7c54d68f3f7e4419eca8ac}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classTileset}{Tileset} with a given \hyperlink{classTileset}{Tileset}. \end{DoxyCompactList}\item 
 \hyperlink{classTileset}{Tileset} {\bfseries set\+Tileset} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classStage_ab62ad01c46da0337c294c4790020306f}{}\label{classStage_ab62ad01c46da0337c294c4790020306f}
 
 \item 
@@ -51,24 +51,15 @@ void {\bfseries set\+Tileset} (\hyperlink{classTileset}{Tileset} t)\hypertarget{
 \hyperlink{classTileset}{Tileset} {\bfseries set\+Tileset} (int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classStage_a42ee2fbdb79971f90984f603fcad54d6}{}\label{classStage_a42ee2fbdb79971f90984f603fcad54d6}
 
 \item 
-\hyperlink{classTileset}{Tileset} {\bfseries get\+Tileset} () const \hypertarget{classStage_a7c41f0bf5dcdac398169c5a2e92196f3}{}\label{classStage_a7c41f0bf5dcdac398169c5a2e92196f3}
+\hyperlink{classTileset}{Tileset} \hyperlink{classStage_a7c41f0bf5dcdac398169c5a2e92196f3}{get\+Tileset} () const \hypertarget{classStage_a7c41f0bf5dcdac398169c5a2e92196f3}{}\label{classStage_a7c41f0bf5dcdac398169c5a2e92196f3}
 
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classMap}{Map} {\bfseries map}\hypertarget{classStage_acd462363f1438577ea16bb7b6407eb66}{}\label{classStage_acd462363f1438577ea16bb7b6407eb66}
-
-\item 
-\hyperlink{classTileset}{Tileset} {\bfseries tileset}\hypertarget{classStage_a263a0cbb2777538824425edf15b5f224}{}\label{classStage_a263a0cbb2777538824425edf15b5f224}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classTileset}{Tileset}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+The \hyperlink{classStage}{Stage} class stores a \hyperlink{classMap}{Map} and \hyperlink{classTileset}{Tileset}. 
 
-
-Definition at line 7 of file stage.\+h.
+Definition at line 8 of file stage.\+h.
 
 
 

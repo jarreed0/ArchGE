@@ -8,10 +8,11 @@ Game::Game() {
   //e.setBackground("../../engine/res/engine-logo.png");
   tileset.create("tiles", "res/tiles.bmp", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/12, 12, TOTAL_TILES);
   map.loadMap("res/1.level");
+  level.setPrecise(true);
   stage.createStage(map, tileset);
   level.setStage(stage);
   level.create();
-  level.setScale(40, 40);
+  //level.setScale(40, 40);
   level.setScreenSize(WIDTH, HEIGHT);
   running = true;
   loop();

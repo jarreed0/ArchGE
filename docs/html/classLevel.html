@@ -85,101 +85,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classLevel-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Level Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for Level:</div>
-<div class="dyncontent">
-<div class="center"><img src="classLevel__coll__graph.png" border="0" usemap="#Level_coll__map" alt="Collaboration graph"/></div>
-<map name="Level_coll__map" id="Level_coll__map">
-<area shape="rect" id="node2" href="classCollision.html" title="Class used for calculating different types of collision between given Objects. " alt="" coords="5,95,77,121"/>
-<area shape="rect" id="node3" href="classStage.html" title="Stage" alt="" coords="101,95,157,121"/>
-<area shape="rect" id="node4" href="classTileset.html" title="Tileset" alt="" coords="23,5,84,32"/>
-<area shape="rect" id="node5" href="classMap.html" title="Map" alt="" coords="109,5,155,32"/>
-<area shape="rect" id="node6" href="classObject.html" title="Object" alt="" coords="182,95,242,121"/>
-<area shape="rect" id="node7" href="classImage.html" title="Class for loading in SDL Textures. " alt="" coords="183,5,241,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+
+<p>This class stores a <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> and Objects and can move them and display them.  
+ <a href="classLevel.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="level_8h_source.html">level.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a81689e48aaf6d5421721bd06f480e4e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81689e48aaf6d5421721bd06f480e4e1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a81689e48aaf6d5421721bd06f480e4e1">create</a> ()</td></tr>
+<tr class="memdesc:a81689e48aaf6d5421721bd06f480e4e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a> based on the given stage. <br /></td></tr>
 <tr class="separator:a81689e48aaf6d5421721bd06f480e4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9bb5473dece11462e702fe418590f24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9bb5473dece11462e702fe418590f24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStage</b> (<a class="el" href="classStage.html">Stage</a> s)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#ac9bb5473dece11462e702fe418590f24">setStage</a> (<a class="el" href="classStage.html">Stage</a> s)</td></tr>
+<tr class="memdesc:ac9bb5473dece11462e702fe418590f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Give a <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> to the <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a>. <br /></td></tr>
 <tr class="separator:ac9bb5473dece11462e702fe418590f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a962fd10cb871d2fdd98230dc079bff34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a962fd10cb871d2fdd98230dc079bff34"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStage</b> (<a class="el" href="classMap.html">Map</a> m, <a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a962fd10cb871d2fdd98230dc079bff34">setStage</a> (<a class="el" href="classMap.html">Map</a> m, <a class="el" href="classTileset.html">Tileset</a> t)</td></tr>
+<tr class="memdesc:a962fd10cb871d2fdd98230dc079bff34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> for the <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a> by giving a <a class="el" href="classMap.html" title="This class takes in a file and loads it in for the map. ">Map</a> and a <a class="el" href="classTileset.html" title="Class for loading in multiple Tiles. ">Tileset</a>. <br /></td></tr>
 <tr class="separator:a962fd10cb871d2fdd98230dc079bff34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fcaa774a00e39090336b5a61d88e3e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcaa774a00e39090336b5a61d88e3e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (int w, int h)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a3fcaa774a00e39090336b5a61d88e3e2">setScale</a> (int w, int h)</td></tr>
+<tr class="memdesc:a3fcaa774a00e39090336b5a61d88e3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a> by giving it the width and height to scale by. <br /></td></tr>
 <tr class="separator:a3fcaa774a00e39090336b5a61d88e3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6fe8bc2dd6623fcbaa739403a239d77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6fe8bc2dd6623fcbaa739403a239d77"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (int s)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#af6fe8bc2dd6623fcbaa739403a239d77">setScale</a> (int s)</td></tr>
+<tr class="memdesc:af6fe8bc2dd6623fcbaa739403a239d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a> by giving it a single integer to scale by. <br /></td></tr>
 <tr class="separator:af6fe8bc2dd6623fcbaa739403a239d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e915f95e181dcfe95553e923a73a39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e915f95e181dcfe95553e923a73a39"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calcPos</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a02e915f95e181dcfe95553e923a73a39">calcPos</a> ()</td></tr>
+<tr class="memdesc:a02e915f95e181dcfe95553e923a73a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the position of the level based on coordinates. <br /></td></tr>
 <tr class="separator:a02e915f95e181dcfe95553e923a73a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade9e45f70f2f3f81c120bb161f87218f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade9e45f70f2f3f81c120bb161f87218f"></a>
-vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTilesToRender</b> ()</td></tr>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#ade9e45f70f2f3f81c120bb161f87218f">getTilesToRender</a> ()</td></tr>
+<tr class="memdesc:ade9e45f70f2f3f81c120bb161f87218f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Tiles that are currently on the screen. <br /></td></tr>
 <tr class="separator:ade9e45f70f2f3f81c120bb161f87218f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9184b25173fbf468a63a633bd3510bd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9184b25173fbf468a63a633bd3510bd6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (int mx, int my)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a9184b25173fbf468a63a633bd3510bd6">move</a> (int mx, int my)</td></tr>
+<tr class="memdesc:a9184b25173fbf468a63a633bd3510bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the screen by passing in how much to move on the x and y coordinates. <br /></td></tr>
 <tr class="separator:a9184b25173fbf468a63a633bd3510bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff79425060f959496d64aa052ef3cf6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ff79425060f959496d64aa052ef3cf6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoord</b> (double x, double y)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a3ff79425060f959496d64aa052ef3cf6">setCoord</a> (double x, double y)</td></tr>
+<tr class="memdesc:a3ff79425060f959496d64aa052ef3cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the coordinate for the screen with a given x and y. <br /></td></tr>
 <tr class="separator:a3ff79425060f959496d64aa052ef3cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6212b3c03b3efc82cf69e642cc093959"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6212b3c03b3efc82cf69e642cc093959"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setX</b> (double x)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a6212b3c03b3efc82cf69e642cc093959">setX</a> (double x)</td></tr>
+<tr class="memdesc:a6212b3c03b3efc82cf69e642cc093959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the x coordinate. <br /></td></tr>
 <tr class="separator:a6212b3c03b3efc82cf69e642cc093959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c67443008f7e0f4b5d1630ff2dcf179"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c67443008f7e0f4b5d1630ff2dcf179"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (double y)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a7c67443008f7e0f4b5d1630ff2dcf179">setY</a> (double y)</td></tr>
+<tr class="memdesc:a7c67443008f7e0f4b5d1630ff2dcf179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the y coordinate. <br /></td></tr>
 <tr class="separator:a7c67443008f7e0f4b5d1630ff2dcf179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5dca509c0e480d8a7b6b1d6b411375"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f5dca509c0e480d8a7b6b1d6b411375"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const </td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a6f5dca509c0e480d8a7b6b1d6b411375">getX</a> () const </td></tr>
+<tr class="memdesc:a6f5dca509c0e480d8a7b6b1d6b411375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the x coordinate. <br /></td></tr>
 <tr class="separator:a6f5dca509c0e480d8a7b6b1d6b411375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5b4e5e0bf364142fa0facc7badea4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb5b4e5e0bf364142fa0facc7badea4a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const </td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#acb5b4e5e0bf364142fa0facc7badea4a">getY</a> () const </td></tr>
+<tr class="memdesc:acb5b4e5e0bf364142fa0facc7badea4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y coordinate. <br /></td></tr>
 <tr class="separator:acb5b4e5e0bf364142fa0facc7badea4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a202624bb540acc74b678b74b60c9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22a202624bb540acc74b678b74b60c9d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setScreenSize</b> (int w, int h)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a22a202624bb540acc74b678b74b60c9d">setScreenSize</a> (int w, int h)</td></tr>
+<tr class="memdesc:a22a202624bb540acc74b678b74b60c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the screen by passing in the width and height. <br /></td></tr>
 <tr class="separator:a22a202624bb540acc74b678b74b60c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a70b63ddb6ddfa55ddf21ba9ee1ceea7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70b63ddb6ddfa55ddf21ba9ee1ceea7b"></a>
-<a class="el" href="classStage.html">Stage</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stage</b></td></tr>
-<tr class="separator:a70b63ddb6ddfa55ddf21ba9ee1ceea7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca83d54bba8108db360d158c23cf3b05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca83d54bba8108db360d158c23cf3b05"></a>
-vector&lt; vector&lt; <a class="el" href="classTile.html">Tile</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tiles</b></td></tr>
-<tr class="separator:aca83d54bba8108db360d158c23cf3b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec07d9a0c48ff9e91faa4bfd963ce7ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec07d9a0c48ff9e91faa4bfd963ce7ac"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
-<tr class="separator:aec07d9a0c48ff9e91faa4bfd963ce7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a0e61d7df45f96fd93deff6d52c6d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a0e61d7df45f96fd93deff6d52c6d57"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
-<tr class="separator:a8a0e61d7df45f96fd93deff6d52c6d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8ef0ca1e4fd96fa82c32bf59767d051"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8ef0ca1e4fd96fa82c32bf59767d051"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tilewidth</b></td></tr>
-<tr class="separator:ac8ef0ca1e4fd96fa82c32bf59767d051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a206b74c28bb8eb3be5bf30f7611815dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a206b74c28bb8eb3be5bf30f7611815dc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tileheight</b></td></tr>
-<tr class="separator:a206b74c28bb8eb3be5bf30f7611815dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae40a7c1aec8beb39a60876d07338f88f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae40a7c1aec8beb39a60876d07338f88f"></a>
-<a class="el" href="classObject.html">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><b>screen</b></td></tr>
-<tr class="separator:ae40a7c1aec8beb39a60876d07338f88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a703a2892808b942817dd84072de22bc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a703a2892808b942817dd84072de22bc5"></a>
-<a class="el" href="classCollision.html">Collision</a>&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
-<tr class="separator:a703a2892808b942817dd84072de22bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f522671fde4a9d25945a9df651f6e28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f522671fde4a9d25945a9df651f6e28"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a6f522671fde4a9d25945a9df651f6e28">setPrecise</a> (bool p)</td></tr>
+<tr class="memdesc:a6f522671fde4a9d25945a9df651f6e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a>. <br /></td></tr>
+<tr class="separator:a6f522671fde4a9d25945a9df651f6e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="level_8h_source.html#l00008">8</a> of file <a class="el" href="level_8h_source.html">level.h</a>.</p>
+<div class="textblock"><p>This class stores a <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> and Objects and can move them and display them. </p>
+
+<p>Definition at line <a class="el" href="level_8h_source.html#l00009">9</a> of file <a class="el" href="level_8h_source.html">level.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="level_8h_source.html">level.h</a></li>
 <li><a class="el" href="level_8cpp_source.html">level.cpp</a></li>

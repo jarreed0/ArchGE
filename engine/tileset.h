@@ -4,6 +4,7 @@
 #include <vector>
 #include "tile.h"
 
+//! Class for loading in multiple Tiles.
 class Tileset {
 private:
   vector<Tile> tiles;

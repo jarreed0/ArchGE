@@ -5,6 +5,7 @@
 #include "stage.h"
 #include "collision.h"
 
+//! This class stores a Stage and Objects and can move them and display them.
 class Level {
 private:
   Stage stage;
@@ -13,23 +14,40 @@ private:
   int tilewidth, tileheight;
   Object screen;
   Collision col;
+  bool precise;
 public:
   Level();
   ~Level();
+  //! Create the Level based on the given stage.
   void create();
+  //! Give a Stage to the Level.
   void setStage(Stage s) { stage = s; }
+  //! Create a Stage for the Level by giving a Map and a Tileset.
   void setStage(Map m, Tileset t) { stage.setMap(m); stage.setTileset(t); }
+  //! Scale the Level by giving it the width and height to scale by.
   void setScale(int w, int h);
+  //! Scale the Level by giving it a single integer to scale by.
   void setScale(int s) { setScale(s, s); }
+  //! Calculate the position of the level based on coordinates.
   void calcPos();
+  //! Return the Tiles that are currently on the screen.
   vector<Tile> getTilesToRender();
+  //! Move the screen by passing in how much to move on the x and y coordinates.
   void move(int mx, int my);
+  //! Set the coordinate for the screen with a given x and y.
   void setCoord(double x, double y) { setX(x); setY(y); screen.setPosCoord(getX(), getY()); }
+  //! Set the x coordinate.
   void setX(double x) { this->x = x; }
+  //! Set the y coordinate.
   void setY(double y) { this->y = y; }
+  //! Get the x coordinate.
   double getX() const { return x; }
+  //! Get the y coordinate.
   double getY() const { return y; }
+  //! Set the size of the screen by passing in the width and height.
   void setScreenSize(int w, int h) { screen.setPosSize(w, h); }
+  //! Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that Tile.
+  void setPrecise(bool p) { precise = p; }
 };
 
 #endif //LEVEL_H

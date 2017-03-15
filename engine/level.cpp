@@ -2,27 +2,12 @@
 
 Level::Level() {
   screen.setPos(0, 0, 1000, 1000);
+  precise = false;
 }
 Level::~Level() {}
 
 void Level::create() {
-  vector<Tile> row;
-  tilewidth=stage.getTileset().getTileset()[stage.getMap().getMap()[0][0]].getPosW();
-  tileheight=stage.getTileset().getTileset()[stage.getMap().getMap()[0][0]].getPosH();
-  for(int r=0; r<stage.getMap().getMap().size(); r++) {
-    row.empty(); row.clear();
-    for(int c=0; c<stage.getMap().getMap()[r].size(); c++) {
-      if(stage.getMap().getMap()[r][c] != 0) {
-        Tile tmp = stage.getTileset().getTileset()[stage.getMap().getMap()[r][c]];
-        tmp.setValue(stage.getMap().getMap()[r][c]);
-        tmp.setFrame(stage.getTileset().getFrame(tmp.getValue()));
-        tmp.setPosCoord(c*tmp.getPosW(), r*tmp.getPosH());
-        tmp.setCoord(c, r);
-        row.push_back(tmp);
-      }
-    }
-    tiles.push_back(row);
-  }
+  setScale(stage.getTileset().getTileset()[stage.getMap().getMap()[0][0]].getPosW(), stage.getTileset().getTileset()[stage.getMap().getMap()[0][0]].getPosH());
 }
 
 void Level::setScale(int w, int h) {
@@ -45,6 +30,8 @@ void Level::setScale(int w, int h) {
     }
     tiles.push_back(row);
   }
+  setCoord(stage.getMap().getX(), stage.getMap().getY());
+  if(precise) setCoord(stage.getMap().getX()*tilewidth, stage.getMap().getY()*tileheight);
 }
 
 void Level::move(int mx, int my) {

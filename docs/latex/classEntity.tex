@@ -24,7 +24,7 @@ Collaboration diagram for Entity\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=198pt]{classEntity__coll__graph}
+\includegraphics[width=125pt]{classEntity__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -72,45 +72,21 @@ void \hyperlink{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}{deactivate} ()\hy
 void \hyperlink{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{activate} ()\hypertarget{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{}\label{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}
 
 \begin{DoxyCompactList}\small\item\em Sets active to true. \end{DoxyCompactList}\item 
-void {\bfseries check\+Displayable} (\hyperlink{classObject}{Object} screen)\hypertarget{classEntity_a63aac9638f79f0608b08f28b8cdc718e}{}\label{classEntity_a63aac9638f79f0608b08f28b8cdc718e}
+void \hyperlink{classEntity_a63aac9638f79f0608b08f28b8cdc718e}{check\+Displayable} (\hyperlink{classObject}{Object} screen)\hypertarget{classEntity_a63aac9638f79f0608b08f28b8cdc718e}{}\label{classEntity_a63aac9638f79f0608b08f28b8cdc718e}
 
-\item 
-S\+D\+L\+\_\+\+Rect {\bfseries get\+Detect} () const \hypertarget{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}{}\label{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}
+\begin{DoxyCompactList}\small\item\em Checks if an the \hyperlink{classEntity}{Entity} is in the current screen by passing the screen to it. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}{get\+Detect} () const \hypertarget{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}{}\label{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}
 
-\item 
-void {\bfseries set\+Detect} (S\+D\+L\+\_\+\+Rect d)\hypertarget{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}{}\label{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}
+\begin{DoxyCompactList}\small\item\em Returns the detection radius. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}{set\+Detect} (S\+D\+L\+\_\+\+Rect d)\hypertarget{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}{}\label{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}
 
-\item 
-void {\bfseries set\+Detect\+Range} (int r)\hypertarget{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{}\label{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}
+\begin{DoxyCompactList}\small\item\em Sets the detection with another S\+D\+L\+\_\+\+Rect. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{set\+Detect\+Range} (int r)\hypertarget{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{}\label{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}
 
-\item 
-void {\bfseries set\+Detect\+Range} (int w, int h)\hypertarget{classEntity_af4b91451301036e4aed029e90a7ba726}{}\label{classEntity_af4b91451301036e4aed029e90a7ba726}
+\begin{DoxyCompactList}\small\item\em Sets the detection radius with a single given distance. \end{DoxyCompactList}\item 
+void \hyperlink{classEntity_af4b91451301036e4aed029e90a7ba726}{set\+Detect\+Range} (int w, int h)\hypertarget{classEntity_af4b91451301036e4aed029e90a7ba726}{}\label{classEntity_af4b91451301036e4aed029e90a7ba726}
 
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-double \hyperlink{classEntity_af5e13d4ed49e8f2954112784a73939ce}{health}\hypertarget{classEntity_af5e13d4ed49e8f2954112784a73939ce}{}\label{classEntity_af5e13d4ed49e8f2954112784a73939ce}
-
-\begin{DoxyCompactList}\small\item\em Int for the \hyperlink{classEntity}{Entity}\textquotesingle{}s health. \end{DoxyCompactList}\item 
-double \hyperlink{classEntity_a814aed95740c20b413e7acf387da9e9b}{max\+Health}\hypertarget{classEntity_a814aed95740c20b413e7acf387da9e9b}{}\label{classEntity_a814aed95740c20b413e7acf387da9e9b}
-
-\begin{DoxyCompactList}\small\item\em Int for the Enitity\textquotesingle{}s max health. \end{DoxyCompactList}\item 
-int \hyperlink{classEntity_a85a5efaff91b778e660972a9edcd1f27}{emotion}\hypertarget{classEntity_a85a5efaff91b778e660972a9edcd1f27}{}\label{classEntity_a85a5efaff91b778e660972a9edcd1f27}
-
-\begin{DoxyCompactList}\small\item\em Int for creating a range of emotional states. \end{DoxyCompactList}\item 
-int \hyperlink{classEntity_ad87a0ad851b569ef13889d903d502079}{team}\hypertarget{classEntity_ad87a0ad851b569ef13889d903d502079}{}\label{classEntity_ad87a0ad851b569ef13889d903d502079}
-
-\begin{DoxyCompactList}\small\item\em Int for setting the team the \hyperlink{classEntity}{Entity} is on. \end{DoxyCompactList}\item 
-bool \hyperlink{classEntity_a939da33e8b67b1d2ee227930aa72da3b}{active}\hypertarget{classEntity_a939da33e8b67b1d2ee227930aa72da3b}{}\label{classEntity_a939da33e8b67b1d2ee227930aa72da3b}
-
-\begin{DoxyCompactList}\small\item\em Boolean for declaring if an entity is active. \end{DoxyCompactList}\item 
-\hyperlink{classCollision}{Collision} {\bfseries col}\hypertarget{classEntity_ac09df9ac08d40a60519392f49bed4fa1}{}\label{classEntity_ac09df9ac08d40a60519392f49bed4fa1}
-
-\item 
-S\+D\+L\+\_\+\+Rect {\bfseries detect}\hypertarget{classEntity_a6c75cb5ab8a495f4c0bfda53a53e8432}{}\label{classEntity_a6c75cb5ab8a495f4c0bfda53a53e8432}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the detection radius with two given distances in both directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

@@ -1,4 +1,4 @@
-#include "game.h"
+h#include "game.h"
 
 Game::Game() : level(TOTAL_TILES) {
   i.logPress();
@@ -34,6 +34,10 @@ Game::~Game() {
 
 void Game::loop() {
   while(running) {
+    e.loopStart();
+    bool frame = true;
+    while(frame) {
+      e.update();
     if(falling) {
       ver=-SPEED;
     } else {
@@ -43,9 +47,10 @@ void Game::loop() {
     level.move(hor, ver);
     hor=ver=0;
     input();
-    e.preLoop();
     draw();
-    e.endLoop();
+      if(!e.FPS()) frame=false;
+    }
+    e.render();
   }
 }
 

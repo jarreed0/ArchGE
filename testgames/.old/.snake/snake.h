@@ -4,7 +4,7 @@
 #include <deque>
 #include "../../engine/engine.h"
 #include "../../engine/image.h"
-#include "../../engine/input.h"
+#include "../../engine/input-tmp.h"
 //#include "../../archge.h"
 
 class Snake {
