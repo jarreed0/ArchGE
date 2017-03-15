@@ -26,7 +26,7 @@ Created by Archeantus Games
 ## New Version of ArchGE ##
 After several long hours we finally released a new version of Arch Game Engine. The new engine implements the coordinate system, map, tilesets, and levels differently. Because of this the old sample games are no longer supported with **ArchGE 0.2**.
 
-## Update now and never have to remember to update again! ##
+## Update MANAGE now and never have to remember to update again! ##
 The newest version of manage can check for updates! and let you know about them and update without distubring your current manage process.
 
 Update with: `./manage -s`
