@@ -17,6 +17,7 @@ Created by Archeantus Games
 - [] Set up Camera/Lens movement
 - [] Fix bugs
 - [] New Input class/method
+- [] Splashscreen fix
 
 # News #
  - - - -
