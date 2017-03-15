@@ -37,11 +37,12 @@ elif [ "$1" == "doc" ] || [ "$1" == "-dc" ]; then
   cd ../docs/latex/
   make > /dev/null
   cd ../..
-  echo "You may get errors here. That is okay."
-  cp -R docs/ ../eportfolio/archge/
-  cd ../eportfolio
-  ./rsycn.sh
-  cd ../ArchGE
+  if [ $USER == "avery"  ]; then
+    cp -R docs/ ../eportfolio/archge/
+    cd ../eportfolio
+    ./rsync.sh
+    cd ../ArchGE
+  fi
 elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   manage clean
   STAT=$(git status | grep engine)
@@ -119,7 +120,7 @@ elif [ "$1" == "setup" ] || [ "$1" == "-s" ]; then
     #move to bin
     sudo cp manage /usr/local/bin/
     sudo chmod a+x /usr/local/bin/manage
-    echo "Completed. You can now run wihtout ./ and from anywhere."
+    echo "Completed. You can now run without ./ and from anywhere."
   fi
 elif [ "$1" == "create" ] || [ "$1" == "-c" ]; then
   echo -n "Would you like to clone a branch or make a new branch (c/n): "
