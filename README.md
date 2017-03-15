@@ -160,7 +160,7 @@ Object chest;
 chest.setImage("chest.png");
 chest.setFrame(0, 0, 25, 45); //x, y, width, height of source to parse from image
 chest.setDest(100, 200, 25, 45); //x, y, width, height of where to display the object
-chest.setPost(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
+chest.setPos(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
 ```
 
 Declaration of an Entity
@@ -169,7 +169,7 @@ Entity character;
 character.setImage("player.png");
 character.setFrame(0, 0, 25, 45); //x, y, width, height of source to parse from image
 character.setDest(100, 200, 25, 45); //x, y, width, height of where to display the object
-character.setPost(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
+character.setPos(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
 character.setMaxHealth(100);
 character.setHealth(90);
 ```
