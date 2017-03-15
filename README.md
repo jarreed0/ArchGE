@@ -158,9 +158,9 @@ Declaration of an Object
 ```
 Object chest;
 chest.setImage("chest.png");
-chest.setFrame(0, 0, 25, 45); //x, y, width, height of source to parse from image
-chest.setDest(100, 200, 25, 45); //x, y, width, height of where to display the object
-chest.setPos(250, 350, 25, 45); //x, y, width, height of where the object is relative to the Level
+chest.setFrame(0, 0, 55, 35); //x, y, width, height of source to parse from image
+chest.setDest(100, 200, 55, 35); //x, y, width, height of where to display the object
+chest.setPos(250, 350, 55, 35); //x, y, width, height of where the object is relative to the Level
 ```
 
 Declaration of an Entity
