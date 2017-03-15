@@ -2,7 +2,7 @@
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
-# Check out our NEW [PDF](docs/latex/refman.pdf) documentation for ArchGE! #
+# Check out our NEW [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) documentation for ArchGE! #
 # Check out the NEW [online docs](http://jar.ylimaf.com/archge/docs/html/annotated.html) #
 
 # Under Heavy Development #
