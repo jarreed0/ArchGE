@@ -1,12 +1,18 @@
-#ArchGE - A 2D Game Engine written in C++ and using SDL2
+#ArchGE 0.2 - A 2D Game Engine written in C++ and using SDL2
 
-Also the splashscreen doesn't work anymore so bypass it like how it in this [example](testgames/test/main.cpp).
+The splashscreen doesn't work anymore so bypass it like how it in this [example](testgames/test/main.cpp).
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
 #Check out our NEW [PDF](docs/latex/refman.pdf) documentation for ArchGE!
 
 #Under Heavy Development
+##Next Update: (will include)
+-Object coordinate system
+-Object movement
+-Adding Objects (and there children to a Level)
+-Have screen follow a specific Object (the player).
+-Set up Camera/Lens movement
 
 #Manage
 
