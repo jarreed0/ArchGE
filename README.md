@@ -8,7 +8,7 @@
 ## Next Update: (will include) ##
 - [] Object coordinate system
 - [] Object movement
-- [] Adding Objects (and there children to a Level)
+- [] Adding Objects (and there children) to a Level
 - [] Have screen follow a specific Object (the player).
 - [] Set up Camera/Lens movement
 - [] Fix bugs
