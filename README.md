@@ -52,7 +52,7 @@ The known bugs include the following:
  *Because of this there is a few bugs from the previous ArchGE version.
  *Update on the way!
 
-Now of any other bugs? Let us know!
+Know of any other bugs? Let us know!
 
 ![alt tag](docs/screenshots/genesis.png)
 
