@@ -46,7 +46,7 @@ The known bugs include the following:
 
 - The splashscreen no longer works.
  We are currently working on this right now!
- Bypass it with the debugMode() feature: `engine.debug()` after initialization.
+ Bypass it with the `debugMode()` feature.
 - Input! Input! Input!
  The input class, sadly didn't have any sort of overhaul in the latest update.
  Because of this there is a few bugs from the previous ArchGE version.
