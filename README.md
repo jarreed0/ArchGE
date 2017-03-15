@@ -1,4 +1,5 @@
 # ArchGE 0.2 - A 2D Game Engine written in C++ and using SDL2 #
+Created by Archeantus Games
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
@@ -192,3 +193,8 @@ Update with: `./manage -s`
 
 And yes I know it is a little cluttered and keep in mind it has a few errors.
 
+- - - -
+
+Archeantus Games
+[Website](http://archeantus.net/)
+![alt tag](http://archeantus.net/images/logo.png)
