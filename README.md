@@ -72,11 +72,6 @@ Setting in debug mode (required as of now because of broken splashscreen)
 
 Currently the debug mode is only used to bypass the splashscreen, eventually is will have more tools for debuggers.
 
-## Build The Game ##
-`g++ *.cpp arch.a -lSDL2 -lSDL2_image -std=c++11`
-
-Makefile generation coming soon.
-
 Creating the window
 ```string NAME = "Window Title";
 int WIDTH = 750; //Window width;
@@ -150,6 +145,11 @@ Draw the Level
 Move the Level
 
 `level.move(mx, my)`
+
+## Build The Game ##
+`g++ *.cpp arch.a -lSDL2 -lSDL2_image -std=c++11`
+
+Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
