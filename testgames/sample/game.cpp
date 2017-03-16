@@ -45,18 +45,25 @@ void Game::draw() {
 }
 
 void Game::input() {
-  r=l=u=d=false;
   i.logPress();
   if(i.checkKey(i.esc) || i.checkKey(i.quit)) running = false;
   if(i.checkKey(i.left)) l=true;
+  if(!i.checkKey(i.left)) l=false;
   if(i.checkKey(i.right)) r=true;
+  if(!i.checkKey(i.right)) r=false;
   if(i.checkKey(i.up)) u=true;
+  if(!i.checkKey(i.up)) u=false;
   if(i.checkKey(i.down)) d=true;
+  if(!i.checkKey(i.down)) d=false;
 }
 
 void Game::update() {
+mcount++;
+if(mcount >= mdelay) {
+  mcount = 0;
   if(l) level.move(-SPEED, 0);
   if(r) level.move(SPEED, 0);
-  if(d) level.move(0, -SPEED);
-  if(u) level.move(0, SPEED);
+  if(d) level.move(0, SPEED);
+  if(u) level.move(0, -SPEED);
+}
 }

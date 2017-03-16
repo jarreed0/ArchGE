@@ -14,7 +14,7 @@
 
 #define TILE_SIZE 24
 #define TOTAL_TILES 60
-#define SPEED 2
+#define SPEED 1
 #define WIDTH 750
 #define HEIGHT 550
 
@@ -29,6 +29,7 @@ private:
   Tileset tileset;
   bool l, r, u, d;
   Entity player;
+  int mcount = 0, mdelay = 20;
 public:
   Game();
   ~Game();
