@@ -15,7 +15,7 @@ public:
   //! Check if a key has been pressed using a given key from this class. Ex: Input i; i.checkKey(i.up);
   bool checkKey(int k);
   //! Reset all pressed keystrokes and other inputs to false. Automatically down at the beginning of each logPress().
-  void reset();
+  bool reset();
   int left; //!< Log ID for left
   int right; //!< Log ID for right
   int up; //!< Log ID for up
@@ -60,7 +60,7 @@ public:
   int mousey; //!< Log ID for mouse y coordinate
 private:
   //! Array that stores what buttons are down.
-  bool keys[50];
+  bool keys[51];
 };
 
 #endif //INPUT_H

@@ -46,7 +46,7 @@ Input::Input() {
 Input::~Input() {}
 
 void Input::logPress() {
-  reset();
+  bool done = reset();
   SDL_Event event;
   while(SDL_PollEvent(&event)) {
     switch(event.type) {
@@ -115,10 +115,13 @@ bool Input::checkKey(int k) {
   return keys[k];
 }
 
-void Input::reset() {
+bool Input::reset() {
   //NEED TO LOOP THROUGH KEYS[] AND SET THEM ALL TO false
   //THE LOOP BELOW CAUSES THE GAME TO CRASH
+  keys[44] = 0;
+  keys[45] = 0;
   for(int i; i<sizeof(keys); i++) {
     keys[i] = 0;
   }
+  return true;
 }

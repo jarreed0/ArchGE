@@ -2,7 +2,7 @@
 
 Game::Game() {
   e.debugMode(true);
-  e.init("Tron", WIDTH, HEIGHT, 0); //SPLASH DOESN'T WORK, NEED TO FIX!!!
+  e.init("Tron", WIDTH, HEIGHT, 0);
   e.setColor(0x00, 0x08, 0x99);
   running = true;
   arena.setDest(0, 0, WIDTH, HEIGHT);
@@ -31,7 +31,7 @@ void Game::loop() {
       input();
       update();
       draw();
-      if(!e.FPS()) frame=false;
+      if(!e.FPS()) { frame=false; }
     }
     e.render();
   }
@@ -45,7 +45,7 @@ void Game::draw() {
 void Game::input() {
   r=l=u=d=false;
   i.logPress();
-  if(i.checkKey(i.esc) || i.checkKey(i.quit)) running = false;
+  if(i.checkKey(i.esc) || (i.checkKey(i.quit))) running = false;
   if(i.checkKey(i.a)) l = true;
   if(i.checkKey(i.d)) r = true;
   if(i.checkKey(i.w)) u = true;
@@ -70,7 +70,7 @@ void Game::update() {
 }
 
 void Game::drawTiles() {
-  for(int i = 0; i < 10; i++) {
+ for(int i = 0; i < 10; i++) {
     for(int j = 0; j < 8; j++) {
       tile.setDest(i * 64, j * 64, 64, 64);
       e.draw(tile);
