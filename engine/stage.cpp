@@ -32,6 +32,6 @@ Tileset Stage::setTileset(int startid, string name, string img, SDL_Renderer* re
   return tileset;
 }
 Tileset Stage::setTileset(int startid, string name, string img, SDL_Renderer* ren, int width, int height, int r, int rcount, int count) {
-  tileset.create(startid, name, img, ren, width, r, rcount, count);
+  tileset.create(startid, name, img, ren, width, height, r, rcount, count);
   return tileset;
 }

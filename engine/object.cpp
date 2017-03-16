@@ -7,7 +7,7 @@ Object::Object() {
 Object::~Object() {}
 
 void Object::center(int w, int h) {
-  setDest(getFrameW(), getFrameH(), (w/2)-(getFrameW()/2), (h/2)-(getFrameH()/2));
+  setDestCoord((w/2)-(getDestW()/2), (h/2)-(getDestH()/2));
 }
 
 void Object::setName(string s) {
