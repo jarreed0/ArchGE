@@ -11,9 +11,8 @@
 #include "../../engine/stage.h"
 #include "../../engine/level.h"
 #include "../../engine/physics-tmp.h"
+#include "../../engine/gamestate.h"
 
-#define TILE_SIZE 24
-#define TOTAL_TILES 60
 #define SPEED 2
 #define WIDTH 640
 #define HEIGHT 480
@@ -26,8 +25,10 @@ private:
   Object arena;
   Object bike;
   Object tile;
+  Object logo;
+  GameState gs;
   bool l, r, u, d;
-  int vel, mcount = 0;
+  int vel, mcount = 0, scount = 0, sdelay = 1000;
 public:
   Game();
   ~Game();

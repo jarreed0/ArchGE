@@ -3,10 +3,13 @@
 Game::Game() {
   e.debugMode(true);
   e.init("Tron", WIDTH, HEIGHT, 0);
-  e.setColor(0x00, 0x08, 0x99);
+  e.setColor(0xff, 0xff, 0xff);
   running = true;
   arena.setDest(0, 0, WIDTH, HEIGHT);
-  bike.setImage("bike.png", e.getRenderer());
+  logo.setImage("res/engine-logo.png", e.getRenderer());
+  logo.setFrame(0, 0, 256, 256);
+  logo.center(WIDTH, HEIGHT);
+  bike.setImage("res/bike.png", e.getRenderer());
   bike.setFrame(0, 0, 64, 64);
   bike.setAngle(180);
   facedown = true;
@@ -15,9 +18,9 @@ Game::Game() {
   faceleft = false;
   vel = 30;
   bike.setDest(100, 100, 64, 64);
-  tile.setImage("tile.png", e.getRenderer());
+  tile.setImage("res/tile.png", e.getRenderer());
   tile.setFrame(0, 0, 64, 64);
-
+  gs.setGameState(gs.INGAME);
   loop();
 }
 Game::~Game() {}
@@ -38,18 +41,25 @@ void Game::loop() {
 }
 
 void Game::draw() {
-  drawTiles();
-  e.draw(bike);
+  /*if(gs.getGameState() == gs.SPLASH) {
+    e.draw(logo);
+    scount++;
+    if(scount >= sdelay) {scount = 0; gs.setGameState(gs.INGAME);}
+  }*/
+  if(gs.getGameState() == gs.INGAME) {
+    drawTiles();
+    e.draw(bike);
+  }
 }
 
 void Game::input() {
   r=l=u=d=false;
   i.logPress();
   if(i.checkKey(i.esc) || (i.checkKey(i.quit))) running = false;
-  if(i.checkKey(i.a)) l = true;
-  if(i.checkKey(i.d)) r = true;
-  if(i.checkKey(i.w)) u = true;
-  if(i.checkKey(i.s)) d = true;
+  if(i.checkKey(i.left)) l = true;
+  if(i.checkKey(i.right)) r = true;
+  if(i.checkKey(i.up)) u = true;
+  if(i.checkKey(i.down)) d = true;
 }
 
 void Game::update() {
