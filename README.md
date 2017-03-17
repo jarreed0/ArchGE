@@ -16,8 +16,8 @@ Created by Archeantus Games
 - [] Have screen follow a specific Object (the player).
 - [] Set up Camera/Lens movement
 - [] Fix bugs
-- [] New Input class/method
-- [] Splashscreen fix
+- [] New Input class/method - Done
+- [] Splashscreen fix - In Progress using Gamestate class
 
 # News #
  - - - -
