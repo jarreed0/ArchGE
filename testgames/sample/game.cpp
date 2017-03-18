@@ -63,7 +63,7 @@ if(mcount >= mdelay) {
   mcount = 0;
   if(l) level.move(-SPEED, 0);
   if(r) level.move(SPEED, 0);
-  if(d) level.move(0, SPEED);
-  if(u) level.move(0, -SPEED);
+  if(d) level.move(0, -SPEED);
+  if(u) level.move(0, SPEED);
 }
 }

@@ -35,7 +35,7 @@ void Level::setScale(int w, int h) {
 }
 
 void Level::move(int mx, int my) {
-  setCoord(getX()+mx, getY()+my);
+  setCoord(getX()+mx, getY()-my);
 }
 
 vector<Tile> Level::getTilesToRender() {

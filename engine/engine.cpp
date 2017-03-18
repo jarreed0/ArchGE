@@ -125,7 +125,7 @@ void Engine::splash() {
   setColor(0xff, 0xff, 0xff);
   Object s;
   //b.setImage("http://archeantus.net/images/splash.bmp", getRenderer());
-  s.setImage("/home/avery/Desktop/ArchGE(old_copies)/ArchGE_10/engine/res/engine-logo.png", getRenderer());
+  s.setImage("../../engine/res/engine-logo.png", getRenderer());
   s.setFrame(0, 0, 256, 256);
   s.center(WIDTH, HEIGHT);
   draw(s, 4231998);

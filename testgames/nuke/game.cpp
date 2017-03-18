@@ -3,19 +3,22 @@
 Game::Game() {
   e.debugMode(true);
   e.init("Nuke", WIDTH, HEIGHT, 0); //SPLASH DOESN'T WORK, NEED TO FIX!!!
-  e.setColor(0x90, 0x75, 0x60);
+  //e.setColor(0x00, 0xff, 0x80);
+  e.setColor(0x00, 0x08, 0x99);
   //e.setBackground("../../engine/res/engine-logo.png");
+  tileset.create("tiles", "res/tiles.png", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/8, 8, TOTAL_TILES);
+  map.loadMap("res/map");
   level.setPrecise(true);
-  level.setScreenSize(WIDTH, HEIGHT);
-  stage.createStage("res/map", "tiles", "res/tiles.png", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/TILES_PER_ROW, TILES_PER_ROW, TOTAL_TILES);
+  stage.createStage(map, tileset);
   level.setStage(stage);
   level.create();
+  //level.setScale(40, 40);
+  level.setScreenSize(WIDTH, HEIGHT);
   running = true;
   player.setImage("res/player.png", e.getRenderer());
   player.setFrame(0, 0, 45, 45);
   player.setDest(250, 200, 45, 45);
   player.setPos(0, 0, 45, 45);
-  player.center(WIDTH, HEIGHT);
   loop();
 }
 Game::~Game() {
@@ -42,18 +45,25 @@ void Game::draw() {
 }
 
 void Game::input() {
-  r=l=u=d=false;
   i.logPress();
   if(i.checkKey(i.esc) || i.checkKey(i.quit)) running = false;
   if(i.checkKey(i.left)) l=true;
+  if(!i.checkKey(i.left)) l=false;
   if(i.checkKey(i.right)) r=true;
+  if(!i.checkKey(i.right)) r=false;
   if(i.checkKey(i.up)) u=true;
+  if(!i.checkKey(i.up)) u=false;
   if(i.checkKey(i.down)) d=true;
+  if(!i.checkKey(i.down)) d=false;
 }
 
 void Game::update() {
+mcount++;
+if(mcount >= mdelay) {
+  mcount = 0;
   if(l) level.move(-SPEED, 0);
   if(r) level.move(SPEED, 0);
   if(d) level.move(0, -SPEED);
   if(u) level.move(0, SPEED);
+}
 }

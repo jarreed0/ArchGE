@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['level',['Level',['../classLevel.html',1,'']]]
+  ['image',['Image',['../classImage.html',1,'']]],
+  ['input',['Input',['../classInput.html',1,'']]]
 ];

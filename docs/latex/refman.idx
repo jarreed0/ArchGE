@@ -2,12 +2,13 @@
 \indexentry{Collision@{Collision}|hyperpage}{6}
 \indexentry{Engine@{Engine}|hyperpage}{7}
 \indexentry{Entity@{Entity}|hyperpage}{8}
+\indexentry{Game\+State@{Game\+State}|hyperpage}{10}
 \indexentry{Image@{Image}|hyperpage}{10}
 \indexentry{Input@{Input}|hyperpage}{11}
-\indexentry{Level@{Level}|hyperpage}{13}
-\indexentry{Map@{Map}|hyperpage}{14}
+\indexentry{Level@{Level}|hyperpage}{14}
+\indexentry{Map@{Map}|hyperpage}{15}
 \indexentry{Object@{Object}|hyperpage}{15}
-\indexentry{Physics@{Physics}|hyperpage}{17}
+\indexentry{Physics@{Physics}|hyperpage}{18}
 \indexentry{Stage@{Stage}|hyperpage}{18}
 \indexentry{Tile@{Tile}|hyperpage}{19}
 \indexentry{Tileset@{Tileset}|hyperpage}{20}
