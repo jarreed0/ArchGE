@@ -101,12 +101,23 @@ void Engine::draw(Object obj, int key) {
 }
 void Engine::draw(Level lvl) {
   if(splashed) {
-    vector<Tile> tmp;
-    tmp = lvl.getTilesToRender();
-    for(int i=0; i<tmp.size(); i++) {
-      SDL_Rect src = tmp[i].getFrame();
-      SDL_Rect des = tmp[i].getDest();
-      SDL_RenderCopyEx(engren, tmp[i].getImage().getTexture(), &src, &des, tmp[i].getAngle(), NULL, SDL_FLIP_NONE);
+    vector<Tile> tiles = lvl.getTilesToRender();
+    for(int i=0; i<tiles.size(); i++) {
+      SDL_Rect src = tiles[i].getFrame();
+      SDL_Rect des = tiles[i].getDest();
+      SDL_RenderCopyEx(engren, tiles[i].getImage().getTexture(), &src, &des, tiles[i].getAngle(), NULL, SDL_FLIP_NONE);
+    }
+    vector<Object> objects = lvl.getObjectsToRender();
+    for(int i=0; i<objects.size(); i++) {
+      SDL_Rect src = objects[i].getFrame();
+      SDL_Rect des = objects[i].getDest();
+      SDL_RenderCopyEx(engren, objects[i].getImage().getTexture(), &src, &des, objects[i].getAngle(), NULL, SDL_FLIP_NONE);
+    }
+    vector<Entity> entities = lvl.getEntitiesToRender();
+    for(int i=0; i<entities.size(); i++) {
+      SDL_Rect src = entities[i].getFrame();
+      SDL_Rect des = entities[i].getDest();
+      SDL_RenderCopyEx(engren, entities[i].getImage().getTexture(), &src, &des, entities[i].getAngle(), NULL, SDL_FLIP_NONE);
     }
   }
 }

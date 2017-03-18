@@ -53,3 +53,45 @@ vector<Tile> Level::getTilesToRender() {
   }
   return tilesToRender;
 }
+
+vector<Object> Level::getObjectsToRender() {
+  vector<Object> objectsToRender;
+  for(int i=0; i<objects.size(); i++) {
+    if(col.isTouching(screen, objects[i])) {
+      objects[i].setDisplayable(true);
+      objects[i].setDestCoord(objects[i].getPosX()-screen.getPosX(), objects[i].getPosY()-screen.getPosY());
+      objectsToRender.push_back(objects[i]);
+    } else {
+      objects[i].setDisplayable(false);
+    }
+  }
+  return objectsToRender;
+}
+
+vector<Entity> Level::getEntitiesToRender() {
+  vector<Entity> entitiesToRender;
+  for(int i=0; i<entities.size(); i++) {
+    if(col.isTouching(screen, entities[i])) {
+      entities[i].setDisplayable(true);
+      entities[i].setDestCoord(entities[i].getPosX()-screen.getPosX(), entities[i].getPosY()-screen.getPosY());
+      entitiesToRender.push_back(entities[i]);
+    } else {
+      entities[i].setDisplayable(false);
+    }
+  }
+  return entitiesToRender;
+}
+
+void Level::addObject(Object o) {
+  objects.push_back(o);
+}
+void Level::addObject(vector<Object> o) {
+  objects.insert(objects.end(), o.begin(), o.end());
+}
+
+void Level::addEntity(Entity e) {
+  entities.push_back(e);
+}
+void Level::addEntity(vector<Entity> e) {
+  entities.insert(entities.end(), e.begin(), e.end());
+}

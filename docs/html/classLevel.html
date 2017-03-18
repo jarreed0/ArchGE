@@ -126,6 +126,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#ade9e45f70f2f3f81c120bb161f87218f">getTilesToRender</a> ()</td></tr>
 <tr class="memdesc:ade9e45f70f2f3f81c120bb161f87218f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Tiles that are currently on the screen. <br /></td></tr>
 <tr class="separator:ade9e45f70f2f3f81c120bb161f87218f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d185e702151c5b5764c1cadcd9064d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80d185e702151c5b5764c1cadcd9064d"></a>
+vector&lt; <a class="el" href="classObject.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a80d185e702151c5b5764c1cadcd9064d">getObjectsToRender</a> ()</td></tr>
+<tr class="memdesc:a80d185e702151c5b5764c1cadcd9064d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Objects that are currently on the screen. <br /></td></tr>
+<tr class="separator:a80d185e702151c5b5764c1cadcd9064d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a95e314e19e1fdba6850e9aa8da856e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a95e314e19e1fdba6850e9aa8da856e"></a>
+vector&lt; <a class="el" href="classEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a1a95e314e19e1fdba6850e9aa8da856e">getEntitiesToRender</a> ()</td></tr>
+<tr class="memdesc:a1a95e314e19e1fdba6850e9aa8da856e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Entities that are currently on the screen. <br /></td></tr>
+<tr class="separator:a1a95e314e19e1fdba6850e9aa8da856e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9184b25173fbf468a63a633bd3510bd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9184b25173fbf468a63a633bd3510bd6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a9184b25173fbf468a63a633bd3510bd6">move</a> (int mx, int my)</td></tr>
 <tr class="memdesc:a9184b25173fbf468a63a633bd3510bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the screen by passing in how much to move on the x and y coordinates. <br /></td></tr>
@@ -158,11 +166,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a6f522671fde4a9d25945a9df651f6e28">setPrecise</a> (bool p)</td></tr>
 <tr class="memdesc:a6f522671fde4a9d25945a9df651f6e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a>. <br /></td></tr>
 <tr class="separator:a6f522671fde4a9d25945a9df651f6e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e4149562c645b6ee11e7a0338dc6d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85e4149562c645b6ee11e7a0338dc6d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a85e4149562c645b6ee11e7a0338dc6d6">addObject</a> (<a class="el" href="classObject.html">Object</a> o)</td></tr>
+<tr class="memdesc:a85e4149562c645b6ee11e7a0338dc6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <a class="el" href="classObject.html" title="This class stores information for an Object in the game. ">Object</a> to <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a>. <br /></td></tr>
+<tr class="separator:a85e4149562c645b6ee11e7a0338dc6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227e7b01aecb4cfd14cd54233788dee2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a227e7b01aecb4cfd14cd54233788dee2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a227e7b01aecb4cfd14cd54233788dee2">addObject</a> (vector&lt; <a class="el" href="classObject.html">Object</a> &gt; o)</td></tr>
+<tr class="memdesc:a227e7b01aecb4cfd14cd54233788dee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add vector of Objects to <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a>. <br /></td></tr>
+<tr class="separator:a227e7b01aecb4cfd14cd54233788dee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0f8443d6a9d7d2c67729c2a8054054"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b0f8443d6a9d7d2c67729c2a8054054"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a5b0f8443d6a9d7d2c67729c2a8054054">addEntity</a> (<a class="el" href="classEntity.html">Entity</a> e)</td></tr>
+<tr class="memdesc:a5b0f8443d6a9d7d2c67729c2a8054054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <a class="el" href="classEntity.html" title="Class for storing health, emotion, team, etc. of an Object. ">Entity</a> to <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a>. <br /></td></tr>
+<tr class="separator:a5b0f8443d6a9d7d2c67729c2a8054054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4584d5aa383888461406de600a43c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c4584d5aa383888461406de600a43c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLevel.html#a6c4584d5aa383888461406de600a43c1">addEntity</a> (vector&lt; <a class="el" href="classEntity.html">Entity</a> &gt; e)</td></tr>
+<tr class="memdesc:a6c4584d5aa383888461406de600a43c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add vector of <a class="el" href="classEntity.html" title="Class for storing health, emotion, team, etc. of an Object. ">Entity</a>'s to <a class="el" href="classLevel.html" title="This class stores a Stage and Objects and can move them and display them. ">Level</a>. <br /></td></tr>
+<tr class="separator:a6c4584d5aa383888461406de600a43c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class stores a <a class="el" href="classStage.html" title="The Stage class stores a Map and Tileset. ">Stage</a> and Objects and can move them and display them. </p>
 
-<p>Definition at line <a class="el" href="level_8h_source.html#l00009">9</a> of file <a class="el" href="level_8h_source.html">level.h</a>.</p>
+<p>Definition at line <a class="el" href="level_8h_source.html#l00010">10</a> of file <a class="el" href="level_8h_source.html">level.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="level_8h_source.html">level.h</a></li>
 <li><a class="el" href="level_8cpp_source.html">level.cpp</a></li>

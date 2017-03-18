@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "stage.h"
+#include "entity.h"
 #include "collision.h"
 
 //! This class stores a Stage and Objects and can move them and display them.
@@ -10,6 +11,8 @@ class Level {
 private:
   Stage stage;
   vector< vector<Tile>> tiles;
+  vector<Object> objects;
+  vector<Entity> entities;
   double x, y;
   int tilewidth, tileheight;
   Object screen;
@@ -32,6 +35,10 @@ public:
   void calcPos();
   //! Return the Tiles that are currently on the screen.
   vector<Tile> getTilesToRender();
+  //! Return the Objects that are currently on the screen.
+  vector<Object> getObjectsToRender();
+  //! Return the Entities that are currently on the screen.
+  vector<Entity> getEntitiesToRender();
   //! Move the screen by passing in how much to move on the x and y coordinates.
   void move(int mx, int my);
   //! Set the coordinate for the screen with a given x and y.
@@ -48,6 +55,14 @@ public:
   void setScreenSize(int w, int h) { screen.setPosSize(w, h); }
   //! Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that Tile.
   void setPrecise(bool p) { precise = p; }
+  //! Add Object to Level
+  void addObject(Object o);
+  //! Add vector of Objects to Level
+  void addObject(vector<Object> o);
+  //! Add Entity to Level
+  void addEntity(Entity e);
+  //! Add vector of Entity's to Level
+  void addEntity(vector<Entity> e);
 };
 
 #endif //LEVEL_H

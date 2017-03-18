@@ -33,6 +33,12 @@ void \hyperlink{classLevel_a02e915f95e181dcfe95553e923a73a39}{calc\+Pos} ()\hype
 vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{get\+Tiles\+To\+Render} ()\hypertarget{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{}\label{classLevel_ade9e45f70f2f3f81c120bb161f87218f}
 
 \begin{DoxyCompactList}\small\item\em Return the Tiles that are currently on the screen. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classObject}{Object} $>$ \hyperlink{classLevel_a80d185e702151c5b5764c1cadcd9064d}{get\+Objects\+To\+Render} ()\hypertarget{classLevel_a80d185e702151c5b5764c1cadcd9064d}{}\label{classLevel_a80d185e702151c5b5764c1cadcd9064d}
+
+\begin{DoxyCompactList}\small\item\em Return the Objects that are currently on the screen. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classEntity}{Entity} $>$ \hyperlink{classLevel_a1a95e314e19e1fdba6850e9aa8da856e}{get\+Entities\+To\+Render} ()\hypertarget{classLevel_a1a95e314e19e1fdba6850e9aa8da856e}{}\label{classLevel_a1a95e314e19e1fdba6850e9aa8da856e}
+
+\begin{DoxyCompactList}\small\item\em Return the Entities that are currently on the screen. \end{DoxyCompactList}\item 
 void \hyperlink{classLevel_a9184b25173fbf468a63a633bd3510bd6}{move} (int mx, int my)\hypertarget{classLevel_a9184b25173fbf468a63a633bd3510bd6}{}\label{classLevel_a9184b25173fbf468a63a633bd3510bd6}
 
 \begin{DoxyCompactList}\small\item\em Move the screen by passing in how much to move on the x and y coordinates. \end{DoxyCompactList}\item 
@@ -56,13 +62,25 @@ void \hyperlink{classLevel_a22a202624bb540acc74b678b74b60c9d}{set\+Screen\+Size}
 \begin{DoxyCompactList}\small\item\em Set the size of the screen by passing in the width and height. \end{DoxyCompactList}\item 
 void \hyperlink{classLevel_a6f522671fde4a9d25945a9df651f6e28}{set\+Precise} (bool p)\hypertarget{classLevel_a6f522671fde4a9d25945a9df651f6e28}{}\label{classLevel_a6f522671fde4a9d25945a9df651f6e28}
 
-\begin{DoxyCompactList}\small\item\em Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that \hyperlink{classTile}{Tile}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that \hyperlink{classTile}{Tile}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}{add\+Object} (\hyperlink{classObject}{Object} o)\hypertarget{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}{}\label{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}
+
+\begin{DoxyCompactList}\small\item\em Add \hyperlink{classObject}{Object} to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a227e7b01aecb4cfd14cd54233788dee2}{add\+Object} (vector$<$ \hyperlink{classObject}{Object} $>$ o)\hypertarget{classLevel_a227e7b01aecb4cfd14cd54233788dee2}{}\label{classLevel_a227e7b01aecb4cfd14cd54233788dee2}
+
+\begin{DoxyCompactList}\small\item\em Add vector of Objects to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a5b0f8443d6a9d7d2c67729c2a8054054}{add\+Entity} (\hyperlink{classEntity}{Entity} e)\hypertarget{classLevel_a5b0f8443d6a9d7d2c67729c2a8054054}{}\label{classLevel_a5b0f8443d6a9d7d2c67729c2a8054054}
+
+\begin{DoxyCompactList}\small\item\em Add \hyperlink{classEntity}{Entity} to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a6c4584d5aa383888461406de600a43c1}{add\+Entity} (vector$<$ \hyperlink{classEntity}{Entity} $>$ e)\hypertarget{classLevel_a6c4584d5aa383888461406de600a43c1}{}\label{classLevel_a6c4584d5aa383888461406de600a43c1}
+
+\begin{DoxyCompactList}\small\item\em Add vector of \hyperlink{classEntity}{Entity}\textquotesingle{}s to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This class stores a \hyperlink{classStage}{Stage} and Objects and can move them and display them. 
 
-Definition at line 9 of file level.\+h.
+Definition at line 10 of file level.\+h.
 
 
 

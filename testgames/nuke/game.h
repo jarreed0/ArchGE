@@ -14,6 +14,7 @@
 
 #define TILE_SIZE 45
 #define TOTAL_TILES 16
+#define TILES_PER_ROW 8
 #define SPEED 2
 #define WIDTH 980
 #define HEIGHT 480
@@ -30,6 +31,7 @@ private:
   bool l, r, u, d;
   Entity player;
   int mcount = 0, mdelay = 20;
+  Collision col;
 public:
   Game();
   ~Game();
