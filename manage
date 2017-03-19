@@ -1,5 +1,5 @@
 #!/bin/bash
-echo ""
+
 ################################################################
 # This program is used to manage basic commands for
 # managing a project, such as git.
