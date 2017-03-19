@@ -63,6 +63,15 @@ void Game::input() {
   if(!i.checkKey(i.up)) u=false;
   if(i.checkKey(i.down)) d=true;
   if(!i.checkKey(i.down)) d=false;
+  if(i.checkKey(i.a)) l=true;
+  if(!i.checkKey(i.a)) l=false;
+  if(i.checkKey(i.d)) r=true;
+  if(!i.checkKey(i.d)) r=false;
+  if(i.checkKey(i.w)) u=true;
+  if(!i.checkKey(i.w)) u=false;
+  if(i.checkKey(i.s)) d=true;
+  if(!i.checkKey(i.s)) d=false;
+  if(i.checkKey(i.mouseleft)) { firenow=true; firex=i.getMouseX(); firey=i.getMouseY(); }
   crossair.centerOnMouse(i);
   e.hideMouseInWindow(i);
 }
@@ -75,5 +84,11 @@ void Game::update() {
     if(r) level.move(SPEED, 0);
     if(d) level.move(0, -SPEED);
     if(u) level.move(0, SPEED);
+    if(firenow) fire(firex, firey);
   }
+}
+
+void Game::fire(int mx, int my) {
+ cout << "firing towards (" << mx << ", " << my << ")\n";
+ firenow=false;
 }

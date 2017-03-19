@@ -34,6 +34,8 @@ private:
   Object crossair;
   int mcount = 0, mdelay = 20;
   Collision col;
+  bool firenow;
+  int firex, firey;
 public:
   Game();
   ~Game();
@@ -41,6 +43,7 @@ public:
   void draw();
   void input();
   void update();
+  void fire(int mx, int my);
 };
 
 #endif //GAME_H
