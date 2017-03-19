@@ -16,7 +16,7 @@ if [ "$GITUPDATE" != "On branch master Your branch is up-to-date with 'origin/ma
  echo "Would you like to pull? (y/n)"
  read ans;
  if [ "$ans" = "y"  ]; then
-  manage update
+  git pull
  else
   echo "You can pull it with manage update."
  fi
