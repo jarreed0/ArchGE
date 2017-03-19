@@ -63,6 +63,7 @@ void Level::moveEntity(int id, int mx, int my) {
     if(tilesToCol[i].isSolid()) {
       if(col.isTouching(entities[id], tilesToCol[i])) {
         entities[id].setPosCoord(entities[id].getPosX()-mx, entities[id].getPosY()+my);
+        camera.setPosCoord(camera.getPosX()+mx, camera.getPosY()-my);
         setCoord(getX()+mx, getY()-my);
       }
     }
