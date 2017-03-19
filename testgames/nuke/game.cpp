@@ -8,8 +8,8 @@ Game::Game() {
   tileset.setName("grass", 3);
   tileset.setName("path", 11);
   tileset.setPassable(1, 16);
-  //tileset.setSolid(1, 2);
-  //tileset.setSolid(9, 10);
+  tileset.setSolid(1, 2);
+  tileset.setSolid(9, 10);
   map.loadMap("res/map");
   level.setPrecise(true);
   stage.createStage(map, tileset);
