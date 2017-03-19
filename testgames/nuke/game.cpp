@@ -5,6 +5,8 @@ Game::Game() {
   e.init("Nuke", WIDTH, HEIGHT, 0);
   e.setColor(0x70, 0x70, 0x90);
   tileset.create("tiles", "res/tiles.png", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/TILES_PER_ROW, TILES_PER_ROW, TOTAL_TILES);
+  tileset.setName("grass", 3);
+  tileset.setName("path", 11);
   tileset.setPassable(1, 16);
   tileset.setSolid(1, 2);
   tileset.setSolid(9, 10);
@@ -14,12 +16,14 @@ Game::Game() {
   level.setStage(stage);
   level.create();
   level.setScreenSize(WIDTH, HEIGHT);
+  level.setCameraMargin(100, 100);
   running = true;
   player.setImage("res/player.png", e.getRenderer());
   player.setFrame(0, 0, 45, 45);
-  player.setDest(250, 200, 45, 45);
-  player.setPos(0, 0, 45, 45);
-  level.addEntity(player);
+  player.setDestSize(45, 45);
+  player.center(WIDTH, HEIGHT);
+  player.setPos(player.getDestX(), player.getDestY(), 45, 45);
+  level.setMainEntity(player);
   loop();
 }
 Game::~Game() {
@@ -42,7 +46,7 @@ void Game::loop() {
 
 void Game::draw() {
   e.draw(level);
-  e.draw(player);
+  //e.draw(player);
 }
 
 void Game::input() {

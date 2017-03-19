@@ -18,6 +18,7 @@ var searchData=
   ['setframey',['setFrameY',['../classObject.html#adbbc257d38397971e16016287b653952',1,'Object']]],
   ['sethealth',['setHealth',['../classEntity.html#a4f521d321ea874c474cc0506ff78da08',1,'Entity']]],
   ['setimage',['setImage',['../classImage.html#af42b5d6a8abd90d67e9ae19e374520da',1,'Image::setImage()'],['../classObject.html#a131f81446cda68e47ee7e94d247e6ea1',1,'Object::setImage(Image i)'],['../classObject.html#a7f984ff2fb0c60b942a1018fc48417ae',1,'Object::setImage(string file, SDL_Renderer *ren)']]],
+  ['setmainentity',['setMainEntity',['../classLevel.html#afc8426f1adb6037dd71b26e4bd63db92',1,'Level::setMainEntity(Entity e)'],['../classLevel.html#ab7cf0af8d8c89da5a2dc9d3e3b978637',1,'Level::setMainEntity(int m)']]],
   ['setmap',['setMap',['../classStage.html#a47a215785ca66ffae354c350aee1800e',1,'Stage::setMap(Map m)'],['../classStage.html#a11b7cabe85812fda7513d14d6b21ff6a',1,'Stage::setMap(string filename)']]],
   ['setmaxhealth',['setMaxHealth',['../classEntity.html#a375385b808ac7fd4632d6b71f15b0e1c',1,'Entity']]],
   ['setname',['setName',['../classEngine.html#ae59bcd31693811574953ba835ecb09bb',1,'Engine']]],

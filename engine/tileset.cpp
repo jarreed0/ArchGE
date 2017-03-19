@@ -1,7 +1,6 @@
 #include "tileset.h"
 
 Tileset::Tileset() {
-
 }
 Tileset::~Tileset() {}
 
@@ -63,11 +62,12 @@ void Tileset::setSolid() {
   setSolid(1, tiles.size()+1);
 }
 void Tileset::setSolid(int t) {
-  tiles[t-1].setSolid();
+  tiles[t].setSolid();
+  cout << tiles[t].getName() << " (id: " << t << ") is now solid" << endl;
 }
 void Tileset::setSolid(int s, int e) {
-  for(int i=s; i<e; i++) {
-    setPassable(i);
+  for(int i=s; i<(e+1); i++) {
+    setSolid(i);
   }
 }
 
@@ -75,14 +75,15 @@ void Tileset::setPassable() {
   setPassable(1, tiles.size()+1);
 }
 void Tileset::setPassable(int t) {
-  tiles[t-1].setPassable();
+  tiles[t].setPassable();
+  cout << tiles[t].getName() << " (id: " << t << ") is now passable" << endl;
 }
 void Tileset::setPassable(int s, int e) {
-  for(int i=s; i<e; i++) {
+  for(int i=s; i<(e+1); i++) {
     setPassable(i);
   }
 }
 
 void Tileset::setName(string n, int id) {
-  tiles[id-1].setName(n);
+  tiles[id].setName(n);
 }

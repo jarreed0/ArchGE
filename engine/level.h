@@ -18,6 +18,10 @@ private:
   Object screen;
   Collision col;
   bool precise;
+  int mainEntityID;
+  bool mainEntitySet;
+  Object camera, lens;
+  bool activeCam, activeLens;
 public:
   Level();
   ~Level();
@@ -60,9 +64,19 @@ public:
   //! Add vector of Objects to Level
   void addObject(vector<Object> o);
   //! Add Entity to Level
-  void addEntity(Entity e);
+  int addEntity(Entity e);
   //! Add vector of Entity's to Level
   void addEntity(vector<Entity> e);
+  //! Set main Entity.
+  int setMainEntity(Entity e);
+  //! Tell Level which one Entity is the main one.
+  int setMainEntity(int m);
+  void setCameraMargin(int wm, int hm);
+  void centerCamera(int percentage);
+  void setLensMargin(int wn, int hm);
+  void centerLens(int percentage);
+  Object getCamera();
+  Object getLens();
 };
 
 #endif //LEVEL_H

@@ -16,7 +16,7 @@
 #define TOTAL_TILES 16
 #define TILES_PER_ROW 8
 #define SPEED 2
-#define WIDTH 980
+#define WIDTH 1200
 #define HEIGHT 480
 
 class Game {

@@ -3,6 +3,8 @@
 Level::Level() {
   screen.setPos(0, 0, 1000, 1000);
   precise = false;
+  mainEntitySet = false;
+  activeCam = activeLens = 0;
 }
 Level::~Level() {}
 
@@ -35,7 +37,27 @@ void Level::setScale(int w, int h) {
 }
 
 void Level::move(int mx, int my) {
-  setCoord(getX()+mx, getY()-my);
+  if(mainEntitySet) {
+    if(activeCam && col.outOfBoundsOf(entities[mainEntityID], camera)) {
+      cout << "out of camera" << endl;
+      if(activeCam) cout << "active" << endl;
+      if(col.outOfBoundsOf(entities[mainEntityID], camera)) cout << "out" << endl;
+      setCoord(getX()+mx, getY()-my);
+    } else {
+      entities[mainEntityID].setPosCoord(entities[mainEntityID].getPosX()+mx, entities[mainEntityID].getPosY()-my);
+      vector<Tile> tilesToCol = getTilesToRender();
+      for(int i=0; i<tilesToCol.size(); i++) {
+        if(tilesToCol[i].isSolid()) {
+          if(col.isTouching(entities[mainEntityID], tilesToCol[i])) {
+            entities[mainEntityID].setPosCoord(entities[mainEntityID].getPosX()-mx, entities[mainEntityID].getPosY()+my);
+            setCoord(getX()+mx, getY()-my);
+          }
+        }
+      }
+    }
+  } else {
+    setCoord(getX()+mx, getY()-my);
+  }
 }
 
 vector<Tile> Level::getTilesToRender() {
@@ -89,9 +111,44 @@ void Level::addObject(vector<Object> o) {
   objects.insert(objects.end(), o.begin(), o.end());
 }
 
-void Level::addEntity(Entity e) {
+int Level::addEntity(Entity e) {
   entities.push_back(e);
+  return entities.size()-1;
 }
 void Level::addEntity(vector<Entity> e) {
   entities.insert(entities.end(), e.begin(), e.end());
+}
+
+int Level::setMainEntity(Entity e) {
+  return setMainEntity(addEntity(e));
+}
+int Level::setMainEntity(int m) {
+  mainEntityID = m;
+  mainEntitySet = true;
+  return m;
+}
+
+void Level::setCameraMargin(int wm, int hm) {
+  camera.setPos(wm, hm, screen.getPosW()-wm-wm, screen.getPosH()-hm-hm);
+  activeCam = true;
+}
+void Level::centerCamera(int percentage) {
+  int wsize = ((percentage/2)*screen.getPosW())/100;
+  int hsize = ((percentage/2)*screen.getPosH())/100;
+  setCameraMargin(wsize, hsize);
+}
+Object Level::getCamera() {
+  return camera;
+}
+void Level::setLensMargin(int wm, int hm) {
+  lens.setPos(camera.getPosX()+wm, camera.getPosY()+hm, camera.getPosW()-wm-wm, camera.getPosH()-hm-hm);
+  activeLens = true;
+}
+void Level::centerLens(int percentage) {
+  int wsize = ((percentage/2)*camera.getPosW())/100;
+  int hsize = ((percentage/2)*camera.getPosH())/100;
+  setLensMargin(wsize, hsize);
+}
+Object Level::getLens() {
+  return lens;
 }
