@@ -45,6 +45,7 @@ public:
   vector<Entity> getEntitiesToRender();
   //! Move the screen by passing in how much to move on the x and y coordinates.
   void move(int mx, int my);
+  void moveEntity(int id, int mx, int my);
   //! Set the coordinate for the screen with a given x and y.
   void setCoord(double x, double y) { setX(x); setY(y); screen.setPosCoord(getX(), getY()); }
   //! Set the x coordinate.

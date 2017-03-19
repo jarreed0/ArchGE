@@ -8,8 +8,8 @@ Game::Game() {
   tileset.setName("grass", 3);
   tileset.setName("path", 11);
   tileset.setPassable(1, 16);
-  tileset.setSolid(1, 2);
-  tileset.setSolid(9, 10);
+  //tileset.setSolid(1, 2);
+  //tileset.setSolid(9, 10);
   map.loadMap("res/map");
   level.setPrecise(true);
   stage.createStage(map, tileset);
@@ -19,8 +19,8 @@ Game::Game() {
   level.setCameraMargin(100, 100);
   running = true;
   player.setImage("res/player.png", e.getRenderer());
-  player.setFrame(0, 0, 45, 45);
-  player.setDestSize(45, 45);
+  player.setFrame(0, 0, PLAYER_SIZE, PLAYER_SIZE);
+  player.setDestSize(PLAYER_SIZE, PLAYER_SIZE);
   player.center(WIDTH, HEIGHT);
   player.setPos(player.getDestX(), player.getDestY(), 45, 45);
   level.setMainEntity(player);
@@ -46,7 +46,6 @@ void Game::loop() {
 
 void Game::draw() {
   e.draw(level);
-  //e.draw(player);
 }
 
 void Game::input() {

@@ -38,25 +38,34 @@ void Level::setScale(int w, int h) {
 
 void Level::move(int mx, int my) {
   if(mainEntitySet) {
-    if(activeCam && col.outOfBoundsOf(entities[mainEntityID], camera)) {
-      cout << "out of camera" << endl;
-      if(activeCam) cout << "active" << endl;
-      if(col.outOfBoundsOf(entities[mainEntityID], camera)) cout << "out" << endl;
-      setCoord(getX()+mx, getY()-my);
+    Object splicedScreen = screen;
+    if(activeCam & col.outOfBoundsOf(entities[mainEntityID], camera)) {
+      bool none=true;
+      cout << "out" << endl;
+      if(activeCam && col.isAbove(entities[mainEntityID], camera) && my>0) { setCoord(getX()+mx, getY()-my); none=false; }
+      if(activeCam && col.isBelow(entities[mainEntityID], camera) && my<0) { setCoord(getX()+mx, getY()-my); none=false; }
+      if(activeCam && col.isRightOf(entities[mainEntityID], camera) && mx>0) { setCoord(getX()+mx, getY()-my); none=false; }
+      if(activeCam && col.isLeftOf(entities[mainEntityID], camera) && mx<0) { setCoord(getX()+mx, getY()-my); none=false; }
+      if(none) moveEntity(mainEntityID, mx, my);
+      if(!none) camera.setPosCoord(camera.getPosX()+mx, camera.getPosY()-my);
     } else {
-      entities[mainEntityID].setPosCoord(entities[mainEntityID].getPosX()+mx, entities[mainEntityID].getPosY()-my);
-      vector<Tile> tilesToCol = getTilesToRender();
-      for(int i=0; i<tilesToCol.size(); i++) {
-        if(tilesToCol[i].isSolid()) {
-          if(col.isTouching(entities[mainEntityID], tilesToCol[i])) {
-            entities[mainEntityID].setPosCoord(entities[mainEntityID].getPosX()-mx, entities[mainEntityID].getPosY()+my);
-            setCoord(getX()+mx, getY()-my);
-          }
-        }
-      }
+      moveEntity(mainEntityID, mx, my);
     }
   } else {
     setCoord(getX()+mx, getY()-my);
+  }
+}
+
+void Level::moveEntity(int id, int mx, int my) {
+  entities[id].setPosCoord(entities[id].getPosX()+mx, entities[id].getPosY()-my);
+  vector<Tile> tilesToCol = getTilesToRender();
+  for(int i=0; i<tilesToCol.size(); i++) {
+    if(tilesToCol[i].isSolid()) {
+      if(col.isTouching(entities[id], tilesToCol[i])) {
+        entities[id].setPosCoord(entities[id].getPosX()-mx, entities[id].getPosY()+my);
+        setCoord(getX()+mx, getY()-my);
+      }
+    }
   }
 }
 

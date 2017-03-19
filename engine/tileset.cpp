@@ -63,7 +63,6 @@ void Tileset::setSolid() {
 }
 void Tileset::setSolid(int t) {
   tiles[t].setSolid();
-  cout << tiles[t].getName() << " (id: " << t << ") is now solid" << endl;
 }
 void Tileset::setSolid(int s, int e) {
   for(int i=s; i<(e+1); i++) {
@@ -76,7 +75,6 @@ void Tileset::setPassable() {
 }
 void Tileset::setPassable(int t) {
   tiles[t].setPassable();
-  cout << tiles[t].getName() << " (id: " << t << ") is now passable" << endl;
 }
 void Tileset::setPassable(int s, int e) {
   for(int i=s; i<(e+1); i++) {
