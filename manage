@@ -7,6 +7,18 @@
 # Last Edited by: Avery Reed 2/16/17
 ################################################################
 
+GITUPDATE=`git status`
+if [ "$GITUPDATE" != "On branch master Your branch is up-to-date with 'origin/master'. nothing to commit, working directory clean" ]; then
+ echo "Your repo is not up to date."
+ echo "Would you like to pull? (y/n)"
+ read ans;
+ if [ "$ans" = "y"  ]; then
+  manage update
+ else
+  echo "You can pull it with manage update."
+ fi
+fi
+
 DIFF=$(diff manage /usr/local/bin/manage)
 if [ "$DIFF" != "" ] && [ "$2" != "up" ]; then
   echo "Manage is not upto date!"
