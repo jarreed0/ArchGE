@@ -31,6 +31,7 @@ private:
   Tileset tileset;
   bool l, r, u, d;
   Entity player;
+  Object crossair;
   int mcount = 0, mdelay = 20;
   Collision col;
 public:

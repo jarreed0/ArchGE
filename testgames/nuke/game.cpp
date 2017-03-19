@@ -24,6 +24,9 @@ Game::Game() {
   player.center(WIDTH, HEIGHT);
   player.setPos(player.getDestX(), player.getDestY(), 45, 45);
   level.setMainEntity(player);
+  crossair.setImage("res/crossair.png", e.getRenderer());
+  crossair.setFrame(0, 0, PLAYER_SIZE, PLAYER_SIZE);
+  crossair.setDestSize(PLAYER_SIZE, PLAYER_SIZE);
   loop();
 }
 Game::~Game() {
@@ -46,6 +49,7 @@ void Game::loop() {
 
 void Game::draw() {
   e.draw(level);
+  e.draw(crossair);
 }
 
 void Game::input() {
@@ -59,6 +63,8 @@ void Game::input() {
   if(!i.checkKey(i.up)) u=false;
   if(i.checkKey(i.down)) d=true;
   if(!i.checkKey(i.down)) d=false;
+  crossair.centerOnMouse(i);
+  e.hideMouseInWindow(i);
 }
 
 void Game::update() {

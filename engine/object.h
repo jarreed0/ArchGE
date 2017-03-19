@@ -2,6 +2,7 @@
 #define OBJECT_H
 
 #include "image.h"
+#include "input-tmp.h"
 #include <SDL2/SDL.h>
 
 class Collision;
@@ -113,6 +114,7 @@ public:
   void movePosY(int y) { pos.y += y; }
   void setName(string s);
   string getName();
+  void centerOnMouse(Input i);
 };
 
 #endif //OBJECT_H

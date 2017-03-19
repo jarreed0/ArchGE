@@ -27,3 +27,7 @@ void Object::checkDisplayable(Object screen) {
     displayable = false;
   }
 }
+
+void Object::centerOnMouse(Input i) {
+  setDestCoord(i.getMouseX()-(getDestW()/2), i.getMouseY()-(getDestH()/2));
+}

@@ -40,6 +40,7 @@ private:
   double ct; //!< Custom splashscreen duration.
   int cw, ch; //!< Custom splashcreen width and height.
   bool debug;
+  Collision col;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -98,6 +99,7 @@ public:
   void customSplash(string file, double time, int w, int h);
   //! Active debugger with Boolean
   void debugMode(bool d);
+  void hideMouseInWindow(Input i);
 };
 
 #endif //ENGINE_H

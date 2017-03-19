@@ -16,6 +16,8 @@ public:
   bool checkKey(int k);
   //! Reset all pressed keystrokes and other inputs to false. Automatically down at the beginning of each logPress().
   bool reset();
+  int getMouseX() const { return mousex; }
+  int getMouseY() const { return mousey; }
   int left; //!< Log ID for left
   int right; //!< Log ID for right
   int up; //!< Log ID for up
@@ -56,11 +58,11 @@ public:
   int mouseright; //!< Log ID for right mouse click
   int mouseup; //!< Log ID for scroll up on mouse wheel
   int mousedown; //!< Log ID for scroll down on mouse wheel
-  int mousex; //!< Log ID for mouse x coordinate
-  int mousey; //!< Log ID for mouse y coordinate
 private:
   //! Array that stores what buttons are down.
   bool keys[51];
+  int mousex; //!< Log ID for mouse x coordinate
+  int mousey; //!< Log ID for mouse y coordinate
 };
 
 #endif //INPUT_H

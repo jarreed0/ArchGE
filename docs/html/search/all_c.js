@@ -7,8 +7,6 @@ var searchData=
   ['mousemiddle',['mousemiddle',['../classInput.html#aeada901dbf556cb13f81d8326943dd08',1,'Input']]],
   ['mouseright',['mouseright',['../classInput.html#abbf0471b00d750ae25d638bca74be28f',1,'Input']]],
   ['mouseup',['mouseup',['../classInput.html#a66df7023e5db7300d0f9bcdafd140bf5',1,'Input']]],
-  ['mousex',['mousex',['../classInput.html#a332eaea23f6cb9689caaa189b11efef7',1,'Input']]],
-  ['mousey',['mousey',['../classInput.html#a8ef4889d960150cf103f78639584c73b',1,'Input']]],
   ['move',['move',['../classLevel.html#a9184b25173fbf468a63a633bd3510bd6',1,'Level::move()'],['../classObject.html#af4133db64f4051294dc103a2f3553a6a',1,'Object::move()']]],
   ['movetowards',['moveTowards',['../classPhysics.html#a8e53f9bf088c0d4f208b3c2029d69ab2',1,'Physics']]],
   ['movex',['moveX',['../classObject.html#a43f3220cb27a282c28afaea57ac9a098',1,'Object']]],

@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.6.1}Detailed Description}{11}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Input Class Reference}{11}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}Detailed Description}{13}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Level Class Reference}{14}{section.3.8}
+\contentsline {section}{\numberline {3.8}Level Class Reference}{13}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}Detailed Description}{15}{subsection.3.8.1}
 \contentsline {section}{\numberline {3.9}Map Class Reference}{15}{section.3.9}
 \contentsline {subsection}{\numberline {3.9.1}Detailed Description}{15}{subsection.3.9.1}
