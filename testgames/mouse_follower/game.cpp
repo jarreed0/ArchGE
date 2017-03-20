@@ -11,6 +11,8 @@ Game::Game() {
   o.setSpeed(3);
   o.setDest(100, 100, 16, 16);
 
+  o2=o;
+
   loop();
 }
 Game::~Game() {}
@@ -42,6 +44,8 @@ void Game::input() {
 
 void Game::update() {
   o2.setDest(i.getMouseX(), i.getMouseY(), 16, 16);
+  if(o2.getDestX() > (WIDTH-o2.getDestW())) o2.setDestX(WIDTH-o2.getDestW());
+  if(o2.getDestY() > (HEIGHT-o2.getDestH())) o2.setDestY(HEIGHT-o2.getDestH());
   if(timeToMove) { o.setVelTo(o2); o.moveDest(o.getVelX(), o.getVelY()); }
 
   mcount++;
