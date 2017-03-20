@@ -16,7 +16,7 @@ Game::Game() {
   level.setStage(stage);
   level.create();
   level.setScreenSize(WIDTH, HEIGHT);
-  level.setCameraMargin(100, 100);
+  level.setCameraMargin(530, 200);
   running = true;
   player.setImage("res/player.png", e.getRenderer());
   player.setFrame(0, 0, PLAYER_SIZE, PLAYER_SIZE);

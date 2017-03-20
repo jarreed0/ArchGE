@@ -10,13 +10,13 @@ Created by Archeantus Games
 
 # Under Heavy Development #
 ## Next Update: (will include) ##
-- [] Object coordinate system
-- [] Object movement
-- [] Adding Objects (and there children) to a Level
-- [] Have screen follow a specific Object (the player).
+- [x] Object coordinate system
+- [x] Object movement
+- [x] Adding Objects (and there children) to a Level
+- [x] Have screen follow a specific Object (the player).
 - [] Set up Camera/Lens movement
 - [] Fix bugs
-- [] New Input class/method - Done
+- [x] New Input class/method - Done
 - [] Splashscreen fix - In Progress using Gamestate class
 
 # News #
