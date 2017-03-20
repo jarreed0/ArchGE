@@ -27,6 +27,11 @@ Game::Game() {
   crossair.setImage("res/crossair.png", e.getRenderer());
   crossair.setFrame(0, 0, PLAYER_SIZE, PLAYER_SIZE);
   crossair.setDestSize(PLAYER_SIZE, PLAYER_SIZE);
+  bullet.setImage("res/bullet.png", e.getRenderer());
+  bullet.setFrame(0, 0, 30, 30);
+  bullet.setDestSize(30, 30);
+  bullet.setPosSize(30, 30);
+  e.hideMouse();
   loop();
 }
 Game::~Game() {
@@ -73,7 +78,6 @@ void Game::input() {
   if(!i.checkKey(i.s)) d=false;
   if(i.checkKey(i.mouseleft)) { firenow=true; firex=i.getMouseX(); firey=i.getMouseY(); }
   crossair.centerOnMouse(i);
-  e.hideMouseInWindow(i);
 }
 
 void Game::update() {
@@ -89,6 +93,7 @@ void Game::update() {
 }
 
 void Game::fire(int mx, int my) {
- cout << "firing towards (" << mx << ", " << my << ")\n";
- firenow=false;
+  bullet.centerOnPoint(mx+level.getScreen().getPosX(), my+level.getScreen().getPosY());
+  level.addObject(bullet);
+  firenow=false;
 }

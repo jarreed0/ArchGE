@@ -56,6 +56,7 @@ public:
   double getX() const { return x; }
   //! Get the y coordinate.
   double getY() const { return y; }
+  Object getScreen() const { return screen; }
   //! Set the size of the screen by passing in the width and height.
   void setScreenSize(int w, int h) { screen.setPosSize(w, h); }
   //! Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that Tile.

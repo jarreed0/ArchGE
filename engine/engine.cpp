@@ -171,14 +171,10 @@ void Engine::debugMode(bool d) {
   cout << "Which at this time only means bypassing the splashscreen." << endl;
 }
 
-void Engine::hideMouseInWindow(Input i) {
-  Object mouse;
-  mouse.setPos(2, 2, i.getMouseX(), i.getMouseY());
-  Object screen;
-  screen.setPos(0, 0, WIDTH, HEIGHT);
-  if(col.isTouching(mouse, screen)) {
-    SDL_ShowCursor(false);
-  } else {
-    SDL_ShowCursor(true);
-  }
+void Engine::hideMouse() {
+  SDL_ShowCursor(false);
+}
+
+void Engine::showMouse() {
+  SDL_ShowCursor(true);
 }

@@ -32,6 +32,7 @@ private:
   bool l, r, u, d;
   Entity player;
   Object crossair;
+  Object bullet;
   int mcount = 0, mdelay = 20;
   Collision col;
   bool firenow;

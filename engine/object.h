@@ -115,6 +115,7 @@ public:
   void setName(string s);
   string getName();
   void centerOnMouse(Input i);
+  void centerOnPoint(int cx, int cy);
 };
 
 #endif //OBJECT_H

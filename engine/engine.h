@@ -99,7 +99,8 @@ public:
   void customSplash(string file, double time, int w, int h);
   //! Active debugger with Boolean
   void debugMode(bool d);
-  void hideMouseInWindow(Input i);
+  void hideMouse();
+  void showMouse();
 };
 
 #endif //ENGINE_H
