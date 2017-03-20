@@ -97,3 +97,4 @@ void Game::fire(int mx, int my) {
   level.addObject(bullet);
   firenow=false;
 }
+
