@@ -1,3 +1,4 @@
+#include <math.h>
 #include "object.h"
 #include "collision.h"
 
@@ -30,4 +31,12 @@ void Object::checkDisplayable(Object screen) {
 
 void Object::centerOnMouse(Input i) {
   setDestCoord(i.getMouseX()-(getDestW()/2), i.getMouseY()-(getDestH()/2));
+}
+
+void Object::setVelTo(Object o) {
+  double angle = atan2(o.getDestY() - getDestY(), o.getDestX() - getDestX());
+  double c = cos(angle) * getSpeed();
+  double s = sin(angle) * getSpeed();
+  setVelX(c);
+  setVelY(s);
 }

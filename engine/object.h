@@ -1,5 +1,6 @@
 #ifndef OBJECT_H
 #define OBJECT_H
+#define PI 3.14159265358979323846
 
 #include "image.h"
 #include "input-tmp.h"
@@ -14,7 +15,7 @@ private:
   SDL_Rect frame, dest, pos;
   double angle;
   string name;
-  double x, y;
+  double x, y, velX, velY, speed;
   bool displayable;
 public:
   Object();
@@ -73,6 +74,8 @@ public:
   void setFrameSize(int w, int h) { setFrameW(w); setFrameH(h); }
   //! Set the x coordinate of the frame.
   void setFrameX(int x) { frame.x = x; }
+  //! Set the object's velocity toward another object
+  void setVelTo(Object o);
   //! Set the y coordinate of the frame.
   void setFrameY(int y) { frame.y = y; }
   void setFrameW(int w) { frame.w = w; }
@@ -112,6 +115,12 @@ public:
   void movePos(int x, int y) { movePosX(x); movePosY(y); }
   void movePosX(int x) { pos.x += x; }
   void movePosY(int y) { pos.y += y; }
+  double getVelX() { return velX; }
+  double getVelY() { return velY; }
+  void setVelX(double vx) { velX = vx; }
+  void setVelY(double vy) { velY = vy; }
+  double getSpeed() {  return speed; }
+  void setSpeed(double s) { speed = s; }
   void setName(string s);
   string getName();
   void centerOnMouse(Input i);
