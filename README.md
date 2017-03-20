@@ -14,10 +14,10 @@ Created by Archeantus Games
 - [x] Object movement
 - [x] Adding Objects (and there children) to a Level
 - [x] Have screen follow a specific Object (the player).
-- [] Set up Camera/Lens movement
-- [] Fix bugs
+- [ ] Set up Camera/Lens movement
+- [ ] Fix bugs
 - [x] New Input class/method - Done
-- [] Splashscreen fix - In Progress using Gamestate class
+- [ ] Splashscreen fix - In Progress using Gamestate class
 
 # News #
  - - - -
