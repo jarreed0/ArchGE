@@ -21,14 +21,12 @@
 \contentsline {subsection}{\numberline {3.8.1}Detailed Description}{15}{subsection.3.8.1}
 \contentsline {section}{\numberline {3.9}Map Class Reference}{15}{section.3.9}
 \contentsline {subsection}{\numberline {3.9.1}Detailed Description}{15}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Object Class Reference}{16}{section.3.10}
-\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{18}{subsection.3.10.1}
-\contentsline {section}{\numberline {3.11}Physics Class Reference}{18}{section.3.11}
-\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{18}{subsection.3.11.1}
-\contentsline {section}{\numberline {3.12}Stage Class Reference}{19}{section.3.12}
-\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{19}{subsection.3.12.1}
-\contentsline {section}{\numberline {3.13}Tile Class Reference}{20}{section.3.13}
-\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{21}{subsection.3.13.1}
-\contentsline {section}{\numberline {3.14}Tileset Class Reference}{21}{section.3.14}
-\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{22}{subsection.3.14.1}
-\contentsline {chapter}{Index}{23}{section*.25}
+\contentsline {section}{\numberline {3.10}Physics Class Reference}{16}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{16}{subsection.3.10.1}
+\contentsline {section}{\numberline {3.11}Stage Class Reference}{16}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{17}{subsection.3.11.1}
+\contentsline {section}{\numberline {3.12}Tile Class Reference}{17}{section.3.12}
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{18}{subsection.3.12.1}
+\contentsline {section}{\numberline {3.13}Tileset Class Reference}{18}{section.3.13}
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{19}{subsection.3.13.1}
+\contentsline {chapter}{Index}{21}{section*.23}

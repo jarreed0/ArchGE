@@ -33,7 +33,7 @@ void \hyperlink{classLevel_a02e915f95e181dcfe95553e923a73a39}{calc\+Pos} ()\hype
 vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{get\+Tiles\+To\+Render} ()\hypertarget{classLevel_ade9e45f70f2f3f81c120bb161f87218f}{}\label{classLevel_ade9e45f70f2f3f81c120bb161f87218f}
 
 \begin{DoxyCompactList}\small\item\em Return the Tiles that are currently on the screen. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classObject}{Object} $>$ \hyperlink{classLevel_a80d185e702151c5b5764c1cadcd9064d}{get\+Objects\+To\+Render} ()\hypertarget{classLevel_a80d185e702151c5b5764c1cadcd9064d}{}\label{classLevel_a80d185e702151c5b5764c1cadcd9064d}
+vector$<$ Object $>$ \hyperlink{classLevel_a80d185e702151c5b5764c1cadcd9064d}{get\+Objects\+To\+Render} ()\hypertarget{classLevel_a80d185e702151c5b5764c1cadcd9064d}{}\label{classLevel_a80d185e702151c5b5764c1cadcd9064d}
 
 \begin{DoxyCompactList}\small\item\em Return the Objects that are currently on the screen. \end{DoxyCompactList}\item 
 vector$<$ \hyperlink{classEntity}{Entity} $>$ \hyperlink{classLevel_a1a95e314e19e1fdba6850e9aa8da856e}{get\+Entities\+To\+Render} ()\hypertarget{classLevel_a1a95e314e19e1fdba6850e9aa8da856e}{}\label{classLevel_a1a95e314e19e1fdba6850e9aa8da856e}
@@ -60,7 +60,7 @@ double \hyperlink{classLevel_a6f5dca509c0e480d8a7b6b1d6b411375}{getX} () const \
 double \hyperlink{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}{getY} () const \hypertarget{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}{}\label{classLevel_acb5b4e5e0bf364142fa0facc7badea4a}
 
 \begin{DoxyCompactList}\small\item\em Get the y coordinate. \end{DoxyCompactList}\item 
-\hyperlink{classObject}{Object} {\bfseries get\+Screen} () const \hypertarget{classLevel_afb6205bfc9804c5ec5561696341b6dc7}{}\label{classLevel_afb6205bfc9804c5ec5561696341b6dc7}
+Object {\bfseries get\+Screen} () const \hypertarget{classLevel_afb6205bfc9804c5ec5561696341b6dc7}{}\label{classLevel_afb6205bfc9804c5ec5561696341b6dc7}
 
 \item 
 void \hyperlink{classLevel_a22a202624bb540acc74b678b74b60c9d}{set\+Screen\+Size} (int w, int h)\hypertarget{classLevel_a22a202624bb540acc74b678b74b60c9d}{}\label{classLevel_a22a202624bb540acc74b678b74b60c9d}
@@ -69,10 +69,10 @@ void \hyperlink{classLevel_a22a202624bb540acc74b678b74b60c9d}{set\+Screen\+Size}
 void \hyperlink{classLevel_a6f522671fde4a9d25945a9df651f6e28}{set\+Precise} (bool p)\hypertarget{classLevel_a6f522671fde4a9d25945a9df651f6e28}{}\label{classLevel_a6f522671fde4a9d25945a9df651f6e28}
 
 \begin{DoxyCompactList}\small\item\em Active precise if you want the coordinates in a map file to go to that exact pixel, or leave it off if you want it to go to that \hyperlink{classTile}{Tile}. \end{DoxyCompactList}\item 
-void \hyperlink{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}{add\+Object} (\hyperlink{classObject}{Object} o)\hypertarget{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}{}\label{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}
+void \hyperlink{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}{add\+Object} (Object o)\hypertarget{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}{}\label{classLevel_a85e4149562c645b6ee11e7a0338dc6d6}
 
-\begin{DoxyCompactList}\small\item\em Add \hyperlink{classObject}{Object} to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
-void \hyperlink{classLevel_a227e7b01aecb4cfd14cd54233788dee2}{add\+Object} (vector$<$ \hyperlink{classObject}{Object} $>$ o)\hypertarget{classLevel_a227e7b01aecb4cfd14cd54233788dee2}{}\label{classLevel_a227e7b01aecb4cfd14cd54233788dee2}
+\begin{DoxyCompactList}\small\item\em Add Object to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
+void \hyperlink{classLevel_a227e7b01aecb4cfd14cd54233788dee2}{add\+Object} (vector$<$ Object $>$ o)\hypertarget{classLevel_a227e7b01aecb4cfd14cd54233788dee2}{}\label{classLevel_a227e7b01aecb4cfd14cd54233788dee2}
 
 \begin{DoxyCompactList}\small\item\em Add vector of Objects to \hyperlink{classLevel}{Level}. \end{DoxyCompactList}\item 
 int \hyperlink{classLevel_a9345e51c6abbc422864bf6954c5f6312}{add\+Entity} (\hyperlink{classEntity}{Entity} e)\hypertarget{classLevel_a9345e51c6abbc422864bf6954c5f6312}{}\label{classLevel_a9345e51c6abbc422864bf6954c5f6312}
@@ -99,10 +99,10 @@ void {\bfseries set\+Lens\+Margin} (int wn, int hm)\hypertarget{classLevel_a7266
 void {\bfseries center\+Lens} (int percentage)\hypertarget{classLevel_ac39dbca241ee739f5f9c2a750c3750f4}{}\label{classLevel_ac39dbca241ee739f5f9c2a750c3750f4}
 
 \item 
-\hyperlink{classObject}{Object} {\bfseries get\+Camera} ()\hypertarget{classLevel_a11a17dbe04938950421d001a8f94cbbc}{}\label{classLevel_a11a17dbe04938950421d001a8f94cbbc}
+Object {\bfseries get\+Camera} ()\hypertarget{classLevel_a11a17dbe04938950421d001a8f94cbbc}{}\label{classLevel_a11a17dbe04938950421d001a8f94cbbc}
 
 \item 
-\hyperlink{classObject}{Object} {\bfseries get\+Lens} ()\hypertarget{classLevel_a33bd74850ef322de8d76572f9fea312f}{}\label{classLevel_a33bd74850ef322de8d76572f9fea312f}
+Object {\bfseries get\+Lens} ()\hypertarget{classLevel_a33bd74850ef322de8d76572f9fea312f}{}\label{classLevel_a33bd74850ef322de8d76572f9fea312f}
 
 \end{DoxyCompactItemize}
 
