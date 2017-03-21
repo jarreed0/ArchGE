@@ -2,7 +2,7 @@
 #define GAME_H
 
 #include "../../engine/engine.h"
-#include "../../engine/input-tmp.h"
+#include "../../engine/input.h"
 #include "../../engine/tileset.h"
 #include "../../engine/tile.h"
 #include "../../engine/object.h"

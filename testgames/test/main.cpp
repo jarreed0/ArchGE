@@ -1,5 +1,5 @@
 #include "../../engine/engine.h"
-#include "../../engine/input-tmp.h"
+#include "../../engine/input.h"
 using namespace std;
 
 int main() {

@@ -1,4 +1,4 @@
-#include "input-tmp.h"
+#include "input.h"
 
 Input::Input() {
   reset();

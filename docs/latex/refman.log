@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  20 MAR 2017 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  21 MAR 2017 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1234,35 +1234,35 @@ File: classBackground__inherit__graph.pdf Graphic file (type pdf)
 
 <use classBackground__inherit__graph.pdf>
 Package pdftex.def Info: classBackground__inherit__graph.pdf used on input line
- 19.
+ 18.
 (pdftex.def)             Requested size: 148.0pt x 156.0064pt.
 
 <classBackground__coll__graph.pdf, id=274, 148.555pt x 156.585pt>
 File: classBackground__coll__graph.pdf Graphic file (type pdf)
 
 <use classBackground__coll__graph.pdf>
-Package pdftex.def Info: classBackground__coll__graph.pdf used on input line 29
+Package pdftex.def Info: classBackground__coll__graph.pdf used on input line 27
 .
 (pdftex.def)             Requested size: 148.0pt x 156.0064pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 32.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 32.
+(Font)              scaled to size 10.79993pt on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 32.
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 35.
+(Font)              scaled to size 10.79993pt on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 35.
+(Font)              scaled to size 8.99994pt on input line 33.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 37.
+(Font)              scaled to size 8.09995pt on input line 35.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 37.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 35.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 37.
+(Font)              scaled to size 8.09995pt on input line 35.
  [5 <./classBackground__inherit__graph.pdf> <./classBackground__coll__graph.pdf
 
 
@@ -1278,7 +1278,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 File: classEntity__inherit__graph.pdf Graphic file (type pdf)
 
 <use classEntity__inherit__graph.pdf>
-Package pdftex.def Info: classEntity__inherit__graph.pdf used on input line 19.
+Package pdftex.def Info: classEntity__inherit__graph.pdf used on input line 18.
 
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
 
@@ -1286,13 +1286,13 @@ Package pdftex.def Info: classEntity__inherit__graph.pdf used on input line 19.
 File: classEntity__coll__graph.pdf Graphic file (type pdf)
 
 <use classEntity__coll__graph.pdf>
-Package pdftex.def Info: classEntity__coll__graph.pdf used on input line 29.
+Package pdftex.def Info: classEntity__coll__graph.pdf used on input line 27.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
  [8 <./classEntity__inherit__graph.pdf>]
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 37.
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 35.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 37.
+(Font)              scaled to size 8.09995pt on input line 35.
 
 [9 <./classEntity__coll__graph.pdf>]) (./classGameState.tex
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
@@ -1313,14 +1313,14 @@ assStage.tex [18]) (./classTile.tex
 File: classTile__inherit__graph.pdf Graphic file (type pdf)
 
 <use classTile__inherit__graph.pdf>
-Package pdftex.def Info: classTile__inherit__graph.pdf used on input line 19.
+Package pdftex.def Info: classTile__inherit__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
 
 <classTile__coll__graph.pdf, id=936, 125.46875pt x 156.585pt>
 File: classTile__coll__graph.pdf Graphic file (type pdf)
 
 <use classTile__coll__graph.pdf>
-Package pdftex.def Info: classTile__coll__graph.pdf used on input line 29.
+Package pdftex.def Info: classTile__coll__graph.pdf used on input line 27.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
  [20 <./classTile__inherit__graph.pdf> <./classTile__coll__graph.pdf
 
@@ -1348,7 +1348,7 @@ Here is how much of TeX's memory you used:
  18100 multiletter control sequences out of 15000+600000
  53329 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,12n,92p,400b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,92p,400b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1356,7 +1356,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (27 pages, 178565 bytes).
+Output written on refman.pdf (27 pages, 178556 bytes).
 PDF statistics:
  1140 PDF objects out of 1200 (max. 8388607)
  1079 compressed objects within 11 object streams

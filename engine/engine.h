@@ -16,7 +16,7 @@ using namespace std;
 #include "entity.h"
 #include "collision.h"
 #include "tileset.h"
-#include "input-tmp.h"
+#include "input.h"
 #include "physics-tmp.h"
 #include "stage.h"
 #include "level.h"

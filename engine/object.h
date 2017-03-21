@@ -3,7 +3,7 @@
 #define PI 3.14159265358979323846
 
 #include "image.h"
-#include "input-tmp.h"
+#include "input.h"
 #include <SDL2/SDL.h>
 
 class Collision;
