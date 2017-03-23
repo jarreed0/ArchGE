@@ -1,16 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "../../engine/engine.h"
-#include "../../engine/input.h"
-#include "../../engine/tileset.h"
-#include "../../engine/tile.h"
-#include "../../engine/object.h"
-#include "../../engine/entity.h"
-#include "../../engine/map.h"
-#include "../../engine/stage.h"
-#include "../../engine/level.h"
-#include "../../engine/physics-tmp.h"
+#include "../../engine/arch.h"
 
 #define TILE_SIZE 24
 #define TOTAL_TILES 60

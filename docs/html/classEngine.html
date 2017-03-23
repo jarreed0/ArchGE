@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Class for declaring an engine, which does basic SDL commands like creating the window and renderer.  
  <a href="classEngine.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="engine_8h_source.html">engine.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="arch_8h_source.html">arch.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -216,12 +216,131 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>hideMouse</b> ()</td>
 <tr class="memitem:a6d476e93e46e59543ea9714b93a30936"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d476e93e46e59543ea9714b93a30936"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showMouse</b> ()</td></tr>
 <tr class="separator:a6d476e93e46e59543ea9714b93a30936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ef7030a089ecb30bbfcb9e43094717a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine</a> ()</td></tr>
+<tr class="memdesc:a8ef7030a089ecb30bbfcb9e43094717a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decontructs renderer and window and then quits SDL. <br /></td></tr>
+<tr class="separator:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92519d36917e125f41ec94ab59da8847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92519d36917e125f41ec94ab59da8847"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a92519d36917e125f41ec94ab59da8847">init</a> (string s, const int &amp;w, const int &amp;h, int flag)</td></tr>
+<tr class="memdesc:a92519d36917e125f41ec94ab59da8847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a window with a given name, width, height, and anyother SDL_Window flags. <br /></td></tr>
+<tr class="separator:a92519d36917e125f41ec94ab59da8847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ec37f272049ad873b0f52e9e3a7559"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7ec37f272049ad873b0f52e9e3a7559"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#af7ec37f272049ad873b0f52e9e3a7559">init</a> (string s, const int &amp;w, const int &amp;h, int flag, int it)</td></tr>
+<tr class="memdesc:af7ec37f272049ad873b0f52e9e3a7559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a window with a given name, width, height, SDL_Window flags, and specified SDL_Init flags. <br /></td></tr>
+<tr class="separator:af7ec37f272049ad873b0f52e9e3a7559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd32f3ac41b62852c6903175e5d36bb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd32f3ac41b62852c6903175e5d36bb2"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#acd32f3ac41b62852c6903175e5d36bb2">init</a> (string s, const int &amp;w, const int &amp;h, int flag, int x, int y)</td></tr>
+<tr class="memdesc:acd32f3ac41b62852c6903175e5d36bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a window with a given name, width, height, SDL_Window flags, and specified x and y coordinate. <br /></td></tr>
+<tr class="separator:acd32f3ac41b62852c6903175e5d36bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17fe3aef8fee92bf959bbfb8f014b01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad17fe3aef8fee92bf959bbfb8f014b01"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ad17fe3aef8fee92bf959bbfb8f014b01">init</a> (string s, const int &amp;w, const int &amp;h, int flag, int x, int y, int it)</td></tr>
+<tr class="memdesc:ad17fe3aef8fee92bf959bbfb8f014b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a window with a given name, width, height, SDL_Window flags, specified x and y coordinate, and SDL_Init flags. <br /></td></tr>
+<tr class="separator:ad17fe3aef8fee92bf959bbfb8f014b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59bcd31693811574953ba835ecb09bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae59bcd31693811574953ba835ecb09bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ae59bcd31693811574953ba835ecb09bb">setName</a> (string s)</td></tr>
+<tr class="memdesc:ae59bcd31693811574953ba835ecb09bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window name. <br /></td></tr>
+<tr class="separator:ae59bcd31693811574953ba835ecb09bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6133368973d175ef8915cc8033958b2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6133368973d175ef8915cc8033958b2b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a6133368973d175ef8915cc8033958b2b">setPos</a> (int x, int y)</td></tr>
+<tr class="memdesc:a6133368973d175ef8915cc8033958b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window position. <br /></td></tr>
+<tr class="separator:a6133368973d175ef8915cc8033958b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada9e7e5de3b47113fc39fcabfe298f9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada9e7e5de3b47113fc39fcabfe298f9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ada9e7e5de3b47113fc39fcabfe298f9e">setSize</a> (int w, int y)</td></tr>
+<tr class="memdesc:ada9e7e5de3b47113fc39fcabfe298f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window size. <br /></td></tr>
+<tr class="separator:ada9e7e5de3b47113fc39fcabfe298f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455a8da0fd4e3d2f446655ab4fba615e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a455a8da0fd4e3d2f446655ab4fba615e"></a>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a455a8da0fd4e3d2f446655ab4fba615e">getRenderer</a> ()</td></tr>
+<tr class="memdesc:a455a8da0fd4e3d2f446655ab4fba615e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns screen renderer. <br /></td></tr>
+<tr class="separator:a455a8da0fd4e3d2f446655ab4fba615e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee842a402f260e38e0502e1d95b920b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeee842a402f260e38e0502e1d95b920b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aeee842a402f260e38e0502e1d95b920b">setColor</a> (Uint8 r, Uint8 g, Uint8 b)</td></tr>
+<tr class="memdesc:aeee842a402f260e38e0502e1d95b920b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets SDL color. <br /></td></tr>
+<tr class="separator:aeee842a402f260e38e0502e1d95b920b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7602820f1b9d75ec1b59f2a6111085e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7602820f1b9d75ec1b59f2a6111085e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ad7602820f1b9d75ec1b59f2a6111085e">loopStart</a> ()</td></tr>
+<tr class="memdesc:ad7602820f1b9d75ec1b59f2a6111085e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this at the beginning of a loop to initilaize the loop. <br /></td></tr>
+<tr class="separator:ad7602820f1b9d75ec1b59f2a6111085e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7960743aefd62e846e7f3cd92c18bc73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7960743aefd62e846e7f3cd92c18bc73"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a7960743aefd62e846e7f3cd92c18bc73">render</a> ()</td></tr>
+<tr class="memdesc:a7960743aefd62e846e7f3cd92c18bc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this at the end of the game loop to render. <br /></td></tr>
+<tr class="separator:a7960743aefd62e846e7f3cd92c18bc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5932cbe5ddf7772028bb6250c5ce75fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5932cbe5ddf7772028bb6250c5ce75fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a5932cbe5ddf7772028bb6250c5ce75fc">FPS</a> () const </td></tr>
+<tr class="memdesc:a5932cbe5ddf7772028bb6250c5ce75fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get fps. <br /></td></tr>
+<tr class="separator:a5932cbe5ddf7772028bb6250c5ce75fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ff110d5a86c1cd60b541d65915ac48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2ff110d5a86c1cd60b541d65915ac48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ad2ff110d5a86c1cd60b541d65915ac48">update</a> ()</td></tr>
+<tr class="memdesc:ad2ff110d5a86c1cd60b541d65915ac48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update loop time. <br /></td></tr>
+<tr class="separator:ad2ff110d5a86c1cd60b541d65915ac48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690ac76faed3d2a9f1f582a2e6fc8c85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a690ac76faed3d2a9f1f582a2e6fc8c85"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a690ac76faed3d2a9f1f582a2e6fc8c85">setBackground</a> (<a class="el" href="classBackground.html">Background</a> b)</td></tr>
+<tr class="memdesc:a690ac76faed3d2a9f1f582a2e6fc8c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set background. <br /></td></tr>
+<tr class="separator:a690ac76faed3d2a9f1f582a2e6fc8c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376e4a1ba9adc079e1da9b28a290abd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a376e4a1ba9adc079e1da9b28a290abd2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a376e4a1ba9adc079e1da9b28a290abd2">setBackground</a> (string filename)</td></tr>
+<tr class="memdesc:a376e4a1ba9adc079e1da9b28a290abd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set background with filename. <br /></td></tr>
+<tr class="separator:a376e4a1ba9adc079e1da9b28a290abd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9398f6b48392dc520ab8c529e1d10c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9398f6b48392dc520ab8c529e1d10c4"></a>
+<a class="el" href="classBackground.html">Background</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aa9398f6b48392dc520ab8c529e1d10c4">getBackground</a> () const </td></tr>
+<tr class="memdesc:aa9398f6b48392dc520ab8c529e1d10c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get background. <br /></td></tr>
+<tr class="separator:aa9398f6b48392dc520ab8c529e1d10c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84c13e84d00fd3b0389a9a076ec194f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa84c13e84d00fd3b0389a9a076ec194f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aa84c13e84d00fd3b0389a9a076ec194f">drawBackground</a> ()</td></tr>
+<tr class="memdesc:aa84c13e84d00fd3b0389a9a076ec194f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw background. <br /></td></tr>
+<tr class="separator:aa84c13e84d00fd3b0389a9a076ec194f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276e63ae5648c36051c21c5b7c5dfb4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a276e63ae5648c36051c21c5b7c5dfb4b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a276e63ae5648c36051c21c5b7c5dfb4b">draw</a> (<a class="el" href="classObject.html">Object</a> obj)</td></tr>
+<tr class="memdesc:a276e63ae5648c36051c21c5b7c5dfb4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an object on the screen. <br /></td></tr>
+<tr class="separator:a276e63ae5648c36051c21c5b7c5dfb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212b1b788cae7931fda927c0cbd2e165"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a212b1b788cae7931fda927c0cbd2e165"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a212b1b788cae7931fda927c0cbd2e165">draw</a> (vector&lt; <a class="el" href="classObject.html">Object</a> &gt; objs)</td></tr>
+<tr class="memdesc:a212b1b788cae7931fda927c0cbd2e165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a vector of Objects. <br /></td></tr>
+<tr class="separator:a212b1b788cae7931fda927c0cbd2e165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d89df09ee2577fd7deaf2f5e27f93a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81d89df09ee2577fd7deaf2f5e27f93a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a81d89df09ee2577fd7deaf2f5e27f93a">draw</a> (<a class="el" href="classObject.html">Object</a> obj, int key)</td></tr>
+<tr class="memdesc:a81d89df09ee2577fd7deaf2f5e27f93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an object with a pass key before/during splash. <br /></td></tr>
+<tr class="separator:a81d89df09ee2577fd7deaf2f5e27f93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9435c9399f0d3952032c106e7ee8f6e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9435c9399f0d3952032c106e7ee8f6e9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a9435c9399f0d3952032c106e7ee8f6e9">draw</a> (<a class="el" href="classLevel.html">Level</a> lvl)</td></tr>
+<tr class="memdesc:a9435c9399f0d3952032c106e7ee8f6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the level. <br /></td></tr>
+<tr class="separator:a9435c9399f0d3952032c106e7ee8f6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6f1426c5c57f9d60be1e10d8eb2506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb6f1426c5c57f9d60be1e10d8eb2506"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#adb6f1426c5c57f9d60be1e10d8eb2506">splash</a> ()</td></tr>
+<tr class="memdesc:adb6f1426c5c57f9d60be1e10d8eb2506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls splashscreen at the beginning of the game. This is automatically called unless deactivated. <br /></td></tr>
+<tr class="separator:adb6f1426c5c57f9d60be1e10d8eb2506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9cf8a050f43e4e185748f7b2a3ded8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b9cf8a050f43e4e185748f7b2a3ded8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a3b9cf8a050f43e4e185748f7b2a3ded8">bypassSplash</a> (int key)</td></tr>
+<tr class="memdesc:a3b9cf8a050f43e4e185748f7b2a3ded8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deactives the splashscreen, requires key. <br /></td></tr>
+<tr class="separator:a3b9cf8a050f43e4e185748f7b2a3ded8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabab82c2ba4dca772a28dbbd4fe08cb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabab82c2ba4dca772a28dbbd4fe08cb4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aabab82c2ba4dca772a28dbbd4fe08cb4">hasSplashed</a> ()</td></tr>
+<tr class="memdesc:aabab82c2ba4dca772a28dbbd4fe08cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the splashscreen has occured. <br /></td></tr>
+<tr class="separator:aabab82c2ba4dca772a28dbbd4fe08cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c87c90c9dd6b3fd652e24af0c7e935d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c87c90c9dd6b3fd652e24af0c7e935d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a5c87c90c9dd6b3fd652e24af0c7e935d">runCustomSplash</a> ()</td></tr>
+<tr class="memdesc:a5c87c90c9dd6b3fd652e24af0c7e935d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run custom splashscreen. This is automatically called after splash if there is a custom splashscreen. <br /></td></tr>
+<tr class="separator:a5c87c90c9dd6b3fd652e24af0c7e935d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0960e415d0b9ed92099eee6677d7ea51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0960e415d0b9ed92099eee6677d7ea51"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a0960e415d0b9ed92099eee6677d7ea51">customSplash</a> (string file, double time, int w, int h)</td></tr>
+<tr class="memdesc:a0960e415d0b9ed92099eee6677d7ea51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image. <br /></td></tr>
+<tr class="separator:a0960e415d0b9ed92099eee6677d7ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d5307c4bc5005119086ff9f3e21624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60d5307c4bc5005119086ff9f3e21624"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a60d5307c4bc5005119086ff9f3e21624">debugMode</a> (bool d)</td></tr>
+<tr class="memdesc:a60d5307c4bc5005119086ff9f3e21624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active debugger with Boolean. <br /></td></tr>
+<tr class="separator:a60d5307c4bc5005119086ff9f3e21624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28645d6809f5335cc9034caaba38827"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab28645d6809f5335cc9034caaba38827"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>hideMouse</b> ()</td></tr>
+<tr class="separator:ab28645d6809f5335cc9034caaba38827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d476e93e46e59543ea9714b93a30936"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d476e93e46e59543ea9714b93a30936"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showMouse</b> ()</td></tr>
+<tr class="separator:a6d476e93e46e59543ea9714b93a30936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for declaring an engine, which does basic SDL commands like creating the window and renderer. </p>
 
-<p>Definition at line <a class="el" href="engine_8h_source.html#l00028">28</a> of file <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
+<p>Definition at line <a class="el" href="arch_8h_source.html#l00070">70</a> of file <a class="el" href="arch_8h_source.html">arch.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="arch_8h_source.html">arch.h</a></li>
 <li><a class="el" href="engine_8h_source.html">engine.h</a></li>
 <li><a class="el" href="engine_8cpp_source.html">engine.cpp</a></li>
 </ul>

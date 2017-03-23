@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Class for loading in multiple Tiles.  
  <a href="classTileset.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="tileset_8h_source.html">tileset.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="arch_8h_source.html">arch.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -161,12 +161,76 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPassable</b> (int 
 <tr class="memitem:ad5f3a60a84cec25c6e11856a7cd36d84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5f3a60a84cec25c6e11856a7cd36d84"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (string n, int id)</td></tr>
 <tr class="separator:ad5f3a60a84cec25c6e11856a7cd36d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f7859d69952b223bdb322796bcc9f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5f7859d69952b223bdb322796bcc9f2"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTileset</b> () const </td></tr>
+<tr class="separator:ae5f7859d69952b223bdb322796bcc9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa962edb9c573aca7327387ba6be0b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefa962edb9c573aca7327387ba6be0b1"></a>
+SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>getFrame</b> (int i)</td></tr>
+<tr class="separator:aefa962edb9c573aca7327387ba6be0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c6192618c41b2083ff4c9224c6830d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98c6192618c41b2083ff4c9224c6830d"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a98c6192618c41b2083ff4c9224c6830d">create</a> (string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
+<tr class="memdesc:a98c6192618c41b2083ff4c9224c6830d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the SDL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image. <br /></td></tr>
+<tr class="separator:a98c6192618c41b2083ff4c9224c6830d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0fe3b9f21336f475f2763c9ea7c4a05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0fe3b9f21336f475f2763c9ea7c4a05"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#af0fe3b9f21336f475f2763c9ea7c4a05">create</a> (string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
+<tr class="memdesc:af0fe3b9f21336f475f2763c9ea7c4a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, SDL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image. <br /></td></tr>
+<tr class="separator:af0fe3b9f21336f475f2763c9ea7c4a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e6d07ce652af578d49d6415461d692"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9e6d07ce652af578d49d6415461d692"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#aa9e6d07ce652af578d49d6415461d692">create</a> (int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int count)</td></tr>
+<tr class="memdesc:aa9e6d07ce652af578d49d6415461d692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the SDL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image. <br /></td></tr>
+<tr class="separator:aa9e6d07ce652af578d49d6415461d692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11e3dc2ff393646e68de707f47c71ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae11e3dc2ff393646e68de707f47c71ea"></a>
+vector&lt; <a class="el" href="classTile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#ae11e3dc2ff393646e68de707f47c71ea">create</a> (int startid, string name, string img, SDL_Renderer *ren, int width, int height, int r, int rcount, int count)</td></tr>
+<tr class="memdesc:ae11e3dc2ff393646e68de707f47c71ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, SDL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image. <br /></td></tr>
+<tr class="separator:ae11e3dc2ff393646e68de707f47c71ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26acaabd06601aba2e277fdd2b750fc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26acaabd06601aba2e277fdd2b750fc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#a26acaabd06601aba2e277fdd2b750fc7">addTile</a> (<a class="el" href="classTile.html">Tile</a> t)</td></tr>
+<tr class="memdesc:a26acaabd06601aba2e277fdd2b750fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a> in tile with given <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a>. <br /></td></tr>
+<tr class="separator:a26acaabd06601aba2e277fdd2b750fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4085286f450afdb53b22c917a77cba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea4085286f450afdb53b22c917a77cba"></a>
+<a class="el" href="classTile.html">Tile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#aea4085286f450afdb53b22c917a77cba">addTile</a> (string name, string file, SDL_Renderer *ren, int value, int r, int c, int width, int height)</td></tr>
+<tr class="memdesc:aea4085286f450afdb53b22c917a77cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and push <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a> with tile name, path tot he tile image, SDL renderer, tile value, row and columg the tile as on in the image, the tiles width and height. <br /></td></tr>
+<tr class="separator:aea4085286f450afdb53b22c917a77cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8022d2b4129de86c132172ac8ce23a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8022d2b4129de86c132172ac8ce23a5"></a>
+<a class="el" href="classTile.html">Tile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#af8022d2b4129de86c132172ac8ce23a5">addTile</a> (string name, string file, SDL_Renderer *ren, int value, int width, int height)</td></tr>
+<tr class="memdesc:af8022d2b4129de86c132172ac8ce23a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and push <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a> with a given name, path to image file, SDL renderer, given value, and tile width and height. <br /></td></tr>
+<tr class="separator:af8022d2b4129de86c132172ac8ce23a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc54ffeda362f79668abb0bad2f73296"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc54ffeda362f79668abb0bad2f73296"></a>
+<a class="el" href="classTile.html">Tile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#adc54ffeda362f79668abb0bad2f73296">addTile</a> (string name, string file, SDL_Renderer *ren, int value, int size)</td></tr>
+<tr class="memdesc:adc54ffeda362f79668abb0bad2f73296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and push <a class="el" href="classTile.html" title="An Object class that stores the a tile value and name. ">Tile</a> with a given name, path to the image, SDL renderer, value, and size (used for width and height). <br /></td></tr>
+<tr class="separator:adc54ffeda362f79668abb0bad2f73296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1dab8dd83a80e5d49dcdb95f9841898"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1dab8dd83a80e5d49dcdb95f9841898"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTileset.html#ab1dab8dd83a80e5d49dcdb95f9841898">setAngle</a> (int ang)</td></tr>
+<tr class="memdesc:ab1dab8dd83a80e5d49dcdb95f9841898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the angle of all the tiles. Calls pushAng(). <br /></td></tr>
+<tr class="separator:ab1dab8dd83a80e5d49dcdb95f9841898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87978787ae2529b915c0436b5872dd48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87978787ae2529b915c0436b5872dd48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSolid</b> ()</td></tr>
+<tr class="separator:a87978787ae2529b915c0436b5872dd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dd63b2c6422ed5a9b7d772963fe255"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4dd63b2c6422ed5a9b7d772963fe255"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSolid</b> (int t)</td></tr>
+<tr class="separator:aa4dd63b2c6422ed5a9b7d772963fe255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d40a14146a3dedd0217a412a66f4c9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d40a14146a3dedd0217a412a66f4c9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSolid</b> (int s, int e)</td></tr>
+<tr class="separator:a6d40a14146a3dedd0217a412a66f4c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc3756317f238121769629ea20a9849"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fc3756317f238121769629ea20a9849"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPassable</b> ()</td></tr>
+<tr class="separator:a9fc3756317f238121769629ea20a9849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231401092d65e28b7dea12e97e3232ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a231401092d65e28b7dea12e97e3232ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPassable</b> (int t)</td></tr>
+<tr class="separator:a231401092d65e28b7dea12e97e3232ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b12096b06c7162ca4bb9058a232d21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84b12096b06c7162ca4bb9058a232d21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPassable</b> (int s, int e)</td></tr>
+<tr class="separator:a84b12096b06c7162ca4bb9058a232d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f3a60a84cec25c6e11856a7cd36d84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5f3a60a84cec25c6e11856a7cd36d84"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (string n, int id)</td></tr>
+<tr class="separator:ad5f3a60a84cec25c6e11856a7cd36d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for loading in multiple Tiles. </p>
 
-<p>Definition at line <a class="el" href="tileset_8h_source.html#l00008">8</a> of file <a class="el" href="tileset_8h_source.html">tileset.h</a>.</p>
+<p>Definition at line <a class="el" href="arch_8h_source.html#l00683">683</a> of file <a class="el" href="arch_8h_source.html">arch.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="arch_8h_source.html">arch.h</a></li>
 <li><a class="el" href="tileset_8h_source.html">tileset.h</a></li>
 <li><a class="el" href="tileset_8cpp_source.html">tileset.cpp</a></li>
 </ul>

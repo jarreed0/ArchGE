@@ -1,5 +1,4 @@
-#include "../../engine/engine.h"
-#include "../../engine/input.h"
+#include "../../engine/arch.h"
 using namespace std;
 
 int main() {
