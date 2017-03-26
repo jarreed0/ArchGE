@@ -76,6 +76,8 @@ public:
   void setFrameX(int x) { frame.x = x; }
   //! Set the object's velocity toward another object
   void setVelTo(Object o);
+  //!Set the object's angle towards another object.
+  void lookAt(Object o);
   //! Set the y coordinate of the frame.
   void setFrameY(int y) { frame.y = y; }
   void setFrameW(int w) { frame.w = w; }

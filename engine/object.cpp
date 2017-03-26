@@ -45,3 +45,8 @@ void Object::setVelTo(Object o) {
   setVelY(s);
 }
 
+void Object::lookAt(Object o) {
+  double angle = atan2(o.getDestY() - getDestY(), o.getDestX() - getDestX());
+  setAngle(angle);
+}
+
