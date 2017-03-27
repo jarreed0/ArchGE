@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "../../engine/arch.h"
+#include <arch/arch.h>
 
 #define SPEED 2
 #define WIDTH 640

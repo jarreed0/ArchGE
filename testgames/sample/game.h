@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "../../engine/arch.h"
+#include <arch/arch.h>
 
 #define TILE_SIZE 24
 #define TOTAL_TILES 60

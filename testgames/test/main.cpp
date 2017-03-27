@@ -1,4 +1,4 @@
-#include "../../engine/arch.h"
+#include <arch/arch.h>
 using namespace std;
 
 int main() {

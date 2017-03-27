@@ -1,7 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "../../engine/arch.h"
+#include <arch/arch.h>
+#include <vector>
 
 #define SPEED 2
 #define WIDTH 640
@@ -13,8 +14,10 @@ private:
   bool running, timeToMove;
   Input i;
   Object o, o2;
+  vector<Object> mobjs, mobjs2;
   bool l, r, u, d;
   int vel = 300, mcount = 0;
+  bool makeNewBlock;
 public:
   Game();
   ~Game();
@@ -22,6 +25,7 @@ public:
   void draw();
   void input();
   void update();
+  void createObj();
 };
 
 #endif //GAME_H
