@@ -1,3 +1,5 @@
+sudo: required
+
 before install:
  - sudo apt-get install libsdl2-2.0-0 -y
  - sudo apt-get install libsdl2-image-2.0-0 -y
@@ -6,3 +8,11 @@ before install:
  - sudo apt-get install libsdl2-ttf-2.0-0 -y
  - sudo apt-get install libsdl2-ttf-dbg -y
  - sudo apt-get install libsdl2-ttf-dev -y
+ - sudo apt-get install binutils -y
+
+script:
+ - cd engine
+ - ./build.sh
+ - cd ..
+
+
