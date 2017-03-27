@@ -1,12 +1,8 @@
 before install:
- - sudo apt-get install -y libsdl2-2.0-0
- - sudo apt-get install -y libsdl2-image-2.0-0
- - sudo apt-get install -y libsdl2-image-dbg
- - sudo apt-get install -y libsdl2-image-dev
- - sudo apt-get install -y libsdl2-ttf-2.0-0
- - sudo apt-get install -y libsdl2-ttf-dbg
- - sudo apt-get install -y libsdl2-ttf-dev
-
-cd engine
-./build.sh
-cd ..
+ - sudo apt-get install libsdl2-2.0-0 -y
+ - sudo apt-get install libsdl2-image-2.0-0 -y
+ - sudo apt-get install libsdl2-image-dbg -y
+ - sudo apt-get install libsdl2-image-dev -y
+ - sudo apt-get install libsdl2-ttf-2.0-0 -y
+ - sudo apt-get install libsdl2-ttf-dbg -y
+ - sudo apt-get install libsdl2-ttf-dev -y
