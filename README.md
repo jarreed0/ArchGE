@@ -28,7 +28,8 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [x] And....
 - [ ] Much, much more
 
-# News # <a name="news"/></a>
+<a name="news"/></a>
+# News #
  - - - -
 
 ## OpenGL Support! ##
@@ -72,7 +73,8 @@ Know of any other bugs? Let us know!
 
 ![alt tag](docs/screenshots/genesis.png)
 
-# Tutorials # <a name="tuts"/></a>
+<a name="tuts"/></a>
+# Tutorials # 
  - - - -
 Check out test games for more examples.
 
@@ -225,7 +227,8 @@ Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
-# Manage # <a name="man"/></a>
+<a name="man"/></a>
+# Manage # 
  - - - -
 
 ## Try out manage: ##
