@@ -39,6 +39,9 @@ void \hyperlink{classEngine_ada9e7e5de3b47113fc39fcabfe298f9e}{set\+Size} (int w
 S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_ae42b73be55ab0fa034a0f7dea156cf9c}{get\+Renderer} ()\hypertarget{classEngine_ae42b73be55ab0fa034a0f7dea156cf9c}{}\label{classEngine_ae42b73be55ab0fa034a0f7dea156cf9c}
 
 \begin{DoxyCompactList}\small\item\em Returns screen renderer. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Window $\ast$ \hyperlink{classEngine_ab95d74b94f8eafd11bf6c8fbf5b34a8f}{get\+Window} () const \hypertarget{classEngine_ab95d74b94f8eafd11bf6c8fbf5b34a8f}{}\label{classEngine_ab95d74b94f8eafd11bf6c8fbf5b34a8f}
+
+\begin{DoxyCompactList}\small\item\em Returns screen window. \end{DoxyCompactList}\item 
 void \hyperlink{classEngine_aeee842a402f260e38e0502e1d95b920b}{set\+Color} (Uint8 r, Uint8 g, Uint8 b)\hypertarget{classEngine_aeee842a402f260e38e0502e1d95b920b}{}\label{classEngine_aeee842a402f260e38e0502e1d95b920b}
 
 \begin{DoxyCompactList}\small\item\em Sets S\+DL color. \end{DoxyCompactList}\item 
@@ -48,12 +51,8 @@ void \hyperlink{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}{loop\+Start} ()\h
 void \hyperlink{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{render} ()\hypertarget{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{}\label{classEngine_a7960743aefd62e846e7f3cd92c18bc73}
 
 \begin{DoxyCompactList}\small\item\em Call this at the end of the game loop to render. \end{DoxyCompactList}\item 
-bool \hyperlink{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}{F\+PS} () const \hypertarget{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}{}\label{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}
-
+void \hyperlink{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}{update} ()
 \begin{DoxyCompactList}\small\item\em Get fps. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}{update} ()\hypertarget{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}{}\label{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}
-
-\begin{DoxyCompactList}\small\item\em Update loop time. \end{DoxyCompactList}\item 
 void \hyperlink{classEngine_a690ac76faed3d2a9f1f582a2e6fc8c85}{set\+Background} (\hyperlink{classBackground}{Background} b)\hypertarget{classEngine_a690ac76faed3d2a9f1f582a2e6fc8c85}{}\label{classEngine_a690ac76faed3d2a9f1f582a2e6fc8c85}
 
 \begin{DoxyCompactList}\small\item\em Set background. \end{DoxyCompactList}\item 
@@ -78,9 +77,15 @@ void \hyperlink{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}{draw} (\hyperlink
 void \hyperlink{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}{draw} (\hyperlink{classLevel}{Level} lvl)\hypertarget{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}{}\label{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}
 
 \begin{DoxyCompactList}\small\item\em Draw the level. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
+void \hyperlink{classEngine_a4eb9f3f3e8207ef4b0dfcc0d1889d176}{draw} (int s, int x, int y)\hypertarget{classEngine_a4eb9f3f3e8207ef4b0dfcc0d1889d176}{}\label{classEngine_a4eb9f3f3e8207ef4b0dfcc0d1889d176}
 
 \begin{DoxyCompactList}\small\item\em Calls splashscreen at the beginning of the game. This is automatically called unless deactivated. \end{DoxyCompactList}\item 
+void {\bfseries draw} (string s, int x, int y)\hypertarget{classEngine_ab84c2e814c44d511e12891c60ae66e96}{}\label{classEngine_ab84c2e814c44d511e12891c60ae66e96}
+
+\item 
+void {\bfseries splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
+
+\item 
 void \hyperlink{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{bypass\+Splash} (int key)\hypertarget{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{}\label{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}
 
 \begin{DoxyCompactList}\small\item\em Deactives the splashscreen, requires key. \end{DoxyCompactList}\item 
@@ -110,14 +115,59 @@ bool {\bfseries get\+Running} () const \hypertarget{classEngine_a8261a8bc23adeaf
 \item 
 void {\bfseries set\+Running} (bool r)\hypertarget{classEngine_ac5a84be825afebf377e227bcb049a753}{}\label{classEngine_ac5a84be825afebf377e227bcb049a753}
 
+\item 
+void {\bfseries set\+G\+L\+View} (int a, int b, int c, int d, int e, int f, int g, int h, int i)\hypertarget{classEngine_ad5387289f39246870a3c40d61b31fed8}{}\label{classEngine_ad5387289f39246870a3c40d61b31fed8}
+
+\item 
+void {\bfseries set\+G\+L\+Mode} (bool m)\hypertarget{classEngine_a0ac77a2abc0269f3825a184fbfcef3dd}{}\label{classEngine_a0ac77a2abc0269f3825a184fbfcef3dd}
+
+\item 
+int {\bfseries get\+F\+PS} () const \hypertarget{classEngine_a7b4d5a0722d470402278c05fed39c1f1}{}\label{classEngine_a7b4d5a0722d470402278c05fed39c1f1}
+
+\item 
+void {\bfseries set\+Font\+Color} (Uint8 r, Uint8 g, Uint8 b)\hypertarget{classEngine_a3658606ab22302767e81ab6d1975d6bd}{}\label{classEngine_a3658606ab22302767e81ab6d1975d6bd}
+
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for declaring an engine, which does basic S\+DL commands like creating the window and renderer. 
 
-Definition at line 28 of file engine.\+h.
+Definition at line 33 of file engine.\+h.
 
+
+
+\subsection{Member Function Documentation}
+\index{Engine@{Engine}!update@{update}}
+\index{update@{update}!Engine@{Engine}}
+\subsubsection[{\texorpdfstring{update()}{update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Engine\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}{}\label{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}
+
+
+Get fps. 
+
+Update loop time. 
+
+Definition at line 110 of file engine.\+cpp.
+
+
+\begin{DoxyCode}
+110                     \{
+111   simulationTime += 16;
+112   \textcolor{keywordflow}{if}(simulationTime < realTime) \{ fps = \textcolor{keyword}{true}; \} \textcolor{keywordflow}{else} \{ fps = \textcolor{keyword}{false}; \}
+113   \textcolor{keywordflow}{if}(exitOnEsc) \{ input.\hyperlink{classInput_a7664a52377e4bda7524d288df481954b}{logPress}(); \textcolor{keywordflow}{if}(input.\hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a528c1c27ef18062003acc6ecc6418719}{esc}) || input.
+      \hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a756c57e33cd0ff991ba76ecff4dfa8a4}{quit})) \{setRunning(\textcolor{keyword}{false});\}\}
+114   \textcolor{keywordflow}{if}(glMode) \{
+115    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+116    glMatrixMode( GL\_MODELVIEW );
+117    glLoadIdentity( );
+118    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
+119   \}
+120 \}
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -11,7 +11,7 @@ private:
   Engine e;
   Input i;
   double angleX, angleZ;
-  Uint32 last_time, current_time, ellapsed_time, start_time; 	
+  Uint32 last_time, current_time, ellapsed_time, start_time;
 public:
   Game();
   ~Game();

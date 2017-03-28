@@ -84,11 +84,13 @@ void Engine::loopStart() {
   curTime = time(0);
   if(curTime > lastTime) {
    lastTime = curTime; cout << frameCount << endl; frameCount=0; 
+   curFPS=frameCount;
    //if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
    //if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
   }
 }
 void Engine::render() {
+  text.setColor(fr, fg, fb);
   //struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
   //if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
    if(!splashed) { splash(); cout << "splash" << endl; }
@@ -153,6 +155,14 @@ void Engine::draw(Level lvl) {
       draw(entities[i]);
     }
   }
+}
+
+void Engine::draw(int s, int x, int y) {
+ draw(text.createMessage(s, x, y, engren));
+}
+
+void Engine::draw(string s, int x, int y) {
+ draw(text.createMessage(s, x, y, engren));
 }
 
 void Engine::setBackground(string filename) {

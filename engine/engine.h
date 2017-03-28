@@ -24,6 +24,7 @@ using namespace std;
 #include "physics-tmp.h"
 #include "stage.h"
 #include "level.h"
+#include "text.h"
 /*
 #include "splash.h"
 */
@@ -54,6 +55,9 @@ private:
   int framesPerSecond, cappedFrame, capTime, capMark, renderMiliGap;
   bool glMode;
   int glView[9];
+  int curFPS;
+  Text text;
+  Uint8 fr, fg, fb;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -103,6 +107,8 @@ public:
   //! Draw the level.
   void draw(Level lvl);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
+  void draw(int s, int x, int y);
+  void draw(string s, int x, int y);
   void splash();
   //! Deactives the splashscreen, requires key.
   void bypassSplash(int key);
@@ -121,6 +127,8 @@ public:
   void setRunning(bool r) { running = r; }
   void setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i);
   void setGLMode(bool m) {glMode=m;}
+  int getFPS() const {return curFPS;}
+  void setFontColor(Uint8 r, Uint8 g, Uint8 b) {fr=r; fg=g; fb=b;}
 };
 
 #endif //ENGINE_H

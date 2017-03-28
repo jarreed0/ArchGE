@@ -9,7 +9,8 @@
   \indexspace
 
   \item {Engine}, \hyperpage{7}
-  \item {Entity}, \hyperpage{8}
+    \subitem {update}, \hyperpage{8}
+  \item {Entity}, \hyperpage{9}
 
   \indexspace
 
@@ -17,12 +18,12 @@
 
   \indexspace
 
-  \item {Image}, \hyperpage{10}
-  \item {Input}, \hyperpage{11}
+  \item {Image}, \hyperpage{11}
+  \item {Input}, \hyperpage{12}
 
   \indexspace
 
-  \item {Level}, \hyperpage{13}
+  \item {Level}, \hyperpage{14}
 
   \indexspace
 
@@ -34,7 +35,7 @@
 
   \indexspace
 
-  \item {Physics}, \hyperpage{18}
+  \item {Physics}, \hyperpage{19}
 
   \indexspace
 
@@ -42,7 +43,13 @@
 
   \indexspace
 
+  \item {Text}, \hyperpage{20}
   \item {Tile}, \hyperpage{20}
   \item {Tileset}, \hyperpage{21}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Engine}, \hyperpage{8}
 
 \end{theindex}

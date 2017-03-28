@@ -22,6 +22,7 @@ var searchData=
   ['gettileset',['getTileset',['../classStage.html#a7c41f0bf5dcdac398169c5a2e92196f3',1,'Stage']]],
   ['gettilestorender',['getTilesToRender',['../classLevel.html#ade9e45f70f2f3f81c120bb161f87218f',1,'Level']]],
   ['getvalue',['getValue',['../classTile.html#aa426a6476fcf257bd0f79da4c3ed06aa',1,'Tile']]],
+  ['getwindow',['getWindow',['../classEngine.html#ab95d74b94f8eafd11bf6c8fbf5b34a8f',1,'Engine']]],
   ['getx',['getX',['../classLevel.html#a6f5dca509c0e480d8a7b6b1d6b411375',1,'Level::getX()'],['../classMap.html#ae235f91105c54961e42e2750cf52deaa',1,'Map::getX()'],['../classObject.html#a313c75c1fdb4a1521ed91b27fd648f44',1,'Object::getX()']]],
   ['gety',['getY',['../classLevel.html#acb5b4e5e0bf364142fa0facc7badea4a',1,'Level::getY()'],['../classMap.html#a7d9858d941f8e40226f4a12d4f8437c4',1,'Map::getY()'],['../classObject.html#a5c85757552e0dc8a69baf769540cc612',1,'Object::getY()']]]
 ];

@@ -54,18 +54,20 @@ void Game::draw() {
 	glVertex3d(-1,1,-1);
 	glVertex3d(-1,-1,-1);
 	glVertex3d(-1,-1,1);
-	 
+
 	glColor3ub(0,255,255); //face cyan
 	glVertex3d(1,1,-1);
 	glVertex3d(1,-1,-1);
 	glVertex3d(-1,-1,-1);
 	glVertex3d(-1,1,-1);
- 
+
 	glColor3ub(255,0,255); //face magenta
 	glVertex3d(1,-1,1);
 	glVertex3d(1,1,1);
 	glVertex3d(-1,1,1);
 	glVertex3d(-1,-1,1);
+
+ //e.draw(e.getFPS(), 10, 10);
 }
 
 void Game::input() {

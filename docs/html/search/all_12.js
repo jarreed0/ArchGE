@@ -37,6 +37,5 @@ var searchData=
   ['setx',['setX',['../classLevel.html#a6212b3c03b3efc82cf69e642cc093959',1,'Level::setX()'],['../classObject.html#a3a3e2b361faf2deb8663ecda9c6c4868',1,'Object::setX()']]],
   ['sety',['setY',['../classLevel.html#a7c67443008f7e0f4b5d1630ff2dcf179',1,'Level::setY()'],['../classObject.html#acab13582a9cb12392fc7a83d1d80e3d6',1,'Object::setY()']]],
   ['shift',['shift',['../classInput.html#a934fa19ab0a751a68f9e9ef2e976e032',1,'Input']]],
-  ['splash',['splash',['../classEngine.html#adb6f1426c5c57f9d60be1e10d8eb2506',1,'Engine']]],
   ['stage',['Stage',['../classStage.html',1,'']]]
 ];

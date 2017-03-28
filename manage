@@ -183,6 +183,8 @@ elif [ "$1" == "reg" ] || [ "$1" == "-r" ]; then
   git config --global user.name "$un"
 	git config --global user.email $em
   echo "(key creation coming soon)"
+elif [ "$1" == "-eb" ]; then
+  g++ *.cpp -larch -lSDL2 -lSDL2_image -std=c++11 -lGL -lglut -lGLU -lSDL2_ttf
 else
   echo "No input value"
   echo "-h or --help for help"

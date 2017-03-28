@@ -16,6 +16,7 @@ int main() {
    e.update();
    i.logPress();
    if(i.checkKey(i.esc) || i.checkKey(i.quit)) e.setRunning(false);
+   //e.draw("dis", 10, 10);
    //if(!e.FPS()) frame=false;
   //}
   e.render();

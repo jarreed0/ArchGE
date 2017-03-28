@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['loadbmp',['loadBMP',['../classImage.html#ad37ad8bd7d9572be7fbbd921a299d235',1,'Image']]],
-  ['loadimage',['loadImage',['../classImage.html#a776ab55f3884f994512aa092cd7fa250',1,'Image']]],
-  ['loadmap',['loadMap',['../classMap.html#a51e1c9c777bc6c4171707f1528a73dc6',1,'Map']]],
-  ['loadpng',['loadPNG',['../classImage.html#ab00c4a53e3154287075c956c805e1cb1',1,'Image']]],
-  ['logpress',['logPress',['../classInput.html#a7664a52377e4bda7524d288df481954b',1,'Input']]],
-  ['lookat',['lookAt',['../classObject.html#a327a4b938d5f97db0ca6b9c8722f6e35',1,'Object']]],
-  ['loopstart',['loopStart',['../classEngine.html#ad7602820f1b9d75ec1b59f2a6111085e',1,'Engine']]]
+  ['move',['move',['../classLevel.html#a9184b25173fbf468a63a633bd3510bd6',1,'Level::move()'],['../classObject.html#af4133db64f4051294dc103a2f3553a6a',1,'Object::move()']]],
+  ['movetowards',['moveTowards',['../classPhysics.html#a8e53f9bf088c0d4f208b3c2029d69ab2',1,'Physics']]],
+  ['movex',['moveX',['../classObject.html#a43f3220cb27a282c28afaea57ac9a098',1,'Object']]],
+  ['movey',['moveY',['../classObject.html#a58bab6e78efd8282996d742530c98034',1,'Object']]]
 ];

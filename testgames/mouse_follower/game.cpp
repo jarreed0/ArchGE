@@ -17,6 +17,8 @@ Game::Game() {
 
   makeNewBlock=false;
 
+  e.setFontColor(0xff, 0xff, 0xff);
+
   loop();
 }
 Game::~Game() {}
@@ -40,6 +42,7 @@ void Game::loop() {
 void Game::draw() {
   //e.draw(o);
   e.draw(mobjs);
+  //e.draw(e.getFPS(), 10, 10);
 }
 
 void Game::input() {
