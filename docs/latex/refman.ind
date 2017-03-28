@@ -9,40 +9,40 @@
   \indexspace
 
   \item {Engine}, \hyperpage{7}
-  \item {Entity}, \hyperpage{10}
+  \item {Entity}, \hyperpage{8}
 
   \indexspace
 
-  \item {Game\+State}, \hyperpage{12}
+  \item {Game\+State}, \hyperpage{10}
 
   \indexspace
 
-  \item {Image}, \hyperpage{13}
-  \item {Input}, \hyperpage{14}
+  \item {Image}, \hyperpage{10}
+  \item {Input}, \hyperpage{11}
 
   \indexspace
 
-  \item {Level}, \hyperpage{16}
+  \item {Level}, \hyperpage{13}
 
   \indexspace
 
-  \item {Map}, \hyperpage{18}
+  \item {Map}, \hyperpage{15}
 
   \indexspace
 
-  \item {Object}, \hyperpage{19}
+  \item {Object}, \hyperpage{16}
 
   \indexspace
 
-  \item {Physics}, \hyperpage{24}
+  \item {Physics}, \hyperpage{18}
 
   \indexspace
 
-  \item {Stage}, \hyperpage{24}
+  \item {Stage}, \hyperpage{19}
 
   \indexspace
 
-  \item {Tile}, \hyperpage{26}
-  \item {Tileset}, \hyperpage{27}
+  \item {Tile}, \hyperpage{20}
+  \item {Tileset}, \hyperpage{21}
 
 \end{theindex}

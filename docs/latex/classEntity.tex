@@ -7,7 +7,7 @@ Class for storing health, emotion, team, etc. of an \hyperlink{classObject}{Obje
 
 
 
-{\ttfamily \#include $<$arch.\+h$>$}
+{\ttfamily \#include $<$entity.\+h$>$}
 
 
 
@@ -88,75 +88,17 @@ void \hyperlink{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{set\+Detect\+Rang
 \begin{DoxyCompactList}\small\item\em Sets the detection radius with a single given distance. \end{DoxyCompactList}\item 
 void \hyperlink{classEntity_af4b91451301036e4aed029e90a7ba726}{set\+Detect\+Range} (int w, int h)\hypertarget{classEntity_af4b91451301036e4aed029e90a7ba726}{}\label{classEntity_af4b91451301036e4aed029e90a7ba726}
 
-\begin{DoxyCompactList}\small\item\em Sets the detection radius with two given distances in both directions. \end{DoxyCompactList}\item 
-double \hyperlink{classEntity_a19c16788d1361e72ac26abb48c7d760f}{get\+Health} () const \hypertarget{classEntity_a19c16788d1361e72ac26abb48c7d760f}{}\label{classEntity_a19c16788d1361e72ac26abb48c7d760f}
-
-\begin{DoxyCompactList}\small\item\em Get \hyperlink{classEntity}{Entity}\textquotesingle{}s health. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a4f521d321ea874c474cc0506ff78da08}{set\+Health} (double h)\hypertarget{classEntity_a4f521d321ea874c474cc0506ff78da08}{}\label{classEntity_a4f521d321ea874c474cc0506ff78da08}
-
-\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classEntity}{Entity}\textquotesingle{}s health. If the health is higher then the max health it will set it to the max health. \end{DoxyCompactList}\item 
-double \hyperlink{classEntity_a5db2ad1ad9e13953207fec9786e632ca}{get\+Max\+Health} () const \hypertarget{classEntity_a5db2ad1ad9e13953207fec9786e632ca}{}\label{classEntity_a5db2ad1ad9e13953207fec9786e632ca}
-
-\begin{DoxyCompactList}\small\item\em Get max health. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a375385b808ac7fd4632d6b71f15b0e1c}{set\+Max\+Health} (double mh)\hypertarget{classEntity_a375385b808ac7fd4632d6b71f15b0e1c}{}\label{classEntity_a375385b808ac7fd4632d6b71f15b0e1c}
-
-\begin{DoxyCompactList}\small\item\em Set max health. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_af7fb432e778f9fcfe4584d09b6a73294}{damage} (double d)\hypertarget{classEntity_af7fb432e778f9fcfe4584d09b6a73294}{}\label{classEntity_af7fb432e778f9fcfe4584d09b6a73294}
-
-\begin{DoxyCompactList}\small\item\em Deal damage. Subtracted from health. If health is less then zero it kills the entity. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_aef00fa78f66829c0ecb8c27c65bd3a92}{heal} (double h)\hypertarget{classEntity_aef00fa78f66829c0ecb8c27c65bd3a92}{}\label{classEntity_aef00fa78f66829c0ecb8c27c65bd3a92}
-
-\begin{DoxyCompactList}\small\item\em Give health to the \hyperlink{classEntity}{Entity}. \end{DoxyCompactList}\item 
-int \hyperlink{classEntity_af1e50595c209b7c90fc9e98ce93883d4}{get\+Emotion} () const \hypertarget{classEntity_af1e50595c209b7c90fc9e98ce93883d4}{}\label{classEntity_af1e50595c209b7c90fc9e98ce93883d4}
-
-\begin{DoxyCompactList}\small\item\em Get current emotion state. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a79056ef5d580c09fe6cf34b989b14589}{set\+Emotion} (int e)\hypertarget{classEntity_a79056ef5d580c09fe6cf34b989b14589}{}\label{classEntity_a79056ef5d580c09fe6cf34b989b14589}
-
-\begin{DoxyCompactList}\small\item\em Set current emotion state. \end{DoxyCompactList}\item 
-int \hyperlink{classEntity_a413d08d1c89b90286c39ec0476613abf}{get\+Team} () const \hypertarget{classEntity_a413d08d1c89b90286c39ec0476613abf}{}\label{classEntity_a413d08d1c89b90286c39ec0476613abf}
-
-\begin{DoxyCompactList}\small\item\em Get \hyperlink{classEntity}{Entity}\textquotesingle{}s team. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a9fe88f82909f89087ad17d4d7ce6b22e}{set\+Team} (int t)\hypertarget{classEntity_a9fe88f82909f89087ad17d4d7ce6b22e}{}\label{classEntity_a9fe88f82909f89087ad17d4d7ce6b22e}
-
-\begin{DoxyCompactList}\small\item\em Set \hyperlink{classEntity}{Entity}\textquotesingle{}s team. \end{DoxyCompactList}\item 
-bool \hyperlink{classEntity_a6b9926025e54639201b59b447da5365b}{is\+Active} () const \hypertarget{classEntity_a6b9926025e54639201b59b447da5365b}{}\label{classEntity_a6b9926025e54639201b59b447da5365b}
-
-\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classEntity}{Entity} is active. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a522648b330daab91b49f78f0737a943f}{kill} ()\hypertarget{classEntity_a522648b330daab91b49f78f0737a943f}{}\label{classEntity_a522648b330daab91b49f78f0737a943f}
-
-\begin{DoxyCompactList}\small\item\em Sets health to zero and deactives the \hyperlink{classEntity}{Entity}. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}{deactivate} ()\hypertarget{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}{}\label{classEntity_aa409e70e0f5abb2ac1314f8745b9a661}
-
-\begin{DoxyCompactList}\small\item\em Sets active to false. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{activate} ()\hypertarget{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}{}\label{classEntity_a95079be1c9fa9f109dd3cf7446eeeb1d}
-
-\begin{DoxyCompactList}\small\item\em Sets active to true. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a63aac9638f79f0608b08f28b8cdc718e}{check\+Displayable} (\hyperlink{classObject}{Object} screen)\hypertarget{classEntity_a63aac9638f79f0608b08f28b8cdc718e}{}\label{classEntity_a63aac9638f79f0608b08f28b8cdc718e}
-
-\begin{DoxyCompactList}\small\item\em Checks if an the \hyperlink{classEntity}{Entity} is in the current screen by passing the screen to it. \end{DoxyCompactList}\item 
-S\+D\+L\+\_\+\+Rect \hyperlink{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}{get\+Detect} () const \hypertarget{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}{}\label{classEntity_a62073e91ee6f63f4b9a7e1512cda2e46}
-
-\begin{DoxyCompactList}\small\item\em Returns the detection radius. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}{set\+Detect} (S\+D\+L\+\_\+\+Rect d)\hypertarget{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}{}\label{classEntity_a7624a9b21bbb1bd97d7f2eac20339a82}
-
-\begin{DoxyCompactList}\small\item\em Sets the detection with another S\+D\+L\+\_\+\+Rect. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{set\+Detect\+Range} (int r)\hypertarget{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}{}\label{classEntity_a884a7f8a537f3d0e926dfedb8e88a740}
-
-\begin{DoxyCompactList}\small\item\em Sets the detection radius with a single given distance. \end{DoxyCompactList}\item 
-void \hyperlink{classEntity_af4b91451301036e4aed029e90a7ba726}{set\+Detect\+Range} (int w, int h)\hypertarget{classEntity_af4b91451301036e4aed029e90a7ba726}{}\label{classEntity_af4b91451301036e4aed029e90a7ba726}
-
 \begin{DoxyCompactList}\small\item\em Sets the detection radius with two given distances in both directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for storing health, emotion, team, etc. of an \hyperlink{classObject}{Object}. 
 
-Definition at line 157 of file arch.\+h.
+Definition at line 9 of file entity.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-arch.\+h\item 
 entity.\+h\item 
 entity.\+cpp\end{DoxyCompactItemize}

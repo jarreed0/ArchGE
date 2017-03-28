@@ -10,7 +10,7 @@
 class Level {
 private:
   Stage stage;
-  vector< vector<Tile>> tiles;
+  vector< vector<Tile> > tiles;
   vector<Object> objects;
   vector<Entity> entities;
   double x, y;

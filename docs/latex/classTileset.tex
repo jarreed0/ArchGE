@@ -7,7 +7,7 @@ Class for loading in multiple Tiles.
 
 
 
-{\ttfamily \#include $<$arch.\+h$>$}
+{\ttfamily \#include $<$tileset.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -65,72 +65,17 @@ void {\bfseries set\+Passable} (int s, int e)\hypertarget{classTileset_a84b12096
 \item 
 void {\bfseries set\+Name} (string n, int id)\hypertarget{classTileset_ad5f3a60a84cec25c6e11856a7cd36d84}{}\label{classTileset_ad5f3a60a84cec25c6e11856a7cd36d84}
 
-\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ {\bfseries get\+Tileset} () const \hypertarget{classTileset_ae5f7859d69952b223bdb322796bcc9f2}{}\label{classTileset_ae5f7859d69952b223bdb322796bcc9f2}
-
-\item 
-S\+D\+L\+\_\+\+Rect {\bfseries get\+Frame} (int i)\hypertarget{classTileset_aefa962edb9c573aca7327387ba6be0b1}{}\label{classTileset_aefa962edb9c573aca7327387ba6be0b1}
-
-\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_a98c6192618c41b2083ff4c9224c6830d}{create} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classTileset_a98c6192618c41b2083ff4c9224c6830d}{}\label{classTileset_a98c6192618c41b2083ff4c9224c6830d}
-
-\begin{DoxyCompactList}\small\item\em Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the S\+DL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_af0fe3b9f21336f475f2763c9ea7c4a05}{create} (string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classTileset_af0fe3b9f21336f475f2763c9ea7c4a05}{}\label{classTileset_af0fe3b9f21336f475f2763c9ea7c4a05}
-
-\begin{DoxyCompactList}\small\item\em Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, S\+DL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_aa9e6d07ce652af578d49d6415461d692}{create} (int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int count)\hypertarget{classTileset_aa9e6d07ce652af578d49d6415461d692}{}\label{classTileset_aa9e6d07ce652af578d49d6415461d692}
-
-\begin{DoxyCompactList}\small\item\em Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the S\+DL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image. \end{DoxyCompactList}\item 
-vector$<$ \hyperlink{classTile}{Tile} $>$ \hyperlink{classTileset_ae11e3dc2ff393646e68de707f47c71ea}{create} (int startid, string name, string img, S\+D\+L\+\_\+\+Renderer $\ast$ren, int width, int height, int r, int rcount, int count)\hypertarget{classTileset_ae11e3dc2ff393646e68de707f47c71ea}{}\label{classTileset_ae11e3dc2ff393646e68de707f47c71ea}
-
-\begin{DoxyCompactList}\small\item\em Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, S\+DL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image. \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_a26acaabd06601aba2e277fdd2b750fc7}{add\+Tile} (\hyperlink{classTile}{Tile} t)\hypertarget{classTileset_a26acaabd06601aba2e277fdd2b750fc7}{}\label{classTileset_a26acaabd06601aba2e277fdd2b750fc7}
-
-\begin{DoxyCompactList}\small\item\em Push \hyperlink{classTile}{Tile} in tile with given \hyperlink{classTile}{Tile}. \end{DoxyCompactList}\item 
-\hyperlink{classTile}{Tile} \hyperlink{classTileset_aea4085286f450afdb53b22c917a77cba}{add\+Tile} (string name, string file, S\+D\+L\+\_\+\+Renderer $\ast$ren, int value, int r, int c, int width, int height)\hypertarget{classTileset_aea4085286f450afdb53b22c917a77cba}{}\label{classTileset_aea4085286f450afdb53b22c917a77cba}
-
-\begin{DoxyCompactList}\small\item\em Generate and push \hyperlink{classTile}{Tile} with tile name, path tot he tile image, S\+DL renderer, tile value, row and columg the tile as on in the image, the tiles width and height. \end{DoxyCompactList}\item 
-\hyperlink{classTile}{Tile} \hyperlink{classTileset_af8022d2b4129de86c132172ac8ce23a5}{add\+Tile} (string name, string file, S\+D\+L\+\_\+\+Renderer $\ast$ren, int value, int width, int height)\hypertarget{classTileset_af8022d2b4129de86c132172ac8ce23a5}{}\label{classTileset_af8022d2b4129de86c132172ac8ce23a5}
-
-\begin{DoxyCompactList}\small\item\em Generate and push \hyperlink{classTile}{Tile} with a given name, path to image file, S\+DL renderer, given value, and tile width and height. \end{DoxyCompactList}\item 
-\hyperlink{classTile}{Tile} \hyperlink{classTileset_adc54ffeda362f79668abb0bad2f73296}{add\+Tile} (string name, string file, S\+D\+L\+\_\+\+Renderer $\ast$ren, int value, int size)\hypertarget{classTileset_adc54ffeda362f79668abb0bad2f73296}{}\label{classTileset_adc54ffeda362f79668abb0bad2f73296}
-
-\begin{DoxyCompactList}\small\item\em Generate and push \hyperlink{classTile}{Tile} with a given name, path to the image, S\+DL renderer, value, and size (used for width and height). \end{DoxyCompactList}\item 
-void \hyperlink{classTileset_ab1dab8dd83a80e5d49dcdb95f9841898}{set\+Angle} (int ang)\hypertarget{classTileset_ab1dab8dd83a80e5d49dcdb95f9841898}{}\label{classTileset_ab1dab8dd83a80e5d49dcdb95f9841898}
-
-\begin{DoxyCompactList}\small\item\em Set the angle of all the tiles. Calls push\+Ang(). \end{DoxyCompactList}\item 
-void {\bfseries set\+Solid} ()\hypertarget{classTileset_a87978787ae2529b915c0436b5872dd48}{}\label{classTileset_a87978787ae2529b915c0436b5872dd48}
-
-\item 
-void {\bfseries set\+Solid} (int t)\hypertarget{classTileset_aa4dd63b2c6422ed5a9b7d772963fe255}{}\label{classTileset_aa4dd63b2c6422ed5a9b7d772963fe255}
-
-\item 
-void {\bfseries set\+Solid} (int s, int e)\hypertarget{classTileset_a6d40a14146a3dedd0217a412a66f4c9a}{}\label{classTileset_a6d40a14146a3dedd0217a412a66f4c9a}
-
-\item 
-void {\bfseries set\+Passable} ()\hypertarget{classTileset_a9fc3756317f238121769629ea20a9849}{}\label{classTileset_a9fc3756317f238121769629ea20a9849}
-
-\item 
-void {\bfseries set\+Passable} (int t)\hypertarget{classTileset_a231401092d65e28b7dea12e97e3232ad}{}\label{classTileset_a231401092d65e28b7dea12e97e3232ad}
-
-\item 
-void {\bfseries set\+Passable} (int s, int e)\hypertarget{classTileset_a84b12096b06c7162ca4bb9058a232d21}{}\label{classTileset_a84b12096b06c7162ca4bb9058a232d21}
-
-\item 
-void {\bfseries set\+Name} (string n, int id)\hypertarget{classTileset_ad5f3a60a84cec25c6e11856a7cd36d84}{}\label{classTileset_ad5f3a60a84cec25c6e11856a7cd36d84}
-
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for loading in multiple Tiles. 
 
-Definition at line 683 of file arch.\+h.
+Definition at line 8 of file tileset.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-arch.\+h\item 
 tileset.\+h\item 
 tileset.\+cpp\end{DoxyCompactItemize}

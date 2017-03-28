@@ -100,6 +100,10 @@ Setting the background
 
 (ArchGE 0.2 currently supports PNG and BMP images)
 
+Automatically close on Quit and Esc
+
+`e.exitOnEscape(true);`
+
 ## Setting Up A Game Loop ##
 Here is a samle game loop:
 ```

@@ -9,13 +9,13 @@ int main() {
  bool running = 1;
  Input i;
  e.setBackground("../../engine/res/engine-logo.png");
- while(running) {
+ while(e.getRunning()) {
   e.loopStart();
   bool frame = true;
   while(frame) {
    e.update();
    i.logPress();
-   if(i.checkKey(i.esc) || i.checkKey(i.quit)) running = false;
+   if(i.checkKey(i.esc) || i.checkKey(i.quit)) e.setRunning(false);
    if(!e.FPS()) frame=false;
   }
   e.render();

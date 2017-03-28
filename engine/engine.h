@@ -41,6 +41,9 @@ private:
   int cw, ch; //!< Custom splashcreen width and height.
   bool debug;
   Collision col;
+  Input input;
+  bool exitOnEsc;
+  bool running;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -101,6 +104,9 @@ public:
   void debugMode(bool d);
   void hideMouse();
   void showMouse();
+  void exitOnEscape(bool e) { exitOnEsc=e; }
+  bool getRunning() const { return running; }
+  void setRunning(bool r) { running = r; }
 };
 
 #endif //ENGINE_H

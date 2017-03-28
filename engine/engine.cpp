@@ -8,6 +8,8 @@ Engine::Engine() {
   splashed = false;
   custom = false;
   debug = false;
+  exitOnEscape(false);
+  setRunning(true);
 }
 Engine::~Engine() {
   SDL_DestroyRenderer(engren);
@@ -76,6 +78,7 @@ void Engine::render() {
 void Engine::update() {
   simulationTime += 16;
   if(simulationTime < realTime) { fps = true; } else { fps = false; }
+  if(exitOnEsc) { input.logPress(); if(input.checkKey(input.esc) || input.checkKey(input.quit)) {setRunning(false);}}
 }
 
 void Engine::draw(Object obj) {

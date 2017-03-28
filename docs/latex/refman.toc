@@ -6,29 +6,29 @@
 \contentsline {section}{\numberline {3.1}Background Class Reference}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Collision Class Reference}{6}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{7}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Engine Class Reference}{7}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{9}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Entity Class Reference}{10}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{12}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State Class Reference}{12}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{13}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Image Class Reference}{13}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{14}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Input Class Reference}{14}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{16}{subsection.3.7.1}
-\contentsline {section}{\numberline {3.8}Level Class Reference}{16}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{18}{subsection.3.8.1}
-\contentsline {section}{\numberline {3.9}Map Class Reference}{18}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{19}{subsection.3.9.1}
-\contentsline {section}{\numberline {3.10}Object Class Reference}{19}{section.3.10}
-\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{23}{subsection.3.10.1}
-\contentsline {section}{\numberline {3.11}Physics Class Reference}{24}{section.3.11}
-\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{24}{subsection.3.11.1}
-\contentsline {section}{\numberline {3.12}Stage Class Reference}{24}{section.3.12}
-\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{25}{subsection.3.12.1}
-\contentsline {section}{\numberline {3.13}Tile Class Reference}{26}{section.3.13}
-\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{27}{subsection.3.13.1}
-\contentsline {section}{\numberline {3.14}Tileset Class Reference}{27}{section.3.14}
-\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{29}{subsection.3.14.1}
-\contentsline {chapter}{Index}{31}{section*.25}
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{8}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Entity Class Reference}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{10}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State Class Reference}{10}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{10}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Image Class Reference}{10}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{11}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Input Class Reference}{11}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{13}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.8}Level Class Reference}{13}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{15}{subsection.3.8.1}
+\contentsline {section}{\numberline {3.9}Map Class Reference}{15}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{15}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}Object Class Reference}{16}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{18}{subsection.3.10.1}
+\contentsline {section}{\numberline {3.11}Physics Class Reference}{18}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{19}{subsection.3.11.1}
+\contentsline {section}{\numberline {3.12}Stage Class Reference}{19}{section.3.12}
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{20}{subsection.3.12.1}
+\contentsline {section}{\numberline {3.13}Tile Class Reference}{20}{section.3.13}
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{21}{subsection.3.13.1}
+\contentsline {section}{\numberline {3.14}Tileset Class Reference}{21}{section.3.14}
+\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{22}{subsection.3.14.1}
+\contentsline {chapter}{Index}{23}{section*.25}

@@ -7,7 +7,7 @@ Class for declaring an engine, which does basic S\+DL commands like creating the
 
 
 
-{\ttfamily \#include $<$arch.\+h$>$}
+{\ttfamily \#include $<$engine.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -102,94 +102,13 @@ void {\bfseries hide\+Mouse} ()\hypertarget{classEngine_ab28645d6809f5335cc9034c
 void {\bfseries show\+Mouse} ()\hypertarget{classEngine_a6d476e93e46e59543ea9714b93a30936}{}\label{classEngine_a6d476e93e46e59543ea9714b93a30936}
 
 \item 
-\hyperlink{classEngine_a8ef7030a089ecb30bbfcb9e43094717a}{$\sim$\+Engine} ()\hypertarget{classEngine_a8ef7030a089ecb30bbfcb9e43094717a}{}\label{classEngine_a8ef7030a089ecb30bbfcb9e43094717a}
-
-\begin{DoxyCompactList}\small\item\em Decontructs renderer and window and then quits S\+DL. \end{DoxyCompactList}\item 
-S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_a92519d36917e125f41ec94ab59da8847}{init} (string s, const int \&w, const int \&h, int flag)\hypertarget{classEngine_a92519d36917e125f41ec94ab59da8847}{}\label{classEngine_a92519d36917e125f41ec94ab59da8847}
-
-\begin{DoxyCompactList}\small\item\em Create a window with a given name, width, height, and anyother S\+D\+L\+\_\+\+Window flags. \end{DoxyCompactList}\item 
-S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_af7ec37f272049ad873b0f52e9e3a7559}{init} (string s, const int \&w, const int \&h, int flag, int it)\hypertarget{classEngine_af7ec37f272049ad873b0f52e9e3a7559}{}\label{classEngine_af7ec37f272049ad873b0f52e9e3a7559}
-
-\begin{DoxyCompactList}\small\item\em Create a window with a given name, width, height, S\+D\+L\+\_\+\+Window flags, and specified S\+D\+L\+\_\+\+Init flags. \end{DoxyCompactList}\item 
-S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_acd32f3ac41b62852c6903175e5d36bb2}{init} (string s, const int \&w, const int \&h, int flag, int x, int y)\hypertarget{classEngine_acd32f3ac41b62852c6903175e5d36bb2}{}\label{classEngine_acd32f3ac41b62852c6903175e5d36bb2}
-
-\begin{DoxyCompactList}\small\item\em Create a window with a given name, width, height, S\+D\+L\+\_\+\+Window flags, and specified x and y coordinate. \end{DoxyCompactList}\item 
-S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_ad17fe3aef8fee92bf959bbfb8f014b01}{init} (string s, const int \&w, const int \&h, int flag, int x, int y, int it)\hypertarget{classEngine_ad17fe3aef8fee92bf959bbfb8f014b01}{}\label{classEngine_ad17fe3aef8fee92bf959bbfb8f014b01}
-
-\begin{DoxyCompactList}\small\item\em Create a window with a given name, width, height, S\+D\+L\+\_\+\+Window flags, specified x and y coordinate, and S\+D\+L\+\_\+\+Init flags. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_ae59bcd31693811574953ba835ecb09bb}{set\+Name} (string s)\hypertarget{classEngine_ae59bcd31693811574953ba835ecb09bb}{}\label{classEngine_ae59bcd31693811574953ba835ecb09bb}
-
-\begin{DoxyCompactList}\small\item\em Set window name. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a6133368973d175ef8915cc8033958b2b}{set\+Pos} (int x, int y)\hypertarget{classEngine_a6133368973d175ef8915cc8033958b2b}{}\label{classEngine_a6133368973d175ef8915cc8033958b2b}
-
-\begin{DoxyCompactList}\small\item\em Set window position. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_ada9e7e5de3b47113fc39fcabfe298f9e}{set\+Size} (int w, int y)\hypertarget{classEngine_ada9e7e5de3b47113fc39fcabfe298f9e}{}\label{classEngine_ada9e7e5de3b47113fc39fcabfe298f9e}
-
-\begin{DoxyCompactList}\small\item\em Set window size. \end{DoxyCompactList}\item 
-S\+D\+L\+\_\+\+Renderer $\ast$ \hyperlink{classEngine_a455a8da0fd4e3d2f446655ab4fba615e}{get\+Renderer} ()\hypertarget{classEngine_a455a8da0fd4e3d2f446655ab4fba615e}{}\label{classEngine_a455a8da0fd4e3d2f446655ab4fba615e}
-
-\begin{DoxyCompactList}\small\item\em Returns screen renderer. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_aeee842a402f260e38e0502e1d95b920b}{set\+Color} (Uint8 r, Uint8 g, Uint8 b)\hypertarget{classEngine_aeee842a402f260e38e0502e1d95b920b}{}\label{classEngine_aeee842a402f260e38e0502e1d95b920b}
-
-\begin{DoxyCompactList}\small\item\em Sets S\+DL color. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}{loop\+Start} ()\hypertarget{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}{}\label{classEngine_ad7602820f1b9d75ec1b59f2a6111085e}
-
-\begin{DoxyCompactList}\small\item\em Call this at the beginning of a loop to initilaize the loop. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{render} ()\hypertarget{classEngine_a7960743aefd62e846e7f3cd92c18bc73}{}\label{classEngine_a7960743aefd62e846e7f3cd92c18bc73}
-
-\begin{DoxyCompactList}\small\item\em Call this at the end of the game loop to render. \end{DoxyCompactList}\item 
-bool \hyperlink{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}{F\+PS} () const \hypertarget{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}{}\label{classEngine_a5932cbe5ddf7772028bb6250c5ce75fc}
-
-\begin{DoxyCompactList}\small\item\em Get fps. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}{update} ()\hypertarget{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}{}\label{classEngine_ad2ff110d5a86c1cd60b541d65915ac48}
-
-\begin{DoxyCompactList}\small\item\em Update loop time. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a690ac76faed3d2a9f1f582a2e6fc8c85}{set\+Background} (\hyperlink{classBackground}{Background} b)\hypertarget{classEngine_a690ac76faed3d2a9f1f582a2e6fc8c85}{}\label{classEngine_a690ac76faed3d2a9f1f582a2e6fc8c85}
-
-\begin{DoxyCompactList}\small\item\em Set background. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a376e4a1ba9adc079e1da9b28a290abd2}{set\+Background} (string filename)\hypertarget{classEngine_a376e4a1ba9adc079e1da9b28a290abd2}{}\label{classEngine_a376e4a1ba9adc079e1da9b28a290abd2}
-
-\begin{DoxyCompactList}\small\item\em Set background with filename. \end{DoxyCompactList}\item 
-\hyperlink{classBackground}{Background} \hyperlink{classEngine_aa9398f6b48392dc520ab8c529e1d10c4}{get\+Background} () const \hypertarget{classEngine_aa9398f6b48392dc520ab8c529e1d10c4}{}\label{classEngine_aa9398f6b48392dc520ab8c529e1d10c4}
-
-\begin{DoxyCompactList}\small\item\em Get background. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_aa84c13e84d00fd3b0389a9a076ec194f}{draw\+Background} ()\hypertarget{classEngine_aa84c13e84d00fd3b0389a9a076ec194f}{}\label{classEngine_aa84c13e84d00fd3b0389a9a076ec194f}
-
-\begin{DoxyCompactList}\small\item\em Draw background. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}{draw} (\hyperlink{classObject}{Object} obj)\hypertarget{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}{}\label{classEngine_a276e63ae5648c36051c21c5b7c5dfb4b}
-
-\begin{DoxyCompactList}\small\item\em Draw an object on the screen. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a212b1b788cae7931fda927c0cbd2e165}{draw} (vector$<$ \hyperlink{classObject}{Object} $>$ objs)\hypertarget{classEngine_a212b1b788cae7931fda927c0cbd2e165}{}\label{classEngine_a212b1b788cae7931fda927c0cbd2e165}
-
-\begin{DoxyCompactList}\small\item\em Draw a vector of Objects. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}{draw} (\hyperlink{classObject}{Object} obj, int key)\hypertarget{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}{}\label{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}
-
-\begin{DoxyCompactList}\small\item\em Draw an object with a pass key before/during splash. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}{draw} (\hyperlink{classLevel}{Level} lvl)\hypertarget{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}{}\label{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}
-
-\begin{DoxyCompactList}\small\item\em Draw the level. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
-
-\begin{DoxyCompactList}\small\item\em Calls splashscreen at the beginning of the game. This is automatically called unless deactivated. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{bypass\+Splash} (int key)\hypertarget{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{}\label{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}
-
-\begin{DoxyCompactList}\small\item\em Deactives the splashscreen, requires key. \end{DoxyCompactList}\item 
-bool \hyperlink{classEngine_aabab82c2ba4dca772a28dbbd4fe08cb4}{has\+Splashed} ()\hypertarget{classEngine_aabab82c2ba4dca772a28dbbd4fe08cb4}{}\label{classEngine_aabab82c2ba4dca772a28dbbd4fe08cb4}
-
-\begin{DoxyCompactList}\small\item\em Check if the splashscreen has occured. \end{DoxyCompactList}\item 
-bool \hyperlink{classEngine_a5c87c90c9dd6b3fd652e24af0c7e935d}{run\+Custom\+Splash} ()\hypertarget{classEngine_a5c87c90c9dd6b3fd652e24af0c7e935d}{}\label{classEngine_a5c87c90c9dd6b3fd652e24af0c7e935d}
-
-\begin{DoxyCompactList}\small\item\em Run custom splashscreen. This is automatically called after splash if there is a custom splashscreen. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a0960e415d0b9ed92099eee6677d7ea51}{custom\+Splash} (string file, double time, int w, int h)\hypertarget{classEngine_a0960e415d0b9ed92099eee6677d7ea51}{}\label{classEngine_a0960e415d0b9ed92099eee6677d7ea51}
-
-\begin{DoxyCompactList}\small\item\em Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a60d5307c4bc5005119086ff9f3e21624}{debug\+Mode} (bool d)\hypertarget{classEngine_a60d5307c4bc5005119086ff9f3e21624}{}\label{classEngine_a60d5307c4bc5005119086ff9f3e21624}
-
-\begin{DoxyCompactList}\small\item\em Active debugger with Boolean. \end{DoxyCompactList}\item 
-void {\bfseries hide\+Mouse} ()\hypertarget{classEngine_ab28645d6809f5335cc9034caaba38827}{}\label{classEngine_ab28645d6809f5335cc9034caaba38827}
+void {\bfseries exit\+On\+Escape} (bool e)\hypertarget{classEngine_abe0b98e24e2f28d316df4eec13ab92c8}{}\label{classEngine_abe0b98e24e2f28d316df4eec13ab92c8}
 
 \item 
-void {\bfseries show\+Mouse} ()\hypertarget{classEngine_a6d476e93e46e59543ea9714b93a30936}{}\label{classEngine_a6d476e93e46e59543ea9714b93a30936}
+bool {\bfseries get\+Running} () const \hypertarget{classEngine_a8261a8bc23adeaf5a17a1d6301223eda}{}\label{classEngine_a8261a8bc23adeaf5a17a1d6301223eda}
+
+\item 
+void {\bfseries set\+Running} (bool r)\hypertarget{classEngine_ac5a84be825afebf377e227bcb049a753}{}\label{classEngine_ac5a84be825afebf377e227bcb049a753}
 
 \end{DoxyCompactItemize}
 
@@ -197,12 +116,11 @@ void {\bfseries show\+Mouse} ()\hypertarget{classEngine_a6d476e93e46e59543ea9714
 \subsection{Detailed Description}
 Class for declaring an engine, which does basic S\+DL commands like creating the window and renderer. 
 
-Definition at line 70 of file arch.\+h.
+Definition at line 28 of file engine.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-arch.\+h\item 
 engine.\+h\item 
 engine.\+cpp\end{DoxyCompactItemize}
