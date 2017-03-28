@@ -7,4 +7,3 @@ sudo cp arch.a /usr/lib/x86_64-linux-gnu/libarch.a
 sudo cp *.h /usr/include/arch/
 rm arch.a
 rm arch.h
-echo "Built."
