@@ -3,6 +3,7 @@ Created by Archeantus Games
 
 Linux: [![Build Status](https://travis-ci.org/jarreed0/ArchGE.svg?branch=master)](https://travis-ci.org/jarreed0/ArchGE)
 Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/master?svg=true)](https://ci.appveyor.com/project/jarreed0/archge/branch/master) 
+Window: [!Build Status](https://ci.appveyor.com/api/projects/jarreed0/archge/branch/master/status/32r7s2skrgm9ubva?svg=true)](https://ci.appveyor.com/api/projects/jarreed0/archge/branch/master/status/32r7s2skrgm9ubva?svg=true)
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
