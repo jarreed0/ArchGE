@@ -10,7 +10,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
-<---![alt tag](http://archeantus.net/images/logo.png)--->
+![alt tag](http://archeantus.net/images/logo.png)
 
 # Check out our NEW [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) documentation for ArchGE! #
 # Check out the NEW [online docs](http://jar.ylimaf.com/archge/docs/html/annotated.html) #
@@ -33,7 +33,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 
 ## OpenGL Support! ##
 
-<img src="docs/screenshots/cube.gif" height="300" width="320" >
+<img src="docs/screenshots/cube.gif" height="300" width="340" >
 
 The engine now supports OpenGL and will soon have support assimp (or something similar) to load in 3D models.
 
