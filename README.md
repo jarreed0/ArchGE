@@ -4,9 +4,9 @@ Created by Archeantus Games
 Linux: [![Build Status](https://travis-ci.org/jarreed0/ArchGE.svg?branch=master)](https://travis-ci.org/jarreed0/ArchGE)
 Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/master?svg=true)](https://ci.appveyor.com/project/jarreed0/archge/branch/master) (I can't figure out how to display this...)
 
-[![News](docs/extra/news.png =80x)](#News)
-[![Tutorials](docs/extra/tuts.png =80x)](#Tutorials)
-[![Manage](docs/extra/man.png =80x)](#Manage)
+[![News](docs/extra/news.png =80x40)](#News)
+[![Tutorials](docs/extra/tuts.png =80x40)](#Tutorials)
+[![Manage](docs/extra/man.png =80x40)](#Manage)
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
@@ -28,7 +28,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [x] And....
 - [ ] Much, much more
 
-#News #
+# News #
  - - - -
 
 ## OpenGL Support! ##
