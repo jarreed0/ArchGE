@@ -10,6 +10,10 @@ Engine::Engine() {
   debug = false;
   exitOnEscape(false);
   setRunning(true);
+  frameCount = lastTime = capLast = capCur = 0;
+  framesPerSecond = 60;
+  capTime = 10;
+  capMark = renderMiliGap = cappedFrame = 0;
 }
 Engine::~Engine() {
   SDL_DestroyRenderer(engren);
@@ -68,12 +72,23 @@ void Engine::loopStart() {
   SDL_RenderClear(engren);
   SDL_SetRenderDrawColor(engren, red, green, blue, 0xff);
   if(bkg) drawBackground();
+  curTime = time(0);
+  if(curTime > lastTime) {
+   lastTime = curTime; cout << frameCount << endl; frameCount=0; 
+   if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
+   if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
+  }  
 }
 void Engine::render() {
-  if(!splashed) { splash(); cout << "splash" << endl; }
-  SDL_RenderPresent(engren);
-  timeval a;
-  realTime = gettimeofday(&a, 0);
+  struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
+  if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
+   if(!splashed) { splash(); cout << "splash" << endl; }
+   SDL_RenderPresent(engren);
+   timeval a;
+   realTime = gettimeofday(&a, 0);
+   frameCount++;
+  }
+  capLast=capCur;
 }
 void Engine::update() {
   simulationTime += 16;

@@ -8,6 +8,8 @@ using namespace std;
 #include <unistd.h>
 #include <sys/time.h>
 #include <vector>
+#include <ctime>
+#include <time.h>
 
 #include "image.h"
 #include "object.h"
@@ -44,6 +46,10 @@ private:
   Input input;
   bool exitOnEsc;
   bool running;
+  time_t lastTime, curTime;
+  long capLast, capCur;
+  int frameCount;
+  int framesPerSecond, cappedFrame, capTime, capMark, renderMiliGap;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
