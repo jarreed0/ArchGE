@@ -4,12 +4,9 @@ Created by Archeantus Games
 Linux: [![Build Status](https://travis-ci.org/jarreed0/ArchGE.svg?branch=master)](https://travis-ci.org/jarreed0/ArchGE)
 Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/master?svg=true)](https://ci.appveyor.com/project/jarreed0/archge/branch/master) (I can't figure out how to display this...)
 
-[![News](docs/extra/news.png =80x40)](#News)
-[![Tutorials](docs/extra/tuts.png =80x40)](#Tutorials)
-[![Manage](docs/extra/man.png =80x40)](#Manage)
-<a href="#News"><img src="docs/extra/news.png" height="48" width="28" ></a>
-<a href="#Tutorials"><img src="docs/extra/tuts.png" height="48" width="28" ></a>
-<a href="#Manage"><img src="docs/extra/man.png" height="48" width="28" ></a>
+<a href="#news"><img src="docs/extra/news.png" height="48" width="68" ></a>
+<a href="#tut"><img src="docs/extra/tuts.png" height="48" width="68" ></a>
+<a href="#man"><img src="docs/extra/man.png" height="48" width="68" ></a>
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
@@ -31,7 +28,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [x] And....
 - [ ] Much, much more
 
-# News #
+# News #<a name="news"/></a>
  - - - -
 
 ## OpenGL Support! ##
@@ -75,7 +72,7 @@ Know of any other bugs? Let us know!
 
 ![alt tag](docs/screenshots/genesis.png)
 
-# Tutorials #
+# Tutorials #<a name="tuts"/></a>
  - - - -
 Check out test games for more examples.
 
@@ -120,7 +117,7 @@ Automatically close on Quit and Esc
 
 `e.exitOnEscape(true);`
 
-Set frame rate
+COMING SOON: Set frame rate
 
 `e.setFrameRate(30);`
 
@@ -228,7 +225,7 @@ Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
-# Manage #
+# Manage #<a name="man"/></a>
  - - - -
 
 ## Try out manage: ##
