@@ -1,9 +1,6 @@
 #include <arch/arch.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <GL/glew.h>
-#include <glm/glm.hpp>
-using namespace glm;
 
 int main() {
  Engine e;
@@ -13,11 +10,7 @@ int main() {
  e.exitOnEscape(true);
  while(e.getRunning()) {
   e.loopStart();
-  //bool frame = true;
-  //while(frame) {
-   e.update();
-   //if(!e.FPS()) frame=false;
-  //}
+  e.update();
  }
  e.render();
 }

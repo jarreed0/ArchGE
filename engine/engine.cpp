@@ -14,6 +14,7 @@ Engine::Engine() {
   framesPerSecond = 60;
   capTime = 10;
   capMark = renderMiliGap = cappedFrame = 0;
+  glMode=false;
 }
 Engine::~Engine() {
   SDL_DestroyRenderer(engren);
@@ -44,6 +45,14 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
   setName(s);
   loopStart();
   render();
+  if(glMode) {
+   SDL_GL_CreateContext(engwin);
+   glMatrixMode(GL_PROJECTION);
+   glLoadIdentity();
+   gluPerspective(70,(double)w/h,1,1000);
+   glEnable(GL_DEPTH_TEST);
+  }
+  //if(it = SDL_WINDOW_OPENGL) cout << "gl" << SDL_WINDOW_OPENGL<<it<<endl;
   return engren;
 }
 
@@ -69,7 +78,7 @@ void Engine::setColor(Uint8 r, Uint8 g, Uint8 b) {
 }
 
 void Engine::loopStart() {
-  SDL_RenderClear(engren);
+  if(!glMode) SDL_RenderClear(engren);
   SDL_SetRenderDrawColor(engren, red, green, blue, 0xff);
   if(bkg) drawBackground();
   curTime = time(0);
@@ -77,23 +86,35 @@ void Engine::loopStart() {
    lastTime = curTime; cout << frameCount << endl; frameCount=0; 
    //if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
    //if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
-  }  
+  }
 }
 void Engine::render() {
   //struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
   //if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
    if(!splashed) { splash(); cout << "splash" << endl; }
-   SDL_RenderPresent(engren);
    timeval a;
    realTime = gettimeofday(&a, 0);
    frameCount++;
   //}
   //capLast=capCur;
+  if(glMode) {
+   glEnd();
+   glFlush();
+   SDL_GL_SwapWindow(engwin);
+  } else {
+   SDL_RenderPresent(engren);
+  }
 }
 void Engine::update() {
   simulationTime += 16;
   if(simulationTime < realTime) { fps = true; } else { fps = false; }
   if(exitOnEsc) { input.logPress(); if(input.checkKey(input.esc) || input.checkKey(input.quit)) {setRunning(false);}}
+  if(glMode) {
+   glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+   glMatrixMode( GL_MODELVIEW );
+   glLoadIdentity( );
+   gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
+  }
 }
 
 void Engine::draw(Object obj) {
@@ -195,4 +216,8 @@ void Engine::hideMouse() {
 
 void Engine::showMouse() {
   SDL_ShowCursor(true);
+}
+
+void Engine::setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i) {
+  glView[0]=a; glView[1]=b; glView[2]=c; glView[3]=d; glView[4]=e; glView[5]=f; glView[6]=g; glView[7]=h; glView[8]=i;
 }

@@ -10,6 +10,8 @@ using namespace std;
 #include <vector>
 #include <ctime>
 #include <time.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
 
 #include "image.h"
 #include "object.h"
@@ -50,6 +52,8 @@ private:
   long capLast, capCur;
   int frameCount;
   int framesPerSecond, cappedFrame, capTime, capMark, renderMiliGap;
+  bool glMode;
+  int glView[9];
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -70,6 +74,8 @@ public:
   void setSize(int w, int y);
   //! Returns screen renderer.
   SDL_Renderer* getRenderer();
+  //! Returns screen window.
+  SDL_Window* getWindow() const { return engwin; }
   //! Sets SDL color.
   void setColor(Uint8 r, Uint8 g, Uint8 b);
   //! Call this at the beginning of a loop to initilaize the loop.
@@ -113,6 +119,8 @@ public:
   void exitOnEscape(bool e) { exitOnEsc=e; }
   bool getRunning() const { return running; }
   void setRunning(bool r) { running = r; }
+  void setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i);
+  void setGLMode(bool m) {glMode=m;}
 };
 
 #endif //ENGINE_H
