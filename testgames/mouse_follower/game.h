@@ -18,6 +18,7 @@ private:
   bool l, r, u, d;
   int vel = 300, mcount = 0;
   bool makeNewBlock;
+  Collision col;
 public:
   Game();
   ~Game();
