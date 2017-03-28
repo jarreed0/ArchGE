@@ -75,20 +75,20 @@ void Engine::loopStart() {
   curTime = time(0);
   if(curTime > lastTime) {
    lastTime = curTime; cout << frameCount << endl; frameCount=0; 
-   if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
-   if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
+   //if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
+   //if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
   }  
 }
 void Engine::render() {
-  struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
-  if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
+  //struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
+  //if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
    if(!splashed) { splash(); cout << "splash" << endl; }
    SDL_RenderPresent(engren);
    timeval a;
    realTime = gettimeofday(&a, 0);
    frameCount++;
-  }
-  capLast=capCur;
+  //}
+  //capLast=capCur;
 }
 void Engine::update() {
   simulationTime += 16;
