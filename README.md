@@ -200,7 +200,11 @@ e.draw(objects);
 
 
 ## Build The Game ##
-`g++ *.cpp arch.a -lSDL2 -lSDL2_image -std=c++11`
+`g++ *.cpp -larch -lSDL2 -lSDL2_image -std=c++11`
+
+or (if you have the build.sh and ebuild.sh files)
+
+`manage GAMEDIR/`
 
 Makefile generation coming soon.
 
