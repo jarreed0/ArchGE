@@ -1,7 +1,4 @@
 configuration: Release
 
-- cd engine
-- cl -c *.cpp
-- ar rvs arch.a *.o
-- del *.o
-- cd ..
+build-script:
+ - cd engine
