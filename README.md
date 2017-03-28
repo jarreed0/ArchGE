@@ -4,9 +4,9 @@ Created by Archeantus Games
 Linux: [![Build Status](https://travis-ci.org/jarreed0/ArchGE.svg?branch=master)](https://travis-ci.org/jarreed0/ArchGE)
 Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/master?svg=true)](https://ci.appveyor.com/project/jarreed0/archge/branch/master) (I can't figure out how to display this...)
 
-[![News](docs/extra/news.png)](# News)
-[![Tutorials](docs/extra/tuts.png)](# Tutorials)
-[![Manage](docs/extra/man.png)](# Manage)
+[![News](docs/extra/news.png =80x)](#News)
+[![Tutorials](docs/extra/tuts.png =80x)](#Tutorials)
+[![Manage](docs/extra/man.png =80x)](#Manage)
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
@@ -33,7 +33,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 
 ## OpenGL Support! ##
 
-![alt tag](docs/screenshots/cube.gif)
+![alt tag](docs/screenshots/cube.gif =300x)
 
 The engine now supports OpenGL and will soon have support assimp (or something similar) to load in 3D models.
 
