@@ -1,12 +1,12 @@
 # ArchGE 0.2 - A 2D Game Engine written in C++ and using SDL2 #
 Created by Archeantus Games
 
+<a href="#news"><img src="docs/extra/news.png" height="46" width="70" ></a>
+<a href="#tuts"><img src="docs/extra/tuts.png" height="46" width="70" ></a>
+<a href="#man"><img src="docs/extra/man.png" height="46" width="70" ></a>
+
 Linux: [![Build Status](https://travis-ci.org/jarreed0/ArchGE.svg?branch=master)](https://travis-ci.org/jarreed0/ArchGE)
 Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/master?svg=true)](https://ci.appveyor.com/project/jarreed0/archge/branch/master) (I can't figure out how to display this...)
-
-<a href="#news"><img src="docs/extra/news.png" height="48" width="68" ></a>
-<a href="#tut"><img src="docs/extra/tuts.png" height="48" width="68" ></a>
-<a href="#man"><img src="docs/extra/man.png" height="48" width="68" ></a>
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
@@ -28,7 +28,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [x] And....
 - [ ] Much, much more
 
-# News #<a name="news"/></a>
+# News # <a name="news"/></a>
  - - - -
 
 ## OpenGL Support! ##
@@ -72,7 +72,7 @@ Know of any other bugs? Let us know!
 
 ![alt tag](docs/screenshots/genesis.png)
 
-# Tutorials #<a name="tuts"/></a>
+# Tutorials # <a name="tuts"/></a>
  - - - -
 Check out test games for more examples.
 
@@ -225,7 +225,7 @@ Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
-# Manage #<a name="man"/></a>
+# Manage # <a name="man"/></a>
  - - - -
 
 ## Try out manage: ##
