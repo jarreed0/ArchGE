@@ -77,7 +77,7 @@ public:
   //! Call this at the end of the game loop to render.
   void render();
   //! Get fps.
-  bool FPS() const { return fps; }
+  //bool FPS() const { return fps; }
   //! Update loop time.
   void update();
   //! Set background.

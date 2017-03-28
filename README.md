@@ -104,20 +104,22 @@ Automatically close on Quit and Esc
 
 `e.exitOnEscape(true);`
 
+Set frame rate
+
+`e.setFrameRate(30);`
+
+Frame rate is automatically set to 60.
+
 ## Setting Up A Game Loop ##
 Here is a samle game loop:
 ```
 void Game::loop() {
   while(running) {
     e.loopStart();
-    bool frame = true;
-    while(frame) {
-      e.update();
-      input(); //user defined
-      update(); //user defined
-      draw(); //user defined
-      if(!e.FPS()) frame=false;
-    }
+    e.update();
+    input(); //user defined
+    update(); //user defined
+    draw(); //user defined
     e.render();
   }
 }

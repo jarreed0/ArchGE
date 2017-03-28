@@ -13,11 +13,11 @@ int main() {
  e.exitOnEscape(true);
  while(e.getRunning()) {
   e.loopStart();
-  bool frame = true;
-  while(frame) {
+  //bool frame = true;
+  //while(frame) {
    e.update();
-   if(!e.FPS()) frame=false;
-  }
+   //if(!e.FPS()) frame=false;
+  //}
  }
  e.render();
 }
