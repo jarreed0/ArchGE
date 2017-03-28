@@ -204,7 +204,7 @@ e.draw(objects);
 
 or (if you have the build.sh and ebuild.sh files)
 
-`manage GAMEDIR/`
+`manage -g GAMEDIR/`
 
 Makefile generation coming soon.
 
