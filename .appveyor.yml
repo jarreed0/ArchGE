@@ -2,5 +2,5 @@ configuration: Release
 
 build_script:
  - cd engine
- - ./build.sh
+ - build.sh
  - cd ..
