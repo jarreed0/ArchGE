@@ -2,8 +2,8 @@
 Created by Archeantus Games
 
 <a href="#news"><img src="docs/extra/news.png" height="46" width="70" ></a>
-<a href="#tuts"><img src="docs/extra/tuts.png" height="46" width="70" ></a>
-<a href="#man"><img src="docs/extra/man.png" height="46" width="70" ></a>
+<a href="#tutorials"><img src="docs/extra/tuts.png" height="46" width="70" ></a>
+<a href="#manage"><img src="docs/extra/man.png" height="46" width="70" ></a>
 
 Linux: [![Build Status](https://travis-ci.org/jarreed0/ArchGE.svg?branch=master)](https://travis-ci.org/jarreed0/ArchGE)
 Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/master?svg=true)](https://ci.appveyor.com/project/jarreed0/archge/branch/master) (I can't figure out how to display this...)
@@ -28,7 +28,6 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [x] And....
 - [ ] Much, much more
 
-<a name="news"/></a>
 # News #
  - - - -
 
@@ -73,7 +72,6 @@ Know of any other bugs? Let us know!
 
 ![alt tag](docs/screenshots/genesis.png)
 
-<a name="tuts"/></a>
 # Tutorials # 
  - - - -
 Check out test games for more examples.
@@ -227,7 +225,6 @@ Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
-<a name="man"/></a>
 # Manage # 
  - - - -
 
