@@ -34,7 +34,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 
 ## OpenGL Support! ##
 
-![alt tag](docs/screenshots/cube.gif =300x)
+<img src="docs/screenshots/cube.gif" height="300" width="300" >
 
 The engine now supports OpenGL and will soon have support assimp (or something similar) to load in 3D models.
 
