@@ -1,4 +1,4 @@
 configuration: Release
 
-build-script:
+build_script:
  - cd engine
