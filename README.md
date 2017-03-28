@@ -7,6 +7,9 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 [![News](docs/extra/news.png =80x40)](#News)
 [![Tutorials](docs/extra/tuts.png =80x40)](#Tutorials)
 [![Manage](docs/extra/man.png =80x40)](#Manage)
+<a href="#News"><img src="docs/extra/news.png" height="48" width="28" ></a>
+<a href="#Tutorials"><img src="docs/extra/tuts.png" height="48" width="28" ></a>
+<a href="#Manage"><img src="docs/extra/man.png" height="48" width="28" ></a>
 
 ![alt tag](http://archeantus.net/images/engine-logo.gif)
 
