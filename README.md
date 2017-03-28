@@ -28,7 +28,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [x] And....
 - [ ] Much, much more
 
-# News #
+#News #
  - - - -
 
 ## OpenGL Support! ##
