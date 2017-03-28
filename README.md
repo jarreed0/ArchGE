@@ -20,11 +20,17 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 - [ ] Fix bugs
 - [x] New Input class/method - Done
 - [ ] Splashscreen fix - In Progress using Gamestate class
+- [x] And....
+- [ ] Much, much more
 
 # News #
  - - - -
 
-![alt tag](docs/screenshots/hero.png)
+## OpenGL Support!
+
+![alt tag](docs/screenshots/cube.gif)
+
+The engine now supports OpenGL and will soon have support assimp (or something similar) to load in 3D models.
 
 ## New Version of ArchGE ##
 After several long hours we finally released a new version of Arch Game Engine. The new engine implements the coordinate system, map, tilesets, and levels differently. Because of this the old sample games are no longer supported with **ArchGE 0.2**.
@@ -33,6 +39,8 @@ After several long hours we finally released a new version of Arch Game Engine. 
 The newest version of manage can check for updates! and let you know about them and update without distubring your current manage process.
 
 Update with: `./manage -s`
+
+![alt tag](docs/screenshots/hero.png)
 
 ## Tutorials!!! Finally! ##
 Just below this news section we have some tutorials on how to set up a game using **ArchGE 0.2**

@@ -4,7 +4,7 @@ Game::Game() {
   e.debugMode(true);
   e.exitOnEscape(true);
   e.setGLMode(true);
-  e.init("The 3D Cube of the dead !!!", WIDTH, HEIGHT, SDL_WINDOW_OPENGL);
+  e.init("Tada!", WIDTH, HEIGHT, 0, 0, SDL_WINDOW_OPENGL);
   e.setColor(0x00, 0x08, 0x99);
   loop();
 }
@@ -30,7 +30,7 @@ void Game::draw() {
 	glRotated(angleZ, 0, 0, 1);
 
 	glBegin(GL_QUADS); //Début pour le CUBEEEEE
-	
+
 	glColor3ub(255,0,0); //face rouge
 	glVertex3d(1,1,1);
 	glVertex3d(1,1,-1);
