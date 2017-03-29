@@ -1,0 +1,12 @@
+ArchGE Install
+
+Dependicies: SDL2, SDL2_image, SDL2_ttf, OpenGL
+
+Linux:
+Run ./configure
+
+Windows:
+COMING SOON
+
+Mac:
+COMING SOON
