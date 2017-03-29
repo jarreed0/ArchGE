@@ -15,6 +15,12 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 # Check out our NEW [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) documentation for ArchGE! #
 # Check out the NEW [online docs](http://jar.ylimaf.com/archge/docs/html/annotated.html) #
 
+Build:
+
+Linux - Build engine and all sample games with ./configure
+
+Windows and Mac Build Tuts Coming Soon.
+
 # Under Heavy Development #
 ## Next Update: (will include) ##
 - [x] Object coordinate system

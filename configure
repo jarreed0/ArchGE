@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Welcome To ArchGE Configuration"
+echo ""
+echo "Installing manage"
+chmod u+wx manage
+./manage -s
+echo ""
+echo "Installing dependicies"
+./manage -i
+echo ""
+echo "Building engine"
+./manage -e
+echo ""
+echo "Building sample games"
+cd testgames
+for d in ./*/ ; do (cd "$d" && chmod u+wx ebuild.sh && chmod u+wx build.sh && ./ebuild.sh); done
+cd ..
+echo ""
+echo "If there were no errors, then the ArchGE is ready to go."

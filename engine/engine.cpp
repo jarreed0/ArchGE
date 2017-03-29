@@ -52,7 +52,6 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
    gluPerspective(70,(double)w/h,1,1000);
    glEnable(GL_DEPTH_TEST);
   }
-  //if(it = SDL_WINDOW_OPENGL) cout << "gl" << SDL_WINDOW_OPENGL<<it<<endl;
   return engren;
 }
 

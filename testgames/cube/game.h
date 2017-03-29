@@ -3,8 +3,8 @@
 
 #include <arch/arch.h>
 
-#define WIDTH 640
-#define HEIGHT 480
+#define WIDTH 400
+#define HEIGHT 400
 
 class Game {
 private:

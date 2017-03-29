@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  28 MAR 2017 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  28 MAR 2017 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1312,14 +1312,14 @@ Package pdftex.def Info: classObject__inherit__graph.pdf used on input line 18.
  [16 <./classObject__inherit__graph.pdf>]
 [17]) (./classPhysics.tex [18]) (./classStage.tex [19]) (./classText.tex)
 (./classTile.tex
-<classTile__inherit__graph.pdf, id=977, 125.46875pt x 156.585pt>
+<classTile__inherit__graph.pdf, id=981, 125.46875pt x 156.585pt>
 File: classTile__inherit__graph.pdf Graphic file (type pdf)
 
 <use classTile__inherit__graph.pdf>
 Package pdftex.def Info: classTile__inherit__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
 
-<classTile__coll__graph.pdf, id=978, 125.46875pt x 156.585pt>
+<classTile__coll__graph.pdf, id=982, 125.46875pt x 156.585pt>
 File: classTile__coll__graph.pdf Graphic file (type pdf)
 
 <use classTile__coll__graph.pdf>
@@ -1343,10 +1343,10 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 15494 strings out of 494953
- 236996 string characters out of 6180977
- 320238 words of memory out of 5000000
- 18120 multiletter control sequences out of 15000+600000
+ 15500 strings out of 494953
+ 237272 string characters out of 6180977
+ 320394 words of memory out of 5000000
+ 18123 multiletter control sequences out of 15000+600000
  56359 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,12n,92p,400b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1357,10 +1357,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (27 pages, 189239 bytes).
+Output written on refman.pdf (27 pages, 189584 bytes).
 PDF statistics:
- 1196 PDF objects out of 1200 (max. 8388607)
- 1134 compressed objects within 12 object streams
- 379 named destinations out of 1000 (max. 500000)
+ 1200 PDF objects out of 1200 (max. 8388607)
+ 1138 compressed objects within 12 object streams
+ 382 named destinations out of 1000 (max. 500000)
  340 words of extra memory for PDF output out of 10000 (max. 10000000)
 

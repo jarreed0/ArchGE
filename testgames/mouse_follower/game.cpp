@@ -2,15 +2,15 @@
 
 Game::Game() {
   e.debugMode(true);
-  e.init("Mouse Follower", WIDTH, HEIGHT, 0);
+  e.init("Mouse Follower", WIDTH, HEIGHT, SDL_WINDOW_BORDERLESS);
   e.setColor(0xff, 0xff, 0xff);
   running = true;
 
   o.setImage("res/object.png", e.getRenderer());
   o.setFrame(0, 0, 16, 16);
   o.setSpeed(3);
+  o.setDest(100,100,16,16);
   o.center(WIDTH, HEIGHT);
-  o.setDestSize(16, 16);
 
   o2=o;
   mobjs.push_back(o);
@@ -18,6 +18,8 @@ Game::Game() {
   makeNewBlock=false;
 
   e.setFontColor(0xff, 0xff, 0xff);
+
+  cout << "Click mouse for more objects.\nPress z for object count.\n";
 
   loop();
 }
@@ -49,10 +51,11 @@ void Game::input() {
   i.logPress();
   if(i.checkKey(i.esc) || (i.checkKey(i.quit))) running = false;
   if(i.checkKey(i.mouseleft)) { cout << mobjs[0].getVelX() << ", " << mobjs[0].getVelY() << endl; makeNewBlock=true; }
+  if(i.checkKey(i.z)) {  cout << ":" << mobjs.size() << endl; }
 }
 
 void Game::update() {
-  o2.centerOnMouse(i);
+  o2.centerOn(i);
   if(o2.getDestX() > (WIDTH-o2.getDestW())) o2.setDestX(WIDTH-o2.getDestW());
   if(o2.getDestY() > (HEIGHT-o2.getDestH())) o2.setDestY(HEIGHT-o2.getDestH());
   if(o2.getDestX() < 0) o2.setDestX(0);
@@ -62,6 +65,8 @@ void Game::update() {
   for(int j=1; j<mobjs.size(); j++) {
    if(timeToMove) {
     Object moveTo = mobjs[j-1];
+    moveTo.setDest(mobjs[j-1].getMovedBuff());
+    //moveTo.setDestCoord(moveTo.getDestX()-(moveTo.getDestW()/2), moveTo.getDestY()-(moveTo.getDestH()/2));
     /*if(col.isAbove(moveTo, mobjs[j-1])) {
      moveTo.setDestY(moveTo.getDestY()+moveTo.getSpeed());
     } else {

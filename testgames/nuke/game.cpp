@@ -77,7 +77,7 @@ void Game::input() {
   if(i.checkKey(i.s)) d=true;
   if(!i.checkKey(i.s)) d=false;
   if(i.checkKey(i.mouseleft)) { firenow=true; firex=i.getMouseX(); firey=i.getMouseY(); }
-  crossair.centerOnMouse(i);
+  crossair.centerOn(i);
 }
 
 void Game::update() {
@@ -93,7 +93,7 @@ void Game::update() {
 }
 
 void Game::fire(int mx, int my) {
-  bullet.centerOnPoint(mx+level.getScreen().getPosX(), my+level.getScreen().getPosY());
+  bullet.centerOn(mx+level.getScreen().getPosX(), my+level.getScreen().getPosY());
   level.addObject(bullet);
   firenow=false;
 }

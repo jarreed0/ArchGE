@@ -151,22 +151,22 @@ Get fps.
 
 Update loop time. 
 
-Definition at line 110 of file engine.\+cpp.
+Definition at line 109 of file engine.\+cpp.
 
 
 \begin{DoxyCode}
-110                     \{
-111   simulationTime += 16;
-112   \textcolor{keywordflow}{if}(simulationTime < realTime) \{ fps = \textcolor{keyword}{true}; \} \textcolor{keywordflow}{else} \{ fps = \textcolor{keyword}{false}; \}
-113   \textcolor{keywordflow}{if}(exitOnEsc) \{ input.\hyperlink{classInput_a7664a52377e4bda7524d288df481954b}{logPress}(); \textcolor{keywordflow}{if}(input.\hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a528c1c27ef18062003acc6ecc6418719}{esc}) || input.
+109                     \{
+110   simulationTime += 16;
+111   \textcolor{keywordflow}{if}(simulationTime < realTime) \{ fps = \textcolor{keyword}{true}; \} \textcolor{keywordflow}{else} \{ fps = \textcolor{keyword}{false}; \}
+112   \textcolor{keywordflow}{if}(exitOnEsc) \{ input.\hyperlink{classInput_a7664a52377e4bda7524d288df481954b}{logPress}(); \textcolor{keywordflow}{if}(input.\hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a528c1c27ef18062003acc6ecc6418719}{esc}) || input.
       \hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a756c57e33cd0ff991ba76ecff4dfa8a4}{quit})) \{setRunning(\textcolor{keyword}{false});\}\}
-114   \textcolor{keywordflow}{if}(glMode) \{
-115    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
-116    glMatrixMode( GL\_MODELVIEW );
-117    glLoadIdentity( );
-118    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
-119   \}
-120 \}
+113   \textcolor{keywordflow}{if}(glMode) \{
+114    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+115    glMatrixMode( GL\_MODELVIEW );
+116    glLoadIdentity( );
+117    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
+118   \}
+119 \}
 \end{DoxyCode}
 
 

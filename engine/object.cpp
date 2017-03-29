@@ -29,11 +29,11 @@ void Object::checkDisplayable(Object screen) {
   }
 }
 
-void Object::centerOnMouse(Input i) {
+void Object::centerOn(Input i) {
   setDestCoord(i.getMouseX()-(getDestW()/2), i.getMouseY()-(getDestH()/2));
 }
 
-void Object::centerOnPoint(int cx, int cy) {
+void Object::centerOn(int cx, int cy) {
   setPosCoord(cx-(getDestW()/2), cy-(getDestH()/2));
 }
 
@@ -50,3 +50,6 @@ void Object::lookAt(Object o) {
   setAngle(angle);
 }
 
+void Object::centerOn(Object obj) {
+ centerOn(obj.getDestX()-(obj.getDestW()/2), obj.getDestY()-(obj.getDestH()/2));
+}
