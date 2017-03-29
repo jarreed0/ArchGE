@@ -17,7 +17,7 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 
 Build:
 
-Linux - Build engine and all sample games with ./configure
+Linux - Build engine and all sample games with `./configure`
 
 Windows and Mac Build Tuts Coming Soon.
 
