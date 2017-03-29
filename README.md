@@ -1,4 +1,4 @@
-# ArchGE 0.2 - A 2D Game Engine written in C++ and using SDL2 #
+# ArchGE 0.2 - A 2D and 3D Game Engine written in C++ and using SDL2 and OpenGL #
 Created by Archeantus Games
 
 <a href="#news"><img src="docs/extra/news.png" height="46" width="70" ></a>
