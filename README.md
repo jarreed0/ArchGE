@@ -103,8 +103,9 @@ Creating the window
 string NAME = "Window Title";
 int WIDTH = 750; //Window width;
 int HEIGHt = 530; //Window height;
-e.init(NAME, WIDTH, HEIGHT, 0); //0 is for extra SDL_Init flags.
-```
+e.init(NAME, WIDTH, HEIGHT, 0);
+```//0 is fore[SDL_WindowFlags](https://wiki.libsdl.org/SDL_WindowFlags).
+
 This is the simplest way to create a window. Check out ArchGE's new docs for other functions to create more advance windows.
 
 Setting the background color
