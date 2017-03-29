@@ -133,7 +133,7 @@ Frame rate is automatically set to 60.
 Here is a samle game loop:
 ```
 void Game::loop() {
-  while(running) {
+  while(e.getRunning) {
     e.loopStart();
     e.update();
     input(); //user defined
