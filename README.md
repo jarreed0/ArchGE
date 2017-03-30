@@ -1,4 +1,4 @@
-# ArchGE 0.2 - A 2D Game Engine written in C++ and using SDL2 #
+# ArchGE 0.2 - A 2D and 3D Game Engine written in C++ and using SDL2 and OpenGL #
 Created by Archeantus Games
 
 <a href="#news"><img src="docs/extra/news.png" height="46" width="70" ></a>
@@ -103,8 +103,10 @@ Creating the window
 string NAME = "Window Title";
 int WIDTH = 750; //Window width;
 int HEIGHt = 530; //Window height;
-e.init(NAME, WIDTH, HEIGHT, 0); //0 is for extra SDL_Init flags.
+e.init(NAME, WIDTH, HEIGHT, 0);
 ```
+0 is for [SDL_WindowFlags](https://wiki.libsdl.org/SDL_WindowFlags).
+
 This is the simplest way to create a window. Check out ArchGE's new docs for other functions to create more advance windows.
 
 Setting the background color
@@ -133,7 +135,7 @@ Frame rate is automatically set to 60.
 Here is a samle game loop:
 ```
 void Game::loop() {
-  while(running) {
+  while(e.getRunning) {
     e.loopStart();
     e.update();
     input(); //user defined
