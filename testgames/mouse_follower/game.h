@@ -14,7 +14,7 @@ private:
   bool running, timeToMove;
   Input i;
   Object o, o2;
-  vector<Object> mobjs, mobjs2;
+  vector<Object> mobjs, mobjs2, mobjs3, mobjs4;
   bool l, r, u, d;
   int vel = 300, mcount = 0;
   bool makeNewBlock;
