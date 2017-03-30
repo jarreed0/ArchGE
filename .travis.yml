@@ -8,6 +8,7 @@ before install:
  - sudo apt-get install libsdl2-ttf-2.0-0 -y
  - sudo apt-get install libsdl2-ttf-dbg -y
  - sudo apt-get install libsdl2-ttf-dev -y
+ - sudo apt-get install freeglut3 libgl3-mesa-dev
  - sudo apt-get install binutils -y
 
 script:
