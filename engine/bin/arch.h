@@ -100,10 +100,13 @@ private:
   int curFPS;
   Text text;
   Uint8 fr, fg, fb;
+  double gravity;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
   ~Engine();
+  void setGravity(double g) {gravity=g;}
+  double getGravity() const {return gravity;}
   //! Create a window with a given name, width, height, and anyother SDL_Window flags.
   SDL_Renderer* init(string s, const int& w, const int& h, int flag);
   //! Create a window with a given name, width, height, SDL_Window flags, and  specified SDL_Init flags.
@@ -464,6 +467,32 @@ public:
 };
 
 #endif //MAP_H
+#ifndef MODEL_H
+#define MODEL_H
+
+#include <vector>
+#include <iostream>
+#include <cstring> 
+#include <glm/glm.hpp>
+using namespace std;
+using namespace glm;
+
+class Model {
+private:
+ vector<unsigned int> vertexIndices, uvIndices, normalIndices;
+ vector<vec3> temp_vertices;
+ vector<vec2> temp_uvs;
+ vector<vec3> temp_normals;
+ vector<vec3> out_vertices;
+ vector<vec2> out_uvs;
+ vector<vec3> out_normals;
+public:
+ Model();
+ ~Model();
+ void loadOBJ(const char* path);
+};
+
+#endif //MODEL_H
 #ifndef OBJECT_H
 #define OBJECT_H
 #define PI 3.14159265358979323846
@@ -483,11 +512,13 @@ private:
   string name;
   double x, y, velX, velY, speed;
   bool displayable;
+  bool gravity;
 public:
   Object();
   ~Object();
   SDL_Rect getBuff() const {return buff;}
   SDL_Rect getMovedBuff() const {return movedBuff;}
+  void actGravity(bool g) {gravity=g;}
   //! This sets if you want the Object to visible on the screen by passing in a boolean.
   void setDisplayable(bool d) { displayable = d; }
   //! Check if the Object is displayable by seeing if it is in a given screen.

@@ -58,10 +58,13 @@ private:
   int curFPS;
   Text text;
   Uint8 fr, fg, fb;
+  double gravity;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
   ~Engine();
+  void setGravity(double g) {gravity=g;}
+  double getGravity() const {return gravity;}
   //! Create a window with a given name, width, height, and anyother SDL_Window flags.
   SDL_Renderer* init(string s, const int& w, const int& h, int flag);
   //! Create a window with a given name, width, height, SDL_Window flags, and  specified SDL_Init flags.

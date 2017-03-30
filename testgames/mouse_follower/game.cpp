@@ -68,6 +68,8 @@ void Game::input() {
 }
 
 void Game::update() {
+  //o2.setDestCoord((i.getMouseX()-mobjs2[0].getDestX()), (i.getMouseY()-mobjs2[0].getDestY()));
+  //o2.setDestCoord( (i.getMouseX()+(mobjs2[0].getDestX()-i.getMouseX())), (i.getMouseY()+(mobjs2[0].getDestY()-i.getMouseY())) );
   o2.centerOn(i);
   if(o2.getDestX() > (WIDTH-o2.getDestW())) o2.setDestX(WIDTH-o2.getDestW());
   if(o2.getDestY() > (HEIGHT-o2.getDestH())) o2.setDestY(HEIGHT-o2.getDestH());

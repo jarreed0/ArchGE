@@ -5,8 +5,8 @@
 #include <vector>
 
 #define SPEED 2
-#define WIDTH 640
-#define HEIGHT 480
+#define WIDTH 720
+#define HEIGHT 580
 
 class Game {
 private:

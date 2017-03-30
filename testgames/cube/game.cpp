@@ -6,6 +6,7 @@ Game::Game() {
   e.setGLMode(true);
   e.init("Tada!", WIDTH, HEIGHT, 0, 0, SDL_WINDOW_OPENGL);
   e.setColor(0x00, 0x08, 0x99);
+  //monkey.loadOBJ("res/cube.obj");
   loop();
 }
 Game::~Game() {

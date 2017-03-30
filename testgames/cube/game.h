@@ -8,6 +8,7 @@
 
 class Game {
 private:
+  Model monkey;
   Engine e;
   Input i;
   double angleX, angleZ;

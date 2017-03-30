@@ -14,7 +14,7 @@
 
   \indexspace
 
-  \item {Game\+State}, \hyperpage{10}
+  \item {Game\+State}, \hyperpage{11}
 
   \indexspace
 
@@ -27,11 +27,12 @@
 
   \indexspace
 
-  \item {Map}, \hyperpage{15}
+  \item {Map}, \hyperpage{16}
+  \item {Model}, \hyperpage{16}
 
   \indexspace
 
-  \item {Object}, \hyperpage{16}
+  \item {Object}, \hyperpage{17}
 
   \indexspace
 
@@ -39,13 +40,13 @@
 
   \indexspace
 
-  \item {Stage}, \hyperpage{19}
+  \item {Stage}, \hyperpage{20}
 
   \indexspace
 
-  \item {Text}, \hyperpage{20}
-  \item {Tile}, \hyperpage{20}
-  \item {Tileset}, \hyperpage{21}
+  \item {Text}, \hyperpage{21}
+  \item {Tile}, \hyperpage{21}
+  \item {Tileset}, \hyperpage{22}
 
   \indexspace
 

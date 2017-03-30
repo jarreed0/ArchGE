@@ -17,11 +17,13 @@ private:
   string name;
   double x, y, velX, velY, speed;
   bool displayable;
+  bool gravity;
 public:
   Object();
   ~Object();
   SDL_Rect getBuff() const {return buff;}
   SDL_Rect getMovedBuff() const {return movedBuff;}
+  void actGravity(bool g) {gravity=g;}
   //! This sets if you want the Object to visible on the screen by passing in a boolean.
   void setDisplayable(bool d) { displayable = d; }
   //! Check if the Object is displayable by seeing if it is in a given screen.

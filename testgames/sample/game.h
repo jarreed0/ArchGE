@@ -21,6 +21,7 @@ private:
   bool l, r, u, d;
   Entity player;
   int mcount = 0, mdelay = 20;
+  Collision col;
 public:
   Game();
   ~Game();

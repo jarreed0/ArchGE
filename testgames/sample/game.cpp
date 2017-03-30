@@ -3,10 +3,12 @@
 Game::Game() {
   e.debugMode(true);
   e.init("sample", WIDTH, HEIGHT, 0); //SPLASH DOESN'T WORK, NEED TO FIX!!!
+  e.setGravity(9.8);
   //e.setColor(0x00, 0xff, 0x80);
   e.setColor(0x00, 0x08, 0x99);
   //e.setBackground("../../engine/res/engine-logo.png");
   tileset.create("tiles", "res/tiles.bmp", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/12, 12, TOTAL_TILES);
+  tileset.setSolid(1, TOTAL_TILES);
   map.loadMap("res/1.level");
   level.setPrecise(true);
   stage.createStage(map, tileset);
@@ -17,8 +19,10 @@ Game::Game() {
   running = true;
   player.setImage("res/player.bmp", e.getRenderer());
   player.setFrame(0, 0, 42/2, 64/2);
-  player.setDest(250, 200, 42/2, 64/2);
+  player.setDestSize(42/2, 64/2);
+  player.center(WIDTH, HEIGHT);
   player.setPos(0, 0, 42/2, 64/2);
+  player.actGravity(true);
   loop();
 }
 Game::~Game() {
@@ -58,6 +62,7 @@ void Game::input() {
 }
 
 void Game::update() {
+player.setPos(player.getDest());
 mcount++;
 if(mcount >= mdelay) {
   mcount = 0;
@@ -65,5 +70,15 @@ if(mcount >= mdelay) {
   if(r) level.move(SPEED, 0);
   if(d) level.move(0, -SPEED);
   if(u) level.move(0, SPEED);
+  vector<Tile> utiles = level.getTilesToRender();
+  bool fall=true;
+  for(int i = 0; i<utiles.size(); i++) {
+   utiles[i].setPos(utiles[i].getDest());
+   if(utiles[i].isSolid() && col.isTouching(player, utiles[i])) {
+     cout << utiles[i].getName() << endl;
+     fall=false;
+   }
+  }
+  if(fall) player.moveDest(0, e.getGravity());
 }
 }

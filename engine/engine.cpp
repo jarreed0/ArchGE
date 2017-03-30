@@ -82,7 +82,7 @@ void Engine::loopStart() {
   if(bkg) drawBackground();
   curTime = time(0);
   if(curTime > lastTime) {
-   lastTime = curTime; cout << frameCount << endl; frameCount=0; 
+   lastTime = curTime; cout << frameCount << endl; frameCount=0;
    curFPS=frameCount;
    //if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
    //if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
