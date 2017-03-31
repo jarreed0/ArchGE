@@ -18,6 +18,9 @@ private:
   double x, y, velX, velY, speed;
   bool displayable;
   bool gravity;
+  bool objsImage;
+  struct color { Uint8 r, g, b; };
+  color objsColor;
 public:
   Object();
   ~Object();
@@ -49,9 +52,9 @@ public:
   //! Get the Object's Image.
   Image getImage() const { return img; }
   //! Set the Object's Image with a given Image.
-  void setImage(Image i) { img = i; }
+  void setImage(Image i) { img = i; objsImage=true; }
   //! Give the path and renderer to create the Object's Image.
-  void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); }
+  void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); objsImage=true; }
   //! Get the Object's angle.
   double getAngle() const { return angle; }
   //! Set the angle.
@@ -132,6 +135,13 @@ public:
   void centerOn(Input i);
   void centerOn(int cx, int cy);
   void centerOn(Object obj);
+  color red = {0xff,0,0};
+  color green = {0,0xff,0};
+  color blue = {0,0,0xff};
+  void setColor(color c) {objsColor = c;}
+  void setColor(Uint8 r, Uint8 g, Uint8 b) {objsColor.r=r;objsColor.g=g;objsColor.b=b;};
+  bool imageSet() const {return objsImage;}
+  color getColor() const {return objsColor;}
 };
 
 #endif //OBJECT_H

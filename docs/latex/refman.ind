@@ -9,48 +9,49 @@
   \indexspace
 
   \item {Engine}, \hyperpage{7}
-    \subitem {update}, \hyperpage{8}
-  \item {Entity}, \hyperpage{9}
+    \subitem {update}, \hyperpage{9}
+  \item {Engine\+::color}, \hyperpage{7}
+  \item {Entity}, \hyperpage{10}
 
   \indexspace
 
-  \item {Game\+State}, \hyperpage{11}
+  \item {Game\+State}, \hyperpage{12}
 
   \indexspace
 
-  \item {Image}, \hyperpage{11}
-  \item {Input}, \hyperpage{12}
+  \item {Image}, \hyperpage{12}
+  \item {Input}, \hyperpage{13}
 
   \indexspace
 
-  \item {Level}, \hyperpage{14}
+  \item {Level}, \hyperpage{15}
 
   \indexspace
 
-  \item {Map}, \hyperpage{16}
-  \item {Model}, \hyperpage{16}
+  \item {Map}, \hyperpage{17}
+  \item {Model}, \hyperpage{17}
 
   \indexspace
 
-  \item {Object}, \hyperpage{17}
+  \item {Object}, \hyperpage{18}
 
   \indexspace
 
-  \item {Physics}, \hyperpage{19}
+  \item {Physics}, \hyperpage{21}
 
   \indexspace
 
-  \item {Stage}, \hyperpage{20}
+  \item {Stage}, \hyperpage{21}
 
   \indexspace
 
-  \item {Text}, \hyperpage{21}
-  \item {Tile}, \hyperpage{21}
-  \item {Tileset}, \hyperpage{22}
+  \item {Text}, \hyperpage{22}
+  \item {Tile}, \hyperpage{23}
+  \item {Tileset}, \hyperpage{24}
 
   \indexspace
 
   \item {update}
-    \subitem {Engine}, \hyperpage{8}
+    \subitem {Engine}, \hyperpage{9}
 
 \end{theindex}

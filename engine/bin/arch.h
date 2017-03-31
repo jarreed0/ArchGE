@@ -147,6 +147,7 @@ public:
   void draw(Object obj);
   //! Draw a vector of Objects
   void draw(vector<Object> objs);
+  void draw(vector<vector<Object>> objs);
   //! Draw an object with a pass key before/during splash.
   void draw(Object obj, int key);
   //! Draw the level.
@@ -171,10 +172,11 @@ public:
   bool getRunning() const { return running; }
   void setRunning(bool r) { running = r; }
   void setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i);
-  void setGLMode(bool m) {glMode=m;}
+  void setGLMode(bool m) {glMode=m; glViewport(0, 0, WIDTH, HEIGHT); }
   int getFPS() const {return curFPS;}
   void setFontColor(Uint8 r, Uint8 g, Uint8 b) {fr=r; fg=g; fb=b;}
   void loop();
+  struct color { Uint8 r, g, b; };
 };
 
 #endif //ENGINE_H
@@ -480,17 +482,10 @@ using namespace glm;
 
 class Model {
 private:
- vector<unsigned int> vertexIndices, uvIndices, normalIndices;
- vector<vec3> temp_vertices;
- vector<vec2> temp_uvs;
- vector<vec3> temp_normals;
- vector<vec3> out_vertices;
- vector<vec2> out_uvs;
- vector<vec3> out_normals;
 public:
  Model();
  ~Model();
- void loadOBJ(const char* path);
+ void load();
 };
 
 #endif //MODEL_H
@@ -514,6 +509,9 @@ private:
   double x, y, velX, velY, speed;
   bool displayable;
   bool gravity;
+  bool objsImage;
+  struct color { Uint8 r, g, b; };
+  color objsColor;
 public:
   Object();
   ~Object();
@@ -545,9 +543,9 @@ public:
   //! Get the Object's Image.
   Image getImage() const { return img; }
   //! Set the Object's Image with a given Image.
-  void setImage(Image i) { img = i; }
+  void setImage(Image i) { img = i; objsImage=true; }
   //! Give the path and renderer to create the Object's Image.
-  void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); }
+  void setImage(string file, SDL_Renderer* ren) { img.loadImage(file, ren); objsImage=true; }
   //! Get the Object's angle.
   double getAngle() const { return angle; }
   //! Set the angle.
@@ -628,6 +626,13 @@ public:
   void centerOn(Input i);
   void centerOn(int cx, int cy);
   void centerOn(Object obj);
+  color red = {0xff,0,0};
+  color green = {0,0xff,0};
+  color blue = {0,0,0xff};
+  void setColor(color c) {objsColor = c;}
+  void setColor(Uint8 r, Uint8 g, Uint8 b) {objsColor.r=r;objsColor.g=g;objsColor.b=b;};
+  bool imageSet() const {return objsImage;}
+  color getColor() const {return objsColor;}
 };
 
 #endif //OBJECT_H

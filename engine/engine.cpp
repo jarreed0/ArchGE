@@ -126,12 +126,25 @@ void Engine::loop() {
 
 void Engine::draw(Object obj) {
   if(splashed) {
-    SDL_Rect src = obj.getFrame();
-    SDL_Rect des = obj.getDest();
-    SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
+     SDL_Rect des = obj.getDest();
+    if(obj.imageSet()) {
+     SDL_Rect src = obj.getFrame();
+     SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
+    } else {
+     SDL_SetRenderDrawColor(engren, obj.getColor().r, obj.getColor().g, obj.getColor().b, 255);
+     SDL_RenderFillRect(engren, &des);
+     SDL_SetRenderDrawColor(engren, red, green, blue, 255);
+    }
   }
 }
 void Engine::draw(vector<Object> objs) {
+  if(splashed) {
+    for(int i=0; i<objs.size(); i++) {
+      draw(objs[i]);
+    }
+  }
+}
+void Engine::draw(vector<vector<Object>> objs) {
   if(splashed) {
     for(int i=0; i<objs.size(); i++) {
       draw(objs[i]);

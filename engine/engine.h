@@ -105,6 +105,7 @@ public:
   void draw(Object obj);
   //! Draw a vector of Objects
   void draw(vector<Object> objs);
+  void draw(vector<vector<Object>> objs);
   //! Draw an object with a pass key before/during splash.
   void draw(Object obj, int key);
   //! Draw the level.
@@ -129,10 +130,11 @@ public:
   bool getRunning() const { return running; }
   void setRunning(bool r) { running = r; }
   void setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i);
-  void setGLMode(bool m) {glMode=m;}
+  void setGLMode(bool m) {glMode=m; glViewport(0, 0, WIDTH, HEIGHT); }
   int getFPS() const {return curFPS;}
   void setFontColor(Uint8 r, Uint8 g, Uint8 b) {fr=r; fg=g; fb=b;}
   void loop();
+  struct color { Uint8 r, g, b; };
 };
 
 #endif //ENGINE_H

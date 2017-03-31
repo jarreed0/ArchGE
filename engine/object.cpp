@@ -3,7 +3,7 @@
 #include "collision.h"
 
 Object::Object() {
-
+ objsImage=false;
 }
 Object::~Object() {}
 
