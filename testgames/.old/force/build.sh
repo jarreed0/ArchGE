@@ -1,6 +1,6 @@
-cd ../..
+cd ../../..
 cd engine
 ./build.sh
 cd ..
-cd testgames/force
+cd testgames/.old/force
 ./ebuild.sh

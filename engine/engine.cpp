@@ -118,6 +118,12 @@ void Engine::update() {
   }
 }
 
+void Engine::loop() {
+ render();
+ loopStart();
+ update();
+}
+
 void Engine::draw(Object obj) {
   if(splashed) {
     SDL_Rect src = obj.getFrame();

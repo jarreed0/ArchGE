@@ -174,6 +174,7 @@ public:
   void setGLMode(bool m) {glMode=m;}
   int getFPS() const {return curFPS;}
   void setFontColor(Uint8 r, Uint8 g, Uint8 b) {fr=r; fg=g; fb=b;}
+  void loop();
 };
 
 #endif //ENGINE_H

@@ -75,7 +75,7 @@ if(mcount >= mdelay) {
   for(int i = 0; i<utiles.size(); i++) {
    utiles[i].setPos(utiles[i].getDest());
    if(utiles[i].isSolid() && col.isTouching(player, utiles[i])) {
-     cout << utiles[i].getName() << endl;
+     //cout << utiles[i].getName() << endl;
      fall=false;
    }
   }

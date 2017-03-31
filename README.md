@@ -15,6 +15,12 @@ Window: [![Build status](https://ci.appveyor.com/project/jarreed0/archge/branch/
 # Check out our NEW [PDF](http://jar.ylimaf.com/archge/docs/latex/refman.pdf) documentation for ArchGE! #
 # Check out the NEW [online docs](http://jar.ylimaf.com/archge/docs/html/annotated.html) #
 
+`git clone https://github.com/jarreed0/ArchGE.git && cd ArchGE && ./configure`
+
+Download:
+
+Linux: `git clone https://githib.com/jarreed0/ArchGE.git && cd ArchGE`
+
 Build:
 
 Linux - Build engine and all sample games with `./configure`
@@ -136,12 +142,10 @@ Here is a samle game loop:
 ```
 void Game::loop() {
   while(e.getRunning) {
-    e.loopStart();
-    e.update();
     input(); //user defined
     update(); //user defined
     draw(); //user defined
-    e.render();
+    e.loop();
   }
 }
 ```

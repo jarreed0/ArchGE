@@ -4,16 +4,7 @@
 #include <iostream>
 using namespace std;
 #include <vector>
-#include "../../engine/engine.h"
-#include "../../engine/image.h"
-#include "../../engine/input.h"
-#include "../../engine/object.h"
-#include "../../engine/physics.h"
-#include "../../engine/tile.h"
-#include "../../engine/tileset.h"
-#include "../../engine/collision.h"
-#include "../../engine/sdl_check.h"
-#include "../../engine/entity.h"
+#include <arch/arch.h>
 
 #define WIDTH 820
 #define HEIGHT 680
@@ -32,7 +23,7 @@ public:
 private:
   Engine e;
   Input i;
-  Tileset level;
+  Level level;
   string TITLE = "Force";
   bool running;
   vector<Tile> disp;

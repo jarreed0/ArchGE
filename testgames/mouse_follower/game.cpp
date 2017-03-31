@@ -37,17 +37,18 @@ Game::~Game() {}
 
 void Game::loop() {
   while(running) {
-    e.loopStart();
+    //e.loopStart();
     //bool frame = true;
     //while(frame) {
-      e.update();
+      //e.update();
       makeNewBlock=false;
       input();
       update();
       draw();
       //if(!FPS()) { frame=false; }
     //}
-    e.render();
+    //e.render();
+    e.loop();
   }
 }
 
