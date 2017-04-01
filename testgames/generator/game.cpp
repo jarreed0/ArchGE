@@ -76,11 +76,14 @@ void Game::update() {
       float height = noise.GetHeight(i, j);
       //cout << height << endl;
       if(height > snowcap) {
-       land[i][j].setColor(255,255,255);
+       //land[i][j].setColor(255,255,255);
+       land[i][j].setColor(0, 46, 37);
       } else if(inRange(height, 0-(ground*4), ground*4)) {
-       land[i][j].setColor(land[i][j].green);
+       //land[i][j].setColor(land[i][j].green);
+       land[i][j].setColor(76, 70, 50);
       } else {
-       land[i][j].setColor(land[i][j].blue);
+       //land[i][j].setColor(land[i][j].blue);
+       land[i][j].setColor(0, 47, 75);
       }
     }
   }
