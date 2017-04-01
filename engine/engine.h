@@ -45,8 +45,6 @@ private:
   double ct; //!< Custom splashscreen duration.
   int cw, ch; //!< Custom splashcreen width and height.
   bool debug;
-  Collision col;
-  Input input;
   bool exitOnEsc;
   bool running;
   time_t lastTime, curTime;
@@ -60,6 +58,8 @@ private:
   Uint8 fr, fg, fb;
   double gravity;
 public:
+  Input input;
+  Collision col;
   Engine();
   //! Decontructs renderer and window and then quits SDL.
   ~Engine();

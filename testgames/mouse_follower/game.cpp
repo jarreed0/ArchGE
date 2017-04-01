@@ -28,6 +28,7 @@ Game::Game() {
   makeNewBlock=false;
 
   e.setFontColor(0xff, 0xff, 0xff);
+  //e.exitOnEscape(true);
 
   cout << "Click mouse for more objects.\nPress z for object count.\n";
 

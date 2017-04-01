@@ -27,16 +27,17 @@ Game::~Game() {}
 
 void Game::loop() {
   while(running) {
-    e.loopStart();
+    //e.loopStart();
     //bool frame = true;
     //while(frame) {
-      e.update();
+      //e.update();
       input();
       update();
       draw();
       //if(!e.FPS()) { frame=false; }
     //}
-    e.render();
+    //e.render();
+    e.loop();
   }
 }
 

@@ -2,10 +2,11 @@
 
 Game::Game() {
   e.debugMode(true);
-  e.exitOnEscape(true);
   e.setGLMode(true);
   e.init("West", WIDTH, HEIGHT, SDL_WINDOW_OPENGL);
-  e.setColor(0x00, 0x08, 0x99);
+  bkg.setDest(0, 0, WIDTH, HEIGHT);
+  bkg.setFrame(bkg.getDest());
+  bkg.setColor(bkg.red);
   loop();
 }
 
@@ -22,10 +23,12 @@ void Game::loop() {
 }
 
 void Game::draw() {
+ e.draw(bkg);
 }
 
 void Game::input() {
-
+ i.logPress();
+ if(i.checkKey(i.esc) || i.checkKey(i.quit)) e.setRunning(false);
 }
 
 void Game::update() {

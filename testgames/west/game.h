@@ -9,6 +9,8 @@
 class Game {
 private:
   Engine e;
+  Input i;
+  Object bkg;
 public:
   Game();
   ~Game();

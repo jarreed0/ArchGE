@@ -81,6 +81,7 @@ void Game::input() {
    posX = event.motion.x-WIDTH/2;
    posY = HEIGHT/2-event.motion.y;
   }*/
+  i.logPress(); if(i.checkKey(i.right)) cout << "test" << endl;
 }
 
 void Game::update() {
