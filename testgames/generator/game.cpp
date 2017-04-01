@@ -68,12 +68,12 @@ void Game::update() {
   for(int i=0; i<land.size(); i++) {
     for(int j=0; j<land[i].size(); j++) {
       int gx = i; int gy = j;
-      land[i][j].setDestCoord(x+(i*SIZE),y+(j*SIZE));
-      if(land[i][j].getDestX()<0) { gx=(((abs(land[i][j].getDestX()/WIDTH))+1)*WIDTH)/SIZE; land[i][j].moveDestX(gx*SIZE);}
-      if(land[i][j].getDestY()<0) { gy=(((abs(land[i][j].getDestY()/HEIGHT))+1)*HEIGHT)/SIZE; land[i][j].moveDestY(gy*SIZE); }
-      if(land[i][j].getDestX()>WIDTH) {  gx=(-((0)+1)*WIDTH)/SIZE; land[i][j].moveDestX(gx*SIZE); }
-      if(land[i][j].getDestY()>HEIGHT) { gy=(-((0)+1)*HEIGHT)/SIZE; land[i][j].moveDestY(gy*SIZE); }
-      float height = noise.GetHeight(i, j);
+      land[i][j].setDestCoord((i*SIZE),(j*SIZE));
+      //if(land[i][j].getDestX()<0) { gx=(((abs(land[i][j].getDestX()/WIDTH))+1)*WIDTH)/SIZE; land[i][j].moveDestX(gx*SIZE);}
+      //if(land[i][j].getDestY()<0) { gy=(((abs(land[i][j].getDestY()/HEIGHT))+1)*HEIGHT)/SIZE; land[i][j].moveDestY(gy*SIZE); }
+      //if(land[i][j].getDestX()>WIDTH) {  gx=(-((0)+1)*WIDTH)/SIZE; land[i][j].moveDestX(gx*SIZE); }
+      //if(land[i][j].getDestY()>HEIGHT) { gy=(-((0)+1)*HEIGHT)/SIZE; land[i][j].moveDestY(gy*SIZE); }
+      float height = noise.GetHeight(i-(x/SIZE), j-(y/SIZE));
       //cout << height << endl;
       if(height > snowcap) {
        //land[i][j].setColor(255,255,255);
