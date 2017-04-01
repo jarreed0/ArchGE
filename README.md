@@ -237,6 +237,18 @@ Makefile generation coming soon.
 
 ![alt tag](docs/screenshots/force.png)
 
+
+## Troubleshooting ##
+If you get this error:
+`/usr/bin/ld: cannot find -lGL collect2: error: ld returned 1 exit status`
+
+You need to find out which libGL library you have so first....
+`do ls /usr/lib/`
+find a library that will/might look like libGL.so.VERSION_NUMBER_HERE
+In the ebuild.sh file that every game has, change the -lGL flag to -l:libGL.so.VERSION_NUMBER_HERE
+Viola! You have now fixed that error.
+
+
 # Manage # 
  - - - -
 
