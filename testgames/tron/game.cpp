@@ -31,13 +31,24 @@ void Game::loop() {
     //bool frame = true;
     //while(frame) {
       //e.update();
-      input();
-      update();
-      draw();
+
+        timerFps = e.getTicks(); // SDL_GetTicks() gives the number of milliseconds since the program start.
+                                   // I initialize the timer.
+
+        input();
+        update();
+        draw();
+        e.loop();
+
+        timerFps = e.getTicks() - timerFps; //I get the time it took to update and draw;
+
+        if(timerFps < 1000/FRAMERATE) // if timerFps is < 16.6666...7 ms (meaning it loaded the frame too fast)
+        {
+            e.delay((1000/FRAMERATE) - timerFps); //delay the frame to be in time
+        } 
       //if(!e.FPS()) { frame=false; }
     //}
     //e.render();
-    e.loop();
   }
 }
 
@@ -68,16 +79,10 @@ void Game::update() {
   if(r && !faceright) {faceright = true;faceleft = false;facedown = false;faceup = false;bike.setAngle(90);}
   if(d && !facedown) {facedown = true;faceup = false;faceleft = false;faceright = false;bike.setAngle(180);}
   if(u && !faceup) {faceup = true;facedown = false;faceleft = false;faceright = false;bike.setAngle(0);}
-  if(faceleft && timeToMove) {bike.setDestX(bike.getDestX() - 1);timeToMove = false;}
-  if(faceright && timeToMove) {bike.setDestX(bike.getDestX() + 1);timeToMove = false;}
-  if(facedown && timeToMove) {bike.setDestY(bike.getDestY() + 1);timeToMove = false;}
-  if(faceup && timeToMove) {bike.setDestY(bike.getDestY() - 1);timeToMove = false;}
-
-  mcount++;
-  if(mcount >= vel) {
-    mcount = 0;
-    timeToMove = true;
-  }
+  if(faceleft) {bike.setDestX(bike.getDestX() - SPEED);}
+  if(faceright) {bike.setDestX(bike.getDestX() + SPEED);}
+  if(facedown) {bike.setDestY(bike.getDestY() + SPEED);}
+  if(faceup) {bike.setDestY(bike.getDestY() - SPEED);}
 }
 
 void Game::drawTiles() {

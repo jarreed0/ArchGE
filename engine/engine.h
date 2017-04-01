@@ -134,6 +134,8 @@ public:
   int getFPS() const {return curFPS;}
   void setFontColor(Uint8 r, Uint8 g, Uint8 b) {fr=r; fg=g; fb=b;}
   void loop();
+  int getTicks();
+  void delay(int time);
   struct color { Uint8 r, g, b; };
 };
 

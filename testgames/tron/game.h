@@ -3,14 +3,15 @@
 
 #include <arch/arch.h>
 
-#define SPEED 2
+#define SPEED 10
 #define WIDTH 640
 #define HEIGHT 480
+#define FRAMERATE 60
 
 class Game {
 private:
   Engine e;
-  bool running, facedown, faceup, faceleft, faceright, timeToMove;
+  bool running, facedown, faceup, faceleft, faceright;
   Input i;
   Object arena;
   Object bike;
@@ -18,7 +19,7 @@ private:
   Object logo;
   GameState gs;
   bool l, r, u, d;
-  int vel, mcount = 0, scount = 0, sdelay = 1000;
+  int vel, timerFps = 0;
 public:
   Game();
   ~Game();
@@ -26,7 +27,7 @@ public:
   void draw();
   void input();
   void update();
-   void drawTiles();
+  void drawTiles();
 };
 
 #endif //GAME_H

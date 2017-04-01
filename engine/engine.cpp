@@ -249,3 +249,6 @@ void Engine::showMouse() {
 void Engine::setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i) {
   glView[0]=a; glView[1]=b; glView[2]=c; glView[3]=d; glView[4]=e; glView[5]=f; glView[6]=g; glView[7]=h; glView[8]=i;
 }
+
+int Engine::getTicks() { return SDL_GetTicks(); }
+void Engine::delay(int time) { SDL_Delay(time); }
