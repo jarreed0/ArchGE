@@ -6,6 +6,7 @@ Game::Game() {
   e.setColor(0xff, 0xff, 0xff);
   running = true;
   arena.setDest(0, 0, WIDTH, HEIGHT);
+  arena.setPos(arena.getDest());
   genTiles();
   logo.setImage("res/engine-logo.png", e.getRenderer());
   logo.setFrame(0, 0, 256, 256);
@@ -17,14 +18,14 @@ Game::Game() {
   faceup = false;
   faceright = false;
   faceleft = false;
-  bike.setDest(100, 100, 64, 64);
+  bike.setDest(100, 100, 20, 42);
   gs.setGameState(gs.INGAME);
   e.setFrameRate(FRAMERATE);
-  Object tmp;
-  tmp.setColor(0xff, 0xa5, 0x00);
-  beam.push_back(tmp);
+  newBeam();
   paused=false;
   cout << "p to pause" << endl;
+  cout << "c to clear all beams" << endl;
+  cout << "arrows to control" << endl;
   loop();
 }
 Game::~Game() {}
@@ -63,11 +64,12 @@ void Game::input() {
   r=l=u=d=false;
   i.logPress();
   if(i.checkKey(i.esc) || (i.checkKey(i.quit))) running = false;
-  if(i.checkKey(i.left)) l = true;
-  if(i.checkKey(i.right)) r = true;
-  if(i.checkKey(i.up)) u = true;
-  if(i.checkKey(i.down)) d = true;
+  if(i.checkKey(i.left)) { l = true; newBeam(); }
+  if(i.checkKey(i.right)) { r = true; newBeam(); }
+  if(i.checkKey(i.up)) { u = true; newBeam(); }
+  if(i.checkKey(i.down)) { d = true; newBeam(); }
   if(i.checkKey(i.p)) paused=!paused;
+  if(i.checkKey(i.c)) { beam.clear(); newBeam(); }
 }
 
 void Game::update() {
@@ -75,10 +77,17 @@ void Game::update() {
   if(r && !faceright) {faceright = true;faceleft = false;facedown = false;faceup = false;bike.setAngle(90);}
   if(d && !facedown) {facedown = true;faceup = false;faceleft = false;faceright = false;bike.setAngle(180);}
   if(u && !faceup) {faceup = true;facedown = false;faceleft = false;faceright = false;bike.setAngle(0);}
-  if(faceleft) {bike.setDestX(bike.getDestX() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+32, bike.getDestY()+30, 300, 5);}
-  if(faceright) {bike.setDestX(bike.getDestX() + SPEED); beam[beam.size()-1].setDest(bike.getDestX()+32-300, bike.getDestY()+30, 300, 5);}
-  if(facedown) {bike.setDestY(bike.getDestY() + SPEED); beam[beam.size()-1].setDest(bike.getDestX()+30, bike.getDestY()+32-300, 5, 300);}
-  if(faceup) {bike.setDestY(bike.getDestY() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+30, bike.getDestY()+32, 5, 300);}
+  if(faceleft) {bike.setDestX(bike.getDestX() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+42, bike.getDestY()+20, streak, 5);}
+  if(faceright) {bike.setDestX(bike.getDestX() + SPEED); beam[beam.size()-1].setDest(bike.getDestX()-streak-20, bike.getDestY()+20, streak, 5);}
+  if(facedown) {bike.setDestY(bike.getDestY() + SPEED); beam[beam.size()-1].setDest(bike.getDestX()+9, bike.getDestY()-streak-10, 5, streak-10);}
+  if(faceup) {bike.setDestY(bike.getDestY() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+9, bike.getDestY()+48, 5, streak);}
+  streak+=SPEED;
+  bike.setPos(bike.getDest());
+  if(col.outOfBoundsOf(bike, arena)) { bike.setDest(bike.getBuff()); cout << "out of bounds\n"; beam.clear(); newBeam(); }
+  for(int i=0; i<beam.size(); i++) {
+    beam[i].setPos(beam[i].getDest());
+    if(col.isTouching(bike, beam[i])) { cout << "you suck!\n"; beam.clear(); newBeam(); }
+  }
 }
 void Game::genTiles() {
  for(int i = 0; i < (WIDTH/TILESIZE)+1; i++) {
@@ -90,4 +99,11 @@ void Game::genTiles() {
       tile.push_back(tmp);
     }
   }
+}
+
+void Game::newBeam() {
+  Object tmp;
+  tmp.setColor(0xff, 0xa5, 0x00);
+  beam.push_back(tmp);
+  streak=0;
 }

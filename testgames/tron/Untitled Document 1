@@ -1,0 +1,4 @@
+  if(faceleft) {bike.setDestX(bike.getDestX() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+42, bike.getDestY()+20, streak, 5);}
+  if(faceright) {bike.setDestX(bike.getDestX() + SPEED); beam[beam.size()-1].setDest(bike.getDestX()-streak-20, bike.getDestY()+20, streak, 5);}
+  if(facedown) {bike.setDestY(bike.getDestY() + SPEED); beam[beam.size()-1].setDest(bike.getDestX()+9, bike.getDestY()-streak-10, 5, streak);}
+  if(faceup) {bike.setDestY(bike.getDestY() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+9, bike.getDestY()+48, 5, streak);}
