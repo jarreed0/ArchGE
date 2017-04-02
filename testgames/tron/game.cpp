@@ -16,7 +16,6 @@ Game::Game() {
   faceup = false;
   faceright = false;
   faceleft = false;
-  vel = 30;
   bike.setDest(100, 100, 64, 64);
   tile.setImage("res/tile.png", e.getRenderer());
   tile.setFrame(0, 0, 64, 64);
