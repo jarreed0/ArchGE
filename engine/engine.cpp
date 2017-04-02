@@ -90,10 +90,10 @@ void Engine::render() {
   text.setColor(fr, fg, fb);
   //struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
   //if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
-   if(!splashed) { splash(); cout << "splash" << endl; }
-   timeval a;
-   realTime = gettimeofday(&a, 0);
-   frameCount++;
+  if(!splashed) { splash(); cout << "splash" << endl; }
+  timeval a;
+  realTime = gettimeofday(&a, 0);
+  frameCount++;
   //}
   //capLast=capCur;
   if(glMode) {
@@ -108,8 +108,8 @@ void Engine::render() {
   if(timerFps < 1000/setFPS) {
     delay((1000/setFPS) - timerFps);
   }
-
 }
+
 void Engine::update() {
   //simulationTime += 16;
   //if(simulationTime < realTime) { fps = true; } else { fps = false; }

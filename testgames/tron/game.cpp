@@ -83,7 +83,7 @@ void Game::update() {
   if(faceup) {bike.setDestY(bike.getDestY() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+9, bike.getDestY()+48, 5, streak);}
   streak+=SPEED;
   bike.setPos(bike.getDest());
-  if(col.outOfBoundsOf(bike, arena)) { bike.setDest(bike.getBuff()); cout << "out of bounds\n"; beam.clear(); newBeam(); }
+  //if(col.outOfBoundsOf(bike, arena)) { bike.setDest(bike.getBuff()); cout << "out of bounds\n"; beam.clear(); newBeam(); }
   for(int i=0; i<beam.size(); i++) {
     beam[i].setPos(beam[i].getDest());
     if(col.isTouching(bike, beam[i])) { cout << "you suck!\n"; beam.clear(); newBeam(); }
