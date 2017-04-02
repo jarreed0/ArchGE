@@ -88,7 +88,7 @@ void Input::logPress() {
       if((event.key.keysym.sym == SDLK_u) && !keys[u]) {keys[u] = true; cout << "u\n";}
       if((event.key.keysym.sym == SDLK_v) && !keys[v]) {keys[v] = true; cout << "v\n";}
       if((event.key.keysym.sym == SDLK_w) && !keys[w]) {keys[w] = true; cout << "w\n";}
-      if((event.key.keysym.sym == SDLK_a) && !keys[x]) {keys[x] = true; cout << "x\n";}
+      if((event.key.keysym.sym == SDLK_x) && !keys[x]) {keys[x] = true; cout << "x\n";}
       if((event.key.keysym.sym == SDLK_y) && !keys[y]) {keys[y] = true; cout << "y\n";}
       if((event.key.keysym.sym == SDLK_z) && !keys[z]) {keys[z] = true; cout << "z\n";}
       if((event.key.keysym.sym == SDLK_ESCAPE) && !keys[esc]) {keys[esc] = true; cout << "Esc\n";}
@@ -133,7 +133,7 @@ void Input::logPress() {
       if((event.key.keysym.sym == SDLK_u) && keys[u]) {keys[u] = false; cout << "u up\n";}
       if((event.key.keysym.sym == SDLK_v) && keys[v]) {keys[v] = false; cout << "v up\n";}
       if((event.key.keysym.sym == SDLK_w) && keys[w]) {keys[w] = false; cout << "w up\n";}
-      if((event.key.keysym.sym == SDLK_a) && keys[x]) {keys[x] = false; cout << "x up\n";}
+      if((event.key.keysym.sym == SDLK_x) && keys[x]) {keys[x] = false; cout << "x up\n";}
       if((event.key.keysym.sym == SDLK_y) && keys[y]) {keys[y] = false; cout << "y up\n";}
       if((event.key.keysym.sym == SDLK_z) && keys[z]) {keys[z] = false; cout << "z up\n";}
       if((event.key.keysym.sym == SDLK_ESCAPE) && keys[esc]) {keys[esc] = false; cout << "Esc up\n";}
