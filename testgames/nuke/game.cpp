@@ -31,7 +31,7 @@ Game::Game() {
   bullet.setFrame(0, 0, 30, 30);
   bullet.setDestSize(30, 30);
   bullet.setPosSize(30, 30);
-  e.setFrameRate(1200);
+  e.setFrameRate(60);
   e.hideMouse();
   loop();
 }

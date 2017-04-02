@@ -18,10 +18,11 @@ Game::Game() {
   faceup = false;
   faceright = false;
   faceleft = false;
-  bike.setDest(100, 100, 20, 42);
+  spawn.setDestSize(20, 42);
+  spawn.center(WIDTH, HEIGHT);
+  respawn();
   gs.setGameState(gs.INGAME);
   e.setFrameRate(FRAMERATE);
-  newBeam();
   paused=false;
   cout << "p to pause" << endl;
   cout << "c to clear all beams" << endl;
@@ -83,10 +84,10 @@ void Game::update() {
   if(faceup) {bike.setDestY(bike.getDestY() - SPEED); beam[beam.size()-1].setDest(bike.getDestX()+9, bike.getDestY()+48, 5, streak);}
   streak+=SPEED;
   bike.setPos(bike.getDest());
-  //if(col.outOfBoundsOf(bike, arena)) { bike.setDest(bike.getBuff()); cout << "out of bounds\n"; beam.clear(); newBeam(); }
+  if(col.outOfBoundsOf(bike, arena)) { respawn(); }
   for(int i=0; i<beam.size(); i++) {
     beam[i].setPos(beam[i].getDest());
-    if(col.isTouching(bike, beam[i])) { cout << "you suck!\n"; beam.clear(); newBeam(); }
+    if(col.isTouching(bike, beam[i])) { respawn(); }
   }
 }
 void Game::genTiles() {
@@ -106,4 +107,10 @@ void Game::newBeam() {
   tmp.setColor(0xff, 0xa5, 0x00);
   beam.push_back(tmp);
   streak=0;
+}
+
+void Game::respawn() {
+  beam.clear();
+  bike.setDest(spawn.getDest());
+  newBeam();
 }

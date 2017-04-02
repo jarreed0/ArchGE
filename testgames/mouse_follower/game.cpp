@@ -5,7 +5,7 @@ Game::Game() {
   e.init("Mouse Follower", WIDTH, HEIGHT, SDL_WINDOW_BORDERLESS);
   e.setColor(0xff, 0xff, 0xff);
   e.hideMouse();
-  e.setFrameRate(1200);
+  e.setFrameRate(60);
   running = true;
 
   o.setImage("res/object.png", e.getRenderer());
@@ -43,7 +43,6 @@ void Game::loop() {
     //bool frame = true;
     //while(frame) {
       //e.update();
-      makeNewBlock=false;
       input();
       update();
       draw();
@@ -66,7 +65,7 @@ void Game::draw() {
 void Game::input() {
   i.logPress();
   if(i.checkKey(i.esc) || (i.checkKey(i.quit))) running = false;
-  if(i.checkKey(i.mouseleft)) { cout << mobjs[0].getVelX() << ", " << mobjs[0].getVelY() << endl; makeNewBlock=true; }
+  if(i.checkKey(i.mouseleft)) { cout << mobjs[0].getVelX() << ", " << mobjs[0].getVelY() << endl; makeNewBlock=true; } else { makeNewBlock=false; }
   if(i.checkKey(i.z)) {  cout << ":" << mobjs.size() << endl; }
 }
 
@@ -121,12 +120,12 @@ void Game::update() {
    }
   }
 
-  mcount++;
-  if(mcount >= vel) {
-    mcount = 0;
-    timeToMove = true;
+  //mcount++;
+  //if(mcount >= vel) {
+    //mcount = 0;
+    //timeToMove = true;
     if(makeNewBlock) createObj();
-  }
+  //}
 }
 
 void Game::createObj() {

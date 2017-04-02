@@ -6,7 +6,7 @@ Game::Game() {
   e.setGravity(9.8);
   //e.setColor(0x00, 0xff, 0x80);
   e.setColor(0x00, 0x08, 0x99);
-  e.setFrameRate(1200);
+  e.setFrameRate(60);
   //e.setBackground("../../engine/res/engine-logo.png");
   tileset.create("tiles", "res/tiles.bmp", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/12, 12, TOTAL_TILES);
   tileset.setSolid(1, TOTAL_TILES);

@@ -4,6 +4,7 @@ Game::Game() {
   cout << "Currently only generates a single screen and loops it it forever when going right and down and repeats it once when going up and left.\nSoon it will be infinitely generated in all directions.";
   setSeed(static_cast<int>(time(0)));
   cout << "Pass in seed as arguments\n";
+  e.setFrameRate(60);
   ifstream f("seeds.txt");
   if(f.is_open()) cout << f.rdbuf();
   //loop();

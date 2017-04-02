@@ -7,7 +7,7 @@
 #define TOTAL_TILES 16
 #define TILES_PER_ROW 8
 #define PLAYER_SIZE 35
-#define SPEED 4
+#define SPEED 5
 #define WIDTH 1200
 #define HEIGHT 480
 

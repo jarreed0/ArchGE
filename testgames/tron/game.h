@@ -19,6 +19,7 @@ private:
   Entity bike;
   vector<Object> tile;
   Object logo;
+  Object spawn;
   vector<Object> beam;
   int streak;
   GameState gs;
@@ -33,6 +34,7 @@ public:
   void update();
   void genTiles();
   void newBeam();
+  void respawn();
 };
 
 #endif //GAME_H
