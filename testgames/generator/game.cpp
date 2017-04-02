@@ -25,7 +25,7 @@ void Game::loop() {
   noise.SetFrequency(rand() % 10);
   noise.SetAmplitude(rand() % 10);
   noise.SetOctaves(rand() % 10);
-  x=y=0; int count; max=0;
+  x=y=0; int count; max=min=0;
   for(int i=0; i<(WIDTH/SIZE); i++) {
     vector<Object> tmpvec;
     for(int j=0; j<(HEIGHT/SIZE); j++) {
@@ -35,12 +35,14 @@ void Game::loop() {
       tmpvec.push_back(tmpo);
       int h = noise.GetHeight(i, j);
       if(h > max) max = h;
+      if(h < min) min = h;
       ground += h;
       count++;
     }
     land.push_back(tmpvec);
   }
   ground=ground/count;
+  cout << "Max: " << max << " Min: " << min << " Ground: " << ground << endl;
   while(e.getRunning()) {
     input();
     update();

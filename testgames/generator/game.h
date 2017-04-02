@@ -21,7 +21,7 @@ private:
   int seed;
   vector< vector<Object> > land;
   int x, y;
-  int ground, max;
+  int ground, max, min;
 public:
   Game();
   void loop();
