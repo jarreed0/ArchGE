@@ -86,7 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classEngine-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Engine Class Reference</div>  </div>
@@ -97,15 +96,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classEngine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="engine_8h_source.html">engine.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Engine:</div>
-<div class="dyncontent">
-<div class="center"><img src="classEngine__coll__graph.png" border="0" usemap="#Engine_coll__map" alt="Collaboration graph"/></div>
-<map name="Engine_coll__map" id="Engine_coll__map">
-<area shape="rect" id="node2" href="classCollision.html" title="Class used for calculating different types of collision between given Objects. " alt="" coords="5,5,77,32"/>
-<area shape="rect" id="node3" href="classInput.html" title="Class for checking and storing keyboard and mouse input. " alt="" coords="101,5,152,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -121,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac2dab34eea67e7a2c006945ee71a9e42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2dab34eea67e7a2c006945ee71a9e42"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setGravity</b> (double g)</td></tr>
 <tr class="separator:ac2dab34eea67e7a2c006945ee71a9e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834148373d85dfc947ec3fcb366f25e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a834148373d85dfc947ec3fcb366f25e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrameRate</b> (int f)</td></tr>
+<tr class="separator:a834148373d85dfc947ec3fcb366f25e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0228c54bc903edc9cc149213b121b65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0228c54bc903edc9cc149213b121b65"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getGravity</b> () const </td></tr>
 <tr class="separator:ae0228c54bc903edc9cc149213b121b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,9 +239,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>hideMouse</b> ()</td>
 <tr class="memitem:a6d476e93e46e59543ea9714b93a30936"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d476e93e46e59543ea9714b93a30936"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>showMouse</b> ()</td></tr>
 <tr class="separator:a6d476e93e46e59543ea9714b93a30936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0b98e24e2f28d316df4eec13ab92c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe0b98e24e2f28d316df4eec13ab92c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>exitOnEscape</b> (bool e)</td></tr>
-<tr class="separator:abe0b98e24e2f28d316df4eec13ab92c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8261a8bc23adeaf5a17a1d6301223eda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8261a8bc23adeaf5a17a1d6301223eda"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getRunning</b> () const </td></tr>
 <tr class="separator:a8261a8bc23adeaf5a17a1d6301223eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,15 +266,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getTicks</b> ()</td></
 <tr class="memitem:a15aa4850592df8924eb542ff0709bd98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15aa4850592df8924eb542ff0709bd98"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>delay</b> (int time)</td></tr>
 <tr class="separator:a15aa4850592df8924eb542ff0709bd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aea9ed2f40335370849a96b262731fc0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea9ed2f40335370849a96b262731fc0a"></a>
-<a class="el" href="classInput.html">Input</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
-<tr class="separator:aea9ed2f40335370849a96b262731fc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ced09f61316f08f0268c35beb0b9218"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ced09f61316f08f0268c35beb0b9218"></a>
-<a class="el" href="classCollision.html">Collision</a>&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
-<tr class="separator:a2ced09f61316f08f0268c35beb0b9218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for declaring an engine, which does basic SDL commands like creating the window and renderer. </p>
@@ -307,12 +288,8 @@ Public Attributes</h2></td></tr>
 <p>Get fps. </p>
 <p>Update loop time. </p>
 
-<p>Definition at line <a class="el" href="engine_8cpp_source.html#l00109">109</a> of file <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    {</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  simulationTime += 16;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">if</span>(simulationTime &lt; realTime) { fps = <span class="keyword">true</span>; } <span class="keywordflow">else</span> { fps = <span class="keyword">false</span>; }</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">if</span>(exitOnEsc) { input.<a class="code" href="classInput.html#a7664a52377e4bda7524d288df481954b">logPress</a>(); <span class="keywordflow">if</span>(input.<a class="code" href="classInput.html#a2f5d21366e04e3ce200fe73c6c748dd8">checkKey</a>(input.<a class="code" href="classInput.html#a528c1c27ef18062003acc6ecc6418719">esc</a>) || input.<a class="code" href="classInput.html#a2f5d21366e04e3ce200fe73c6c748dd8">checkKey</a>(input.<a class="code" href="classInput.html#a756c57e33cd0ff991ba76ecff4dfa8a4">quit</a>)) {setRunning(<span class="keyword">false</span>);}}</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span>(glMode) {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   glMatrixMode( GL_MODELVIEW );</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;   glLoadIdentity( );</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div><div class="ttc" id="classInput_html_a528c1c27ef18062003acc6ecc6418719"><div class="ttname"><a href="classInput.html#a528c1c27ef18062003acc6ecc6418719">Input::esc</a></div><div class="ttdeci">int esc</div><div class="ttdoc">Log ID for esc. </div><div class="ttdef"><b>Definition:</b> <a href="input_8h_source.html#l00055">input.h:55</a></div></div>
-<div class="ttc" id="classInput_html_a2f5d21366e04e3ce200fe73c6c748dd8"><div class="ttname"><a href="classInput.html#a2f5d21366e04e3ce200fe73c6c748dd8">Input::checkKey</a></div><div class="ttdeci">bool checkKey(int k)</div><div class="ttdoc">Check if a key has been pressed using a given key from this class. Ex: Input i; i.checkKey(i.up);. </div><div class="ttdef"><b>Definition:</b> <a href="input_8cpp_source.html#l00217">input.cpp:217</a></div></div>
-<div class="ttc" id="classInput_html_a756c57e33cd0ff991ba76ecff4dfa8a4"><div class="ttname"><a href="classInput.html#a756c57e33cd0ff991ba76ecff4dfa8a4">Input::quit</a></div><div class="ttdeci">int quit</div><div class="ttdoc">Log ID for quit. </div><div class="ttdef"><b>Definition:</b> <a href="input_8h_source.html#l00054">input.h:54</a></div></div>
-<div class="ttc" id="classInput_html_a7664a52377e4bda7524d288df481954b"><div class="ttname"><a href="classInput.html#a7664a52377e4bda7524d288df481954b">Input::logPress</a></div><div class="ttdeci">void logPress()</div><div class="ttdoc">Log all current keys and buttons being pressed. </div><div class="ttdef"><b>Definition:</b> <a href="input_8cpp_source.html#l00048">input.cpp:48</a></div></div>
-</div><!-- fragment -->
+<p>Definition at line <a class="el" href="engine_8cpp_source.html#l00113">113</a> of file <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">//simulationTime += 16;</span></div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">//if(simulationTime &lt; realTime) { fps = true; } else { fps = false; }</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">if</span>(glMode) {</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   glMatrixMode( GL_MODELVIEW );</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   glLoadIdentity( );</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

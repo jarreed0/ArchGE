@@ -36,7 +36,7 @@ private:
   SDL_Window *engwin; //!< SDL Window.
   int WIDTH, HEIGHT; //!< Width and height of the window.
   int simulationTime, realTime; //!< Timestamps used for fps loop.
-  bool fps; //!< Boolean for loop.
+  //bool fps; //!< Boolean for loop.
   bool bkg; //!< Boolean for if there is a set background.
   Background background; //!< Background to display.
   Uint8 red, green, blue; //!< Colors for background.
@@ -45,25 +45,23 @@ private:
   double ct; //!< Custom splashscreen duration.
   int cw, ch; //!< Custom splashcreen width and height.
   bool debug;
-  bool exitOnEsc;
   bool running;
   time_t lastTime, curTime;
   long capLast, capCur;
   int frameCount;
-  int framesPerSecond, cappedFrame, capTime, capMark, renderMiliGap;
+  //int framesPerSecond, cappedFrame, capTime, capMark, renderMiliGap;
   bool glMode;
   int glView[9];
-  int curFPS;
+  int curFPS, setFPS, lastFrame;
   Text text;
   Uint8 fr, fg, fb;
   double gravity;
 public:
-  Input input;
-  Collision col;
   Engine();
   //! Decontructs renderer and window and then quits SDL.
   ~Engine();
   void setGravity(double g) {gravity=g;}
+  void setFrameRate(int f) {setFPS=f;}
   double getGravity() const {return gravity;}
   //! Create a window with a given name, width, height, and anyother SDL_Window flags.
   SDL_Renderer* init(string s, const int& w, const int& h, int flag);
@@ -126,7 +124,6 @@ public:
   void debugMode(bool d);
   void hideMouse();
   void showMouse();
-  void exitOnEscape(bool e) { exitOnEsc=e; }
   bool getRunning() const { return running; }
   void setRunning(bool r) { running = r; }
   void setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i);

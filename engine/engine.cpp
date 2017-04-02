@@ -1,19 +1,19 @@
 #include "engine.h"
 
 Engine::Engine() {
-  simulationTime = 0;
-  realTime = 0;
-  fps = 1;
+  //simulationTime = 0;
+  //realTime = 0;
+  setFPS = 60;
   bkg = 0;
+  lastFrame = 0;
   splashed = false;
   custom = false;
   debug = false;
-  exitOnEscape(false);
   setRunning(true);
-  frameCount = lastTime = capLast = capCur = 0;
-  framesPerSecond = 60;
-  capTime = 10;
-  capMark = renderMiliGap = cappedFrame = 0;
+  frameCount = lastTime = 0;capLast = capCur = 0;
+  //framesPerSecond = 60;
+  //capTime = 10;
+  //capMark = renderMiliGap = cappedFrame = 0;
   glMode=false;
 }
 Engine::~Engine() {
@@ -80,12 +80,10 @@ void Engine::loopStart() {
   if(!glMode) SDL_RenderClear(engren);
   SDL_SetRenderDrawColor(engren, red, green, blue, 0xff);
   if(bkg) drawBackground();
+  lastFrame = getTicks();
   curTime = time(0);
   if(curTime > lastTime) {
-   lastTime = curTime; cout << "FPS: " << frameCount << endl; frameCount=0;
-   curFPS=frameCount;
-   //if(capMark > capTime) { capMark++; cappedFrame = (cappedFrame + frameCount); cout << "Cap: " << cappedFrame << endl; }
-   //if(capMark < capTime) { cappedFrame = (cappedFrame/capTime);renderMiliGap = (cappedFrame/framesPerSecond)/1000; }
+   lastTime = curTime; curFPS=frameCount; cout << "FPS: " << curFPS << endl; frameCount=0;
   }
 }
 void Engine::render() {
@@ -105,11 +103,16 @@ void Engine::render() {
   } else {
    SDL_RenderPresent(engren);
   }
+
+  int timerFps = getTicks() - lastFrame;
+  if(timerFps < 1000/setFPS) {
+    delay((1000/setFPS) - timerFps);
+  }
+
 }
 void Engine::update() {
-  simulationTime += 16;
-  if(simulationTime < realTime) { fps = true; } else { fps = false; }
-  if(exitOnEsc) { input.logPress(); if(input.checkKey(input.esc) || input.checkKey(input.quit)) {setRunning(false);}}
+  //simulationTime += 16;
+  //if(simulationTime < realTime) { fps = true; } else { fps = false; }
   if(glMode) {
    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
    glMatrixMode( GL_MODELVIEW );

@@ -2,7 +2,7 @@
 
 Game::Game() {
   e.debugMode(true);
-  e.exitOnEscape(true);
+ // e.exitOnEscape(true);
   e.setGLMode(true);
   e.init("Tada!", WIDTH, HEIGHT, 0, 0, SDL_WINDOW_OPENGL);
   e.setColor(0x00, 0x08, 0x99);
@@ -81,7 +81,7 @@ void Game::input() {
    posX = event.motion.x-WIDTH/2;
    posY = HEIGHT/2-event.motion.y;
   }*/
-  i.logPress(); if(i.checkKey(i.right)) cout << "test" << endl;
+  i.logPress(); if(i.checkKey(i.esc) || i.checkKey(i.quit)) e.setRunning(false);
 }
 
 void Game::update() {

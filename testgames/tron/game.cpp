@@ -21,6 +21,7 @@ Game::Game() {
   tile.setImage("res/tile.png", e.getRenderer());
   tile.setFrame(0, 0, 64, 64);
   gs.setGameState(gs.INGAME);
+  e.setFrameRate(FRAMERATE);
   loop();
 }
 Game::~Game() {}
@@ -32,23 +33,23 @@ void Game::loop() {
     //while(frame) {
       //e.update();
 
-        timerFps = e.getTicks(); // SDL_GetTicks() gives the number of milliseconds since the program start.
+        //timerFps = e.getTicks(); // SDL_GetTicks() gives the number of milliseconds since the program start.
                                    // I initialize the timer.
 
         input();
         update();
         draw();
         e.loop();
-
+/*
         timerFps = e.getTicks() - timerFps; //I get the time it took to update and draw;
 
         if(timerFps < 1000/FRAMERATE) // if timerFps is < 16.6666...7 ms (meaning it loaded the frame too fast)
         {
             e.delay((1000/FRAMERATE) - timerFps); //delay the frame to be in time
-        } 
+        } */
       //if(!e.FPS()) { frame=false; }
     //}
-    //e.render();
+    //e.render();/
   }
 }
 

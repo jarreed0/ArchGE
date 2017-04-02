@@ -9,15 +9,6 @@ Class for declaring an engine, which does basic S\+DL commands like creating the
 
 {\ttfamily \#include $<$engine.\+h$>$}
 
-
-
-Collaboration diagram for Engine\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=190pt]{classEngine__coll__graph}
-\end{center}
-\end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,6 +21,9 @@ struct \hyperlink{structEngine_1_1color}{color}
 
 \begin{DoxyCompactList}\small\item\em Decontructs renderer and window and then quits S\+DL. \end{DoxyCompactList}\item 
 void {\bfseries set\+Gravity} (double g)\hypertarget{classEngine_ac2dab34eea67e7a2c006945ee71a9e42}{}\label{classEngine_ac2dab34eea67e7a2c006945ee71a9e42}
+
+\item 
+void {\bfseries set\+Frame\+Rate} (int f)\hypertarget{classEngine_a834148373d85dfc947ec3fcb366f25e6}{}\label{classEngine_a834148373d85dfc947ec3fcb366f25e6}
 
 \item 
 double {\bfseries get\+Gravity} () const \hypertarget{classEngine_ae0228c54bc903edc9cc149213b121b65}{}\label{classEngine_ae0228c54bc903edc9cc149213b121b65}
@@ -130,9 +124,6 @@ void {\bfseries hide\+Mouse} ()\hypertarget{classEngine_ab28645d6809f5335cc9034c
 void {\bfseries show\+Mouse} ()\hypertarget{classEngine_a6d476e93e46e59543ea9714b93a30936}{}\label{classEngine_a6d476e93e46e59543ea9714b93a30936}
 
 \item 
-void {\bfseries exit\+On\+Escape} (bool e)\hypertarget{classEngine_abe0b98e24e2f28d316df4eec13ab92c8}{}\label{classEngine_abe0b98e24e2f28d316df4eec13ab92c8}
-
-\item 
 bool {\bfseries get\+Running} () const \hypertarget{classEngine_a8261a8bc23adeaf5a17a1d6301223eda}{}\label{classEngine_a8261a8bc23adeaf5a17a1d6301223eda}
 
 \item 
@@ -160,15 +151,6 @@ int {\bfseries get\+Ticks} ()\hypertarget{classEngine_adfac6631b6c52bcb43811742a
 void {\bfseries delay} (int time)\hypertarget{classEngine_a15aa4850592df8924eb542ff0709bd98}{}\label{classEngine_a15aa4850592df8924eb542ff0709bd98}
 
 \end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classInput}{Input} {\bfseries input}\hypertarget{classEngine_aea9ed2f40335370849a96b262731fc0a}{}\label{classEngine_aea9ed2f40335370849a96b262731fc0a}
-
-\item 
-\hyperlink{classCollision}{Collision} {\bfseries col}\hypertarget{classEngine_a2ced09f61316f08f0268c35beb0b9218}{}\label{classEngine_a2ced09f61316f08f0268c35beb0b9218}
-
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -192,22 +174,20 @@ Get fps.
 
 Update loop time. 
 
-Definition at line 109 of file engine.\+cpp.
+Definition at line 113 of file engine.\+cpp.
 
 
 \begin{DoxyCode}
-109                     \{
-110   simulationTime += 16;
-111   \textcolor{keywordflow}{if}(simulationTime < realTime) \{ fps = \textcolor{keyword}{true}; \} \textcolor{keywordflow}{else} \{ fps = \textcolor{keyword}{false}; \}
-112   \textcolor{keywordflow}{if}(exitOnEsc) \{ input.\hyperlink{classInput_a7664a52377e4bda7524d288df481954b}{logPress}(); \textcolor{keywordflow}{if}(input.\hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a528c1c27ef18062003acc6ecc6418719}{esc}) || input.
-      \hyperlink{classInput_a2f5d21366e04e3ce200fe73c6c748dd8}{checkKey}(input.\hyperlink{classInput_a756c57e33cd0ff991ba76ecff4dfa8a4}{quit})) \{setRunning(\textcolor{keyword}{false});\}\}
-113   \textcolor{keywordflow}{if}(glMode) \{
-114    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
-115    glMatrixMode( GL\_MODELVIEW );
-116    glLoadIdentity( );
-117    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
-118   \}
-119 \}
+113                     \{
+114   \textcolor{comment}{//simulationTime += 16;}
+115   \textcolor{comment}{//if(simulationTime < realTime) \{ fps = true; \} else \{ fps = false; \}}
+116   \textcolor{keywordflow}{if}(glMode) \{
+117    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+118    glMatrixMode( GL\_MODELVIEW );
+119    glLoadIdentity( );
+120    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
+121   \}
+122 \}
 \end{DoxyCode}
 
 

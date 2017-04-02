@@ -5,6 +5,7 @@ Game::Game() {
   e.init("Mouse Follower", WIDTH, HEIGHT, SDL_WINDOW_BORDERLESS);
   e.setColor(0xff, 0xff, 0xff);
   e.hideMouse();
+  e.setFrameRate(1200);
   running = true;
 
   o.setImage("res/object.png", e.getRenderer());

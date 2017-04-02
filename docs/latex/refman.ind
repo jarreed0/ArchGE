@@ -8,8 +8,8 @@
 
   \indexspace
 
-  \item {Engine}, \hyperpage{8}
-    \subitem {update}, \hyperpage{10}
+  \item {Engine}, \hyperpage{7}
+    \subitem {update}, \hyperpage{9}
   \item {Engine\+::color}, \hyperpage{7}
   \item {Entity}, \hyperpage{10}
 
@@ -19,17 +19,17 @@
 
   \indexspace
 
-  \item {Image}, \hyperpage{13}
-  \item {Input}, \hyperpage{14}
+  \item {Image}, \hyperpage{12}
+  \item {Input}, \hyperpage{13}
 
   \indexspace
 
-  \item {Level}, \hyperpage{16}
+  \item {Level}, \hyperpage{15}
 
   \indexspace
 
   \item {Map}, \hyperpage{17}
-  \item {Model}, \hyperpage{18}
+  \item {Model}, \hyperpage{17}
 
   \indexspace
 
@@ -37,22 +37,22 @@
 
   \indexspace
 
-  \item {Perlin\+Noise}, \hyperpage{22}
-  \item {Physics}, \hyperpage{22}
+  \item {Perlin\+Noise}, \hyperpage{21}
+  \item {Physics}, \hyperpage{21}
 
   \indexspace
 
-  \item {Stage}, \hyperpage{23}
+  \item {Stage}, \hyperpage{22}
 
   \indexspace
 
-  \item {Text}, \hyperpage{24}
-  \item {Tile}, \hyperpage{24}
-  \item {Tileset}, \hyperpage{26}
+  \item {Text}, \hyperpage{23}
+  \item {Tile}, \hyperpage{23}
+  \item {Tileset}, \hyperpage{25}
 
   \indexspace
 
   \item {update}
-    \subitem {Engine}, \hyperpage{10}
+    \subitem {Engine}, \hyperpage{9}
 
 \end{theindex}
