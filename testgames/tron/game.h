@@ -3,7 +3,7 @@
 
 #include <arch/arch.h>
 
-#define SPEED 10
+#define SPEED 6
 #define WIDTH 640
 #define HEIGHT 480
 #define FRAMERATE 60
@@ -21,8 +21,11 @@ private:
   vector<Object> beam;
   GameState gs;
   bool l, r, u, d;
+<<<<<<< HEAD
   int vel, timerFps = 0;
   bool paused;
+=======
+>>>>>>> c67c66df5f3e794a83a50dfbf15126601448378f
 public:
   Game();
   ~Game();

@@ -17,7 +17,6 @@ Game::Game() {
   faceup = false;
   faceright = false;
   faceleft = false;
-  vel = 30;
   bike.setDest(100, 100, 64, 64);
   gs.setGameState(gs.INGAME);
   e.setFrameRate(FRAMERATE);
