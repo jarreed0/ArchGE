@@ -7,6 +7,7 @@
 #define WIDTH 640
 #define HEIGHT 480
 #define FRAMERATE 60
+#define TILESIZE 64
 
 class Game {
 private:
@@ -14,12 +15,14 @@ private:
   bool running, facedown, faceup, faceleft, faceright;
   Input i;
   Object arena;
-  Object bike;
-  Object tile;
+  Entity bike;
+  vector<Object> tile;
   Object logo;
+  vector<Object> beam;
   GameState gs;
   bool l, r, u, d;
   int vel, timerFps = 0;
+  bool paused;
 public:
   Game();
   ~Game();
@@ -27,7 +30,7 @@ public:
   void draw();
   void input();
   void update();
-  void drawTiles();
+  void genTiles();
 };
 
 #endif //GAME_H
