@@ -5,8 +5,8 @@ Game::Game() {
   e.init("Pong", WIDTH, HEIGHT, 0);
   e.setFrameRate(60);
   e.setColor(0,0,0);
-  paddle.setDestSize(15, 100);
-  paddle.center(WIDTH,HEIGHT-100);
+  paddle.setDestSize(10, 90);
+  paddle.center(WIDTH,HEIGHT);
   paddle.setDestX(10);
   paddle.setColor(paddle.blue);
   paddle2.setDest(paddle.getDest());
@@ -15,6 +15,26 @@ Game::Game() {
   hitball.setColor(150,255,150);
   hitpaddle.setColor(150,150,255);
   hitpaddle2.setColor(255,150,150);
+  bhitball=bhitpaddle=bhitpaddle2=false;
+  for(int i = 0; i<12; i++) {
+    Object tmp;
+    tmp.setDestSize(3, 16);
+    tmp.center(WIDTH, HEIGHT);
+    tmp.setDestY((i*tmp.getDestH())+(tmp.getDestH()*i));
+    tmp.setColor(255,255,255);
+    track.push_back(tmp);
+  }
+  for(int i = 0; i<SCORETOWIN*2; i++) {
+    Object tmp;
+    if(i<SCORETOWIN) {
+      tmp.setDest(10*i, (10*i)+(10*i), 10, 10);
+    } else { 
+      tmp.setDest((i*10)+(i*10), sqrt(-(pow(8,2)-pow(((i*10)+(i*10)),2))), 10, 10);
+      cout << sqrt(-(pow(8,2)-pow(((i*10)+(i*10)),2))) << endl;
+    }
+    tmp.setColor(0,20,80);
+    scoreboard.push_back(tmp);
+  }
   p=0;
   spawnball();
   loop();
@@ -33,6 +53,10 @@ void Game::loop() {
 }
 
 void Game::draw() {
+ e.draw(hittrack);
+ e.draw(track);
+ //e.draw(hitscoreboard);
+ //e.draw(scoreboard);
  e.draw(paddle);
  e.draw(paddle2);
  if(bhitpaddle) {
@@ -57,6 +81,8 @@ void Game::input() {
  if(i.checkKey(i.up)) { p=1; move=1; }
  if(i.checkKey(i.down)) { p=2; move=1; }
  if(!move) p=0;
+ if(i.checkKey(i.o)) ball.setDestSize(ball.getDestW()-1, ball.getDestH()-1);
+ if(i.checkKey(i.p)) ball.setDestSize(ball.getDestW()+1, ball.getDestH()+1);
 }
 
 void Game::update() {
@@ -72,18 +98,40 @@ void Game::update() {
  if(col.isTouching(ball, paddle) && xballspeed<0) { xballspeed=-xballspeed-(xballspeed/10); bhitball=true; bhitpaddle=true; }
  if(col.isTouching(ball, paddle2) && xballspeed>0) { xballspeed=-xballspeed-(xballspeed/10); bhitball=true; bhitpaddle2=true; }
  if(ball.getDestX() < 0) { xballspeed = SPEED*2; score2++; cout << score << " - " << score2 << endl; bhitball=true; }
- if(ball.getDestX()+ball.getDestW() > WIDTH) { xballspeed=SPEED*2; xballspeed=-xballspeed; score++; cout << score << " - " << score2 << endl; bhitball=true;}
+ if(ball.getDestX()+ball.getDestW() > WIDTH) { xballspeed=SPEED*2; xballspeed=-xballspeed; score++; cout << score << " - " << score2 << endl; bhitball=true; }
  if(ball.getDestY() < 0 || ball.getDestY()+ball.getDestH() > HEIGHT) { yballspeed=-yballspeed-(yballspeed/10); bhitball=true; }
  if(paddle.getDestY() < 0 || paddle.getDestY()+paddle.getDestH() > HEIGHT) paddle.setDest(paddle.getBuff());
- /*paddle2.setVelTo(ball);
+ 
+ hittrack.clear();
+ for(int i=0; i<track.size(); i++) {
+  Object tmp = track[i];
+  tmp.setPos(tmp.getDestX()-3, tmp.getDestY()-3, tmp.getDestW()+3, tmp.getDestH()+3);
+  if(col.isTouching(ball, tmp)) {
+    tmp.setDestSize(16, 29);
+    tmp.moveDest(-6,-6);
+    if(xballspeed > 0) tmp.setColor(0,100,200);
+    if(xballspeed < 0) tmp.setColor(250,50,0);
+    hittrack.push_back(tmp);
+  }
+ }
+
+/*paddle2.setVelTo(ball);
  paddle2.moveDestY(paddle2.getVelY());*/
- paddle2.setDestY(ball.getDestY()-((paddle2.getDestH()-ball.getDestH())/2));
+ //paddle2.setDestY(ball.getDestY()-((paddle2.getDestH()-ball.getDestH())/2));
+
+ int pad2mov = 0;
+ int pad2mid = paddle2.getDestY()+(paddle2.getDestH()/2);
+ int balldest = (yballspeed/xballspeed)*(pad2mid)+ball.getDestY();
+ if(balldest > pad2mid) pad2mov = SPEED;
+ if(balldest < pad2mid) pad2mov = -SPEED;
+ paddle2.moveDestY(pad2mov);
+
  if(paddle2.getDestY() < 0 || paddle2.getDestY()+paddle2.getDestH() > HEIGHT) paddle2.setDest(paddle2.getBuff());
  if(yballspeed>8)yballspeed=8;
  if(yballspeed<-8)yballspeed=-8;
  if(xballspeed>24)xballspeed=24;
  if(xballspeed<-24)xballspeed=-24;
- if(score >= 7 || score2 >= 7) spawnball();
+ if(score >= SCORETOWIN || score2 >= SCORETOWIN) spawnball();
 }
 
 void Game::spawnball() {
