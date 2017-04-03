@@ -3,16 +3,28 @@
 Game::Game() {
   e.debugMode(true);
   e.init("Day of Escape", WIDTH, HEIGHT, 0);
-  e.setColor(0xff, 0xff, 0xff);
+  e.setColor(65, 244, 193);
   running = true;
-  e.setFrameRate(FRAMERATE);
-  
+  e.setFrameRate(FRAMERATE);  
+
   player.setImage("res/player.png", e.getRenderer());
   player.setFrame(64 * iframe, 0, 64, 64);
-  player.setDest(0, 0, 64, 64);
+  player.setDest(32, 0, 64, 64);
 
   tile.setImage("res/ground.png", e.getRenderer());
   tile.setFrame(0, 0, 64, 64);
+
+
+  tile2.setImage("res/ground.png", e.getRenderer());
+  tile2.setFrame(0, 0, 64, 64);
+  tile2.setDest(128, 356, 64, 64);
+
+  tile3.setImage("res/ground.png", e.getRenderer());
+  tile3.setFrame(0, 0, 64, 64);
+  tile3.setDest(192, 292, 64, 64);
+
+  ground.setDest(0, 420, 640, 64);
+  screen.setDest(0, 0, WIDTH, HEIGHT);
 
   loop();
 }
@@ -29,6 +41,8 @@ void Game::loop() {
 }
 
 void Game::draw() {
+  e.draw(tile2);
+  e.draw(tile3);
   e.draw(player);
   drawFloor();
 }
@@ -39,6 +53,8 @@ void Game::input() {
   if(!i.checkKey(i.a) && movingl) {movingl = false;}
   if(i.checkKey(i.d) && !movingr) {movingr = true;movingl = false;lookingright = true;lookingleft = false;}
   if(!i.checkKey(i.d) && movingr) {movingr = false;}
+  if(i.checkKey(i.w) && !jumping && !nj) {jumping = true;nj = true;}
+  if(!i.checkKey(i.w) && nj) {nj = false;}
   if(i.checkKey(i.p)) paused = !paused;
   if(i.checkKey(i.esc)) running = false;
 }
@@ -46,15 +62,28 @@ void Game::input() {
 void Game::update() {
   updatePlayer();
   gravity();
+  nowJumping();
 }
 
 void Game::gravity() {
-  if(player.getDestY() < 358) player.setDestY(player.getDestY() + 8);
+  //if(player.getDestY() < 358) player.setDestY(player.getDestY() + 8);
+  if (!col.overlaps(player, ground) && !col.overlaps(player, tile2) && !col.overlaps(player, tile3) && !jumping) {
+    player.setDestY(player.getDestY() + 8);
+  }
 }
 
 void Game::updatePlayer() {
-  if(movingl) player.setDestX(player.getDestX() - 3.0);
-  if(movingr) player.setDestX(player.getDestX() + 3.0);
+  for (int i = 0; i < 3; i++) {
+    if(movingl) {
+      player.setDestX(player.getDestX() - 1.0);
+      if(!col.contains(screen, player)) player.setDestX(player.getDestX() + 1.0);
+    }
+
+    if(movingr) {
+      player.setDestX(player.getDestX() + 1.0);
+      if(!col.contains(screen, player)) player.setDestX(player.getDestX() - 1.0);
+    }
+  }  
 
   if(movingl || movingr) {
     fcount++;
@@ -88,5 +117,16 @@ void Game::drawFloor() {
   for(int i = 0; i < 10; i++) {
     tile.setDest(i * 64, 420, 64, 64);
     e.draw(tile);
+  }
+}
+
+void Game::nowJumping() {
+  if(jumping){
+    jump += 8;
+    player.setDestY(player.getDestY() - 8.0);
+    if(jump >= 80) {
+      jumping = false;
+      jump = 0;
+    }
   }
 }
