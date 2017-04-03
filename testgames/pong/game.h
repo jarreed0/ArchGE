@@ -23,6 +23,15 @@ private:
   bool bhitball, bhitpaddle, bhitpaddle2, bhittrack;
   vector<Object> track, hittrack;
   vector<Object> scoreboard, hitscoreboard;
+  Object boostBar, boostMeter, staticBoostMeter;
+  bool boost;
+  double boostBarSize;
+  int boostCount;
+  Object boostBar2, boostMeter2, staticBoostMeter2;
+  bool boost2;
+  double boostBarSize2;
+  int boostCount2;
+  bool paused;
 public:
   Game();
   ~Game();
@@ -31,6 +40,7 @@ public:
   void input();
   void update();
   void spawnball();
+  void resetBoost();
   void configballhit();
   void configpaddlehit();
   void configpaddle2hit();
