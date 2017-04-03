@@ -120,12 +120,12 @@ void Game::update() {
    }
   }
 
-  //mcount++;
-  //if(mcount >= vel) {
-    //mcount = 0;
-    //timeToMove = true;
-    if(makeNewBlock) createObj();
-  //}
+  mcount++;
+  if(mcount >= vel) {
+    mcount = 0;
+    timeToMove = true;
+  }
+  if(makeNewBlock) createObj();
 }
 
 void Game::createObj() {

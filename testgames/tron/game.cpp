@@ -14,10 +14,6 @@ Game::Game() {
   bike.setImage("res/bike.png", e.getRenderer());
   bike.setFrame(0, 0, 64, 64);
   bike.setAngle(180);
-  facedown = true;
-  faceup = false;
-  faceright = false;
-  faceleft = false;
   spawn.setDestSize(20, 42);
   spawn.center(WIDTH, HEIGHT);
   respawn();
@@ -110,6 +106,11 @@ void Game::newBeam() {
 }
 
 void Game::respawn() {
+  facedown = true;
+  faceup = false;
+  faceright = false;
+  faceleft = false;
+  bike.setAngle(180);
   beam.clear();
   bike.setDest(spawn.getDest());
   newBeam();
