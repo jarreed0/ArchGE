@@ -3,7 +3,7 @@
 Game::Game() {
   e.debugMode(true);
   e.init("Pong", WIDTH, HEIGHT, 0);
-  cout << "arrows to move\nz to boost\n" << SCORETOWIN << " points to win" << endl;
+  cout << "arrows to move\nz to boost\n" << SCORETOWIN << " points to win\na and s to (de)activate ai\np and o to change ball size\nl and k to (un)pause" << endl;
   e.setFrameRate(60);
   e.setColor(0,0,0);
   paddle.setDestSize(10, 90);
@@ -32,6 +32,7 @@ Game::Game() {
     tmp.setColor(255,255,255);
     scoreboard.push_back(tmp);
   }
+  ai=false;
   paused=false;
   p=0;
   spawnball();
@@ -91,6 +92,8 @@ void Game::input() {
  if(i.checkKey(i.l)) paused=true;
  if(i.checkKey(i.k)) paused=false;
  if(i.checkKey(i.z)) boost=true;
+ if(i.checkKey(i.a)) ai=true;
+ if(i.checkKey(i.s)) ai=false;
 }
 
 void Game::update() {
@@ -156,6 +159,19 @@ void Game::update() {
  if(balldest < (pad2mid-paddle2.getDestH()) && (ball.getDestX()> (WIDTH-(3*(WIDTH/4))) )) boost2=true;
  paddle2.moveDestY(pad2mov);
 
+ if(paddle2.getDestY() < 0) paddle2.setDestY(0);
+ if(paddle2.getDestY()+paddle2.getDestH() > HEIGHT) paddle2.setDestY(HEIGHT-paddle.getDestH());
+
+ if(ai) {
+ pad2mov = 0;
+ pad2mid = paddle.getDestY()+(paddle.getDestH()/2);
+ balldest = -(yballspeed/xballspeed)*(pad2mid)+ball.getDestY();
+ if(balldest > pad2mid) pad2mov = SPEED;
+ if(balldest < pad2mid) pad2mov = -SPEED;
+ if(balldest > (pad2mid+paddle.getDestH()) && (ball.getDestX()> ((3*(WIDTH/4))) )) boost=true;
+ if(balldest < (pad2mid-paddle.getDestH()) && (ball.getDestX()> ((3*(WIDTH/4))) )) boost=true;
+ paddle.moveDestY(pad2mov);
+ }
 
  if(boost2 && boostBar2.getDestW()>0) {
    int pad2mov = 0;

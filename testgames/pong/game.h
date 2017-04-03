@@ -32,6 +32,7 @@ private:
   double boostBarSize2;
   int boostCount2;
   bool paused;
+  bool ai;
 public:
   Game();
   ~Game();
