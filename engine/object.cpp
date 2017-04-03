@@ -59,3 +59,7 @@ void Object::lookAt(Input i) {
 void Object::centerOn(Object obj) {
  centerOn(obj.getDestX()-(obj.getDestW()/2), obj.getDestY()-(obj.getDestH()/2));
 }
+
+void Object::rotateAngle(int rot) {
+ setAngle(getAngle()+rot);
+}

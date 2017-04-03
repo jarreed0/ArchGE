@@ -42,9 +42,16 @@ void Game::input() {
 
 void Game::update() {
   //o.lookAt(i);
-  if(l) o.setAngle(o.getAngle()-ROTATE);
-  if(r) o.setAngle(o.getAngle()+ROTATE);
-  if(u) o.moveDest(-(SPEED*cos(o.getAngle())),-(SPEED*sin(o.getAngle())));
-  if(d) o.moveDest(SPEED*cos(o.getAngle()),SPEED*sin(o.getAngle()));
+  if(l) o.rotateAngle(-ROTATE);
+  if(r) o.rotateAngle(ROTATE);
+  int dx = cos(get_degrees(o.getAngle()))*SPEED;
+  int dy = sin(get_degrees(o.getAngle()))*SPEED;
+  if(u) o.moveDest(dx,dy);
+  if(d) o.moveDest(-dx,-dy);
+}
+
+double Game::get_degrees(double input) {
+    const double halfC = M_PI / 180;
+    return input * halfC;
 }
 

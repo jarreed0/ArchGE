@@ -144,6 +144,7 @@ public:
   void setColor(Uint8 r, Uint8 g, Uint8 b) {objsColor.r=r;objsColor.g=g;objsColor.b=b;};
   bool imageSet() const {return objsImage;}
   color getColor() const {return objsColor;}
+  void rotateAngle(int rot);
 };
 
 #endif //OBJECT_H

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  3 APR 2017 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  3 APR 2017 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1322,16 +1322,16 @@ Package pdftex.def Info: classObject__coll__graph.pdf used on input line 27.
 
 pdfTeX warning: pdflatex (file ./classObject__coll__graph.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
->] [19] [20]) (./classPerlinNoise.tex) (./classPhysics.tex [21])
+>] [19] [20]) (./classPerlinNoise.tex [21]) (./classPhysics.tex)
 (./classStage.tex [22]) (./classText.tex) (./classTile.tex [23]
-<classTile__inherit__graph.pdf, id=1098, 125.46875pt x 156.585pt>
+<classTile__inherit__graph.pdf, id=1099, 125.46875pt x 156.585pt>
 File: classTile__inherit__graph.pdf Graphic file (type pdf)
 
 <use classTile__inherit__graph.pdf>
 Package pdftex.def Info: classTile__inherit__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
 
-<classTile__coll__graph.pdf, id=1099, 152.57pt x 246.9225pt>
+<classTile__coll__graph.pdf, id=1100, 152.57pt x 246.9225pt>
 File: classTile__coll__graph.pdf Graphic file (type pdf)
 
 <use classTile__coll__graph.pdf>
@@ -1357,13 +1357,13 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15610 strings out of 494953
- 241302 string characters out of 6180977
- 322294 words of memory out of 5000000
- 18170 multiletter control sequences out of 15000+600000
+ 15612 strings out of 494953
+ 241394 string characters out of 6180977
+ 322346 words of memory out of 5000000
+ 18171 multiletter control sequences out of 15000+600000
  56359 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,16n,92p,400b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,15n,92p,400b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1371,10 +1371,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (31 pages, 198224 bytes).
+Output written on refman.pdf (31 pages, 198178 bytes).
 PDF statistics:
- 1328 PDF objects out of 1440 (max. 8388607)
- 1259 compressed objects within 13 object streams
- 438 named destinations out of 1000 (max. 500000)
+ 1330 PDF objects out of 1440 (max. 8388607)
+ 1261 compressed objects within 13 object streams
+ 439 named destinations out of 1000 (max. 500000)
  393 words of extra memory for PDF output out of 10000 (max. 10000000)
 

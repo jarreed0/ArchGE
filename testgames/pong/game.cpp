@@ -26,12 +26,7 @@ Game::Game() {
   }
   for(int i = 0; i<SCORETOWIN*2; i++) {
     Object tmp;
-    if(i<SCORETOWIN) {
-      tmp.setDest(10*i, (10*i)+(10*i), 10, 10);
-    } else { 
-      tmp.setDest((i*10)+(i*10), sqrt(-(pow(8,2)-pow(((i*10)+(i*10)),2))), 10, 10);
-      cout << sqrt(-(pow(8,2)-pow(((i*10)+(i*10)),2))) << endl;
-    }
+    tmp.setDest((WIDTH/2)+(i*15), (HEIGHT/2)+sqrt(pow(20,2)-pow((i*15),2)), 10, 10);
     tmp.setColor(0,20,80);
     scoreboard.push_back(tmp);
   }
@@ -56,7 +51,7 @@ void Game::draw() {
  e.draw(hittrack);
  e.draw(track);
  //e.draw(hitscoreboard);
- //e.draw(scoreboard);
+ e.draw(scoreboard);
  e.draw(paddle);
  e.draw(paddle2);
  if(bhitpaddle) {

@@ -23,6 +23,7 @@ public:
   void draw();
   void input();
   void update();
+  double get_degrees(double input);
 };
 
 #endif //GAME_H
