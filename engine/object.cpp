@@ -50,6 +50,12 @@ void Object::lookAt(Object o) {
   setAngle(angle);
 }
 
+void Object::lookAt(Input i) {
+  Object tmp;
+  tmp.setDestCoord(i.getMouseX(), i.getMouseY());
+  lookAt(tmp);
+}
+
 void Object::centerOn(Object obj) {
  centerOn(obj.getDestX()-(obj.getDestW()/2), obj.getDestY()-(obj.getDestH()/2));
 }

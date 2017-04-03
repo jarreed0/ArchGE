@@ -8,8 +8,8 @@
 
   \indexspace
 
-  \item {Engine}, \hyperpage{7}
-    \subitem {update}, \hyperpage{9}
+  \item {Engine}, \hyperpage{8}
+    \subitem {update}, \hyperpage{10}
   \item {Engine\+::color}, \hyperpage{7}
   \item {Entity}, \hyperpage{10}
 
@@ -19,7 +19,7 @@
 
   \indexspace
 
-  \item {Image}, \hyperpage{12}
+  \item {Image}, \hyperpage{13}
   \item {Input}, \hyperpage{13}
 
   \indexspace
@@ -29,7 +29,7 @@
   \indexspace
 
   \item {Map}, \hyperpage{17}
-  \item {Model}, \hyperpage{17}
+  \item {Model}, \hyperpage{18}
 
   \indexspace
 
@@ -38,7 +38,7 @@
   \indexspace
 
   \item {Perlin\+Noise}, \hyperpage{21}
-  \item {Physics}, \hyperpage{21}
+  \item {Physics}, \hyperpage{22}
 
   \indexspace
 
@@ -47,12 +47,12 @@
   \indexspace
 
   \item {Text}, \hyperpage{23}
-  \item {Tile}, \hyperpage{23}
+  \item {Tile}, \hyperpage{24}
   \item {Tileset}, \hyperpage{25}
 
   \indexspace
 
   \item {update}
-    \subitem {Engine}, \hyperpage{9}
+    \subitem {Engine}, \hyperpage{10}
 
 \end{theindex}

@@ -12,6 +12,7 @@ class Collision;
 class Object {
 private:
   Image img;
+  Input i;
   SDL_Rect frame, dest, pos, buff, movedBuff;
   double angle;
   string name;
@@ -135,6 +136,7 @@ public:
   void centerOn(Input i);
   void centerOn(int cx, int cy);
   void centerOn(Object obj);
+  void lookAt(Input i);
   color red = {0xff,0,0};
   color green = {0,0xff,0};
   color blue = {0,0,0xff};

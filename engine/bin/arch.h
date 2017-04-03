@@ -27,6 +27,8 @@ public:
   ~Collision();
   //! Check if two objects are touching.
   bool isTouching(Object a, Object b);
+  //! Check if an object contains another object
+  bool contains(Object a, Object b);
   //! Check if two object are not touching.
   bool outOfBoundsOf(Object a, Object b);
   //! Check if the first object is above the second object.
@@ -37,6 +39,7 @@ public:
   bool isRightOf(Object a, Object b);
   //! Check if the first object is to the left of the second object.
   bool isLeftOf(Object a, Object b);
+  bool overlaps(Object a, Object b);
 };
 
 #endif //COLLISION_H
@@ -502,6 +505,7 @@ class Collision;
 class Object {
 private:
   Image img;
+  Input i;
   SDL_Rect frame, dest, pos, buff, movedBuff;
   double angle;
   string name;
@@ -625,6 +629,7 @@ public:
   void centerOn(Input i);
   void centerOn(int cx, int cy);
   void centerOn(Object obj);
+  void lookAt(Input i);
   color red = {0xff,0,0};
   color green = {0,0xff,0};
   color blue = {0,0,0xff};
