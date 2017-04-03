@@ -1,4 +1,4 @@
 cd ../../engine
 ./build.sh
-cd ../testgames/pong
+cd ../testgames/DoE
 ./ebuild.sh
