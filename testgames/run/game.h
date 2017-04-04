@@ -5,7 +5,7 @@
 #include <vector>
 
 #define SPEED 5
-#define ROTATE 3
+#define ROTATE 1.5
 #define WIDTH 720
 #define HEIGHT 580
 
@@ -16,6 +16,8 @@ private:
   Object o;
   Collision col;
   bool u,d,l,r;
+  float vel;
+  bool pu, pd;
 public:
   Game();
   ~Game();

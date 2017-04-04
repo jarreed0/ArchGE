@@ -587,13 +587,13 @@ public:
   int getFrameY() const { return frame.y; }
   int getFrameW() const { return frame.w; }
   int getFrameH() const { return frame.h; }
-  void setDest(int x, int y, int w, int h) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} setDestCoord(x, y); setDestSize(w, h); }
+  void setDest(int x, int y, int w, int h) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} setDestCoord(x, y); setDestSize(w, h); }
   void setDestCoord(int x, int y) { setDestX(x); setDestY(y); }
   void setDestSize(int w, int h) { setDestW(w); setDestH(h); }
-  void setDestX(int x) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} dest.x = x; }
-  void setDestY(int y) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} dest.y = y; }
-  void setDestW(int w) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} dest.w = w; }
-  void setDestH(int h) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} dest.h = h; }
+  void setDestX(int x) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} dest.x = x; }
+  void setDestY(int y) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} dest.y = y; }
+  void setDestW(int w) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} dest.w = w; }
+  void setDestH(int h) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} dest.h = h; }
   int getDestX() const { return dest.x; }
   int getDestY() const { return dest.y; }
   int getDestW() const { return dest.w; }
@@ -613,8 +613,8 @@ public:
   void moveFrameX(int x) { frame.x += x; }
   void moveFrameY(int y) { frame.y += y; }
   void moveDest(int x, int y) { moveDestX(x); moveDestY(y); }
-  void moveDestX(int x) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} dest.x += x; }
-  void moveDestY(int y) { buff=dest; if(movedBuff.x!=buff.x && movedBuff.y!=buff.y) {movedBuff=buff;} dest.y += y; }
+  void moveDestX(int x) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} dest.x += x; }
+  void moveDestY(int y) { buff=dest; if(movedBuff.x!=buff.x || movedBuff.y!=buff.y) {movedBuff=buff;} dest.y += y; }
   void movePos(int x, int y) { movePosX(x); movePosY(y); }
   void movePosX(int x) { pos.x += x; }
   void movePosY(int y) { pos.y += y; }
