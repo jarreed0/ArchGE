@@ -4,7 +4,7 @@
 #include <arch/arch.h>
 #include <vector>
 
-#define SPEED 5
+#define SPEED 6
 #define ROTATE 1.5
 #define WIDTH 720
 #define HEIGHT 580
@@ -18,6 +18,7 @@ private:
   bool u,d,l,r;
   bool pu,pd;
   float vel;
+  vector<Object> burn;
 public:
   Game();
   ~Game();
@@ -26,6 +27,7 @@ public:
   void input();
   void update();
   double get_degrees(double input);
+  void genBurn();
 };
 
 #endif //GAME_H

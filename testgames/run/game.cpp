@@ -3,12 +3,12 @@
 Game::Game() {
   e.debugMode(true);
   e.init("RUN!", WIDTH, HEIGHT, 0);
-  e.setColor(0xff, 0xff, 0xff);
+  e.setColor(194, 177, 128);//(226,206,179);
 
-  o.setImage("res/object.png", e.getRenderer());
-  o.setFrame(0, 0, 16, 16);
+  o.setImage("res/car.png", e.getRenderer());
+  o.setFrame(0, 0, 57, 35);
   o.setSpeed(3);
-  o.setDest(100,100,16,16);
+  o.setDestSize(57*1.3,35*1.3);
   o.center(WIDTH, HEIGHT);
 
   u=d=l=r=0;
@@ -30,6 +30,7 @@ void Game::loop() {
 }
 
 void Game::draw() {
+  e.draw(burn);
   e.draw(o);
 }
 
@@ -63,10 +64,30 @@ void Game::update() {
   if(o.getDestX() > WIDTH-o.getDestW()) { o.setDestX(WIDTH-o.getDestW()); vel=vel/2; }
   if(o.getDestY() < 0) { o.setDestY(0); vel=vel/2; }
   if(o.getDestY() > HEIGHT-o.getDestH()) { o.setDestY(HEIGHT-o.getDestH()); vel=vel/2; }
+  if(vel>(SPEED-1) || vel<(-SPEED+1)) genBurn();
+
+  int burnTick = e.getTicks();
+  static int lastBurnTick = e.getTicks();
+  if(burnTick-lastBurnTick > 80 && burn.size() > 2) {
+    lastBurnTick=burnTick;
+    for(int i=0; i<3; i++) burn.erase(burn.begin());
+  }
 }
 
 double Game::get_degrees(double input) {
     const double halfC = M_PI / 180;
     return input * halfC;
 }
+
+void Game::genBurn() {
+  for(int i=2; i<4; i++) {
+    Object tmp;
+    tmp.setDest((i*15)+o.getDestX(),(i*6)+o.getDestY(),10-i,10+i);
+    tmp.setColor(180+(i*5), 165-(i*3), 120+(i*3));//(22+(i*5),24-(i*3),26+(i*3));
+    burn.push_back(tmp);
+  }
+}
+
+
+
 
