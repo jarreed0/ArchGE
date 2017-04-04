@@ -36,33 +36,28 @@ void Game::draw() {
 void Game::input() {
   i.logPress();
   if(i.checkKey(i.esc) || (i.checkKey(i.quit))) e.setRunning(false);
-  if(u) pu=1;
-  if(d) pd=1;
+  //if(i.checkKey(i.w) && u) 
+  //if(i.checkKey(i.s) && d) 
   u=d=l=r=0;
-  if(i.checkKey(i.w) && !u) u=true;
-  if(i.checkKey(i.s) && !d) d=true;
-  if(i.checkKey(i.a) && !l) l=true;
-  if(i.checkKey(i.d) && !r) r=true;
+  if(i.checkKey(i.w)){ u=true; pu=true; }
+  if(i.checkKey(i.s)){ d=true; pd=true; }
+  if(i.checkKey(i.a)) l=true;
+  if(i.checkKey(i.d)) r=true;
 }
 
 void Game::update() {
-  //o.lookAt(i);
-  if(l) o.rotateAngle(-ROTATE-(vel/2));
-  if(r) o.rotateAngle(ROTATE+(vel/2));
-  cout << vel << endl;
-  if(!u && !d) {
-    vel-=(vel*.0);
-    if(vel<0) { vel=0;
-    pu=pd=0;}
-  } else {
-    if(vel==0) vel=1;
-    vel+=(vel*.05);
-  }
+  if(l) o.rotateAngle(-ROTATE-abs(vel/2));
+  if(r) o.rotateAngle(ROTATE+abs(vel/2));
   if(vel>SPEED) vel=SPEED;
+  if(vel<-SPEED) vel=-SPEED;
+  if(!u && !d) {if(vel>0){vel-=(vel*0.04);}else{vel+=(vel*0.04);}
+  if((vel<0 && vel>-.8) || (vel<.8 && vel>0)) {vel=0;pu=pd=0;}}
+  if(u) {if(vel<.8){vel=1;} vel+=(vel*0.01);}
+  if(d) {if(vel>-.8){vel=-1;} vel+=(vel*0.01);}
+  cout << vel << endl;
   int dx = cos(get_degrees(o.getAngle()))*vel;
   int dy = sin(get_degrees(o.getAngle()))*vel;
-  if(pu) o.moveDest(dx,dy);
-  if(pd) o.moveDest(-dx,-dy);
+  o.moveDest(dx,dy);
 
   if(o.getDestX() < 0) { o.setDestX(0); vel=vel/2; }
   if(o.getDestX() > WIDTH-o.getDestW()) { o.setDestX(WIDTH-o.getDestW()); vel=vel/2; }

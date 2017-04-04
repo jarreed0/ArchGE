@@ -16,8 +16,8 @@ private:
   Object o;
   Collision col;
   bool u,d,l,r;
+  bool pu,pd;
   float vel;
-  bool pu, pd;
 public:
   Game();
   ~Game();
