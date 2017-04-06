@@ -4,7 +4,7 @@
 #include <arch/arch.h>
 #include <vector>
 
-#define SPEED 6
+#define SPEED 7
 #define ROTATE 1.5
 #define WIDTH 720
 #define HEIGHT 580

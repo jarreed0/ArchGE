@@ -47,15 +47,27 @@ void Game::input() {
 }
 
 void Game::update() {
+  static bool stutter = true;
+
   if(l) o.rotateAngle(-ROTATE-abs(vel/2));
   if(r) o.rotateAngle(ROTATE+abs(vel/2));
   if(vel>SPEED) vel=SPEED;
   if(vel<-SPEED) vel=-SPEED;
-  if(!u && !d) {if(vel>0){vel-=(vel*0.04);}else{vel+=(vel*0.04);}
+
+  if(vel > -.8 && vel < .8) { vel=0; stutter=true; }
+  if(u) { if(vel<=0 && vel<1) {vel=1;} vel+=vel*.02; }
+  if(d) { if(vel>=0 && vel>-1) {vel=-1;} vel-=abs(vel)*.02; }
+  if(!u && !d) {
+    if(vel > 0) vel-=vel*.05;
+    if(vel < 0) vel+=abs(vel)*.05;
+  }
+
+  /*if(!u && !d) {if(vel>0){vel-=(vel*0.04);}else{vel+=(vel*0.04);}
   if((vel<0 && vel>-.8) || (vel<.8 && vel>0)) {vel=0;pu=pd=0;}}
   if(u) {if(vel<.8){vel=1;} vel+=(vel*0.01);}
-  if(d) {if(vel>-.8){vel=-1;} vel+=(vel*0.01);}
-  cout << vel << endl;
+  if(d) {if(vel>-.8){vel=-1;} vel+=(vel*0.01);}*/
+  
+  //cout << vel << endl;
   int dx = cos(get_degrees(o.getAngle()))*vel;
   int dy = sin(get_degrees(o.getAngle()))*vel;
   o.moveDest(dx,dy);
@@ -68,9 +80,22 @@ void Game::update() {
 
   int burnTick = e.getTicks();
   static int lastBurnTick = e.getTicks();
-  if(burnTick-lastBurnTick > 80 && burn.size() > 2) {
+  if(burnTick-lastBurnTick > 50 && burn.size() > 2) {
     lastBurnTick=burnTick;
     for(int i=0; i<3; i++) burn.erase(burn.begin());
+  }
+
+  static int lastStutterTick = e.getTicks();
+  if(abs(vel) >= (abs(SPEED)*.5) && stutter) {
+     vel-=vel*.2;
+     int stutterTick = e.getTicks();
+     cout << "stut";
+     if(stutterTick-lastStutterTick > 5000) {
+        stutter = false;
+        cout << "ter";
+        lastStutterTick = stutterTick;
+     }
+     cout << endl;
   }
 }
 
