@@ -14,7 +14,6 @@ Game::Game() {
   tile.setImage("res/ground.png", e.getRenderer());
   tile.setFrame(0, 0, 64, 64);
 
-
   tile2.setImage("res/ground.png", e.getRenderer());
   tile2.setFrame(0, 0, 64, 64);
   tile2.setDest(128, 356, 64, 64);
@@ -44,6 +43,7 @@ void Game::draw() {
   e.draw(tile2);
   e.draw(tile3);
   e.draw(player);
+  e.draw(tile);
   drawFloor();
 }
 
@@ -54,9 +54,8 @@ void Game::input() {
   if(i.checkKey(i.d) && !movingr) {movingr = true;movingl = false;lookingright = true;lookingleft = false;}
   if(!i.checkKey(i.d) && movingr) {movingr = false;}
   if(i.checkKey(i.w) && !jumping && !nj) {jumping = true;nj = true;}
-  if(!i.checkKey(i.w) && nj) {nj = false;}
   if(i.checkKey(i.p)) paused = !paused;
-  if(i.checkKey(i.esc)) running = false;
+  if(i.checkKey(i.esc) || i.checkKey(i.quit)) running = false;
 }
 
 void Game::update() {
@@ -66,9 +65,14 @@ void Game::update() {
 }
 
 void Game::gravity() {
-  //if(player.getDestY() < 358) player.setDestY(player.getDestY() + 8);
-  if (!col.overlaps(player, ground) && !col.overlaps(player, tile2) && !col.overlaps(player, tile3) && !jumping) {
-    player.setDestY(player.getDestY() + 8);
+  if (!jumping) {
+    for (int i = 0; i < 8; i++) {
+      player.setDestY(player.getDestY() + 1);
+      if (col.overlaps(player, ground) || col.overlaps(player, tile2) || col.overlaps(player, tile3)) {
+        player.setDestY(player.getDestY() - 1);
+        if (nj) nj = false;
+      }
+    }
   }
 }
 
@@ -77,11 +81,15 @@ void Game::updatePlayer() {
     if(movingl) {
       player.setDestX(player.getDestX() - 1.0);
       if(!col.contains(screen, player)) player.setDestX(player.getDestX() + 1.0);
+      if(col.overlaps(tile2, player)) player.setDestX(player.getDestX() + 1.0);
+      if(col.overlaps(tile3, player)) player.setDestX(player.getDestX() + 1.0);
     }
 
     if(movingr) {
       player.setDestX(player.getDestX() + 1.0);
       if(!col.contains(screen, player)) player.setDestX(player.getDestX() - 1.0);
+      if(col.overlaps(tile2, player)) player.setDestX(player.getDestX() - 1.0);
+      if(col.overlaps(tile3, player)) player.setDestX(player.getDestX() - 1.0);
     }
   }  
 
