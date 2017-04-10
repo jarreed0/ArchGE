@@ -6,18 +6,23 @@
 
 #define SPEED 7
 #define ROTATE 1.5
-#define WIDTH 720
+#define WIDTH 1124
 #define HEIGHT 580
+#define SCALE 1.3
+
+#define PSPEED 4
+#define PROTATE 2
 
 class Game {
 private:
   Engine e;
   Input i;
-  Object o;
+  Object car;
+  bool inCar;
+  Entity player;
   Collision col;
   bool u,d,l,r;
-  bool pu,pd;
-  float vel;
+  float vel, pvel;
   vector<Object> burn;
 public:
   Game();
@@ -28,6 +33,10 @@ public:
   void update();
   double get_degrees(double input);
   void genBurn();
+  void driveCar();
+  void walk();
+  void getOut();
+  void getIn();
 };
 
 #endif //GAME_H
