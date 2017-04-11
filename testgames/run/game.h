@@ -11,7 +11,7 @@
 #define SCALE 1.3
 
 #define PSPEED 4
-#define PROTATE 2
+#define PROTATE 4
 
 class Game {
 private:
@@ -24,6 +24,8 @@ private:
   bool u,d,l,r;
   float vel, pvel;
   vector<Object> burn;
+  Object bullet;
+  vector<Object> bullets;
 public:
   Game();
   ~Game();
@@ -37,6 +39,7 @@ public:
   void walk();
   void getOut();
   void getIn();
+  void fire();
 };
 
 #endif //GAME_H

@@ -18,6 +18,9 @@ Game::Game() {
   player.setFrame(0,0,50,50);
   player.setDest(10, 10, 25, 25);
 
+  bullet.setColor(20,30,40);
+  bullet.setDestSize(3,3);
+
   loop();
 }
 Game::~Game() {}
@@ -33,6 +36,7 @@ void Game::loop() {
 
 void Game::draw() {
   e.draw(burn);
+  e.draw(bullets);
   e.draw(car);
   if(!inCar) e.draw(player);
 }
@@ -48,6 +52,7 @@ void Game::input() {
   car.setPos(car.getDest());
   player.setPos(player.getDest());
   if(i.checkKey(i.e)) if(inCar) {getOut();cout<<"out"<<endl;} else if(col.isTouching(car,player)) {getIn();cout<<"in"<<endl;}
+  if(i.checkKey(i.mouseleft)) fire();
 }
 
 void Game::update() {
@@ -72,6 +77,7 @@ void Game::update() {
     lastBurnTick=burnTick;
     for(int i=0; i<3; i++) burn.erase(burn.begin());
   }
+  if(inCar) player.setDestCoord(car.getDestX(), car.getDestY());
 }
 
 double Game::get_degrees(double input) {
@@ -122,17 +128,22 @@ void Game::getOut() {
 }
 
 void Game::walk() {
-//  if(l) player.rotateAngle(-PROTATE);
-//  if(r) player.rotateAngle(PROTATE);
   player.lookAt(i);
+
+  int dx = cos(get_degrees(player.getAngle()))*PROTATE;
+  int dy = sin(get_degrees(player.getAngle()))*PROTATE;
+
+  if(l) player.moveDest(dy, -dx);
+  if(r) player.moveDest(-dy, dx);
+
+  dx = cos(get_degrees(player.getAngle()))*pvel;
+  dy = sin(get_degrees(player.getAngle()))*pvel;
 
   if(u) pvel = PSPEED;
   if(d) pvel = -PSPEED;
   if(!u && !d) pvel = 0;
 
-  int dx = cos(get_degrees(player.getAngle()))*pvel;
-  int dy = sin(get_degrees(player.getAngle()))*pvel;
-  player.moveDest(dx,dy);
+  if(u || d) player.moveDest(dx,dy);
 
   if(player.getDestX() < 0) { player.setDestX(0); pvel=pvel/2; }
   if(player.getDestX() > WIDTH-player.getDestW()) { player.setDestX(WIDTH-player.getDestW()); pvel=pvel/2; }
@@ -140,3 +151,8 @@ void Game::walk() {
   if(player.getDestY() > HEIGHT-player.getDestH()) { player.setDestY(HEIGHT-player.getDestH()); pvel=pvel/2; }
 }
 
+void Game::fire() {
+  Object tmp = bullet;
+  tmp.setDestCoord(player.getDestX(), player.getDestY());
+  bullets.push_back(tmp);
+}
