@@ -1,4 +1,4 @@
 cd ../../engine
 ./build.sh
-cd ../testgames/mouse_follower
+cd ../testgames/run
 ./ebuild.sh
