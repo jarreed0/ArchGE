@@ -129,6 +129,7 @@ public:
   double getVelY() { return velY; }
   void setVelX(double vx) { velX = vx; }
   void setVelY(double vy) { velY = vy; }
+  void setVelTo(int x, int y);
   double getSpeed() {  return speed; }
   void setSpeed(double s) { speed = s; }
   void setName(string s);
@@ -145,6 +146,7 @@ public:
   bool imageSet() const {return objsImage;}
   color getColor() const {return objsColor;}
   void rotateAngle(int rot);
+  void moveToVel();
 };
 
 #endif //OBJECT_H

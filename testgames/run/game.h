@@ -3,6 +3,7 @@
 
 #include <arch/arch.h>
 #include <vector>
+#include "car.h"
 
 #define SPEED 7
 #define ROTATE 1.5
@@ -22,10 +23,12 @@ private:
   Entity player;
   Collision col;
   bool u,d,l,r;
+  bool u2,d2,l2,r2;
   float vel, pvel;
   vector<Object> burn;
   Object bullet;
   vector<Object> bullets;
+  Car c1, c2;
 public:
   Game();
   ~Game();
@@ -43,3 +46,4 @@ public:
 };
 
 #endif //GAME_H
+

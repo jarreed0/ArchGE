@@ -45,6 +45,14 @@ void Object::setVelTo(Object o) {
   setVelY(s);
 }
 
+void Object::setVelTo(int x, int y) {
+  double angle = atan2(y-getDestY(), x-getDestX());
+  double c = cos(angle) * getSpeed();
+  double s = sin(angle) * getSpeed();
+  setVelX(c);
+  setVelY(s);
+}
+
 void Object::lookAt(Object o) {
   double angle = atan2(o.getDestY() - getDestY(), o.getDestX() - getDestX()) * (180/PI);
   setAngle(angle);
@@ -62,4 +70,8 @@ void Object::centerOn(Object obj) {
 
 void Object::rotateAngle(int rot) {
  setAngle(getAngle()+rot);
+}
+
+void Object::moveToVel() {
+  moveDest(getVelX(), getVelY());
 }

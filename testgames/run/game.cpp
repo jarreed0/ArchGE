@@ -14,6 +14,23 @@ Game::Game() {
   vel=0;
   inCar=true;
 
+  c1.setBounds(WIDTH, HEIGHT);
+  c1.setCar(car);
+  c1.setSpeed(SPEED);
+  c1.setVel(vel);
+  c1.setRotate(ROTATE);
+  c1.setScale(SCALE);
+
+  //c2 = c1;
+  c2.setBounds(WIDTH, HEIGHT);
+  car.setDestCoord(WIDTH-200,HEIGHT-200);
+  car.setFrameX(57);
+  c2.setCar(car);
+  c2.setSpeed(SPEED);
+  c2.setVel(vel);
+  c2.setRotate(ROTATE);
+  c2.setScale(SCALE);
+
   player.setImage("res/player.png", e.getRenderer());
   player.setFrame(0,0,50,50);
   player.setDest(10, 10, 25, 25);
@@ -35,10 +52,14 @@ void Game::loop() {
 }
 
 void Game::draw() {
-  e.draw(burn);
+  //e.draw(burn);
+  e.draw(c1.getBurns());
+  e.draw(c2.getBurns());
   e.draw(bullets);
-  e.draw(car);
-  if(!inCar) e.draw(player);
+  //e.draw(car);
+  e.draw(c1.getCar());
+  e.draw(c2.getCar());
+  e.draw(player);
 }
 
 void Game::input() {
@@ -49,16 +70,29 @@ void Game::input() {
   if(i.checkKey(i.s)) d=true;
   if(i.checkKey(i.a)) l=true;
   if(i.checkKey(i.d)) r=true;
-  car.setPos(car.getDest());
-  player.setPos(player.getDest());
-  if(i.checkKey(i.e)) if(inCar) {getOut();cout<<"out"<<endl;} else if(col.isTouching(car,player)) {getIn();cout<<"in"<<endl;}
+
+  u2=d2=l2=r2=0;
+  if(i.checkKey(i.up)) u2=true;
+  if(i.checkKey(i.down)) d2=true;
+  if(i.checkKey(i.left)) l2=true;
+  if(i.checkKey(i.right)) r2=true;
+
+  //car.setPos(car.getDest());
+  //player.setPos(player.getDest());
+  //if(i.checkKey(i.e)) if(inCar) {getOut();cout<<"out"<<endl;} else if(col.isTouching(car,player)) {getIn();cout<<"in"<<endl;}
   if(i.checkKey(i.mouseleft)) fire();
 }
 
 void Game::update() {
-  if(inCar) driveCar();
-  if(!inCar) walk();
+  //if(inCar) driveCar();
+  walk();
 
+  //c1.move(l,r,u,d);
+  c1.drive();
+
+  c2.move(l2,r2,u2,d2);
+  c2.drive();
+/*
   if(!u && !d) {
     if(vel > 0) vel-=vel*.05;
     if(vel < 0) vel+=abs(vel)*.05;
@@ -77,7 +111,11 @@ void Game::update() {
     lastBurnTick=burnTick;
     for(int i=0; i<3; i++) burn.erase(burn.begin());
   }
-  if(inCar) player.setDestCoord(car.getDestX(), car.getDestY());
+  if(inCar) player.setDestCoord(car.getDestX(), car.getDestY());*/
+
+  for(int i=0; i<bullets.size(); i++) {
+    bullets[i].setDestCoord(bullets[i].getDestX()+bullets[i].getVelX(), bullets[i].getDestY()+bullets[i].getVelY());
+  }
 }
 
 double Game::get_degrees(double input) {
@@ -153,6 +191,10 @@ void Game::walk() {
 
 void Game::fire() {
   Object tmp = bullet;
+  tmp.setSpeed(10);
   tmp.setDestCoord(player.getDestX(), player.getDestY());
+  tmp.setVelTo(i.getMouseX(), i.getMouseY());
+  cout << tmp.getVelX() << " - " << tmp.getVelY() << endl;
   bullets.push_back(tmp);
 }
+
