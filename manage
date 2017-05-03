@@ -4,7 +4,7 @@
 # This program is used to manage basic commands for
 # managing a project, such as git.
 # Created by: Avery Reed on 2/14/17
-# Last Edited by: Avery Reed 2/16/17
+# Last Edited by: Cody Johns (5/03/17)
 ################################################################
 
 #GITUPDATE=`git status`
@@ -34,6 +34,7 @@ fi
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "push or -p - push everything or specified file"
   echo "test or -t - build and test engine and sample project"
+  echo "compwin or -cw - build an executable for Windows (Uses Mingw32)."
   echo "update or -u - update get branch from main"
   echo "setup or -s - make it so you can run the program without ./, it also works everywhere, also updates it"
   echo "create or -c - create a git branch"
@@ -77,18 +78,32 @@ elif [ "$1" == "push" ] || [ "$1" == "-p" ]; then
   git push
 elif [ "$1" == "test" ] || [ "$1" == "-t" ]; then
   if [ "$2" = NULL ]; then
-    echo "Specify games directory"
+    echo "Specify game's directory"
   else
     cd $2
     ./build.sh
     ./a.out
+  fi
+elif [ "$1" == "compwin" ] || [ "$1" == "-cw" ]; then
+  if [ "$2" = NULL ]; then
+    echo "Specify game's directory"
+  else
+    cd $2
+    echo -n "Type name of .exe without spaces: "
+    read ans
+    if [ "$ans" != NULL ]; then
+      g++ *.cpp -larch -lSDL2 -lSDL2_image -std=c++11 -l:libGL.so.1 -lglut -lGLU -lSDL2_ttf -o $ans.exe
+      echo "$ans.exe has been created. To test with linux, use wine or upload to Windows PC."
+    else
+      echo "Name needed to give .exe"
+    fi
   fi
 elif [ "$1" == "engine" ] || [ "$1" == "-e" ]; then
   cd engine
   ./build.sh
 elif [ "$1" == "game" ] || [ "$1" == "-g" ]; then
   if [ "$2" = NULL ]; then
-    echo "Specify games directory"
+    echo "Specify game's directory"
   else
     cd $2
     ./build.sh
