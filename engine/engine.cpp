@@ -134,7 +134,7 @@ void Engine::draw(Object obj) {
      SDL_Rect src = obj.getFrame();
      SDL_RenderCopyEx(engren, obj.getImage().getTexture(), &src, &des, obj.getAngle(), NULL, SDL_FLIP_NONE);
     } else {
-     SDL_SetRenderDrawColor(engren, obj.getColor().r, obj.getColor().g, obj.getColor().b, 255);
+     SDL_SetRenderDrawColor(engren, obj.getColor().r, obj.getColor().g, obj.getColor().b, obj.getColor().a);
      SDL_RenderFillRect(engren, &des);
      SDL_SetRenderDrawColor(engren, red, green, blue, 255);
     }

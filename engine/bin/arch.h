@@ -178,6 +178,7 @@ public:
   void loop();
   int getTicks();
   void delay(int time);
+  void enableTransparency() {SDL_SetRenderDrawBlendMode(engren, SDL_BLENDMODE_BLEND);}
   struct color { Uint8 r, g, b; };
 };
 
@@ -513,7 +514,7 @@ private:
   bool displayable;
   bool gravity;
   bool objsImage;
-  struct color { Uint8 r, g, b; };
+  struct color { Uint8 r, g, b, a; };
   color objsColor;
 public:
   Object();
@@ -631,11 +632,12 @@ public:
   void centerOn(int cx, int cy);
   void centerOn(Object obj);
   void lookAt(Input i);
-  color red = {0xff,0,0};
-  color green = {0,0xff,0};
-  color blue = {0,0,0xff};
+  color red = {0xff,0,0,0xff};
+  color green = {0,0xff,0,0xff};
+  color blue = {0,0,0xff,0xff};
   void setColor(color c) {objsColor = c;}
-  void setColor(Uint8 r, Uint8 g, Uint8 b) {objsColor.r=r;objsColor.g=g;objsColor.b=b;};
+  void setColor(Uint8 r, Uint8 g, Uint8 b) {objsColor.r=r;objsColor.g=g;objsColor.b=b;}
+  void setTransparency(Uint8 a) {objsColor.a = a;}
   bool imageSet() const {return objsImage;}
   color getColor() const {return objsColor;}
   void rotateAngle(int rot);

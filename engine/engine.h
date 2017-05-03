@@ -133,6 +133,7 @@ public:
   void loop();
   int getTicks();
   void delay(int time);
+  void enableTransparency() {SDL_SetRenderDrawBlendMode(engren, SDL_BLENDMODE_BLEND);}
   struct color { Uint8 r, g, b; };
 };
 
