@@ -4,6 +4,7 @@
 
 Object::Object() {
  objsImage=false;
+ objsColor.a = 255;
 }
 Object::~Object() {}
 

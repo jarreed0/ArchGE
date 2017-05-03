@@ -4,6 +4,7 @@ Game::Game() {
   e.debugMode(true);
   e.init("Day of Escape", WIDTH, HEIGHT, 0);
   e.setColor(65, 244, 193);
+  e.enableTransparency();
   running = true;
   e.setFrameRate(FRAMERATE);  
 
@@ -25,6 +26,16 @@ Game::Game() {
   ground.setDest(0, 420, 640, 64);
   screen.setDest(0, 0, WIDTH, HEIGHT);
 
+  ray.setDest(0, 0, WIDTH, 2);
+  ray.setFrame(ray.getDest());
+  ray.setColor(0, 0, 0);
+  ray.setTransparency(20);
+
+  ray2.setDest(0, 0, 2, HEIGHT);
+  ray2.setFrame(ray2.getDest());
+  ray2.setColor(0, 0, 0);
+  ray2.setTransparency(20);
+
   loop();
 }
 
@@ -45,6 +56,7 @@ void Game::draw() {
   e.draw(player);
   e.draw(tile);
   drawFloor();
+  drawCRT();
 }
 
 void Game::input() {
@@ -136,5 +148,17 @@ void Game::nowJumping() {
       jumping = false;
       jump = 0;
     }
+  }
+}
+
+void Game::drawCRT() {
+  for(int i = 0; i < (HEIGHT / 4); i++) {
+    ray.setDestY(i * 4);
+    e.draw(ray);
+  }
+
+  for(int i = 0; i < (WIDTH / 4); i++) {
+    ray2.setDestX(i * 4);
+    e.draw(ray2);
   }
 }

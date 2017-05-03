@@ -14,7 +14,7 @@ private:
   Input i;
   Collision col;
   Entity player;
-  Object tile, tile2, tile3, ground, screen;
+  Object tile, tile2, tile3, ground, screen, ray, ray2;
   int pframe = 0, iframe = 0, fcount = 0, fdelay = 10, icount = 0, idelay = 20, jump = 0;
 public:
   Game();
@@ -27,6 +27,7 @@ public:
   void gravity();
   void drawFloor();
   void nowJumping();
+  void drawCRT();
 };
 
 #endif //GAME_H
