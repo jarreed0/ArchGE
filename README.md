@@ -244,7 +244,9 @@ If you get this error:
 
 `/usr/bin/ld: cannot find -lGL collect2: error: ld returned 1 exit status`
 
-You need to find out which libGL library you have so first....
+This error usually occurs when you have a video card and its drivers installed but are missing the 32 bit drivers for it. I would recommend installing the 32 bit drivers so that manage can find the Libgl library. If you don't want to install 32 bit drivers, for whatever reason, follow the steps below.
+
+First, You need to find out which libGL library you have so first....
 
 `do ls /usr/lib/`
 
@@ -254,6 +256,7 @@ In the ebuild.sh file that every game has, change the -lGL flag to -l:libGL.so.V
 
 Viola! You have now fixed that error.
 
+This is a quick fix, however you must do this to every game that has a ebuild.sh if you want it to work. That's why I recommended installing the 32 bit drivers for your video card just to save you time and sanity.
 
 # Manage # 
  - - - -
