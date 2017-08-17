@@ -80,7 +80,8 @@ void Game::input() {
   //car.setPos(car.getDest());
   //player.setPos(player.getDest());
   //if(i.checkKey(i.e)) if(inCar) {getOut();cout<<"out"<<endl;} else if(col.isTouching(car,player)) {getIn();cout<<"in"<<endl;}
-  if(i.checkKey(i.mouseleft)) fire();
+  click=0;
+  if(i.checkKey(i.mouseleft)) click=1;
 }
 
 void Game::update() {
@@ -92,6 +93,8 @@ void Game::update() {
 
   c2.move(l2,r2,u2,d2);
   c2.drive();
+
+  if(click) fire();
 /*
   if(!u && !d) {
     if(vel > 0) vel-=vel*.05;

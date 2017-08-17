@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  25 APR 2017 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.24)  17 AUG 2017 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1228,7 +1228,7 @@ Chapter 3.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) <classBackground__inherit__graph.pdf, id=340, 148.555pt x 156.585pt>
+) <classBackground__inherit__graph.pdf, id=326, 148.555pt x 156.585pt>
 File: classBackground__inherit__graph.pdf Graphic file (type pdf)
 
 <use classBackground__inherit__graph.pdf>
@@ -1236,7 +1236,7 @@ Package pdftex.def Info: classBackground__inherit__graph.pdf used on input line
  18.
 (pdftex.def)             Requested size: 148.0pt x 156.0064pt.
 
-<classBackground__coll__graph.pdf, id=341, 152.57pt x 246.9225pt>
+<classBackground__coll__graph.pdf, id=327, 152.57pt x 246.9225pt>
 File: classBackground__coll__graph.pdf Graphic file (type pdf)
 
 <use classBackground__coll__graph.pdf>
@@ -1278,10 +1278,10 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 22.
  [8]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 170.
+(Font)              scaled to size 8.99994pt on input line 167.
  [9])
 (./classEntity.tex
-<classEntity__inherit__graph.pdf, id=509, 125.46875pt x 156.585pt>
+<classEntity__inherit__graph.pdf, id=495, 125.46875pt x 156.585pt>
 File: classEntity__inherit__graph.pdf Graphic file (type pdf)
 
 <use classEntity__inherit__graph.pdf>
@@ -1289,7 +1289,7 @@ Package pdftex.def Info: classEntity__inherit__graph.pdf used on input line 18.
 
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
 
-<classEntity__coll__graph.pdf, id=510, 152.57pt x 246.9225pt>
+<classEntity__coll__graph.pdf, id=496, 152.57pt x 246.9225pt>
 File: classEntity__coll__graph.pdf Graphic file (type pdf)
 
 <use classEntity__coll__graph.pdf>
@@ -1304,7 +1304,7 @@ LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
 [11 <./classEntity__coll__graph.pdf>]) (./classGameState.tex) (./classImage.tex
 [12]) (./classInput.tex [13] [14]) (./classLevel.tex [15] [16]) (./classMap.tex
 ) (./classModel.tex [17]) (./classObject.tex
-<classObject__inherit__graph.pdf, id=831, 258.9675pt x 156.585pt>
+<classObject__inherit__graph.pdf, id=820, 258.9675pt x 156.585pt>
 File: classObject__inherit__graph.pdf Graphic file (type pdf)
 
 <use classObject__inherit__graph.pdf>
@@ -1312,7 +1312,7 @@ Package pdftex.def Info: classObject__inherit__graph.pdf used on input line 18.
 
 (pdftex.def)             Requested size: 258.0pt x 156.01595pt.
 
-<classObject__coll__graph.pdf, id=832, 152.57pt x 189.70876pt>
+<classObject__coll__graph.pdf, id=821, 152.57pt x 189.70876pt>
 File: classObject__coll__graph.pdf Graphic file (type pdf)
 
 <use classObject__coll__graph.pdf>
@@ -1323,15 +1323,15 @@ Package pdftex.def Info: classObject__coll__graph.pdf used on input line 27.
 pdfTeX warning: pdflatex (file ./classObject__coll__graph.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >] [19] [20]) (./classPerlinNoise.tex [21]) (./classPhysics.tex)
-(./classStage.tex [22]) (./classText.tex) (./classTile.tex [23]
-<classTile__inherit__graph.pdf, id=1101, 125.46875pt x 156.585pt>
+(./classStage.tex [22]) (./classTile.tex
+<classTile__inherit__graph.pdf, id=1066, 125.46875pt x 156.585pt>
 File: classTile__inherit__graph.pdf Graphic file (type pdf)
 
 <use classTile__inherit__graph.pdf>
 Package pdftex.def Info: classTile__inherit__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 125.0pt x 156.00879pt.
-
-<classTile__coll__graph.pdf, id=1102, 152.57pt x 246.9225pt>
+ [23]
+<classTile__coll__graph.pdf, id=1086, 152.57pt x 246.9225pt>
 File: classTile__coll__graph.pdf Graphic file (type pdf)
 
 <use classTile__coll__graph.pdf>
@@ -1347,20 +1347,20 @@ ltiple pdfs with page group included in a single page
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 5B5AB2BDAB0A130113ABE36BE628A030;8414.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
+(rerunfilecheck)             Checksum: 92F8761FE80B5EB47EA8063D768F6B3F;8019.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
  ) 
 Here is how much of TeX's memory you used:
- 15616 strings out of 494953
- 241578 string characters out of 6180977
- 322450 words of memory out of 5000000
- 18173 multiletter control sequences out of 15000+600000
+ 15605 strings out of 494953
+ 241373 string characters out of 6180977
+ 322349 words of memory out of 5000000
+ 18169 multiletter control sequences out of 15000+600000
  56359 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,15n,92p,400b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1371,10 +1371,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (31 pages, 198442 bytes).
+Output written on refman.pdf (31 pages, 196900 bytes).
 PDF statistics:
- 1332 PDF objects out of 1440 (max. 8388607)
- 1263 compressed objects within 13 object streams
- 441 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1314 PDF objects out of 1440 (max. 8388607)
+ 1245 compressed objects within 13 object streams
+ 436 named destinations out of 1000 (max. 500000)
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 

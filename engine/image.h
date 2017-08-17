@@ -29,6 +29,9 @@ public:
   string getFile() const {return filename;}
   //! Set path file to the image.
   void setFile(string f) {filename=f;}
+  //! Set texture
+  void setTexture(SDL_Texture* t) {tex=t;}
+  void setSurface(SDL_Surface* s, SDL_Renderer* ren) {tex=SDL_CreateTextureFromSurface(ren, s); SDL_FreeSurface(s);}
 };
 
 #endif //IMAGE_H

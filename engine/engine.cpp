@@ -17,6 +17,7 @@ Engine::Engine() {
   glMode=false;
 }
 Engine::~Engine() {
+  TTF_Quit();
   SDL_DestroyRenderer(engren);
   SDL_DestroyWindow(engwin);
   SDL_Quit();
@@ -52,6 +53,7 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
    gluPerspective(70,(double)w/h,1,1000);
    glEnable(GL_DEPTH_TEST);
   }
+  TTF_Init();
   return engren;
 }
 
@@ -87,7 +89,6 @@ void Engine::loopStart() {
   }
 }
 void Engine::render() {
-  text.setColor(fr, fg, fb);
   //struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
   //if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
   if(!splashed) { splash(); cout << "splash" << endl; }
@@ -178,12 +179,29 @@ void Engine::draw(Level lvl) {
   }
 }
 
-void Engine::draw(int s, int x, int y) {
- draw(text.createMessage(s, x, y, engren));
-}
-
-void Engine::draw(string s, int x, int y) {
- draw(text.createMessage(s, x, y, engren));
+void Engine::draw(const char *text, int x, int y, int r, int g, int b, char *font_path) {
+    SDL_Surface *surface;
+    SDL_Texture *texture;
+    TTF_Font *font = TTF_OpenFont(font_path, 24);
+    if (font == NULL) {
+        fprintf(stderr, "error: font not found\n");
+        exit(EXIT_FAILURE);
+    }
+    SDL_Color color;
+    color.r = r;
+    color.g = g;
+    color.b = b;
+    color.a = 255;
+    SDL_Rect rect;
+    surface = TTF_RenderText_Solid(font, text, color);
+    texture = SDL_CreateTextureFromSurface(engren, surface);
+    rect.x = x;
+    rect.y = y;
+    rect.w = surface->w;
+    rect.h = surface->h;
+    SDL_FreeSurface(surface);
+    SDL_RenderCopy(engren, texture, NULL, &rect);
+    SDL_DestroyTexture(texture);
 }
 
 void Engine::setBackground(string filename) {

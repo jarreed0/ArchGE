@@ -47,9 +47,11 @@ public:
 #define ENGINE_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 using namespace std;
 #include <iostream>
 #include <cassert>
+#include <string>
 #include <unistd.h>
 #include <sys/time.h>
 #include <vector>
@@ -69,7 +71,7 @@ using namespace std;
 #include "physics-tmp.h"
 #include "stage.h"
 #include "level.h"
-#include "text.h"
+
 /*
 #include "splash.h"
 */
@@ -98,8 +100,6 @@ private:
   bool glMode;
   int glView[9];
   int curFPS, setFPS, lastFrame;
-  Text text;
-  Uint8 fr, fg, fb;
   double gravity;
 public:
   Engine();
@@ -153,9 +153,9 @@ public:
   void draw(Object obj, int key);
   //! Draw the level.
   void draw(Level lvl);
+  //! Write to the screen with a char
+  void draw(const char *text, int x, int y, int r, int g, int b, char *font_path);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
-  void draw(int s, int x, int y);
-  void draw(string s, int x, int y);
   void splash();
   //! Deactives the splashscreen, requires key.
   void bypassSplash(int key);
@@ -174,7 +174,6 @@ public:
   void setGLView(int a, int b, int c, int d, int e, int f, int g, int h, int i);
   void setGLMode(bool m) {glMode=m; glViewport(0, 0, WIDTH, HEIGHT); }
   int getFPS() const {return curFPS;}
-  void setFontColor(Uint8 r, Uint8 g, Uint8 b) {fr=r; fg=g; fb=b;}
   void loop();
   int getTicks();
   void delay(int time);
@@ -291,6 +290,9 @@ public:
   string getFile() const {return filename;}
   //! Set path file to the image.
   void setFile(string f) {filename=f;}
+  //! Set texture
+  void setTexture(SDL_Texture* t) {tex=t;}
+  void setSurface(SDL_Surface* s, SDL_Renderer* ren) {tex=SDL_CreateTextureFromSurface(ren, s); SDL_FreeSurface(s);}
 };
 
 #endif //IMAGE_H
@@ -767,27 +769,6 @@ public:
 };
 
 #endif //STAGE_H
-#ifndef TEXT_H
-#define TEXT_H
-
-#include <SDL2/SDL_ttf.h>
-using namespace std;
-#include <iostream>
-#include "object.h"
-
-class Text {
-private:
- SDL_Color color;
- TTF_Font* Sans;
-public:
- Text();
- ~Text();
- void setColor(Uint8 r, Uint8 g, Uint8 b);
- Object createMessage(string s, int x, int y, SDL_Renderer* ren);
- Object createMessage(int s, int x, int y, SDL_Renderer* ren);
-};
-
-#endif //TEXT_H
 #ifndef TILE_H
 #define TILE_H
 

@@ -94,15 +94,12 @@ void \hyperlink{classEngine_a81d89df09ee2577fd7deaf2f5e27f93a}{draw} (\hyperlink
 void \hyperlink{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}{draw} (\hyperlink{classLevel}{Level} lvl)\hypertarget{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}{}\label{classEngine_a9435c9399f0d3952032c106e7ee8f6e9}
 
 \begin{DoxyCompactList}\small\item\em Draw the level. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a4eb9f3f3e8207ef4b0dfcc0d1889d176}{draw} (int s, int x, int y)\hypertarget{classEngine_a4eb9f3f3e8207ef4b0dfcc0d1889d176}{}\label{classEngine_a4eb9f3f3e8207ef4b0dfcc0d1889d176}
+void \hyperlink{classEngine_aae435925ba83db0788ce65e0e8e41f4c}{draw} (const char $\ast$text, int x, int y, int r, int g, int b, char $\ast$font\+\_\+path)\hypertarget{classEngine_aae435925ba83db0788ce65e0e8e41f4c}{}\label{classEngine_aae435925ba83db0788ce65e0e8e41f4c}
+
+\begin{DoxyCompactList}\small\item\em Write to the screen with a char, coordinates, color, ttf file. \end{DoxyCompactList}\item 
+void \hyperlink{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
 
 \begin{DoxyCompactList}\small\item\em Calls splashscreen at the beginning of the game. This is automatically called unless deactivated. \end{DoxyCompactList}\item 
-void {\bfseries draw} (string s, int x, int y)\hypertarget{classEngine_ab84c2e814c44d511e12891c60ae66e96}{}\label{classEngine_ab84c2e814c44d511e12891c60ae66e96}
-
-\item 
-void {\bfseries splash} ()\hypertarget{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}{}\label{classEngine_adb6f1426c5c57f9d60be1e10d8eb2506}
-
-\item 
 void \hyperlink{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{bypass\+Splash} (int key)\hypertarget{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{}\label{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}
 
 \begin{DoxyCompactList}\small\item\em Deactives the splashscreen, requires key. \end{DoxyCompactList}\item 
@@ -139,9 +136,6 @@ void {\bfseries set\+G\+L\+Mode} (bool m)\hypertarget{classEngine_a0ac77a2abc026
 int {\bfseries get\+F\+PS} () const \hypertarget{classEngine_a7b4d5a0722d470402278c05fed39c1f1}{}\label{classEngine_a7b4d5a0722d470402278c05fed39c1f1}
 
 \item 
-void {\bfseries set\+Font\+Color} (Uint8 r, Uint8 g, Uint8 b)\hypertarget{classEngine_a3658606ab22302767e81ab6d1975d6bd}{}\label{classEngine_a3658606ab22302767e81ab6d1975d6bd}
-
-\item 
 void {\bfseries loop} ()\hypertarget{classEngine_a514f8d788ced7c6508b8b6f9ef66ccb1}{}\label{classEngine_a514f8d788ced7c6508b8b6f9ef66ccb1}
 
 \item 
@@ -150,13 +144,16 @@ int {\bfseries get\+Ticks} ()\hypertarget{classEngine_adfac6631b6c52bcb43811742a
 \item 
 void {\bfseries delay} (int time)\hypertarget{classEngine_a15aa4850592df8924eb542ff0709bd98}{}\label{classEngine_a15aa4850592df8924eb542ff0709bd98}
 
+\item 
+void {\bfseries enable\+Transparency} ()\hypertarget{classEngine_a74e701ab9fb6a69713f9867d9962630e}{}\label{classEngine_a74e701ab9fb6a69713f9867d9962630e}
+
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for declaring an engine, which does basic S\+DL commands like creating the window and renderer. 
 
-Definition at line 33 of file engine.\+h.
+Definition at line 35 of file engine.\+h.
 
 
 
@@ -174,20 +171,20 @@ Get fps.
 
 Update loop time. 
 
-Definition at line 113 of file engine.\+cpp.
+Definition at line 114 of file engine.\+cpp.
 
 
 \begin{DoxyCode}
-113                     \{
-114   \textcolor{comment}{//simulationTime += 16;}
-115   \textcolor{comment}{//if(simulationTime < realTime) \{ fps = true; \} else \{ fps = false; \}}
-116   \textcolor{keywordflow}{if}(glMode) \{
-117    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
-118    glMatrixMode( GL\_MODELVIEW );
-119    glLoadIdentity( );
-120    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
-121   \}
-122 \}
+114                     \{
+115   \textcolor{comment}{//simulationTime += 16;}
+116   \textcolor{comment}{//if(simulationTime < realTime) \{ fps = true; \} else \{ fps = false; \}}
+117   \textcolor{keywordflow}{if}(glMode) \{
+118    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+119    glMatrixMode( GL\_MODELVIEW );
+120    glLoadIdentity( );
+121    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
+122   \}
+123 \}
 \end{DoxyCode}
 
 

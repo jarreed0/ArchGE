@@ -24,6 +24,7 @@ private:
   Collision col;
   bool u,d,l,r;
   bool u2,d2,l2,r2;
+  bool click;
   float vel, pvel;
   vector<Object> burn;
   Object bullet;

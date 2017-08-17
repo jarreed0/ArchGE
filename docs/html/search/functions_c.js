@@ -30,9 +30,11 @@ var searchData=
   ['setsolid',['setSolid',['../classTile.html#a3deac8e6d0ebd7b8352248201d264c38',1,'Tile']]],
   ['setstage',['setStage',['../classLevel.html#ac9bb5473dece11462e702fe418590f24',1,'Level::setStage(Stage s)'],['../classLevel.html#a962fd10cb871d2fdd98230dc079bff34',1,'Level::setStage(Map m, Tileset t)']]],
   ['setteam',['setTeam',['../classEntity.html#a9fe88f82909f89087ad17d4d7ce6b22e',1,'Entity']]],
+  ['settexture',['setTexture',['../classImage.html#a64fb847a42f4553c6e4a652107fb997b',1,'Image']]],
   ['settileset',['setTileset',['../classStage.html#a63a19b471f7c54d68f3f7e4419eca8ac',1,'Stage']]],
   ['setvalue',['setValue',['../classTile.html#ae3d9e4ace265389dd0e0cf3d62ad6ff3',1,'Tile']]],
   ['setvelto',['setVelTo',['../classObject.html#afa2ef385cd0c7e76134d4a11b8643d38',1,'Object']]],
   ['setx',['setX',['../classLevel.html#a6212b3c03b3efc82cf69e642cc093959',1,'Level::setX()'],['../classObject.html#a3a3e2b361faf2deb8663ecda9c6c4868',1,'Object::setX()']]],
-  ['sety',['setY',['../classLevel.html#a7c67443008f7e0f4b5d1630ff2dcf179',1,'Level::setY()'],['../classObject.html#acab13582a9cb12392fc7a83d1d80e3d6',1,'Object::setY()']]]
+  ['sety',['setY',['../classLevel.html#a7c67443008f7e0f4b5d1630ff2dcf179',1,'Level::setY()'],['../classObject.html#acab13582a9cb12392fc7a83d1d80e3d6',1,'Object::setY()']]],
+  ['splash',['splash',['../classEngine.html#adb6f1426c5c57f9d60be1e10d8eb2506',1,'Engine']]]
 ];
