@@ -179,10 +179,14 @@ void Engine::draw(Level lvl) {
   }
 }
 
-void Engine::draw(const char *text, int x, int y, int r, int g, int b, char *font_path) {
+void Engine::loadFont(char *font_path) {
+    font = TTF_OpenFont(font_path, 24);
+}
+
+void Engine::draw(const char *text, int x, int y, int r, int g, int b) {
     SDL_Surface *surface;
     SDL_Texture *texture;
-    TTF_Font *font = TTF_OpenFont(font_path, 24);
+
     if (font == NULL) {
         fprintf(stderr, "error: font not found\n");
         exit(EXIT_FAILURE);

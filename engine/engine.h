@@ -56,6 +56,7 @@ private:
   int glView[9];
   int curFPS, setFPS, lastFrame;
   double gravity;
+  TTF_Font *font;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -109,7 +110,7 @@ public:
   //! Draw the level.
   void draw(Level lvl);
   //! Write to the screen with a char, coordinates, color, ttf file
-  void draw(const char *text, int x, int y, int r, int g, int b, char *font_path);
+  void draw(const char *text, int x, int y, int r, int g, int b);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
   void splash();
   //! Deactives the splashscreen, requires key.
@@ -122,6 +123,7 @@ public:
   void customSplash(string file, double time, int w, int h);
   //! Active debugger with Boolean
   void debugMode(bool d);
+  void loadFont(char *font_path);
   void hideMouse();
   void showMouse();
   bool getRunning() const { return running; }

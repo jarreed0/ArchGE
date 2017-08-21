@@ -41,7 +41,6 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   echo "install or -i - install missing dependicies"
   echo "engine or -e - rebuild engine"
   echo "game or -g - build game based on current engine build"
-  echo "clean or -cl - clean out all built files and engine library"
   echo "doc or -dc - generate doc (html and pdf)"
   echo "In the works:"
   echo "reg or -r - CAN: register git info like username, email, and CANNOT YET:(need to add) key"
@@ -92,7 +91,7 @@ elif [ "$1" == "compwin" ] || [ "$1" == "-cw" ]; then
     echo -n "Type name of .exe without spaces: "
     read ans
     if [ "$ans" != NULL ]; then
-      g++ *.cpp -larch -lSDL2 -lSDL2_image -std=c++11 -l:libGL.so.1 -lglut -lGLU -lSDL2_ttf -o $ans.exe
+      g++ *.cpp -larch -lSDL2 -lSDL2_image -std=c++11 -lGL -lglut -lGLU -lSDL2_ttf -o $ans.exe -m64
       echo "$ans.exe has been created. To test with linux, use wine or upload to Windows PC."
     else
       echo "Name needed to give .exe"
