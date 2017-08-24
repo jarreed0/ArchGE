@@ -36,7 +36,7 @@ Windows and Mac Build Tuts Coming Soon.
 - [ ] Set up Camera/Lens movement
 - [ ] Fix bugs
 - [x] New Input class/method - Done
-- [ ] Splashscreen fix - In Progress using Gamestate class
+- [x] Splashscreen fix - In Progress using Gamestate class
 - [x] And....
 - [ ] Much, much more
 
