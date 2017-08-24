@@ -1,7 +1,7 @@
 #include "game.h"
 
 Game::Game() {
-  e.debugMode(true);
+  //e.debugMode(true);
   e.init("RUN!", WIDTH, HEIGHT, 0);
   e.setColor(194, 177, 128);//(226,206,179);
 

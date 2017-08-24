@@ -71,6 +71,7 @@ using namespace std;
 #include "physics-tmp.h"
 #include "stage.h"
 #include "level.h"
+#include "gamestate.h"
 
 /*
 #include "splash.h"
@@ -87,10 +88,6 @@ private:
   bool bkg; //!< Boolean for if there is a set background.
   Background background; //!< Background to display.
   Uint8 red, green, blue; //!< Colors for background.
-  bool splashed, custom;  //!< Boolean that shows if the splashscreen has occured.
-  string cf; //!< Custom splashscreen file path.
-  double ct; //!< Custom splashscreen duration.
-  int cw, ch; //!< Custom splashcreen width and height.
   bool debug;
   bool running;
   time_t lastTime, curTime;
@@ -102,6 +99,8 @@ private:
   int curFPS, setFPS, lastFrame;
   double gravity;
   TTF_Font *font;
+  GameState gs;
+  int sr,sg,sb;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -162,10 +161,6 @@ public:
   void bypassSplash(int key);
   //! Check if the splashscreen has occured.
   bool hasSplashed();
-  //! Run custom splashscreen. This is automatically called after splash if there is a custom splashscreen.
-  bool runCustomSplash();
-  //! Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image.
-  void customSplash(string file, double time, int w, int h);
   //! Active debugger with Boolean
   void debugMode(bool d);
   void loadFont(char *font_path);
@@ -181,6 +176,9 @@ public:
   void delay(int time);
   void enableTransparency() {SDL_SetRenderDrawBlendMode(engren, SDL_BLENDMODE_BLEND);}
   struct color { Uint8 r, g, b; };
+  void setGamestate(int s) {if(gs.getGameState()!=0) gs.setGameState(s);}
+  int getGameState() {return gs.getGameState();}
+  void setSplashColor(int r, int g, int b) {sr=r;sg=g;sb=b;}
 };
 
 #endif //ENGINE_H

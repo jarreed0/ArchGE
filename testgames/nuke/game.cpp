@@ -1,7 +1,8 @@
 #include "game.h"
 
 Game::Game() {
-  e.debugMode(true);
+  //e.debugMode(true);
+  e.setSplashColor(20, 100,60);
   e.init("Nuke", WIDTH, HEIGHT, 0);
   e.setColor(0x70, 0x70, 0x90);
   tileset.create("tiles", "res/tiles.png", e.getRenderer(), TILE_SIZE, TILE_SIZE, TOTAL_TILES/TILES_PER_ROW, TILES_PER_ROW, TOTAL_TILES);

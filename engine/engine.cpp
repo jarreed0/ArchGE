@@ -6,8 +6,6 @@ Engine::Engine() {
   setFPS = 60;
   bkg = 0;
   lastFrame = 0;
-  splashed = false;
-  custom = false;
   debug = false;
   setRunning(true);
   frameCount = lastTime = 0;capLast = capCur = 0;
@@ -15,6 +13,8 @@ Engine::Engine() {
   //capTime = 10;
   //capMark = renderMiliGap = cappedFrame = 0;
   glMode=false;
+  gs.setGameState(gs.SPLASH);
+  sr=sg=sb=22;
 }
 Engine::~Engine() {
   TTF_Quit();
@@ -54,6 +54,24 @@ SDL_Renderer* Engine::init(string s, const int& w, const int& h, int flag, int x
    glEnable(GL_DEPTH_TEST);
   }
   TTF_Init();
+  if(!debug) {
+    SDL_SetRenderDrawColor(engren, sr, sg, sb, 255);
+    SDL_Rect rect;
+    rect.x=rect.y=0;
+    rect.w=WIDTH;
+    rect.h=HEIGHT;
+    SDL_RenderFillRect(engren, &rect);
+    Object o;
+    o.setImage("../../engine/res/engine-logo.png", getRenderer());
+    o.setFrame(0, 0, 256, 256);
+    o.setDestSize(256,256);
+    o.center(WIDTH, HEIGHT);
+    draw(o);
+    draw(o,4231998);
+    SDL_RenderPresent(engren);
+    SDL_Delay(2300);
+    gs.setGameState(1);
+  }
   return engren;
 }
 
@@ -91,12 +109,13 @@ void Engine::loopStart() {
 void Engine::render() {
   //struct timespec spec; clock_gettime(CLOCK_REALTIME, &spec); capCur=round(spec.tv_nsec/1.0e6);
   //if(renderMiliGap = 0 || (capCur-capLast)>renderMiliGap) {
-  if(!splashed) { splash(); cout << "splash" << endl; }
+  //if(gs.getGameState() == 0) { cout << "splash" << endl; splash(); }
   timeval a;
   realTime = gettimeofday(&a, 0);
   frameCount++;
   //}
   //capLast=capCur;
+
   if(glMode) {
    glEnd();
    glFlush();
@@ -104,6 +123,7 @@ void Engine::render() {
   } else {
    SDL_RenderPresent(engren);
   }
+
 
   int timerFps = getTicks() - lastFrame;
   if(timerFps < 1000/setFPS) {
@@ -129,7 +149,7 @@ void Engine::loop() {
 }
 
 void Engine::draw(Object obj) {
-  if(splashed) {
+  if(gs.getGameState()!=0) {
      SDL_Rect des = obj.getDest();
     if(obj.imageSet()) {
      SDL_Rect src = obj.getFrame();
@@ -142,14 +162,14 @@ void Engine::draw(Object obj) {
   }
 }
 void Engine::draw(vector<Object> objs) {
-  if(splashed) {
+  if(gs.getGameState()!=0) {
     for(int i=0; i<objs.size(); i++) {
       draw(objs[i]);
     }
   }
 }
 void Engine::draw(vector<vector<Object>> objs) {
-  if(splashed) {
+  if(gs.getGameState()!=0) {
     for(int i=0; i<objs.size(); i++) {
       draw(objs[i]);
     }
@@ -163,7 +183,7 @@ void Engine::draw(Object obj, int key) {
   }
 }
 void Engine::draw(Level lvl) {
-  if(splashed) {
+  if(gs.getGameState()!=0) {
     vector<Tile> tiles = lvl.getTilesToRender();
     for(int i=0; i<tiles.size(); i++) {
       draw(tiles[i]);
@@ -219,46 +239,35 @@ void Engine::drawBackground() {
 }
 
 void Engine::splash() {
-  setColor(0xff, 0xff, 0xff);
+  setColor(0xff, 0x00, 0xff);
   Object s;
-  //b.setImage("http://archeantus.net/images/splash.bmp", getRenderer());
   s.setImage("../../engine/res/engine-logo.png", getRenderer());
+  //s.setColor(0xFF, 0xFF, 0x00);
   s.setFrame(0, 0, 256, 256);
   s.center(WIDTH, HEIGHT);
   draw(s, 4231998);
-  render();
-  sleep(2.3);
-  splashed=true;
-  if(custom) runCustomSplash();
+  SDL_RenderPresent(engren);
+  loopStart();
+  SDL_Delay(2300);
+  gs.setGameState(1);
 }
 void Engine::bypassSplash(int key) {
   if(key = 4231998) {
-    splashed = true;
+    gs.setGameState(1);
   }
 }
 bool Engine::hasSplashed() {
-  return splashed;
+  if(gs.getGameState() == 0) {
+     return 0;
+  } else {
+     return 1;
+  }
 }
-bool Engine::runCustomSplash() {
-  Object b;
-  b.setImage(cf.c_str(), getRenderer());
-  b.setFrame(0, 0, cw, ch);
-  b.center(WIDTH, HEIGHT);
-  draw(b);
-  render();
-  sleep(ct);
-}
-void Engine::customSplash(string file, double time, int w, int h) {
-  cf = file;
-  ct = time;
-  cw = w;
-  ch = h;
-  custom = true;
-}
+
 
 void Engine::debugMode(bool d) {
   debug = true;
-  splashed = true;
+  gs.setGameState(1);
   cout << "In debug mode!" << endl;
   cout << "Which at this time only means bypassing the splashscreen." << endl;
 }

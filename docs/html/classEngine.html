@@ -219,14 +219,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aabab82c2ba4dca772a28dbbd4fe08cb4">hasSplashed</a> ()</td></tr>
 <tr class="memdesc:aabab82c2ba4dca772a28dbbd4fe08cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the splashscreen has occured. <br /></td></tr>
 <tr class="separator:aabab82c2ba4dca772a28dbbd4fe08cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c87c90c9dd6b3fd652e24af0c7e935d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c87c90c9dd6b3fd652e24af0c7e935d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a5c87c90c9dd6b3fd652e24af0c7e935d">runCustomSplash</a> ()</td></tr>
-<tr class="memdesc:a5c87c90c9dd6b3fd652e24af0c7e935d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run custom splashscreen. This is automatically called after splash if there is a custom splashscreen. <br /></td></tr>
-<tr class="separator:a5c87c90c9dd6b3fd652e24af0c7e935d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0960e415d0b9ed92099eee6677d7ea51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0960e415d0b9ed92099eee6677d7ea51"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a0960e415d0b9ed92099eee6677d7ea51">customSplash</a> (string file, double time, int w, int h)</td></tr>
-<tr class="memdesc:a0960e415d0b9ed92099eee6677d7ea51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image. <br /></td></tr>
-<tr class="separator:a0960e415d0b9ed92099eee6677d7ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60d5307c4bc5005119086ff9f3e21624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60d5307c4bc5005119086ff9f3e21624"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a60d5307c4bc5005119086ff9f3e21624">debugMode</a> (bool d)</td></tr>
 <tr class="memdesc:a60d5307c4bc5005119086ff9f3e21624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active debugger with Boolean. <br /></td></tr>
@@ -267,11 +259,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>delay</b> (int time)<
 <tr class="memitem:a74e701ab9fb6a69713f9867d9962630e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74e701ab9fb6a69713f9867d9962630e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>enableTransparency</b> ()</td></tr>
 <tr class="separator:a74e701ab9fb6a69713f9867d9962630e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0353877b7da9431718029c77db2d35d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0353877b7da9431718029c77db2d35d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setGamestate</b> (int s)</td></tr>
+<tr class="separator:ab0353877b7da9431718029c77db2d35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0938d28018a9ed9bcea2a78c28b972"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba0938d28018a9ed9bcea2a78c28b972"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getGameState</b> ()</td></tr>
+<tr class="separator:aba0938d28018a9ed9bcea2a78c28b972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095fb17299a5a7eac3acd98dceff6fd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a095fb17299a5a7eac3acd98dceff6fd3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSplashColor</b> (int r, int g, int b)</td></tr>
+<tr class="separator:a095fb17299a5a7eac3acd98dceff6fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for declaring an engine, which does basic SDL commands like creating the window and renderer. </p>
 
-<p>Definition at line <a class="el" href="engine_8h_source.html#l00035">35</a> of file <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
+<p>Definition at line <a class="el" href="engine_8h_source.html#l00036">36</a> of file <a class="el" href="engine_8h_source.html">engine.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ad2ff110d5a86c1cd60b541d65915ac48"></a>
 <div class="memitem">
@@ -289,8 +290,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>enableTransparency</b
 <p>Get fps. </p>
 <p>Update loop time. </p>
 
-<p>Definition at line <a class="el" href="engine_8cpp_source.html#l00114">114</a> of file <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    {</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">//simulationTime += 16;</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">//if(simulationTime &lt; realTime) { fps = true; } else { fps = false; }</span></div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span>(glMode) {</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   glMatrixMode( GL_MODELVIEW );</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   glLoadIdentity( );</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;   gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="engine_8cpp_source.html#l00134">134</a> of file <a class="el" href="engine_8cpp_source.html">engine.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    {</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="comment">//simulationTime += 16;</span></div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">//if(simulationTime &lt; realTime) { fps = true; } else { fps = false; }</span></div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">if</span>(glMode) {</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;   glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;   glMatrixMode( GL_MODELVIEW );</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;   glLoadIdentity( );</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

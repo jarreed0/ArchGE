@@ -106,12 +106,6 @@ void \hyperlink{classEngine_a3b9cf8a050f43e4e185748f7b2a3ded8}{bypass\+Splash} (
 bool \hyperlink{classEngine_aabab82c2ba4dca772a28dbbd4fe08cb4}{has\+Splashed} ()\hypertarget{classEngine_aabab82c2ba4dca772a28dbbd4fe08cb4}{}\label{classEngine_aabab82c2ba4dca772a28dbbd4fe08cb4}
 
 \begin{DoxyCompactList}\small\item\em Check if the splashscreen has occured. \end{DoxyCompactList}\item 
-bool \hyperlink{classEngine_a5c87c90c9dd6b3fd652e24af0c7e935d}{run\+Custom\+Splash} ()\hypertarget{classEngine_a5c87c90c9dd6b3fd652e24af0c7e935d}{}\label{classEngine_a5c87c90c9dd6b3fd652e24af0c7e935d}
-
-\begin{DoxyCompactList}\small\item\em Run custom splashscreen. This is automatically called after splash if there is a custom splashscreen. \end{DoxyCompactList}\item 
-void \hyperlink{classEngine_a0960e415d0b9ed92099eee6677d7ea51}{custom\+Splash} (string file, double time, int w, int h)\hypertarget{classEngine_a0960e415d0b9ed92099eee6677d7ea51}{}\label{classEngine_a0960e415d0b9ed92099eee6677d7ea51}
-
-\begin{DoxyCompactList}\small\item\em Create a custom game splashscreen to be shown after the engine splashscreen by passing in the path to the image, the duration for it be displayed, and the size of the image. \end{DoxyCompactList}\item 
 void \hyperlink{classEngine_a60d5307c4bc5005119086ff9f3e21624}{debug\+Mode} (bool d)\hypertarget{classEngine_a60d5307c4bc5005119086ff9f3e21624}{}\label{classEngine_a60d5307c4bc5005119086ff9f3e21624}
 
 \begin{DoxyCompactList}\small\item\em Active debugger with Boolean. \end{DoxyCompactList}\item 
@@ -150,13 +144,22 @@ void {\bfseries delay} (int time)\hypertarget{classEngine_a15aa4850592df8924eb54
 \item 
 void {\bfseries enable\+Transparency} ()\hypertarget{classEngine_a74e701ab9fb6a69713f9867d9962630e}{}\label{classEngine_a74e701ab9fb6a69713f9867d9962630e}
 
+\item 
+void {\bfseries set\+Gamestate} (int s)\hypertarget{classEngine_ab0353877b7da9431718029c77db2d35d}{}\label{classEngine_ab0353877b7da9431718029c77db2d35d}
+
+\item 
+int {\bfseries get\+Game\+State} ()\hypertarget{classEngine_aba0938d28018a9ed9bcea2a78c28b972}{}\label{classEngine_aba0938d28018a9ed9bcea2a78c28b972}
+
+\item 
+void {\bfseries set\+Splash\+Color} (int r, int g, int b)\hypertarget{classEngine_a095fb17299a5a7eac3acd98dceff6fd3}{}\label{classEngine_a095fb17299a5a7eac3acd98dceff6fd3}
+
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class for declaring an engine, which does basic S\+DL commands like creating the window and renderer. 
 
-Definition at line 35 of file engine.\+h.
+Definition at line 36 of file engine.\+h.
 
 
 
@@ -174,20 +177,20 @@ Get fps.
 
 Update loop time. 
 
-Definition at line 114 of file engine.\+cpp.
+Definition at line 134 of file engine.\+cpp.
 
 
 \begin{DoxyCode}
-114                     \{
-115   \textcolor{comment}{//simulationTime += 16;}
-116   \textcolor{comment}{//if(simulationTime < realTime) \{ fps = true; \} else \{ fps = false; \}}
-117   \textcolor{keywordflow}{if}(glMode) \{
-118    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
-119    glMatrixMode( GL\_MODELVIEW );
-120    glLoadIdentity( );
-121    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
-122   \}
-123 \}
+134                     \{
+135   \textcolor{comment}{//simulationTime += 16;}
+136   \textcolor{comment}{//if(simulationTime < realTime) \{ fps = true; \} else \{ fps = false; \}}
+137   \textcolor{keywordflow}{if}(glMode) \{
+138    glClear( GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+139    glMatrixMode( GL\_MODELVIEW );
+140    glLoadIdentity( );
+141    gluLookAt(glView[0],glView[1],glView[2],glView[3],glView[4],glView[5],glView[6],glView[7],glView[8]);
+142   \}
+143 \}
 \end{DoxyCode}
 
 
