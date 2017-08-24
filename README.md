@@ -35,6 +35,7 @@ Windows and Mac Build Tuts Coming Soon.
 - [x] Have screen follow a specific Object (the player).
 - [ ] Set up Camera/Lens movement
 - [ ] Fix bugs
+- [x] Sound!!!
 - [x] New Input class/method - Done
 - [ ] Splashscreen fix - In Progress using Gamestate class
 - [x] And....
@@ -225,6 +226,16 @@ objects.push_back(character);
 e.draw(objects);
 ```
 
+## Playing Sound Files - WAV ##
+
+Create an instance of Audio
+`Audio sound-effect;`
+
+Load the sound
+`sound-effect.load("hit.wav");`
+
+Play the sound
+`sound-effect.play();`
 
 ## Build The Game ##
 `g++ *.cpp -larch -lSDL2 -lSDL2_image -std=c++11`
