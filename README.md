@@ -37,7 +37,7 @@ Windows and Mac Build Tuts Coming Soon.
 - [ ] Fix bugs
 - [x] Sound!!!
 - [x] New Input class/method - Done
-- [ ] Splashscreen fix - In Progress using Gamestate class
+- [x] Splashscreen fix - In Progress using Gamestate class
 - [x] And....
 - [ ] Much, much more
 
