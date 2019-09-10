@@ -56,6 +56,7 @@ private:
   TTF_Font *font;
   GameState gs;
   int sr,sg,sb;
+  SDL_Color fcolor;
 public:
   Engine();
   //! Decontructs renderer and window and then quits SDL.
@@ -119,6 +120,8 @@ public:
   //! Active debugger with Boolean
   void debugMode(bool d);
   void loadFont(char *font_path);
+  //! Set Font Color Using RGB.
+  void setFontColor(int r, int g, int b);
   void hideMouse();
   void showMouse();
   bool getRunning() const { return running; }

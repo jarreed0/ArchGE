@@ -10,6 +10,7 @@ var searchData=
   ['setdisplayable',['setDisplayable',['../classObject.html#a6eb461900d28eba30ba6dbdb02284900',1,'Object']]],
   ['setemotion',['setEmotion',['../classEntity.html#a79056ef5d580c09fe6cf34b989b14589',1,'Entity']]],
   ['setfile',['setFile',['../classImage.html#ab4030489c65a25b2e0c458acac0ca94e',1,'Image']]],
+  ['setfontcolor',['setFontColor',['../classEngine.html#a4b1936a48e82bbb7af8b3be97f2e2816',1,'Engine']]],
   ['setframe',['setFrame',['../classObject.html#a720ff968db3849ae49437fc8d01246ef',1,'Object::setFrame(SDL_Rect i)'],['../classObject.html#a52bedccbb5a658daf8c8ef2abbd5d76e',1,'Object::setFrame(int x, int y, int w, int h)']]],
   ['setframecoord',['setFrameCoord',['../classObject.html#ab2213d14a8983028d49192d49770e0bc',1,'Object']]],
   ['setframesize',['setFrameSize',['../classObject.html#a2ec266f6f1f6bdc3c3cd001f2dc6daef',1,'Object']]],

@@ -12,7 +12,7 @@ public:
   Tileset();
   ~Tileset();
   vector<Tile> getTileset() const { return tiles; }
-  SDL_Rect getFrame(int i) { tiles[i-1].getFrame(); }
+  SDL_Rect getFrame(int i) { return tiles[i-1].getFrame(); }
   //! Load in a map file with the name for all the tiles, the path to the map file, path to the tileset image, the SDL renderer, width and height of a tile, row to begin from on the image, how many tiles there are in the image.
   vector<Tile> create(string name, string img, SDL_Renderer* ren, int width, int height, int r, int count);
   //! Load a map with a given name for the tiles, the file path to the map, the path to the tileset image, SDL renderer, width and height of a tile, row to begin on in the image, how many tiles on a certain row in the image, total amount of tiles in the image.

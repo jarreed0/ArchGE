@@ -5,4 +5,4 @@
 #rm *.o
 #cd ..
 #cd testgames/genesis
-g++ *.cpp ../../engine/engine.a -lSDL2 -std=c++11
+g++ *.cpp ../../../engine/bin/arch.a -lSDL2 -std=c++11

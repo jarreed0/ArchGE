@@ -15,6 +15,7 @@ Engine::Engine() {
   glMode=false;
   gs.setGameState(gs.SPLASH);
   sr=sg=sb=22;
+  fcolor.a = 255;
 }
 Engine::~Engine() {
   TTF_Quit();
@@ -203,6 +204,12 @@ void Engine::loadFont(char *font_path) {
     font = TTF_OpenFont(font_path, 24);
 }
 
+void Engine::setFontColor(int r, int g, int b) {
+    fcolor.r = r;
+    fcolor.g = g;
+    fcolor.b = b;
+}
+
 void Engine::draw(const char *text, int x, int y, int r, int g, int b) {
     SDL_Surface *surface;
     SDL_Texture *texture;
@@ -211,13 +218,11 @@ void Engine::draw(const char *text, int x, int y, int r, int g, int b) {
         fprintf(stderr, "error: font not found\n");
         exit(EXIT_FAILURE);
     }
-    SDL_Color color;
-    color.r = r;
-    color.g = g;
-    color.b = b;
-    color.a = 255;
+    fcolor.r = r;
+    fcolor.g = g;
+    fcolor.b = b;
     SDL_Rect rect;
-    surface = TTF_RenderText_Solid(font, text, color);
+    surface = TTF_RenderText_Solid(font, text, fcolor);
     texture = SDL_CreateTextureFromSurface(engren, surface);
     rect.x = x;
     rect.y = y;

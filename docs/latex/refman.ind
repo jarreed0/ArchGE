@@ -13,7 +13,7 @@
   \indexspace
 
   \item {Engine}, \hyperpage{8}
-    \subitem {update}, \hyperpage{10}
+    \subitem {update}, \hyperpage{9}
   \item {Engine\+::color}, \hyperpage{7}
   \item {Entity}, \hyperpage{10}
 
@@ -50,12 +50,12 @@
 
   \indexspace
 
-  \item {Tile}, \hyperpage{23}
+  \item {Tile}, \hyperpage{24}
   \item {Tileset}, \hyperpage{25}
 
   \indexspace
 
   \item {update}
-    \subitem {Engine}, \hyperpage{10}
+    \subitem {Engine}, \hyperpage{9}
 
 \end{theindex}
