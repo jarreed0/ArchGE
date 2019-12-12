@@ -42,6 +42,9 @@ Input::Input() {
   mousemiddle = 48;
   mouseup = 49;
   mousedown = 50;
+  for(int i=1; i<51; i++) {
+   keys[i]=false;
+  }
 }
 Input::~Input() {}
 
