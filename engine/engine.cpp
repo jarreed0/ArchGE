@@ -210,7 +210,7 @@ void Engine::setFontColor(int r, int g, int b) {
     fcolor.b = b;
 }
 
-void Engine::draw(const char *text, int x, int y, int r, int g, int b) {
+void Engine::draw(string text, int x, int y, int r, int g, int b) {
     SDL_Surface *surface;
     SDL_Texture *texture;
 
@@ -222,7 +222,8 @@ void Engine::draw(const char *text, int x, int y, int r, int g, int b) {
     fcolor.g = g;
     fcolor.b = b;
     SDL_Rect rect;
-    surface = TTF_RenderText_Solid(font, text, fcolor);
+    const char* t = text.c_str();
+    surface = TTF_RenderText_Solid(font, t, fcolor);
     texture = SDL_CreateTextureFromSurface(engren, surface);
     rect.x = x;
     rect.y = y;

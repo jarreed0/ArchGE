@@ -75,6 +75,7 @@ Object Car::setCar(string img, int fx, int fy, int fw, int fh, SDL_Renderer* ren
   c.setSpeed(sp);
   setScale(sc);
   c.setDestSize(fw*scale,fh*scale);
+  return c;
 }
 
 double Car::get_degrees(double input) {

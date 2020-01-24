@@ -8,6 +8,7 @@ int main() {
  e.setColor(0x00, 0xff, 0x80);
  bool running = 1;
  Input i;
+ 
  e.setBackground("../../engine/res/engine-logo.png");
  while(e.getRunning()) {
   e.loopStart();

@@ -25,6 +25,7 @@ private:
   Collision col;
   bool u,d,l,r;
   bool u2,d2,l2,r2;
+  bool u3,d3,l3,r3;
   bool click;
   float vel, pvel;
   vector<Object> burn;
@@ -39,11 +40,7 @@ public:
   void input();
   void update();
   double get_degrees(double input);
-  void genBurn();
-  void driveCar();
   void walk();
-  void getOut();
-  void getIn();
   void fire();
 };
 

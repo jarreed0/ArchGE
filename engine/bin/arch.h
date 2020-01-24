@@ -173,7 +173,7 @@ public:
   //! Draw the level.
   void draw(Level lvl);
   //! Write to the screen with a char, coordinates, color, ttf file
-  void draw(const char *text, int x, int y, int r, int g, int b);
+  void draw(string text, int x, int y, int r, int g, int b);
   //! Calls splashscreen at the beginning of the game. This is automatically called unless deactivated.
   void splash();
   //! Deactives the splashscreen, requires key.

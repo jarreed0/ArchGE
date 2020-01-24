@@ -1,9 +1,9 @@
 #include "game.h"
 
 Game::Game() {
-  //e.debugMode(true);
+  e.debugMode(true);
   e.init("RUN!", WIDTH, HEIGHT, 0);
-  e.setColor(194, 177, 128);//(226,206,179);
+  e.setColor(194, 177, 128);
 
   car.setImage("res/car.png", e.getRenderer());
   car.setFrame(0, 0, 57, 35);
@@ -21,7 +21,6 @@ Game::Game() {
   c1.setRotate(ROTATE);
   c1.setScale(SCALE);
 
-  //c2 = c1;
   c2.setBounds(WIDTH, HEIGHT);
   car.setDestCoord(WIDTH-200,HEIGHT-200);
   car.setFrameX(57);
@@ -52,11 +51,9 @@ void Game::loop() {
 }
 
 void Game::draw() {
-  //e.draw(burn);
   e.draw(c1.getBurns());
   e.draw(c2.getBurns());
   e.draw(bullets);
-  //e.draw(car);
   e.draw(c1.getCar());
   e.draw(c2.getCar());
   e.draw(player);
@@ -77,44 +74,25 @@ void Game::input() {
   if(i.checkKey(i.left)) l2=true;
   if(i.checkKey(i.right)) r2=true;
 
-  //car.setPos(car.getDest());
-  //player.setPos(player.getDest());
-  //if(i.checkKey(i.e)) if(inCar) {getOut();cout<<"out"<<endl;} else if(col.isTouching(car,player)) {getIn();cout<<"in"<<endl;}
-  click=0;
+  u3=d3=l3=r3=0;
+  if(i.checkKey(i.i)) u3=true;
+  if(i.checkKey(i.k)) d3=true;
+  if(i.checkKey(i.j)) l3=true;
+  if(i.checkKey(i.l)) r3=true;
+
   if(i.checkKey(i.mouseleft)) click=1;
 }
 
 void Game::update() {
-  //if(inCar) driveCar();
   walk();
 
-  //c1.move(l,r,u,d);
+  c1.move(l3,r3,u3,d3);
   c1.drive();
 
   c2.move(l2,r2,u2,d2);
   c2.drive();
 
   if(click) fire();
-/*
-  if(!u && !d) {
-    if(vel > 0) vel-=vel*.05;
-    if(vel < 0) vel+=abs(vel)*.05;
-  }
-  int dx = cos(get_degrees(car.getAngle()))*vel;
-  int dy = sin(get_degrees(car.getAngle()))*vel;
-  car.moveDest(dx,dy);
-  if(car.getDestX() < 0) { car.setDestX(0); vel=vel/2; }
-  if(car.getDestX() > WIDTH-car.getDestW()) { car.setDestX(WIDTH-car.getDestW()); vel=vel/2; }
-  if(car.getDestY() < 0) { car.setDestY(0); vel=vel/2; }
-  if(car.getDestY() > HEIGHT-car.getDestH()) { car.setDestY(HEIGHT-car.getDestH()); vel=vel/2; }
-  if(vel>(SPEED-1) || vel<(-SPEED+1) && inCar) genBurn();
-  int burnTick = e.getTicks();
-  static int lastBurnTick = e.getTicks();
-  if(burnTick-lastBurnTick > 50 && burn.size() > 2) {
-    lastBurnTick=burnTick;
-    for(int i=0; i<3; i++) burn.erase(burn.begin());
-  }
-  if(inCar) player.setDestCoord(car.getDestX(), car.getDestY());*/
 
   for(int i=0; i<bullets.size(); i++) {
     bullets[i].setDestCoord(bullets[i].getDestX()+bullets[i].getVelX(), bullets[i].getDestY()+bullets[i].getVelY());
@@ -126,47 +104,6 @@ double Game::get_degrees(double input) {
     return input * halfC;
 }
 
-void Game::genBurn() {
-  for(int i=2; i<4; i++) {
-    Object tmp;
-    tmp.setDest((i*15)+car.getDestX(),(i*6)+car.getDestY(),10-i,10+i);
-    tmp.setColor(180+(i*5), 165-(i*3), 120+(i*3));//(22+(i*5),24-(i*3),26+(i*3));
-    burn.push_back(tmp);
-  }
-}
-
-void Game::driveCar() {
-  static bool stutter = true;
-
-  if(l) car.rotateAngle(-ROTATE-abs(vel/2));
-  if(r) car.rotateAngle(ROTATE+abs(vel/2));
-  if(vel>SPEED) vel=SPEED;
-  if(vel<-SPEED) vel=-SPEED;
-
-  if(vel > -.8 && vel < .8) { vel=0; stutter=true; }
-  if(u) { if(vel<=0 && vel<1) {vel=1;} vel+=vel*.02; }
-  if(d) { if(vel>=0 && vel>-1) {vel=-1;} vel-=abs(vel)*.02; }
-
-  if(abs(vel) < SPEED*.3) stutter=true;
-  static int stutterTick = 0;
-  if(abs(vel) >= (abs(SPEED)*.5) && stutter) {
-     vel-=vel*.15;
-     stutterTick++;
-     if(stutterTick > 4) {
-        stutter = false;
-        stutterTick = 0;
-     }
-  }
-}
-
-void Game::getIn() {
-  inCar=true;
-}
-
-void Game::getOut() {
-  inCar=false;
-  player.setDestCoord(car.getDestX(), car.getDestY());
-}
 
 void Game::walk() {
   player.lookAt(i);
@@ -200,4 +137,5 @@ void Game::fire() {
   cout << tmp.getVelX() << " - " << tmp.getVelY() << endl;
   bullets.push_back(tmp);
 }
+
 
