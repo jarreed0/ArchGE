@@ -314,3 +314,9 @@ Archeantus Games
 [Website](http://archeantus.net/)
 
 ![alt tag](http://archeantus.net/images/logo.png)
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/jarreed0/ArchGE.svg)](https://starchart.cc/jarreed0/ArchGE)
+
